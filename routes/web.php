@@ -20,3 +20,11 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/home_admin', 'Admin\AdminController@home')->name('home_admin');
+
+//SLIDER
+Route::get('/slider', 'Admin\SliderController@index')->name('slider');
+Route::post('/slider_store', 'Admin\SliderController@store');
+Route::delete('/slider_delete', 'Admin\SliderController@destroy')->name('slider_delete');
+
