@@ -183,11 +183,11 @@
 
                             <ul class="nav nav-group-sub" data-submenu-title="Layouts">
                                 <li class="nav-item"><a href="/slider" class="nav-link">SLIDER</a></li>
-                                <li class="nav-item"><a href="/PP" class="nav-link">Berita</a></li>
-                                <!-- <li class="nav-item"><a href="/penjual" class="nav-link">Data Penjual</a></li>
-                                <li class="nav-item"><a href="/pembeli" class="nav-link">Data Pembeli</a></li>
-                                <li class="nav-item"><a href="/produk" class="nav-link">Data Produk</a></li>
-                                <li class="nav-item"><a href="/kategori" class="nav-link">Data Kategori Produk</a></li> -->
+                                <li class="nav-item"><a href="/card" class="nav-link">CARD</a></li>
+                                <li class="nav-item"><a href="/article" class="nav-link">ARTICLE</a></li>
+                                <li class="nav-item"><a href="/banner" class="nav-link">BANNER</a></li>
+                                <li class="nav-item"><a href="/link" class="nav-link">LINK TERKAIT</a></li> 
+                                <!-- <li class="nav-item"><a href="/kategori" class="nav-link">Data Kategori Produk</a></li> -->
                             </ul>
                         </li>
                         <!-- <li class="nav-item nav-item-submenu">

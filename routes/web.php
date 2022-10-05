@@ -28,3 +28,23 @@ Route::get('/slider', 'Admin\SliderController@index')->name('slider');
 Route::post('/slider_store', 'Admin\SliderController@store');
 Route::delete('/slider_delete', 'Admin\SliderController@destroy')->name('slider_delete');
 
+//CARD
+Route::get('/card', 'Admin\CardController@index')->name('card');
+Route::post('/card_store', 'Admin\CardController@store');
+Route::delete('/card_delete', 'Admin\CardController@destroy')->name('card_delete');
+
+//ARTICLE
+Route::get('/article', 'Admin\ArticleController@index')->name('article');
+// Route::post('/article_store', 'Admin\ArticleController@store');
+Route::delete('/article_delete', 'Admin\ArticleController@destroy')->name('article_delete');
+
+//BANNER
+Route::get('/banner', 'Admin\BannerController@index')->name('banner');
+Route::post('/banner_store', 'Admin\BannerController@store');
+Route::delete('/banner_delete', 'Admin\BannerController@destroy')->name('banner_delete');
+
+//CARD
+Route::get('/link', 'Admin\LinkController@index')->name('link');
+Route::post('/link_store', 'Admin\LinkController@store');
+Route::delete('/link_delete', 'Admin\LinkController@destroy')->name('link_delete');
+
