@@ -5,6 +5,7 @@ use App\Http\Controllers\Controller;
 Use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\card;
+use Illuminate\Support\Facades\DB;
 
 class CardController extends Controller
 {
@@ -44,6 +45,33 @@ class CardController extends Controller
             
         ]);
 
+        return redirect('/card');
+    }
+
+    public function edit($id)
+    {
+        $card = card::find($id);
+        return response()->json([
+            'status' => 200,
+            'card' => $card,
+        ]);
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request)
+    {
+
+        DB::table('cards')->where('id', $request->id)->update([
+
+            'name' => $request->name,
+            'desc' => $request->desc,
+        ]);
         return redirect('/card');
     }
 

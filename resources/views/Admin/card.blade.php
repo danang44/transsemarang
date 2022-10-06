@@ -57,7 +57,7 @@
                                         <td class="pr-2 pl-2 ">{{$c->name}}</td>
                                         <td class="pr-2 pl-2 ">{{$c->desc}}</td>
                                         <td class="text-center">
-                                           
+                                        <button class="btn btn-outline-info editbtn" value="{{$c->id}}"><i class="fa-solid fa-pen"></i></button> 
                                             <button class="btn btn-outline-danger deletebtn" value="{{$c->id}}"><i class="fa-solid fa-trash"></i></button>
                                         </td>
                                     </tr>
@@ -89,9 +89,59 @@
             // alert(id)
             $('#editModal').modal('show');
 
+            $.ajax({
+                type: "GET",
+                url: "/card_edit/" + id,
+                success: function(response) {
+                    console.log(response.card.desc)
+                    $('#name').val(response.card.name);
+                    $('#desc').val(response.card.desc);
+                    $('#id').val(response.card.id);
+                }
+            });
         });
     });
     </script>
+
+<!-- Modal Update -->
+<div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header text-center pb-3" style="background-color:#011126">
+                <h5 class="modal-title">Update Card</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!--FORM UPDATE BARANG-->
+                <form action="/card/update" method="post">
+                    @csrf
+
+                    <input type="hidden" id="id" name="id"> <br />
+
+                    <div class="form-group">
+                        <label>Jenis Kartu</label>
+                        <input type="text" required="required" class="form-control" name="name" id="name">
+                    </div>
+                    <div class="form-group">
+                        <label>Deskripsi</label>
+                        <input type="text" required="required" class="form-control" name="desc" id="desc">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Batal</button>
+                        <button type="submit" class="btn btn-outline-primary">Simpan</button>
+                    </div>
+                </form>
+                <!--END FORM UPDATE BARANG-->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Modal UPDATE Barang-->
+
+
+
     <!-- delete -->
 <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -138,10 +188,7 @@
                 {{ csrf_field() }}
                     <input type="hidden" id="id" name="id"> <br/>
                     <input type="hidden" id="created_by" name="created_by" value="{{Auth::id()}}">
-                    <div class="form-group">
-                        <label>Jenis Kartu</label>
-                    <input type="hidden" id="id" name="id">
-           
+                  
                     <div class="form-group">
                         <label>Jenis Kartu</label>
                         <input type="text" required="required" class="form-control" name="name" id="name">
