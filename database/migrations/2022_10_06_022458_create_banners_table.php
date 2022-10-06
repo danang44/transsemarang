@@ -17,6 +17,9 @@ class CreateBannersTable extends Migration
             $table->id();
             $table->string('deskripsi');
             $table->string('user_id');
+            $table->string('created_by');
+            $table->string('deleted_by')->nullable();
+            $table->string('deleted_at')->nullable();
             $table->timestamps();
         });
     }
