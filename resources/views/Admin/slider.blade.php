@@ -38,8 +38,8 @@
                             Tambah Data <i class="fa-solid fa-plus"></i>
                         </button>
                     </div>
-                    <div class=" card">
-                        <div class="pt-2 pr-1 pl-1 table-responsive col-sm-12 ">
+                    <div class="card">
+                        <div class="pt-2  table-responsive col-sm-12 ">
                             <table id="table_id" class="table table-striped  table-striped table-border m-1 datatable-scroll-y">
                                 <thead>
                                     <tr class="text-center">

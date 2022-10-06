@@ -5,6 +5,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\banner;
 Use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class bannerController extends Controller
 {
@@ -32,6 +33,33 @@ class bannerController extends Controller
         ]);
 
 
+        return redirect('/banner');
+    }
+
+    public function edit($id)
+    {
+        $banner = banner::find($id);
+        return response()->json([
+            'status' => 200,
+            'banner' => $banner,
+        ]);
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request)
+    {
+
+        DB::table('banners')->where('id', $request->id)->update([
+
+            'id' => $request->id,
+            'deskripsi' => $request->deskripsi,
+        ]);
         return redirect('/banner');
     }
 

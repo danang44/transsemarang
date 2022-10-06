@@ -57,7 +57,7 @@
                                         <td class="pr-2 pl-2 ">{{@$c->user->name}}</td>
                                         <td class="pr-2 pl-2 ">{{$c->created_at}}</td>
                                         <td class="text-center">
-                                           
+                                        <button class="btn btn-outline-info editbtn" value="{{$c->id}}"><i class="fa-solid fa-pen"></i></button>
                                             <button class="btn btn-outline-danger deletebtn" value="{{$c->id}}"><i class="fa-solid fa-trash"></i></button>
                                         </td>
                                     </tr>
@@ -89,9 +89,54 @@
             // alert(id)
             $('#editModal').modal('show');
 
+            $.ajax({
+                type: "GET",
+                url: "/banner_edit/" + id,
+                success: function(response) {
+                    console.log(response.banner.deskripsi)
+                    $('#deskripsi').val(response.banner.deskripsi);
+                    $('#id').val(response.banner.id);
+                }
+            });
         });
     });
     </script>
+
+
+<!-- Modal Update -->
+<div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header text-center pb-3" style="background-color:#011126">
+                <h5 class="modal-title">Update Banner</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!--FORM UPDATE BARANG-->
+                <form action="/banner/update" method="post">
+                    @csrf
+
+                    <input type="hidden" id="id" name="id"> <br />
+
+                    <div class="form-group">
+                        <label>Deskripsi</label>
+                        <input type="text" required="required" class="form-control" name="deskripsi" id="deskripsi">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Batal</button>
+                        <button type="submit" class="btn btn-outline-primary">Simpan</button>
+                    </div>
+                </form>
+                <!--END FORM UPDATE BARANG-->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Modal UPDATE Barang-->
+
+
     <!-- delete -->
 <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -158,9 +203,6 @@
     </div>
 </div>
 <!-- end add -->
-
-
-
 
 
 

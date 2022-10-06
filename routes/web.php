@@ -42,6 +42,8 @@ Route::delete('/article_delete', 'Admin\ArticleController@destroy')->name('artic
 Route::get('/banner', 'Admin\BannerController@index')->name('banner');
 Route::post('/banner_store', 'Admin\BannerController@store');
 Route::delete('/banner_delete', 'Admin\BannerController@destroy')->name('banner_delete');
+Route::get('/banner_edit/{id}', 'Admin\BannerController@edit')->name('banner_edit');
+Route::post('/banner/update', 'Admin\BannerController@update');
 
 //CARD
 Route::get('/link', 'Admin\LinkController@index')->name('link');
