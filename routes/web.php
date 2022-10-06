@@ -49,4 +49,6 @@ Route::post('/banner/update', 'Admin\BannerController@update');
 Route::get('/link', 'Admin\LinkController@index')->name('link');
 Route::post('/link_store', 'Admin\LinkController@store');
 Route::delete('/link_delete', 'Admin\LinkController@destroy')->name('link_delete');
+Route::get('/card_edit/{id}', 'Admin\CardController@edit')->name('card_edit');
+Route::post('/card/update', 'Admin\CardController@update');
 
