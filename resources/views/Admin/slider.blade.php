@@ -45,6 +45,7 @@
                                     <tr class="text-center">
                                         <th>Gambar</th>
                                         <th>Judul</th>
+                                        <th>Penulis</th>
                                         <th class="col-3s text-center">Opsi</th>
                                     </tr>
                                 </thead>
@@ -53,6 +54,7 @@
                                     <tr>
                                         <td class="pr-2 pl-1 "><img width="300px" src="{{ url('/data_slider/'.$c->gambar) }}"></td>
                                         <td class="pr-2 pl-2 ">{{$c->judul}}</td>
+                                        <td class="pr-2 pl-2 ">{{@$c->user->name}}</td>
                                         <td class="text-center">
                                            
                                             <button class="btn btn-outline-danger deletebtn" value="{{$c->id}}"><i class="fa-solid fa-trash"></i></button>
@@ -102,10 +104,11 @@
             <div class="modal-body">
                 <!--FORM UPDATE BARANG-->
                 <form action="/slider_delete" method="post">
-                    @csrf
+                @csrf
                     @method('DELETE')
                     <h3>Anda yakin menghapus data ?</h3>
                     <input type="hidden" id="deleting_id" name="delete_id">
+                    <input type="hidden" id="deleted_by" name="deleted_by" value="{{Auth::id()}}">
                     <div class="modal-footer">
                         <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Batal</button>
                         <button type="submit" class="btn btn-outline-primary">Hapus</button>
@@ -131,10 +134,10 @@
 
             <div class="modal-body">
                 <form action="/slider_store" method="POST" enctype="multipart/form-data">
-                    {{ csrf_field() }}
-                    <div class="form-group">
-                        <label>Slider</label>
-                    <input type="hidden" id="id" name="id">
+                {{ csrf_field() }}
+                <input type="hidden" id="id" name="id"> <br/>
+                <input type="hidden" id="user_id" name="user_id" value="{{Auth::id()}}">
+                    <input type="hidden" id="created_by" name="created_by" value="{{Auth::id()}}">
            
                     <div class="form-group">
                         <label>Judul</label>

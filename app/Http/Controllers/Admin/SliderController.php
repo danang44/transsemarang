@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\slider;
+Use Illuminate\Support\Facades\Auth;
 
 class SliderController extends Controller
 {
@@ -17,7 +18,8 @@ class SliderController extends Controller
     {
         //dd($request);
         $this->validate($request, [
-
+            'user_id' => 'required',
+            'created_by' => 'required',
             'judul' => 'required',
             'gambar' => 'required|file|image|mimes:jpeg,png,jpg|max:2048',
 
@@ -33,6 +35,8 @@ class SliderController extends Controller
         $slider->move($tujuan_upload, $nama_file);
 
         slider::create([
+            'user_id' => $request->user_id,
+            'created_by' => $request->created_by,
             'gambar' => $nama_file,
             'judul' => $request->judul,
             
@@ -47,6 +51,10 @@ class SliderController extends Controller
         $id = $request->input('delete_id');
         $slider = slider::find($id);
         $slider->delete();
+
+        $user =Auth::user()->id;
+        $slider->deleted_by= $user;
+        $slider->update();
         return redirect()->back()->with('status', 'Data berhasil dihapus');
         
     }
