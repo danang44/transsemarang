@@ -105,6 +105,60 @@
     });
 </script>
 
+<!-- add -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center pb-3" style="background-color:#011126">
+                <h5 class="modal-title" id="exampleModalLabel">Tambahkan Data Banner</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <form action="/banner_store" method="POST" enctype="multipart/form-data">
+                    {{ csrf_field() }}
+         
+                    <input type="hidden" id="id" name="id"> <br />
+                    <input type="hidden" id="user_id" name="user_id" value="{{Auth::id()}}">
+                    <input type="hidden" id="created_by" name="created_by" value="{{Auth::id()}}">
+                    <div class="form-group">
+                        <input type="hidden" id="id" name="id">
+                        <div class="form-group">
+                            <label>Deskripsi</label>
+                            @if(old('deskripsi'))
+                            @foreach($banner as $c)
+                            <textarea name="deskripsi" required="required" class="form-control" id="deskripsi" cols="30" rows="10" value="{{ $c->deskripsi }}"></textarea>
+                            @endforeach
+
+                         @else
+                         <textarea name="deskripsi" required="required" class="form-control" id="deskripsi" cols="30" rows="10" value="text"></textarea>
+                                
+                            
+                                
+                            @endif
+                          
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Batal</button>
+                            <button type="submit" value="Upload" class="btn btn-outline-primary">Simpan</button>
+                        </div>
+                </form>
+
+                <script src="https://cdn.ckeditor.com/4.20.0/standard/ckeditor.js"></script>
+
+                <script>
+                    CKEDITOR.replace('deskripsi');
+                </script>
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
 <!-- delete -->
 <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -132,47 +186,5 @@
     </div>
 </div>
 <!-- end delete -->
-
-<!-- add -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header text-center pb-3" style="background-color:#011126">
-                <h5 class="modal-title" id="exampleModalLabel">Tambahkan Data Banner</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-
-            <div class="modal-body">
-                <form action="/banner_store" method="POST" enctype="multipart/form-data">
-                    {{ csrf_field() }}
-                    <input type="hidden" id="id" name="id"> <br />
-                    <input type="hidden" id="user_id" name="user_id" value="{{Auth::id()}}">
-                    <input type="hidden" id="created_by" name="created_by" value="{{Auth::id()}}">
-                    <div class="form-group">
-                        <input type="hidden" id="id" name="id">
-                        <div class="form-group">
-                            <label>Deskripsi</label>
-                            <textarea name="deskripsi" required="required" class="form-control" id="deskripsi" cols="30" rows="10" value="{{ $c->deskripsi }}"></textarea>
-                        </div>
-
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Batal</button>
-                            <button type="submit" value="Upload" class="btn btn-outline-primary">Simpan</button>
-                        </div>
-                </form>
-
-                <script src="https://cdn.ckeditor.com/4.20.0/standard/ckeditor.js"></script>
-
-                <script>
-                    CKEDITOR.replace('deskripsi');
-                </script>
-
-            </div>
-        </div>
-    </div>
-</div>
-</div>
 
 @endsection

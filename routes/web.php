@@ -1,5 +1,5 @@
 <?php
-
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -40,6 +40,7 @@ Route::delete('/article_delete', 'Admin\ArticleController@destroy')->name('artic
 
 //BANNER
 Route::get('/banner', 'Admin\BannerController@index')->name('banner');
+Route::get('/banner_add', 'Admin\BannerController@add')->name('banner_add');
 
 Route::get('/banner_edit', 'Admin\BannerController@edit')->name('banner_edit');
 Route::post('/banner_store', 'Admin\BannerController@store');

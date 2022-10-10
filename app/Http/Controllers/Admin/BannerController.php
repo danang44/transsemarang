@@ -15,6 +15,13 @@ class bannerController extends Controller
         return view('Admin.banner',['banner' => $banner]);
     }
 
+    public function add()
+    {
+        $banner = banner::all();
+         
+        return view('admin.banner_add', ['banner' => $banner]);
+    }
+
     public function store(Request $request)
     {
         //dd($request);
