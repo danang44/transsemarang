@@ -1,3 +1,5 @@
+@include('sweetalert::alert')
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -22,6 +24,7 @@
         <link rel="stylesheet" href="assets/css/Footer-Multi-Column-icons.css">
         <link rel="stylesheet" href="assets/css/Hero-Clean-Reverse-images.css">
         <link rel="stylesheet" href="assets/css/logo-slider.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.38/dist/sweetalert2.css">
     </head>
     
     <body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="72">
@@ -47,7 +50,19 @@
                             <li class="nav-item mx-0 mx-lg-1">
                                 <a class="nav-link py-3 px-0 px-lg-3 rounded" href="https://www.youtube.com/channel/UCeaDUObnYHFxrdsea9zIP3w" target="_blank"><img src="assets/img/Social icon-2.svg" alt=""></a>
                             </li>
-                        </ul><a class="btn btn-primary ms-md-2" role="button" href="#Contact">Contact</a>
+                        </ul>
+                        <button class="btn-sweet" onclick="sweet();">Contact</button>
+                            <script>
+                                function sweet() {
+                                    Swal.fire({
+                                        title: 'Contact',
+                                        text: 'CS : 1-5000-94 | Whatsapp / SMS : 08112884447',
+                                        imageUrl: 'assets/img/tsmgLogo32px-01.png',
+                                        imageWidth: 100,
+                                        imageHeight: 100,
+                                        imageAlt: 'Custom image',
+                                    })
+                                }</script>
                     </div>
                 </div>
             </nav>
@@ -297,6 +312,7 @@
         <script src="assets/bootstrap/js/bootstrap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
         <script src="assets/js/logo-slider.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.38/dist/sweetalert2.all.min.js"></script>
     </body>
     
 </html>
