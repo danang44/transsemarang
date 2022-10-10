@@ -15,6 +15,7 @@
         color: white !important;
     }
 </style>
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-lg-12">
@@ -32,6 +33,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="col-md-12">
                     <div class="text-right">
                         <button type="button" class=" mt-3 mb-1 btn btn-outline-success" data-toggle="modal" data-target="#exampleModal">
@@ -52,12 +54,11 @@
                                 <tbody>
                                     @foreach($banner as $c)
                                     <tr>
-                                     
-                                        <td class="pr-2 pl-2 ">{{$c->deskripsi}}</td>
+                                        <td class="pr-2 pl-2 ">{!!$c->deskripsi!!}</td>
                                         <td class="pr-2 pl-2 ">{{@$c->user->name}}</td>
                                         <td class="pr-2 pl-2 ">{{$c->created_at}}</td>
                                         <td class="text-center">
-                                        <button class="btn btn-outline-info editbtn" value="{{$c->id}}"><i class="fa-solid fa-pen"></i></button>
+                                            <a href="/banner_edit/{{ $c->id }}"><button class="btn btn-outline-info" value="{{$c->id}}"><i class="fa-solid fa-pen"></i></button></a>
                                             <button class="btn btn-outline-danger deletebtn" value="{{$c->id}}"><i class="fa-solid fa-trash"></i></button>
                                         </td>
                                     </tr>
@@ -84,60 +85,27 @@
             $('#deleteModal').modal('show');
             $('#deleting_id').val(id);
         });
-        $(document).on('click', '.editbtn', function() {
-            var id = $(this).val();
-            // alert(id)
-            $('#editModal').modal('show');
+        // $(document).on('click', '.editbtn', function() {
+        //     var id = $(this).val();
+        //     // alert(id)
+        //     $('#editModal').modal('show');
 
-            $.ajax({
-                type: "GET",
-                url: "/banner_edit/" + id,
-                success: function(response) {
-                    console.log(response.banner.deskripsi)
-                    $('#deskripsi').val(response.banner.deskripsi);
-                    $('#id').val(response.banner.id);
-                }
-            });
-        });
+        //     $.ajax({
+        //         type: "GET",
+        //         url: "/banner_edit/" + id,
+        //         success: function(response) {
+        //             console.log(response.banner.deskripsi)
+        //             CKEDITOR.instances['deskripsi'].setData(response.banner.deskripsi);
+        //             $('#deskripsi').val(response.banner.deskripsi);
+        //             $('#id').val(response.banner.id);
+
+        //         }
+        //     });
+        // });
     });
-    </script>
+</script>
 
-
-<!-- Modal Update -->
-<div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header text-center pb-3" style="background-color:#011126">
-                <h5 class="modal-title">Update Banner</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <!--FORM UPDATE BARANG-->
-                <form action="/banner/update" method="post">
-                    @csrf
-
-                    <input type="hidden" id="id" name="id"> <br />
-
-                    <div class="form-group">
-                        <label>Deskripsi</label>
-                        <input type="text" required="required" class="form-control" name="deskripsi" id="deskripsi">
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Batal</button>
-                        <button type="submit" class="btn btn-outline-primary">Simpan</button>
-                    </div>
-                </form>
-                <!--END FORM UPDATE BARANG-->
-            </div>
-        </div>
-    </div>
-</div>
-<!-- End Modal UPDATE Barang-->
-
-
-    <!-- delete -->
+<!-- delete -->
 <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -148,9 +116,8 @@
                 </button>
             </div>
             <div class="modal-body">
-                <!--FORM UPDATE BARANG-->
                 <form action="/banner_delete" method="post">
-                @csrf
+                    @csrf
                     @method('DELETE')
                     <h3>Anda yakin menghapus data ?</h3>
                     <input type="hidden" id="deleting_id" name="delete_id">
@@ -160,7 +127,6 @@
                         <button type="submit" class="btn btn-outline-primary">Hapus</button>
                     </div>
                 </form>
-                <!--END FORM UPDATE BARANG-->
             </div>
         </div>
     </div>
@@ -172,7 +138,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header text-center pb-3" style="background-color:#011126">
-                <h5 class="modal-title" id="exampleModalLabel">Tambahkan Data </h5>
+                <h5 class="modal-title" id="exampleModalLabel">Tambahkan Data Banner</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -180,30 +146,33 @@
 
             <div class="modal-body">
                 <form action="/banner_store" method="POST" enctype="multipart/form-data">
-                {{ csrf_field() }}
-                <input type="hidden" id="id" name="id"> <br/>
-                <input type="hidden" id="user_id" name="user_id" value="{{Auth::id()}}">
+                    {{ csrf_field() }}
+                    <input type="hidden" id="id" name="id"> <br />
+                    <input type="hidden" id="user_id" name="user_id" value="{{Auth::id()}}">
                     <input type="hidden" id="created_by" name="created_by" value="{{Auth::id()}}">
                     <div class="form-group">
-                        <label>banner</label>
-                    <input type="hidden" id="id" name="id">
-           
-                    <div class="form-group">
-                        <label>Deskripsi</label>
-                        <input type="text" required="required" class="form-control" name="deskripsi" id="deskripsi">
-                    </div>
-                   
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Batal</button>
-                        <button type="submit" value="Upload" class="btn btn-outline-primary">Simpan</button>
-                    </div>
+                        <input type="hidden" id="id" name="id">
+                        <div class="form-group">
+                            <label>Deskripsi</label>
+                            <textarea name="deskripsi" required="required" class="form-control" id="deskripsi" cols="30" rows="10" value="{{ $c->deskripsi }}"></textarea>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Batal</button>
+                            <button type="submit" value="Upload" class="btn btn-outline-primary">Simpan</button>
+                        </div>
                 </form>
+
+                <script src="https://cdn.ckeditor.com/4.20.0/standard/ckeditor.js"></script>
+
+                <script>
+                    CKEDITOR.replace('deskripsi');
+                </script>
+
             </div>
         </div>
     </div>
 </div>
-<!-- end add -->
-
-
+</div>
 
 @endsection

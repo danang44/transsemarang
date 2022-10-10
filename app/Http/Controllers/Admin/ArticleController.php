@@ -11,6 +11,7 @@ class ArticleController extends Controller
     public function index()
     {
       
+        // $article = article::latest()->get();
         $article = article::all();
         
         return view('Admin.article',['article' => $article]);

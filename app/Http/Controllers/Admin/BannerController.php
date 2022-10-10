@@ -35,15 +35,14 @@ class bannerController extends Controller
 
         return redirect('/banner');
     }
-
+   
     public function edit($id)
     {
-        $banner = banner::find($id);
-        return response()->json([
-            'status' => 200,
-            'banner' => $banner,
-        ]);
+        $banner = DB::table('banners')->where('id', $id)->get();
+     
+        return view('admin.banner_edit', ['banner' => $banner]);
     }
+    
 
     /**
      * Update the specified resource in storage.

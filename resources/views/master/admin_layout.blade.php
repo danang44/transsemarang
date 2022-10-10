@@ -50,6 +50,7 @@
             }
         }
     </style>
+     @stack('scripts')
 </head>
 
 <body class="navbar-top">
