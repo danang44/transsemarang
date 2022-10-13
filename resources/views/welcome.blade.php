@@ -121,9 +121,9 @@
     </section>
     {{-- Section 2 - News --}}
     <section style="padding-top: 80px; padding-bottom: 80px;padding-left: 120px;padding-right: 120px;">
-        <div class="row row-cols-2 border round-border border-1"
+        <div class="row row-cols-2"
             style="display: flex;flex-direction: row;align-items: flex-start;width: 1200px;height: 832px;">
-            <div class="col-md-4 border border-1 themed-grid-col" style="width: 412px">
+            <div class="col-md-4 themed-grid-col" style="width: 412px">
                 <div class="pb-3">
                     <p class=""
                         style="color: var(--bs-brand);font-family: 'Plus Jakarta Sans';font-style: normal;font-weight: 700;font-size: 32px;line-height: 40px;">
@@ -180,7 +180,7 @@
             </div>
             <div class="themed-grid-col"
                 style="display: flex;flex-direction: column;align-items: flex-start;width: 748px;height: 828px;padding-left: 40px">
-                <div class="pb-3 border border-1">
+                <div class="pb-3">
                     <p class="w-lg-50 fw-semibold "
                         style="color: var(--bs-brand);width: 748px;height: 40px;font-family: 'Plus Jakarta Sans';font-style: normal;font-weight: 700;font-size: 32px;line-height: 40px;">
                         <strong>Recent</strong>
@@ -188,38 +188,41 @@
                     </p>
                 </div>
                 <div class="row row-cols-6">
-                    <div class="col" style="width: 248px; height: auto">
+                    <div class="col rounded" style="background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(0,0,0,1)),url('assets/img/berita1.jpeg')center / cover no-repeat;width: 248px; height: 248px;align-items: flex-end;display: flex">
                         <div class="card">
-                            <img src="assets/img/berita1.jpeg" class="card-img-top" alt="...">
-                            {{-- <div class="card-body">
+                            {{-- <img src="assets/img/berita1.jpeg" class="card-img-top" alt="..."> --}}
+                                <div class="card-body">
+                                    <span class="text-white" style="font-family: 'Plus Jakarta Sans';
+                                    font-style: normal;
+                                    font-weight: 600;
+                                    font-size: 16px;
+                                    line-height: 24px;">Kolaborasi Musisi Semarang dan BRT Trans Semarang Lahirkan</span>
+                                    {{-- <p class="card-text"></p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a> --}}
+                                </div>
+                        </div>
+                    </div>
+                    <div class="col rounded" style="background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(0,0,0,1)),url('assets/img/berita2.jpeg')center / cover no-repeat;width: 248px; height: 248px">
+                        {{-- <div class="card" >
+                            <img class="card-img-top" alt="...">
+                            <div class="card-body">
                                     <h5 class="card-title">Card title</h5>
                                     <p class="card-text">Some quick example text to build on the card title and make up the
                                         bulk of the card's content.</p>
                                     <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div> --}}
-                        </div>
+                                </div>
+                        </div> --}}
                     </div>
-                    <div class="col" style="width: 248px; height: 248px">
-                        <div class="card">
-                            <img src="assets/img/berita2.jpeg" class="card-img-top" alt="...">
-                            {{-- <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the
-                                        bulk of the card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div> --}}
-                        </div>
-                    </div>
-                    <div class="col" style="width: 248px; height: 248px">
-                        <div class="card">
+                    <div class="col rounded" style="background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(0,0,0,1)),url('assets/img/berita3.jpeg')center / cover no-repeat;width: 248px; height: 248px">
+                        {{-- <div class="card">
                             <img src="assets/img/berita3.jpeg" class="card-img-top" alt="...">
-                            {{-- <div class="card-body">
+                            <div class="card-body">
                                     <h5 class="card-title">Card title</h5>
                                     <p class="card-text">Some quick example text to build on the card title and make up the
                                         bulk of the card's content.</p>
                                     <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div> --}}
-                        </div>
+                                </div>
+                        </div> --}}
                     </div>
                 </div>
                 <div class="row row-cols-6">
