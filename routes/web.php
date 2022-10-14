@@ -41,12 +41,9 @@ Route::delete('/card_delete', 'Admin\CardController@destroy')->name('card_delete
 //ARTICLE
 Route::get('/article', 'Admin\ArticleController@index')->name('article');
 Route::get('/article_add', 'Admin\ArticleController@add')->name('article_add');
-<<<<<<< Updated upstream
 Route::post('/article_store', 'Admin\ArticleController@store');
 
-=======
 // Route::post('/article_store', 'Admin\ArticleController@store');
->>>>>>> Stashed changes
 Route::delete('/article_delete', 'Admin\ArticleController@destroy')->name('article_delete');
 
 //BANNER
@@ -69,22 +66,19 @@ Route::post('/card/update', 'Admin\CardController@update');
 Route::get('/aboutadd', 'AdminController@aboutadd')->name('aboutadd');
 Route::post('/about_process', 'AdminController@about_process');
 
-<<<<<<< Updated upstream
 
 Route::get('/auth/redirect', 'Auth\LoginController@redirectToProvider');
 Route::get('/auth/callback', 'Auth\LoginController@handleProviderCallback');
 
 // Route::get('/home','Api\HomeController@index');
 
-Route::get('testing', function() {
-    $client = Http::withHeaders(['key' => 'a1e5b407f811c091c02c25159cd1d4be'])
-    ->get('https://gps.brtnusantara.com/dev/trans_semarang/api_v1/getCorridor')
-            
-            ->body();
-    dd($client);
+// Route::get('testing', function() {
+//     $client = Http::withHeaders(['key' => 'a1e5b407f811c091c02c25159cd1d4be'])
+//     ->get('https://gps.brtnusantara.com/dev/trans_semarang/api_v1/getCorridor')
 
-=======
-Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
-    \UniSharp\LaravelFilemanager\Lfm::routes();
->>>>>>> Stashed changes
-});
+//             ->body();
+//     dd($client);
+
+// Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
+//     \UniSharp\LaravelFilemanager\Lfm::routes();
+// });
