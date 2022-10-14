@@ -1,23 +1,13 @@
-@extends('master.admin_layout')
 
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard ADMIN') }}</div>
+<?php
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+// $curl_handle=curl_init();
+// curl_setopt($curl_handle, CURLOPT_URL,'https://gps.brtnusantara.com/dev/trans_semarang/api_v1/getCorridor format=flv');
+// curl_setopt($curl_handle, CURLOPT_CONNECTTIMEOUT, 2);
+// curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, 1);
+// curl_setopt($curl_handle, CURLOPT_USERAGENT, 'Your application name');
+// $query = curl_exec($curl_handle);
+// curl_close($curl_handle);
 
-                    {{ __('You are logged in!') }}
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-@endsection
+$query=file_get_contents('https://gps.brtnusantara.com/dev/trans_semarang/api_v1/getCorridor');
+?>

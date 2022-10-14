@@ -201,8 +201,10 @@
                         <div style="position:relative;">
                             <a class='btn btn-info col-sm-3' href='javascript:;'>
                                 Choose Image...
-                                <input type="file" style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;' name="image" size="40" onchange='$("#upload-file-info").html($(this).val());'>
                             </a>
+                            <img class="img-preview img-fluid mt-3 ">
+                            <input type="file"  style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;' name="image" id="image" size="40" onchange="previewImage()">
+                            
                             &nbsp;
                             <span class='label label-info' id="upload-file-info"></span>
                         </div>
@@ -216,5 +218,22 @@
         </div>
     </div>
 </div>
+
+<script>
+    function previewImage(){
+        const image = document.querySelector('#image');
+        const imgPreview = document.querySelector('.img-preview')
+        
+
+        imgPreview.style.display = 'block';
+        const oFReader = new FileReader();
+        oFReader.readAsDataURL(image.files[0]);
+
+        oFReader.onload = function(oFREvent){
+            imgPreview.src = oFREvent.target.result;
+        }
+    
+    }
+    </script>
 
 @endsection
