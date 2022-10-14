@@ -4,7 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
+<<<<<<< Updated upstream
     "content-hash": "7489304e6e954328e134c32d6882699a",
+=======
+    "content-hash": "d767e0b640b6eba51f1bf396fb5ed7a3",
+>>>>>>> Stashed changes
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -5233,7 +5237,11 @@
         },
         {
             "name": "unisharp/laravel-filemanager",
+<<<<<<< Updated upstream
             "version": "dev-master",
+=======
+            "version": "v2.5.1",
+>>>>>>> Stashed changes
             "source": {
                 "type": "git",
                 "url": "https://github.com/UniSharp/laravel-filemanager.git",
@@ -5265,7 +5273,10 @@
                 "ext-gd": "to use GD library based image processing.",
                 "ext-imagick": "to use Imagick based image processing."
             },
+<<<<<<< Updated upstream
             "default-branch": true,
+=======
+>>>>>>> Stashed changes
             "type": "library",
             "extra": {
                 "laravel": {

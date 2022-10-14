@@ -12,11 +12,11 @@
     {{-- <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css"> --}}
     <link href="../../../../global_assets/css/icons/icomoon/styles.min.css" rel="stylesheet" type="text/css">
     <!-- <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"> -->
-    <link href="{{asset('assets/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css">
-    <link href="{{asset('assets/css/bootstrap_limitless.min.css')}}" rel="stylesheet" type="text/css">
-    <link href="{{asset('assets/css/layout.min.css')}}" rel="stylesheet" type="text/css">
-    <link href="{{asset('assets/css/components.min.css')}}" rel="stylesheet" type="text/css">
-    <link href="{{asset('assets/css/colors.min.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('assets/css/bootstrap_limitless.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('assets/css/layout.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('assets/css/components.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('assets/css/colors.min.css') }}" rel="stylesheet" type="text/css">
     <!-- /global stylesheets -->
 
     <!-- Core JS files -->
@@ -30,13 +30,14 @@
     <script src="../../../../global_assets/js/plugins/ui/prism.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i&amp;display=swap" type="text/css">
     <script src="https://kit.fontawesome.com/76f2dc9b0b.js" crossorigin="anonymous"></script>
-    <script src="{{asset('assets/js/app.js')}}"></script>
+    <script src="{{ asset('assets/js/app.js') }}"></script>
     <!-- /theme JS files -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.0/css/jquery.dataTables.css">
 
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.0/js/jquery.dataTables.js"></script>
 
+<<<<<<< Updated upstream
     {{-- leaflet --}}
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
     integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
@@ -45,6 +46,12 @@
                            <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
                            integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg="
                            crossorigin=""></script>
+=======
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+>>>>>>> Stashed changes
 
     <style>
         .shimmer {
@@ -60,7 +67,7 @@
             }
         }
     </style>
-     @stack('scripts')
+    @stack('scripts')
 </head>
 
 <body class="navbar-top">
@@ -94,10 +101,10 @@
             <span class="navbar-text ml-md-3">
                 <span class="badge badge-mark border-orange-300 mr-2"></span>
                 <?php
-
+                
                 //ubah timezone menjadi jakarta
-                date_default_timezone_set("Asia/Jakarta");
-
+                date_default_timezone_set('Asia/Jakarta');
+                
                 //ambil jam dan menit
                 $jam = date('H:i');
                 //atur salam menggunakan IF
@@ -110,9 +117,9 @@
                 } elseif ($jam > '18:00') {
                     $salam = 'Malam';
                 }
-
+                
                 echo 'Hai! Selamat ' . $salam;
-
+                
                 ?>
             </span>
 
@@ -162,19 +169,22 @@
 
                         <!-- Main -->
                         <li class="nav-item nav-item-submenu">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 <i class="icon-user"></i>
                                 <span>
                                     {{ Auth::user()->name }} <span>
                                     </span>
                             </a>
                             <div class="dropdown-menu dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                    onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}
                                 </a>
 
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                    style="display: none;">
                                     @csrf
                                 </form>
                             </div>
@@ -190,7 +200,8 @@
                             </a>
                         </li>
                         <li class="nav-item nav-item-submenu">
-                            <a href="#" class="nav-link"><i class="icon-copy"></i> <span>Manajemen Data</span></a>
+                            <a href="#" class="nav-link"><i class="icon-copy"></i> <span>Manajemen
+                                    Data</span></a>
 
                             <ul class="nav nav-group-sub" data-submenu-title="Layouts">
                                 <li class="nav-item"><a href="/slider" class="nav-link">SLIDER</a></li>
@@ -217,7 +228,7 @@
 
                             <ul class="nav nav-group-sub" data-submenu-title="Starter kit">
                                 <li class="nav-item"><a href="/laporan_keuangan" class="nav-link">Laporan Keuangan</a></li> -->
-                                <!-- <li class="nav-item"><a href="../seed/sidebar_none.html" class="nav-link">No sidebar</a></li>
+                        <!-- <li class="nav-item"><a href="../seed/sidebar_none.html" class="nav-link">No sidebar</a></li>
                                 <li class="nav-item"><a href="../seed/sidebar_main.html" class="nav-link">1 sidebar</a></li>
                                 <li class="nav-item nav-item-submenu">
                                     <a href="#" class="nav-link">2 sidebars</a>
@@ -226,13 +237,13 @@
                                         <li class="nav-item"><a href="../seed/sidebar_right.html" class="nav-link">Right sidebar</a></li>
                                     </ul>
                                 </li> -->
-                            </ul>
-                        </li>
+                    </ul>
+                    </li>
 
-                        <!-- /main -->
+                    <!-- /main -->
 
 
-                        <!-- /page kits -->
+                    <!-- /page kits -->
 
                     </ul>
                 </div>
@@ -257,10 +268,14 @@
             <div class="content">
 
 
-                <!-- Content area -->
 
+                <!-- Dashboard content -->
                 @yield('content')
+                <!-- ngisi konten disini  -->
 
+
+
+                <!-- /dashboard content -->
 
             </div>
             <!-- /content area -->
@@ -269,7 +284,8 @@
             <!-- Footer -->
             <div class="navbar navbar-expand-lg navbar-light">
                 <div class="text-center d-lg-none w-100">
-                    <button type="button" class="navbar-toggler dropdown-toggle" data-toggle="collapse" data-target="#navbar-footer">
+                    <button type="button" class="navbar-toggler dropdown-toggle" data-toggle="collapse"
+                        data-target="#navbar-footer">
                         <i class="icon-unfold mr-2"></i>
                         Footer
                     </button>
@@ -281,9 +297,15 @@
                     </span>
 
                     <ul class="navbar-nav ml-lg-auto">
-                        <li class="nav-item"><a href="https://kopyov.ticksy.com/" class="navbar-nav-link" target="_blank"><i class="icon-lifebuoy mr-2"></i> Support</a></li>
-                        <li class="nav-item"><a href="http://demo.interface.club/limitless/docs/" class="navbar-nav-link" target="_blank"><i class="icon-file-text2 mr-2"></i> Docs</a></li>
-                        <li class="nav-item"><a href="https://themeforest.net/item/limitless-responsive-web-application-kit/13080328?ref=kopyov" class="navbar-nav-link font-weight-semibold"><span class="text-pink-400"><i class="icon-cart2 mr-2"></i> Purchase</span></a></li>
+                        <li class="nav-item"><a href="https://kopyov.ticksy.com/" class="navbar-nav-link"
+                                target="_blank"><i class="icon-lifebuoy mr-2"></i> Support</a></li>
+                        <li class="nav-item"><a href="http://demo.interface.club/limitless/docs/"
+                                class="navbar-nav-link" target="_blank"><i class="icon-file-text2 mr-2"></i> Docs</a>
+                        </li>
+                        <li class="nav-item"><a
+                                href="https://themeforest.net/item/limitless-responsive-web-application-kit/13080328?ref=kopyov"
+                                class="navbar-nav-link font-weight-semibold"><span class="text-pink-400"><i
+                                        class="icon-cart2 mr-2"></i> Purchase</span></a></li>
                     </ul>
                 </div>
             </div>

@@ -51,6 +51,7 @@
                         <h3>PERBAHARUI ARTIKEL</h3>
                     </div>
                     <div class="col-md-12 p-4">
+<<<<<<< Updated upstream
                         <form action="/article_store" method="POST" enctype="multipart/form-data">
                             {{ csrf_field() }}
                             <input type="hidden" id="id" name="id"> <br />
@@ -125,6 +126,58 @@
                                     <span class='label label-info' id="upload-file-info"></span>
                                 </div>
                             </div>
+=======
+                        <form action="/about_process" method="POST" enctype="multipart/form-data">
+                            {{ csrf_field() }}
+                            <input type="hidden" id="id" name="id"> <br />
+                            <input type="hidden" id="iduser" name="iduser" value="{{Auth::id()}}">
+
+                            <div class="form-group">
+                                <label>JUDUL</label>
+                                <input type="text" required="required" class="form-control" name="title" id="title">
+                            </div>
+                            <div class="form-group">
+                                <label>TANGGAL</label>
+                                <input type="text" required="required" class="form-control" name="date" id="date">
+                            </div>
+                           
+
+                            <div class="form-group">
+                                <label>THUMBNAIL</label>
+                                @if(old('thumb'))
+                                @foreach($article as $c)
+                                <textarea name="thumb" required="required" class="form-control" id="thumb" cols="30" rows="10" value="{{ $c->thumb }}"></textarea>
+                                @endforeach
+                             @else
+                             <textarea name="thumb" required="required" class="form-control" id="thumb" cols="30" rows="10" value="text"></textarea>
+                                @endif 
+                            </div>
+
+                            <div class="form-group">
+                                <label>INTI ARTIKEL</label>
+                                @if(old('intro'))
+                                @foreach($article as $c)
+                                <textarea name="intro" required="required" class="form-control" id="intro" cols="30" rows="10" value="{{ $c->intro }}"></textarea>
+                                @endforeach
+                             @else
+                             <textarea name="intro" required="required" class="form-control" id="intro" cols="30" rows="10" value="text"></textarea>
+                                @endif 
+                            </div>
+
+                            <div class="form-group">
+                                <label>ARTIKEL LENGKAP</label>
+                                @if(old('content'))
+                                @foreach($article as $c)
+                                <textarea name="content" required="required" class="form-control" id="content" cols="30" rows="10" value="{{ $c->content }}"></textarea>
+                                @endforeach
+                             @else
+                             <textarea name="content" required="required" class="form-control" id="content" cols="30" rows="10" value="text"></textarea>
+                                @endif 
+                            </div>
+
+                           
+
+>>>>>>> Stashed changes
 
                             <input type="submit" value="Simpan" class="btn btn-primary col-sm-3">
                         </form>
@@ -134,6 +187,7 @@
                     <script src="https://cdn.ckeditor.com/4.20.0/standard/ckeditor.js"></script>
 
                     <script>
+<<<<<<< Updated upstream
                        
                         CKEDITOR.replace('intro');
                         CKEDITOR.replace('content');
@@ -152,6 +206,12 @@
                             }
 
                         }
+=======
+                        CKEDITOR.replace('thumb');
+                        CKEDITOR.replace('intro');
+                        CKEDITOR.replace('content');
+               
+>>>>>>> Stashed changes
                     </script>
 
                 </div>

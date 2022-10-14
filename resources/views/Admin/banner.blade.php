@@ -16,12 +16,12 @@
     }
 </style>
 
-<div class="container">
+<div class="container ">
     <div class="row justify-content-center">
         <div class="col-lg-12">
-            <div class="card mb-5">
-                <div class="page-header-content header-elements-md-inline" style="background-color:#011126">
-                    <div class="page-title d-flex" style="padding-top:1% !important;padding-bottom:1% !important">
+            <div class="card mb-5 ">
+                <div class="page-header-content header-elements-md-inline " style="background-color:#011126">
+                    <div class="page-title d-flex " style="padding-top:1% !important;padding-bottom:1% !important">
                         <h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Home</span> - Data banner</h4>
                         <a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
                     </div>

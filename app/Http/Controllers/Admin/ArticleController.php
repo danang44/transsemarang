@@ -24,6 +24,7 @@ class ArticleController extends Controller
         return view('admin.article_add', ['article' => $article]);
     } 
 
+<<<<<<< Updated upstream
     public function store(Request $request)
     {
         //dd($request);
@@ -65,6 +66,8 @@ class ArticleController extends Controller
 
         return redirect('/article');
     }
+=======
+>>>>>>> Stashed changes
  
 
     public function destroy(Request $request)
