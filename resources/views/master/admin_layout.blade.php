@@ -5,10 +5,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta property="og:image" content="assets/img/Trans_Semarang_icon.svg">
     <title>Trans Semarang</title>
 
     <!-- Global stylesheets -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+    {{-- <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css"> --}}
     <link href="../../../../global_assets/css/icons/icomoon/styles.min.css" rel="stylesheet" type="text/css">
     <!-- <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"> -->
     <link href="{{asset('assets/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css">
@@ -27,6 +28,7 @@
 
     <!-- Theme JS files -->
     <script src="../../../../global_assets/js/plugins/ui/prism.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i&amp;display=swap" type="text/css">
     <script src="https://kit.fontawesome.com/76f2dc9b0b.js" crossorigin="anonymous"></script>
     <script src="{{asset('assets/js/app.js')}}"></script>
     <!-- /theme JS files -->
@@ -195,7 +197,7 @@
                                 <li class="nav-item"><a href="/card" class="nav-link">CARD</a></li>
                                 <li class="nav-item"><a href="/article" class="nav-link">ARTICLE</a></li>
                                 <li class="nav-item"><a href="/banner" class="nav-link">BANNER</a></li>
-                                <li class="nav-item"><a href="/link" class="nav-link">LINK TERKAIT</a></li> 
+                                <li class="nav-item"><a href="/link" class="nav-link">LINK TERKAIT</a></li>
                                 <!-- <li class="nav-item"><a href="/kategori" class="nav-link">Data Kategori Produk</a></li> -->
                             </ul>
                         </li>
@@ -275,7 +277,7 @@
 
                 <div class="navbar-collapse collapse" id="navbar-footer">
                     <span class="navbar-text">
-                        &copy; 2022 
+                        &copy; 2022
                     </span>
 
                     <ul class="navbar-nav ml-lg-auto">
