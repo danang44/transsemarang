@@ -12195,6 +12195,121 @@ textarea.form-control-lg {
     };
 }
 
+@media(min-width:1366px) {
+    .fs-5 {
+        font-size: 1.25rem!important;
+    }
+
+    .fs-6 {
+        font-size: 1rem!important;
+    };
+}
+
+@media (min-width: 1440px) {
+    .fs-7 {
+        font-size: .875rem!important;
+    }
+
+    .fs-8 {
+        font-size: .75rem!important;
+    }
+
+    .fs-9 {
+        font-size: .625rem!important;
+    }
+
+    .fs-10 {
+        font-size: .5rem!important;
+    }
+
+    .fs-11 {
+        font-size: .375rem!important;
+    }
+
+    .fs-12 {
+        font-size: .25rem!important;
+    }
+
+    .fs-13 {
+        font-size: .125rem!important;
+    }
+
+    .fs-14 {
+        font-size: .0625rem!important;
+    }
+
+    .fs-15 {
+        font-size: .03125rem!important;
+    }
+
+    .fs-16 {
+        font-size: .015625rem!important;
+    }
+
+    .fs-17 {
+        font-size: .0078125rem!important;
+    }
+
+    .fs-18 {
+        font-size: .00390625rem!important;
+    }
+
+    .fs-19 {
+        font-size: .001953125rem!important;
+    }
+
+    .fs-20 {
+        font-size: .0009765625rem!important;
+    }
+
+    .fs-21 {
+        font-size: .00048828125rem!important;
+    }
+
+    .fs-22 {
+        font-size: .000244140625rem!important;
+    }
+
+    .fs-23 {
+        font-size: .0001220703125rem!important;
+    }
+
+    .fs-24 {
+        font-size: .00006103515625rem!important;
+    }
+
+    .fs-25 {
+        font-size: .000030517578125rem!important;
+    }
+
+    .fs-26 {
+        font-size: .0000152587890625rem!important;
+    }
+
+    .fs-27 {
+        font-size: .00000762939453125rem!important;
+    }
+
+    .fs-28 {
+        font-size: .000003814697265625rem!important;
+    }
+
+    .fs-29 {
+        font-size: .0000019073486328125rem!important;
+    }
+
+    .fs-30 {
+        font-size: .00000095367431640625rem!important;
+    }
+
+    .fs-31 {
+        font-size: .000000476837158203125rem!important;
+    }
+
+    .fs-32 {
+        font-size: .
+}
+
 @media print {
     .d-print-inline {
         display: inline!important;
