@@ -5,14 +5,12 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TRANS SEMARANG</title>
-    <meta name="twitter:description"
-        content="Twitter Resmi BLU UPTD Trans Semarang  Jl. Tambak Aji Raya No. 5 Kode Pos 50185  CS : 1-5000-94  IG: transsemarang  FB: TRANS Semarang">
+    <meta name="twitter:description" content="Twitter Resmi BLU UPTD Trans Semarang  Jl. Tambak Aji Raya No. 5 Kode Pos 50185  CS : 1-5000-94  IG: transsemarang  FB: TRANS Semarang">
     <meta property="og:image" content="assets/img/Trans_Semarang_icon.svg">
     <meta property="og:type" content="website">
-    <meta name="description"
-        content="Trans Semarang adalah sistem transportasi angkutan massal berbasis jalan di Jawa Tengah yang beroperasi di Kota dan Kabupaten Semarang. Layanan ini dioperasikan guna mengurai kemacetan di Kota Semarang serta untuk mengakomodasi para pelaju menuju pusat kota dan destinasi wisata yang ada di Kota Semarang.">
+    <meta name="description" content="Trans Semarang adalah sistem transportasi angkutan massal berbasis jalan di Jawa Tengah yang beroperasi di Kota dan Kabupaten Semarang. Layanan ini dioperasikan guna mengurai kemacetan di Kota Semarang serta untuk mengakomodasi para pelaju menuju pusat kota dan destinasi wisata yang ada di Kota Semarang.">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:image" content="assets/img/tsmgLogo32px-01.png">
     <meta name="twitter:title" content="Trans Semarang | @transsemarang">
@@ -23,18 +21,14 @@
     <link rel="icon" type="image/png" sizes="192x192" href="assets/img/tsmgLogo-01-01%20(192x192).png">
     {{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"> --}}
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Lato:100i,300,300i,400,700,900&amp;display=swap">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100i,300,300i,400,700,900&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i&amp;display=swap">
     <link rel="stylesheet" href="assets/css/Footer-Multi-Column-icons.css">
     <link rel="stylesheet" href="assets/css/Hero-Clean-Reverse-images.css">
     <link rel="stylesheet" href="assets/css/logo-slider.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.38/dist/sweetalert2.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
-        integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
-    <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
-        integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js" integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
 </head>
 
 <body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="72">
@@ -62,12 +56,10 @@
                             <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#busRute" target="_blank">BUS & RUTE</a>
                         </li>
                         <li class="nav-item mx-0 mx-lg-1">
-                            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#hotlineCenter" target="_blank">HOTLINE
-                                CENTER</a>
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#hotlineCenter" onclick="sweet();">HOTLINE CENTER</a>
                         </li>
                     </ul>
-                    {{-- <button class="btn btn-danger" onclick="sweet();">Contact</button> --}}
-                    {{-- <script>
+                    <script>
                         function sweet() {
                             Swal.fire({
                                 title: 'Contact',
@@ -78,14 +70,14 @@
                                 imageAlt: 'Custom image',
                             })
                         }
-                    </script> --}}
+                    </script>
                 </div>
             </div>
         </nav>
     </header>
     {{-- Section 1 - Slider --}}
     <section
-        style="background: url('assets/img/Hero.png') center / cover no-repeat;position: relative;height:600px;padding-top: 120px;margin-top: 100px;">
+        style="background: url('assets/img/Hero.png') center / cover no-repeat;position: relative;height:800px;padding-top: 120px;margin-top: 100px;">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 text-left text-md-start d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center"
@@ -121,7 +113,8 @@
         </div>
     </section>
     {{-- Section 2 - News --}}
-    <section style="display: flex;flex-direction: row;align-items: center;padding-top: 80px; padding-bottom: 80px;padding-left: 120px;padding-right: 120px;align-content: center;justify-content: center;">
+    <section
+        style="display: flex;flex-direction: row;align-items: center;padding-top: 80px; padding-bottom: 80px;padding-left: 120px;padding-right: 120px;align-content: center;justify-content: center;">
         <div class="row row-cols-1"
             style="display: flex;flex-direction: row;align-items: flex-start;width: 1200px;height: 832px;">
             <div class="col-md-4 themed-grid-col" style="width: 412px">
@@ -206,43 +199,30 @@
                     <div class="col border rounded border-1"
                         style="background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(0,0,0,1)),url('assets/img/berita1.jpeg')center / cover no-repeat;width: 248px; height: 248px;align-items: flex-end;display: flex">
                         <div class="card">
-                            {{-- <img src="assets/img/berita1.jpeg" class="card-img-top" alt="..."> --}}
                             <div class="card-body">
                                 <span class="fw-semibold text-white"
                                     style="font-family: 'Plus Jakarta Sans';font-style: normal;font-size: 16px;line-height: 24px;">Kolaborasi
                                     Musisi Semarang dan BRT Trans Semarang Lahirkan</span>
-                                {{-- <p class="card-text"></p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a> --}}
                             </div>
                         </div>
                     </div>
                     <div class="col border rounded border-1"
                         style="background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(0,0,0,1)),url('assets/img/berita2.jpeg')center / cover no-repeat;width: 248px; height: 248px;align-items: flex-end;display: flex">
                         <div class="card">
-                            {{-- <img class="card-img-top" alt="..."> --}}
                             <div class="card-body">
                                 <span class="fw-semibold text-white"
                                     style="font-family: 'Plus Jakarta Sans';font-style: normal;font-size: 16px;line-height: 24px;">Trans
                                     Semarang Kembali Operasikan Feeder 1 Ngaliyan-Mijen-Madukoro</span>
-                                {{-- <h5 class="card-title">Card title</h5> --}}
-                                {{-- <p class="card-text">Some quick example text to build on the card title and make up the
-                                        bulk of the card's content.</p> --}}
-                                {{-- <a href="#" class="btn btn-primary">Go somewhere</a> --}}
                             </div>
                         </div>
                     </div>
                     <div class="col border rounded border-1"
                         style="background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(0,0,0,1)),url('assets/img/berita3.jpeg')center / cover no-repeat;width: 248px; height: 248px;align-items: flex-end;display: flex">
                         <div class="card">
-                            {{-- <img src="assets/img/berita3.jpeg" class="card-img-top" alt="..."> --}}
                             <div class="card-body">
                                 <span class="fw-semibold text-white"
                                     style="font-family: 'Plus Jakarta Sans';font-style: normal;font-size: 16px;line-height: 1.5rem;">Trans
                                     Semarang Menambah Waktu Layanan Operasional</span>
-                                {{-- <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the
-                                        bulk of the card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a> --}}
                             </div>
                         </div>
                     </div>
@@ -251,34 +231,16 @@
                     <div class="col border rounded border-1" style="width: 248px; height: auto">
                         <div class="card">
                             <img src="assets/img/Card.png" class="card-img-top" alt="...">
-                            {{-- <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the
-                                        bulk of the card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div> --}}
                         </div>
                     </div>
                     <div class="col border rounded border-1" style="width: 248px; height: 248px">
                         <div class="card">
                             <img src="assets/img/Card.png" class="card-img-top" alt="...">
-                            {{-- <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the
-                                        bulk of the card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div> --}}
                         </div>
                     </div>
                     <div class="col border rounded border-1" style="width: 248px; height: 248px">
                         <div class="card">
                             <img src="assets/img/Card.png" class="card-img-top" alt="...">
-                            {{-- <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the
-                                        bulk of the card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div> --}}
                         </div>
                     </div>
                 </div>
@@ -286,34 +248,16 @@
                     <div class="col border rounded border-1" style="width: 248px; height: auto">
                         <div class="card">
                             <img src="assets/img/Card.png" class="card-img-top" alt="...">
-                            {{-- <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the
-                                        bulk of the card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div> --}}
                         </div>
                     </div>
                     <div class="col border rounded border-1" style="width: 248px; height: 248px">
                         <div class="card">
                             <img src="assets/img/Card.png" class="card-img-top" alt="...">
-                            {{-- <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the
-                                        bulk of the card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div> --}}
                         </div>
                     </div>
                     <div class="col border rounded border-1" style="width: 248px; height: 248px">
                         <div class="card">
                             <img src="assets/img/Card.png" class="card-img-top" alt="">
-                            {{-- <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the
-                                        bulk of the card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div> --}}
                         </div>
                     </div>
                 </div>
@@ -423,67 +367,6 @@
                 </div>
             </div>
         </div>
-
-        {{-- <div class="container py-4 py-xl-5">
-                    <div class="row mb-5">
-                        <div class="col-md-8 col-xl-6 text-center mx-auto">
-                            <h2>Heading</h2>
-                            <p class="w-lg-50">Curae hendrerit donec commodo hendrerit egestas tempus, turpis facilisis
-                                nostra
-                                nunc. Vestibulum dui eget ultrices.</p>
-                        </div>
-                    </div>
-                    <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
-                        <div class="col">
-                            <div class="p-4"><span class="badge rounded-pill bg-primary mb-2">Article</span>
-                                <h4>Lorem libero donec</h4>
-                                <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac
-                                    facilisis
-                                    in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
-                                <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover"
-                                        width="50" height="50"
-                                        src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png">
-                                    <div>
-                                        <p class="fw-bold mb-0">John Smith</p>
-                                        <p class="text-muted mb-0">Erat netus</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="p-4"><span class="badge rounded-pill bg-primary mb-2">Article</span>
-                                <h4>Lorem libero donec</h4>
-                                <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac
-                                    facilisis
-                                    in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
-                                <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover"
-                                        width="50" height="50"
-                                        src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png">
-                                    <div>
-                                        <p class="fw-bold mb-0">John Smith</p>
-                                        <p class="text-muted mb-0">Erat netus</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="p-4"><span class="badge rounded-pill bg-primary mb-2">Article</span>
-                                <h4>Lorem libero donec</h4>
-                                <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac
-                                    facilisis
-                                    in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
-                                <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover"
-                                        width="50" height="50"
-                                        src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png">
-                                    <div>
-                                        <p class="fw-bold mb-0">John Smith</p>
-                                        <p class="text-muted mb-0">Erat netus</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> --}}
     </section>
     {{-- Section User Report --}}
     <section>
@@ -567,7 +450,8 @@
         </section>
     </section>
     {{-- Section Related Link --}}
-    <section style="background-color: #F9FAFB;display: flex;flex-direction: row;justify-content: center;align-items: center;padding: 10px 80px;gap: 80px;width: 1440px;height: 120px;">
+    <section
+        style="background-color: #F9FAFB;display: flex;flex-direction: row;justify-content: center;align-items: center;padding: 10px 80px;gap: 80px;width: 1440px;height: 120px;">
         <div class="container h-100" style="overflow: hidden;">
             <div class="row align-items-center h-100">
                 <div class="container rounded">
@@ -601,50 +485,23 @@
             </div>
 
         </div>
-        {{-- <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="d-block w-100" src="assets/img/LAPOR-02.png" alt="slide1">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="assets/img/PEMKOT-03.png" alt="slide2">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="assets/img/DISHUB-01.png" alt="slide3">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="assets/img/wndrl-07.png" alt="slide4">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="assets/img/ATCS-04.png" alt="slide5">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="assets/img/prwst-05.png" alt="slide6">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="assets/img/RESTABES-06.png" alt="slide7">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="assets/img/JATENG-08.png" alt="slide8">
-                </div>
-            </div>
-        </div> --}}
     </section>
     {{-- Section Footer --}}
-    <footer class="text-white" style="background-color: #AF2330">
-        <div class="col" style="padding-top: 40px;padding-bottom: 40px;padding-left: 120px;padding-right: 120px;">
-            <div class="row text-lg-start d-flex flex-column item" style="display: flex;flex-direction: row;justify-content: space-between;align-items: flex-start;padding: 0px;width: 1200px;height: 48px;padding-bottom: 80px;">
-                <img src="assets/img/Logobar.png" alt="" style="display: flex;flex-direction: row;align-items: left;padding: 0px;width: 256.95px;height: 48px;">
+    <footer class="text-white" style="background-color: #AF2330; display: flex;display: flex;flex-direction: column;align-items: flex-start;padding: 0px;width: 1440px;height: 398px;">
+        <div class="col" style="display: flex;flex-direction: column;align-items: flex-start;padding: 40px 120px;gap: 40px;width: 1440px;height: 338px;">
+            <div class="row text-lg-start d-flex flex-column item" style="display: flex;flex-direction: row;align-items: flex-start;padding: 0px;width: 1200px;height: 48px;">
+                <img src="assets/img/Logobar.png" alt=""
+                    style="display: flex;flex-direction: row;align-items: left;padding: 0px;width: 256.95px;height: 48px;">
 
             </div>
-            <div class="row" style="display: flex;flex-direction: row;align-items: flex-start;padding: 0px;width: 1200px;height: 170px;">
-                <div class="col-auto" style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;gap: 20px;width: 546px;height: 170px;">
+            <div class="row" style="display: flex;flex-direction: row;align-items: flex-start;padding: 0px;gap: 80px;width: 1200px;height: 170px;">
+                <div class="col-auto" style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;row-gap: 20px;width: 546px;height: 170px;">
                     <p class="" style="font-weight: 700;font-size: 24px;line-height: 34px;letter-spacing: -0.24px;">TRANS SEMARANG</p>
                     <span class="" style="font-weight: 400;font-size: 18px;line-height: 24px;letter-spacing: -0.24px;">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et malesuada lobortis quis.
                     </span>
                     <div class="" style="display: flex;flex-direction: row;align-items: flex-start;padding: 0px;gap: 8px;width: 332px;height: 48px;">
-                        <a href="https://play.google.com/store/apps/details?id=ngi.brtsemarang.apppublic" target="_blank" class="" style="width: 162px;height: 48px;transform: matrix(1, 0, 0, 1, 0, 0);">
+                        <a href="https://play.google.com/store/apps/details?id=ngi.brtsemarang.apppublic" target="_blank" class=""style="width: 162px;height: 48px;transform: matrix(1, 0, 0, 1, 0, 0);">
                             <img src="assets/img/Google_Play.png"></a>
                         <a href="https://apps.apple.com/id/app/trans-semarang/id1460565652" target="_blank" class="" style="width: 162px;height: 48px;transform: matrix(1, 0, 0, 1, 0, 0);">
                             <img src="assets/img/App_Store.png"></a>
@@ -653,85 +510,58 @@
                 <div class="col-auto" style="display: flex;flex-direction: row;align-items: flex-start;padding: 0px;gap: 40px;width: 574px;height: 162px;">
                     <div class="col-auto" style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;gap: 20px;width: 260px;height: 162px;">
                         <p class="" style="font-weight: 700;font-size: 24px;line-height: 34px;letter-spacing: -0.24px;">About</p>
-                        <div class="col-auto" style="font-weight: 400;font-size: 18px;line-height: 24px;letter-spacing: -0.24px;display: flex;flex-direction: column;align-items: flex-start;padding: 0px;gap: 4px;width: 260px;height: 108px;text-decoration-line: none;color: white;">
-                            <span class="row" ><a href="#tentang_kami" style="">Tentang Kami</a></span>
-                            <span class="row" >Kontak Kami</span>
-                            <span class="row" >Karir</span>
+                        <div class="col-auto"
+                            style="font-weight: 400;font-size: 18px;line-height: 24px;letter-spacing: -0.24px;display: flex;flex-direction: column;align-items: flex-start;padding: 0px;gap: 4px;width: 260px;height: 108px;text-decoration-line: none;">
+                            <span class="row"><a class="text-white" href="#tentang_kami" >Profil</a></span>
+                            <span class="row"><a class="text-white" href="#kontak_kami" >Team</a></span>
+                            <span class="row"><a class="text-white" href="#karir">Visi & Misi</a></span>
+                            <span class="row"><a class="text-white" href="#karir">Tugas Pokok</a></span>
                         </div>
                     </div>
                     <div class="col-auto" style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;gap: 20px;width: 274px;height: 162px;">
                         <p class="" style="font-weight: 700;font-size: 24px;line-height: 34px;letter-spacing: -0.24px;">Supported by</p>
-                        <div class="col-auto" style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;gap: 4px;width: 274px;height: 108px;">
-                            <span class="row" >Pemerintah Kota Semarang 2022</span>
-                            <span class="row" >Walikota Semarang</span>
-                            <span class="row" >Dinas Kesehatan Kota Semarang</span>
-                            <span class="row" >Nusantara Global Inovasi</span>
+                        <div class="col-auto"
+                            style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;gap: 4px;width: 274px;height: 108px;">
+                            <span class="row"><a class="text-white" href="#tentang_kami" >Pemerintah Kota Semarang 2022</a></span>
+                            <span class="row"><a class="text-white" href="#tentang_kami" >Walikota Semarang</a></span>
+                            <span class="row"><a class="text-white" href="#tentang_kami" >Dinas Kesehatan Kota Semarang</a></span>
+                            <span class="row"><a class="text-white" href="#tentang_kami" >Nusantara Global Inovasi</a></span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-            {{-- <div class="row justify-content-center">
-                <div class="col-sm-4 col-md-3 text-center text-lg-start d-flex flex-column item">
-                    <img src="assets/img/Logobar.png" alt="" style="">
-                    <p class="" style="font-weight: 700;font-size: 24px;line-height: 34px;letter-spacing: 2px;">TRANS SEMARANG</p>
-                    <ul class="list-unstyled ">
-                        <li><a class="link-secondary text-white" href="#">Web design</a></li>
-                        <li><a class="link-secondary" href="#">Development</a></li>
-                        <li><a class="link-secondary" href="#">Hosting</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-4 col-md-3 text-center text-lg-start d-flex flex-column item">
-                </div>
-                <div class="col-sm-4 col-md-3 text-center text-lg-start d-flex flex-column item">
-                </div>
-                <div class="col-lg-3 text-center text-lg-start d-flex flex-column align-items-center order-first align-items-lg-start order-lg-last item social">
-                    <div class="fw-bold d-flex align-items-center mb-2">
-                        <span class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center bs-icon me-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-bezier">
-                                <path fill-rule="evenodd" d="M0 10.5A1.5 1.5 0 0 1 1.5 9h1A1.5 1.5 0 0 1 4 10.5v1A1.5 1.5 0 0 1 2.5 13h-1A1.5 1.5 0 0 1 0 11.5v-1zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zm10.5.5A1.5 1.5 0 0 1 13.5 9h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5v-1zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zM6 4.5A1.5 1.5 0 0 1 7.5 3h1A1.5 1.5 0 0 1 10 4.5v1A1.5 1.5 0 0 1 8.5 7h-1A1.5 1.5 0 0 1 6 5.5v-1zM7.5 4a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1z"></path>
-                                <path d="M6 4.5H1.866a1 1 0 1 0 0 1h2.668A6.517 6.517 0 0 0 1.814 9H2.5c.123 0 .244.015.358.043a5.517 5.517 0 0 1 3.185-3.185A1.503 1.503 0 0 1 6 5.5v-1zm3.957 1.358A1.5 1.5 0 0 0 10 5.5v-1h4.134a1 1 0 1 1 0 1h-2.668a6.517 6.517 0 0 1 2.72 3.5H13.5c-.123 0-.243.015-.358.043a5.517 5.517 0 0 0-3.185-3.185z"></path>
-                            </svg>
-                        </span>
-                        <span>Brand</span>
-                    </div>
-                    <p class="text-muted copyright">Sem eleifend donec molestie, integer quisque orci aliquam.</p>
-                </div>
-            </div>
-            <hr>
-            <div class="d-flex justify-content-between align-items-center pt-3">
-                <p class="text-muted mb-0">Copyright © 2022 Brand</p>
-                <ul class="list-inline mb-0">
-                    <li class="list-inline-item"><svg xmlns="http://www.w3.org/2000/svg" width="1em"
-                            height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-facebook">
-                            <path
-                                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z">
-                            </path>
-                        </svg></li>
-                    <li class="list-inline-item"><svg xmlns="http://www.w3.org/2000/svg" width="1em"
-                            height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-twitter">
-                            <path
-                                d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z">
-                            </path>
-                        </svg></li>
-                    <li class="list-inline-item"><svg xmlns="http://www.w3.org/2000/svg" width="1em"
-                            height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-instagram">
-                            <path
-                                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z">
-                            </path>
-                        </svg>
-                    </li>
-                </ul>
-            </div> --}}
-
+        <hr style="margin-top: 10px; margin-bottom: 0px">
+        <div class="d-flex justify-content-between align-items-center pt-3" style="background-color: #921D28;display: flex;flex-direction: row;padding: 20px 120px;width: 1440px;height: 60px;">
+            <p class="text-white mb-0" style="font-weight: 300;font-size: 14px;line-height: 20px;letter-spacing: -0.24px;">&#169; NGINOVASI 2022-V.1.1 All rights reserved.</p>
+            <ul class="list-inline mb-0">
+                <li class="list-inline-item"><a href="https://www.facebook.com/bus.trans.semarang/" target="_blank" style="color: #ffffff">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-facebook">
+                        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"></path>
+                    </svg></a>
+                </li>
+                <li class="list-inline-item"><a href="https://twitter.com/transsemarang" target="_blank" style="color: #ffffff">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-twitter">
+                        <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"></path>
+                    </svg></a>
+                </li>
+                <li class="list-inline-item"><a href="https://www.instagram.com/transsemarang" target="_blank" style="color: #ffffff">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-instagram">
+                        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"></path>
+                    </svg></a>
+                </li>
+                <li class="list-inline-item"><a href="https://www.youtube.com/channel/UCeaDUObnYHFxrdsea9zIP3w" target="_blank" style="color: #ffffff">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+                        <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
+                      </svg></a>
+                </li>
+            </ul>
+        </div>
     </footer>
-    {{-- <script src="assets/js/jquery.min.js"></script> --}}
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.38/dist/sweetalert2.all.min.js"></script>
-    <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
-        integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
+    <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js" integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
 </body>
 
 </html>
