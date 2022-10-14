@@ -17,6 +17,7 @@
         "laravel/socialite": "^5.5",
         "laravel/tinker": "^2.5",
         "laravel/ui": "^2.3",
+        "realrashid/sweet-alert": "^5.1",
         "tinymce/tinymce": "^6.2",
         "unisharp/laravel-filemanager": "^2.5"
     },

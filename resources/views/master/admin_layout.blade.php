@@ -40,7 +40,7 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
     integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
     crossorigin=""/>
-    
+
                            <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
                            integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg="
                            crossorigin=""></script>
@@ -74,7 +74,7 @@
     <div class=" navbar navbar-expand-md navbar-dark bg-indigo fixed-top" style="background-color:#011126">
         <div class="navbar-brand">
             <a href="index.html" class="d-inline-block">
-                <img src="../../../../global_assets/images/logo_light.png" alt="">
+                <img src="../../../../assets/img/Logobar.png" alt="">
             </a>
         </div>
 
@@ -99,10 +99,10 @@
             <span class="navbar-text ml-md-3">
                 <span class="badge badge-mark border-orange-300 mr-2"></span>
                 <?php
-                
+
                 //ubah timezone menjadi jakarta
                 date_default_timezone_set('Asia/Jakarta');
-                
+
                 //ambil jam dan menit
                 $jam = date('H:i');
                 //atur salam menggunakan IF
@@ -115,9 +115,9 @@
                 } elseif ($jam > '18:00') {
                     $salam = 'Malam';
                 }
-                
+
                 echo 'Hai! Selamat ' . $salam;
-                
+
                 ?>
             </span>
 
@@ -206,7 +206,7 @@
                                 <li class="nav-item"><a href="/card" class="nav-link">CARD</a></li>
                                 <li class="nav-item"><a href="/article" class="nav-link">ARTICLE</a></li>
                                 <li class="nav-item"><a href="/banner" class="nav-link">BANNER</a></li>
-                                <li class="nav-item"><a href="/link" class="nav-link">LINK TERKAIT</a></li> 
+                                <li class="nav-item"><a href="/link" class="nav-link">LINK TERKAIT</a></li>
                                 <!-- <li class="nav-item"><a href="/kategori" class="nav-link">Data Kategori Produk</a></li> -->
                             </ul>
                         </li>
@@ -291,7 +291,7 @@
 
                 <div class="navbar-collapse collapse" id="navbar-footer">
                     <span class="navbar-text">
-                        &copy; 2022 
+                        &copy; 2022
                     </span>
 
                     <ul class="navbar-nav ml-lg-auto">

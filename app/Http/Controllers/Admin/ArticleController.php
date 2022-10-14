@@ -10,21 +10,20 @@ class ArticleController extends Controller
 {
     public function index()
     {
-      
+
         // $article = article::latest()->get();
         $article = article::all();
-        
+
         return view('Admin.article',['article' => $article]);
     }
 
     public function add()
     {
         $article = article::all();
-         
-        return view('admin.article_add', ['article' => $article]);
-    } 
 
-<<<<<<< Updated upstream
+        return view('admin.article_add', ['article' => $article]);
+    }
+
     public function store(Request $request)
     {
         //dd($request);
@@ -61,14 +60,12 @@ class ArticleController extends Controller
             'art_seo' => $request->art_seo,
             'iduder' => $request->isuder,
             'thumb' => $nama_file,
-            
+
         ]);
 
         return redirect('/article');
     }
-=======
->>>>>>> Stashed changes
- 
+
 
     public function destroy(Request $request)
     {
@@ -76,7 +73,7 @@ class ArticleController extends Controller
         $article = article::find($id);
         $article->delete();
         return redirect()->back()->with('status', 'Data berhasil dihapus');
-        
+
     }
 
 }
