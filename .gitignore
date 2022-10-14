@@ -3,13 +3,6 @@
 /public/storage
 /storage/*.key
 /vendor
-<<<<<<< Updated upstream
-composer.lock
-composer.json
-=======
-.composer.json
-.composer.lock
->>>>>>> Stashed changes
 .env.backup
 .phpunit.result.cache
 Homestead.json
