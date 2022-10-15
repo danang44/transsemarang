@@ -14,6 +14,7 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:image" content="assets/img/tsmgLogo32px-01.png">
     <meta name="twitter:title" content="Trans Semarang | @transsemarang">
+    <meta name="google-signin-client_id" content="662068769407-v9ceg1qfrabh68j4nmd5svf5q6203hpd.apps.googleusercontent.com">
     <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="assets/img/tsmgLogo-01-01%20(180x180).png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/img/tsmgLogo-01-01%20(16x16).png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/tsmgLogo32px-01.png">
@@ -29,6 +30,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.38/dist/sweetalert2.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
     <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js" integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
+    <script src="https://apis.google.com/js/api:client.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
 </head>
 
 <body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="72">
@@ -449,6 +452,49 @@
             </div>
         </section>
     </section>
+    <section>
+        <div class="col" style="display: flex;flex-direction: row;justify-content: center;align-items: center;padding: 80px 120px;gap: 120px;width: 1440px;height: 316px;">
+            <div class="row" style="display: flex;flex-direction: row;align-items: center;padding: 40px 80px;width: 1200px;height: 156px;background: #1D2939;border-radius: 8px;">
+                <div class="col" style="display: flex;justify-content: center;align-items: flex-start;flex-direction: column;align-content: flex-start;">
+                    <span style="font-weight: 300;font-size: 24px;line-height: 32px;color: #ffffff">Have you ever reported a complaint?</span>
+                    <span style="font-weight: 600;font-size: 32px;line-height: 40px;color: #ffffff">Track your complaint report</span>
+                </div>
+                <script>
+                    var googleUser = {};
+                    var startApp = function() {
+                      gapi.load('auth2', function(){
+                        // Retrieve the singleton for the GoogleAuth library and set up the client.
+                        auth2 = gapi.auth2.init({
+                          client_id: '662068769407-v9ceg1qfrabh68j4nmd5svf5q6203hpd.apps.googleusercontent.com',
+                          cookiepolicy: 'single_host_origin',
+                          // Request scopes in addition to 'profile' and 'email'
+                          //scope: 'additional_scope'
+                        });
+                        attachSignin(document.getElementById('customBtn'));
+                      });
+                    };
+
+                    function attachSignin(element) {
+                      console.log(element.id);
+                      auth2.attachClickHandler(element, {},
+                          function(googleUser) {
+                            document.getElementById('name').innerText = "Signed in: " +
+                                googleUser.getBasicProfile().getName();
+                          }, function(error) {
+                            alert(JSON.stringify(error, undefined, 2));
+                          });
+                    }
+                    </script>
+                <div id="gSignInWrapper" style="display: flex;flex-direction: row;align-items: center;width: 413px;height: 72px;">
+                    <button id="customBtn" role="button" class="customGPlusSignIn" type="button" style="display: flex;flex-direction: column;padding: 20px 32px;gap: 20px;width: 413px;height: 72px;background: #FFFFFF;box-shadow: 0px 4px 12px rgba(29, 41, 57, 0.08);backdrop-filter: blur(10px);border-radius: 8px;flex-wrap: wrap;">
+                        <img src="https://cdn.cdnlogo.com/logos/g/35/google-icon.svg" style="width: 32px;height: 32px;">
+                        <span id="name" style="font-weight: 600;font-size: 24px;line-height: 32px;color: #1D2939;">Lanjutkan dengan Google</span>
+                    </button>
+                    <script>startApp();</script>
+                </div>
+            </div>
+        </div>
+    </section>
     {{-- Section Related Link --}}
     <section
         style="background-color: #F9FAFB;display: flex;flex-direction: row;justify-content: center;align-items: center;padding: 10px 80px;gap: 80px;width: 1440px;height: 120px;">
@@ -558,6 +604,7 @@
             </ul>
         </div>
     </footer>
+    <script src="https://apis.google.com/js/api:client.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.38/dist/sweetalert2.all.min.js"></script>
