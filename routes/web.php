@@ -90,3 +90,8 @@ Route::get('google', function () {
 });
 Route::get('auth/google', 'Auth\LoginController@redirectToGoogle');
 Route::get('auth/google/callback', 'Auth\LoginController@handleGoogleCallback');
+
+Route::get('/news', function () {
+    return view('/news');
+});
+Route::get('/news', 'NewsController@index')->name('news');

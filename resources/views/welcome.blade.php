@@ -6,41 +6,33 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TRANS SEMARANG</title>
-    <meta name="twitter:description"
-        content="Twitter Resmi BLU UPTD Trans Semarang  Jl. Tambak Aji Raya No. 5 Kode Pos 50185  CS : 1-5000-94  IG: transsemarang  FB: TRANS Semarang">
+    <title>Trans Semarang | Home</title>
+    <meta name="twitter:description" content="Twitter Resmi BLU UPTD Trans Semarang  Jl. Tambak Aji Raya No. 5 Kode Pos 50185  CS : 1-5000-94  IG: transsemarang  FB: TRANS Semarang">
     <meta property="og:image" content="assets/img/Trans_Semarang_icon.svg">
     <meta property="og:type" content="website">
-    <meta name="description"
-        content="Trans Semarang adalah sistem transportasi angkutan massal berbasis jalan di Jawa Tengah yang beroperasi di Kota dan Kabupaten Semarang. Layanan ini dioperasikan guna mengurai kemacetan di Kota Semarang serta untuk mengakomodasi para pelaju menuju pusat kota dan destinasi wisata yang ada di Kota Semarang.">
+    <meta name="description" content="Trans Semarang adalah sistem transportasi angkutan massal berbasis jalan di Jawa Tengah yang beroperasi di Kota dan Kabupaten Semarang. Layanan ini dioperasikan guna mengurai kemacetan di Kota Semarang serta untuk mengakomodasi para pelaju menuju pusat kota dan destinasi wisata yang ada di Kota Semarang.">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:image" content="assets/img/tsmgLogo32px-01.png">
     <meta name="twitter:title" content="Trans Semarang | @transsemarang">
-    <meta name="google-signin-client_id"
-        content="662068769407-1qc1taetjo897853c5lkl755p2c5csvi.apps.googleusercontent.com">
+    <meta name="google-signin-client_id"content="662068769407-1qc1taetjo897853c5lkl755p2c5csvi.apps.googleusercontent.com">
     <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="assets/img/tsmgLogo-01-01%20(180x180).png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/img/tsmgLogo-01-01%20(16x16).png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/tsmgLogo32px-01.png">
     <link rel="icon" type="image/png" sizes="180x180" href="assets/img/tsmgLogo-01-01%20(180x180).png">
     <link rel="icon" type="image/png" sizes="192x192" href="assets/img/tsmgLogo-01-01%20(192x192).png">
-    {{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"> --}}
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Lato:100i,300,300i,400,700,900&amp;display=swap">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i&amp;display=swap">
+    <link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Lato:100i,300,300i,400,700,900&amp;display=swap">
+    <link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i&amp;display=swap">
     <link rel="stylesheet" href="assets/css/Footer-Multi-Column-icons.css">
     <link rel="stylesheet" href="assets/css/Hero-Clean-Reverse-images.css">
     <link rel="stylesheet" href="assets/css/logo-slider.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.38/dist/sweetalert2.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
-        integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
-    <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
-        integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
     <script src="https://accounts.google.com/gsi/client" async defer></script>
 </head>
+
 <style>
     .g_id_signin {
         display: flex;
@@ -86,19 +78,6 @@
                                 onclick="sweet();">HOTLINE CENTER</a>
                         </li>
                     </ul>
-                    <script>
-                        function sweet() {
-                            Swal.fire({
-                                title: 'Contact',
-                                html: 'CS: ' + '<a href="tel:1500094" target="_blank">1-5000-94</a>' + '| Whatsapp/SMS: ' +
-                                    '<a href="https://wa.me/+628112884447" target="_blank">0811-2884-447</a> ',
-                                imageUrl: 'assets/img/tsmgLogo32px-01.png',
-                                imageWidth: 100,
-                                imageHeight: 100,
-                                imageAlt: 'Custom image',
-                            })
-                        }
-                    </script>
                 </div>
             </div>
         </nav>
@@ -135,7 +114,7 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="p-xl-5 m-xl-5"><img class="img-fluid fit-cover" style="min-height: 300px;"></div>
+                    {{-- <div class="p-xl-5 m-xl-5"><img class="img-fluid fit-cover" style="min-height: 300px;"></div> --}}
                 </div>
             </div>
         </div>
@@ -224,8 +203,8 @@
                     </p>
                 </div>
                 <div class="row row-cols-6">
-                    <div class="col border rounded border-1"
-                        style="background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(0,0,0,1)),url('assets/img/berita1.jpeg')center / cover no-repeat;width: 248px; height: 248px;align-items: flex-end;display: flex">
+                    <div class="col border rounded border-1" onclick="window.location.href = '{{ url('news') }}';"
+                        style="cursor: pointer;background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(0,0,0,1)),url('assets/img/berita1.jpeg')center / cover no-repeat;width: 248px; height: 248px;align-items: flex-end;display: flex">
                         <div class="card">
                             <div class="card-body">
                                 <span class="fw-semibold text-white"
@@ -235,7 +214,7 @@
                         </div>
                     </div>
                     <div class="col border rounded border-1"
-                        style="background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(0,0,0,1)),url('assets/img/berita2.jpeg')center / cover no-repeat;width: 248px; height: 248px;align-items: flex-end;display: flex">
+                        style="cursor: pointer;background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(0,0,0,1)),url('assets/img/berita2.jpeg')center / cover no-repeat;width: 248px; height: 248px;align-items: flex-end;display: flex">
                         <div class="card">
                             <div class="card-body">
                                 <span class="fw-semibold text-white"
@@ -245,7 +224,7 @@
                         </div>
                     </div>
                     <div class="col border rounded border-1"
-                        style="background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(0,0,0,1)),url('assets/img/berita3.jpeg')center / cover no-repeat;width: 248px; height: 248px;align-items: flex-end;display: flex">
+                        style="cursor: pointer;background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(0,0,0,1)),url('assets/img/berita3.jpeg')center / cover no-repeat;width: 248px; height: 248px;align-items: flex-end;display: flex">
                         <div class="card">
                             <div class="card-body">
                                 <span class="fw-semibold text-white"
@@ -311,15 +290,6 @@
             </div>
             <div class="container bg-dark border rounded border-0 p-4 p-md-5" id="map"
                 style="width: auto; height: 600px;"></div>
-            <script>
-                var map = L.map('map').setView([-6.996667, 110.416664], 13);
-                var tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                    maxZoom: 20,
-                    zoomControl: true,
-                    attribution: '&copy; Trans Semarang | <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-
-                }).addTo(map);
-            </script>
         </div>
     </section>
     {{-- Section Payment --}}
@@ -346,7 +316,7 @@
             <div class="container text-center my-3">
                 <div class="row mx-auto my-auto"
                     style="display: flex;flex-direction: row;align-items: flex-start;padding: 0px;gap: 40px;width: 1200px;height: 568px;">
-                    <div id="recipeCarousel" class="carousel slide w-100 carousel-fade" data-ride="carousel">
+                    <div id="recipeCarousel" class="carousel slide carousel-fade" data-ride="carousel">
                         <div class="carousel-inner w-100" role="listbox">
                             <div class="carousel-item">
                                 <div class="col-md-4">
@@ -688,22 +658,17 @@
                             data-slide="prev">
                             {{-- <span class="sr-only">Previous</span> --}}
                             <span class="carousel-control-prev-icon bg-danger border border-danger rounded-circle"
-                                aria-hidden="true"></span>
+                                aria-hidden="true" style="width: 60px; height: 60px;"></span>
                         </a>
                         <a class="carousel-control-next w-auto" href="#recipeCarousel" role="button"
                             data-slide="next">
                             {{-- <span class="sr-only">Next</span> --}}
                             <span class="carousel-control-next-icon bg-danger border border-danger rounded-circle"
-                                aria-hidden="true"></span>
+                                aria-hidden="true" style="width: 60px; height: 60px;"></span>
                         </a>
                     </div>
                 </div>
             </div>
-
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-
             <script>
                 $('#recipeCarousel').carousel({
                     interval: 10000
@@ -805,7 +770,7 @@
                         </svg>
                     </div>
 
-                    <div class="row" style="display: flex;flex-direction: column;align-items: center;padding: 0px;width: 646px;height: 750px;background: #F9FAFB;box-shadow: 0px 4px 12px rgba(29, 41, 57, 0.12);backdrop-filter: blur(10px);border-radius: 20px;">
+                    {{-- <div class="row" style="display: flex;flex-direction: column;align-items: center;padding: 0px;width: 646px;height: 750px;background: #F9FAFB;box-shadow: 0px 4px 12px rgba(29, 41, 57, 0.12);backdrop-filter: blur(10px);border-radius: 20px;">
                         <div class="mb-3" style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;gap: 2px;width: 646px;height: 662px;background: #F9FAFB;border-radius: 20px;">
                             <div style="width: 646px;height: 80px;background: #FFFFFF;border-radius: 20px 20px 0 0;">
                                 <p style="position: absolute;width: 233px;height: 40px;left: 40px;top: 20px;font-family: 'Plus Jakarta Sans';font-style: normal;font-weight: 600;font-size: 32px;line-height: 40px;text-transform: capitalize;color: #1D2939;">
@@ -814,12 +779,13 @@
                             </div>
                             <div class="mb-3"
                                 style="display: flex;flex-direction: column;align-items: flex-start;padding: 40px;gap: 20px;width: 646px;height: 580px;background: #FFFFFF;">
-
+                                <img style="position: absolute;width: 566px;height: 344px;" src="assets/img/IlustrationCS.png"/>
+                                p
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
 
-                    {{-- <form action="/pengaduan.php" method="post" class="row"
+                    <form action="/pengaduan.php" method="post" class="row"
                         style="display: flex;flex-direction: column;align-items: center;padding: 0px;width: 646px;height: 750px;background: #F9FAFB;box-shadow: 0px 4px 12px rgba(29, 41, 57, 0.12);backdrop-filter: blur(10px);border-radius: 20px;">
                         <div class="mb-3"
                             style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;gap: 2px;width: 646px;height: 662px;background: #F9FAFB;border-radius: 20px;">
@@ -887,7 +853,7 @@
                                 style="display: flex;flex-direction: row;justify-content: center;align-items: center;width: 159px;height: 48px;background: #AF2330;border-radius: 8px;"
                                 disabled>Submit Report</button>
                         </div>
-                    </form> --}}
+                    </form>
                 </div>
             </div>
         </div>
@@ -1084,16 +1050,13 @@
 
 </body>
 
-<script src="assets/bootstrap/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.38/dist/sweetalert2.all.min.js"></script>
-<script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
-    integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
+<script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
+
 <script>
     let formFile = document.getElementById('formFile');
     let fileResult = document.getElementById('fileResult');
     let submitReport = document.getElementById('submitReport');
-
     formFile.addEventListener('change', function() {
         if (formFile.files.length > 0) {
             const fileSize = formFile.files.item(0).size;
@@ -1108,5 +1071,26 @@
         }
     });
 </script>
+<script>
+    function sweet() {
+        Swal.fire({
+            title: 'Contact',
+            html: 'CS: ' + '<a href="tel:1500094" target="_blank">1-5000-94</a>' + '| Whatsapp/SMS: ' +
+                '<a href="https://wa.me/+628112884447" target="_blank">0811-2884-447</a> ',
+            imageUrl: 'assets/img/tsmgLogo32px-01.png',
+            imageWidth: 100,
+            imageHeight: 100,
+            imageAlt: 'Custom image',
+        })
+    }
+</script>
+<script>
+    var map = L.map('map').setView([-6.996667, 110.416664], 13);
+    var tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 20,
+        zoomControl: true,
+        attribution: '&copy; Trans Semarang | <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 
+    }).addTo(map);
+</script>
 </html>
