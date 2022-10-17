@@ -17,7 +17,7 @@
     <meta name="twitter:image" content="assets/img/tsmgLogo32px-01.png">
     <meta name="twitter:title" content="Trans Semarang | @transsemarang">
     <meta name="google-signin-client_id"
-        content="662068769407-v9ceg1qfrabh68j4nmd5svf5q6203hpd.apps.googleusercontent.com">
+        content="662068769407-1qc1taetjo897853c5lkl755p2c5csvi.apps.googleusercontent.com">
     <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="assets/img/tsmgLogo-01-01%20(180x180).png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/img/tsmgLogo-01-01%20(16x16).png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/tsmgLogo32px-01.png">
@@ -37,12 +37,22 @@
         integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
     <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
         integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
-    <script src="https://apis.google.com/js/api:client.js"></script>
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <script src="https://apis.google.com/js/platform.js?onload=init" async defer></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
 </head>
+<style>
+    .g_id_signin {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 20px 32px;
+        gap: 20px;
+        width: 413px;
+        height: 72px;
+        text-align: center;
+    }
+</style>
 
 <body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="72">
     <header>
@@ -63,10 +73,13 @@
                 <div id="navbarResponsive" class="collapse navbar-collapse" id="navcol-2">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item mx-0 mx-lg-1">
-                            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="http://karir.transsemarang.semarangkota.go.id" target="_blank">CAREER</a>
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded"
+                                href="http://karir.transsemarang.semarangkota.go.id" target="_blank">CAREER</a>
                         </li>
                         <li class="nav-item mx-0 mx-lg-1">
-                            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="https://ppid.semarangkota.go.id/kb/jalur-rute-brt-trans-semarang-dan-feeder-di-kota-semarang" target="_blank">BUS & RUTE</a>
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded"
+                                href="https://ppid.semarangkota.go.id/kb/jalur-rute-brt-trans-semarang-dan-feeder-di-kota-semarang"
+                                target="_blank">BUS & RUTE</a>
                         </li>
                         <li class="nav-item mx-0 mx-lg-1">
                             <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#hotlineCenter"
@@ -331,191 +344,342 @@
                     pulvinar vitae sit proin. Quam morbi turpis dolor in.</p>
             </div>
             <div class="container text-center my-3">
-                <div class="row mx-auto my-auto" style="display: flex;flex-direction: row;align-items: flex-start;padding: 0px;gap: 40px;width: 1200px;height: 568px;">
+                <div class="row mx-auto my-auto"
+                    style="display: flex;flex-direction: row;align-items: flex-start;padding: 0px;gap: 40px;width: 1200px;height: 568px;">
                     <div id="recipeCarousel" class="carousel slide w-100 carousel-fade" data-ride="carousel">
                         <div class="carousel-inner w-100" role="listbox">
                             <div class="carousel-item">
                                 <div class="col-md-4">
                                     <div class="card card-body">
-                                        <img class="img-fluid" src="assets/img/ETS_DIFABLE.png" style="border-radius: 16px;">
-                                        <h5 class="card-title" style="text-align: left;padding-top: 24px;font-weight: 600;font-size: 32px;line-height: 40px;color: #1D2939;">ETS Difabel</h5>
-                                        <p class="card-text" style="width: 360px;height: 96px;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;text-align: left;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <img class="img-fluid" src="assets/img/ETS_DIFABLE.png"
+                                            style="border-radius: 16px;">
+                                        <h5 class="card-title"
+                                            style="text-align: left;padding-top: 24px;font-weight: 600;font-size: 32px;line-height: 40px;color: #1D2939;">
+                                            ETS Difabel</h5>
+                                        <p class="card-text"
+                                            style="width: 360px;height: 96px;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;text-align: left;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;">
+                                            Some quick example text to build on the card title and make up the bulk of
+                                            the card's content.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="card card-body">
-                                        <img class="img-fluid" src="assets/img/ETS_KIA.png" style="border-radius: 16px;">
-                                        <h5 class="card-title" style="text-align: left;padding-top: 24px;font-weight: 600;font-size: 32px;line-height: 40px;color: #1D2939;">ETS KIA</h5>
-                                        <p class="card-text" style="width: 360px;height: 96px;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;text-align: left;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <img class="img-fluid" src="assets/img/ETS_KIA.png"
+                                            style="border-radius: 16px;">
+                                        <h5 class="card-title"
+                                            style="text-align: left;padding-top: 24px;font-weight: 600;font-size: 32px;line-height: 40px;color: #1D2939;">
+                                            ETS KIA</h5>
+                                        <p class="card-text"
+                                            style="width: 360px;height: 96px;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;text-align: left;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;">
+                                            Some quick example text to build on the card title and make up the bulk of
+                                            the card's content.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="card card-body">
-                                        <img class="img-fluid" src="assets/img/ETS_LANSIA.png" style="border-radius: 16px;">
-                                        <h5 class="card-title" style="text-align: left;padding-top: 24px;font-weight: 600;font-size: 32px;line-height: 40px;color: #1D2939;">ETS Lansia / Veteran</h5>
-                                        <p class="card-text" style="width: 360px;height: 96px;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;text-align: left;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <img class="img-fluid" src="assets/img/ETS_LANSIA.png"
+                                            style="border-radius: 16px;">
+                                        <h5 class="card-title"
+                                            style="text-align: left;padding-top: 24px;font-weight: 600;font-size: 32px;line-height: 40px;color: #1D2939;">
+                                            ETS Lansia / Veteran</h5>
+                                        <p class="card-text"
+                                            style="width: 360px;height: 96px;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;text-align: left;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;">
+                                            Some quick example text to build on the card title and make up the bulk of
+                                            the card's content.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="card card-body">
-                                        <img class="img-fluid" src="assets/img/ETS_PELAJAR.png" style="border-radius: 16px;">
-                                        <h5 class="card-title" style="text-align: left;padding-top: 24px;font-weight: 600;font-size: 32px;line-height: 40px;color: #1D2939;">ETS Pelajar</h5>
-                                        <p class="card-text" style="width: 360px;height: 96px;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;text-align: left;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <img class="img-fluid" src="assets/img/ETS_PELAJAR.png"
+                                            style="border-radius: 16px;">
+                                        <h5 class="card-title"
+                                            style="text-align: left;padding-top: 24px;font-weight: 600;font-size: 32px;line-height: 40px;color: #1D2939;">
+                                            ETS Pelajar</h5>
+                                        <p class="card-text"
+                                            style="width: 360px;height: 96px;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;text-align: left;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;">
+                                            Some quick example text to build on the card title and make up the bulk of
+                                            the card's content.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="card card-body">
-                                        <img class="img-fluid" src="assets/img/ETS_UMUM.png" style="border-radius: 16px;">
-                                        <h5 class="card-title" style="text-align: left;padding-top: 24px;font-weight: 600;font-size: 32px;line-height: 40px;color: #1D2939;">ETS Umum</h5>
-                                        <p class="card-text" style="width: 360px;height: 96px;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;text-align: left;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="col-md-4">
-                                    <div class="card card-body">
-                                        <img class="img-fluid" src="assets/img/ETS_KIA.png" style="border-radius: 16px;">
-                                        <h5 class="card-title" style="text-align: left;padding-top: 24px;font-weight: 600;font-size: 32px;line-height: 40px;color: #1D2939;">ETS KIA</h5>
-                                        <p class="card-text" style="width: 360px;height: 96px;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;text-align: left;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="card card-body">
-                                        <img class="img-fluid" src="assets/img/ETS_LANSIA.png" style="border-radius: 16px;">
-                                        <h5 class="card-title" style="text-align: left;padding-top: 24px;font-weight: 600;font-size: 32px;line-height: 40px;color: #1D2939;">ETS Lansia / Veteran</h5>
-                                        <p class="card-text" style="width: 360px;height: 96px;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;text-align: left;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="card card-body">
-                                        <img class="img-fluid" src="assets/img/ETS_PELAJAR.png" style="border-radius: 16px;">
-                                        <h5 class="card-title" style="text-align: left;padding-top: 24px;font-weight: 600;font-size: 32px;line-height: 40px;color: #1D2939;">ETS Pelajar</h5>
-                                        <p class="card-text" style="width: 360px;height: 96px;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;text-align: left;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="card card-body">
-                                        <img class="img-fluid" src="assets/img/ETS_UMUM.png" style="border-radius: 16px;">
-                                        <h5 class="card-title" style="text-align: left;padding-top: 24px;font-weight: 600;font-size: 32px;line-height: 40px;color: #1D2939;">ETS Umum</h5>
-                                        <p class="card-text" style="width: 360px;height: 96px;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;text-align: left;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="card card-body">
-                                        <img class="img-fluid" src="assets/img/ETS_DIFABLE.png" style="border-radius: 16px;">
-                                        <h5 class="card-title" style="text-align: left;padding-top: 24px;font-weight: 600;font-size: 32px;line-height: 40px;color: #1D2939;">ETS Difabel</h5>
-                                        <p class="card-text" style="width: 360px;height: 96px;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;text-align: left;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <img class="img-fluid" src="assets/img/ETS_UMUM.png"
+                                            style="border-radius: 16px;">
+                                        <h5 class="card-title"
+                                            style="text-align: left;padding-top: 24px;font-weight: 600;font-size: 32px;line-height: 40px;color: #1D2939;">
+                                            ETS Umum</h5>
+                                        <p class="card-text"
+                                            style="width: 360px;height: 96px;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;text-align: left;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;">
+                                            Some quick example text to build on the card title and make up the bulk of
+                                            the card's content.</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="carousel-item">
                                 <div class="col-md-4">
                                     <div class="card card-body">
-                                        <img class="img-fluid" src="assets/img/ETS_LANSIA.png" style="border-radius: 16px;">
-                                        <h5 class="card-title" style="text-align: left;padding-top: 24px;font-weight: 600;font-size: 32px;line-height: 40px;color: #1D2939;">ETS Lansia / Veteran</h5>
-                                        <p class="card-text" style="width: 360px;height: 96px;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;text-align: left;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <img class="img-fluid" src="assets/img/ETS_KIA.png"
+                                            style="border-radius: 16px;">
+                                        <h5 class="card-title"
+                                            style="text-align: left;padding-top: 24px;font-weight: 600;font-size: 32px;line-height: 40px;color: #1D2939;">
+                                            ETS KIA</h5>
+                                        <p class="card-text"
+                                            style="width: 360px;height: 96px;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;text-align: left;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;">
+                                            Some quick example text to build on the card title and make up the bulk of
+                                            the card's content.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="card card-body">
-                                        <img class="img-fluid" src="assets/img/ETS_PELAJAR.png" style="border-radius: 16px;">
-                                        <h5 class="card-title" style="text-align: left;padding-top: 24px;font-weight: 600;font-size: 32px;line-height: 40px;color: #1D2939;">ETS Pelajar</h5>
-                                        <p class="card-text" style="width: 360px;height: 96px;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;text-align: left;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <img class="img-fluid" src="assets/img/ETS_LANSIA.png"
+                                            style="border-radius: 16px;">
+                                        <h5 class="card-title"
+                                            style="text-align: left;padding-top: 24px;font-weight: 600;font-size: 32px;line-height: 40px;color: #1D2939;">
+                                            ETS Lansia / Veteran</h5>
+                                        <p class="card-text"
+                                            style="width: 360px;height: 96px;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;text-align: left;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;">
+                                            Some quick example text to build on the card title and make up the bulk of
+                                            the card's content.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="card card-body">
-                                        <img class="img-fluid" src="assets/img/ETS_UMUM.png" style="border-radius: 16px;">
-                                        <h5 class="card-title" style="text-align: left;padding-top: 24px;font-weight: 600;font-size: 32px;line-height: 40px;color: #1D2939;">ETS Umum</h5>
-                                        <p class="card-text" style="width: 360px;height: 96px;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;text-align: left;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <img class="img-fluid" src="assets/img/ETS_PELAJAR.png"
+                                            style="border-radius: 16px;">
+                                        <h5 class="card-title"
+                                            style="text-align: left;padding-top: 24px;font-weight: 600;font-size: 32px;line-height: 40px;color: #1D2939;">
+                                            ETS Pelajar</h5>
+                                        <p class="card-text"
+                                            style="width: 360px;height: 96px;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;text-align: left;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;">
+                                            Some quick example text to build on the card title and make up the bulk of
+                                            the card's content.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="card card-body">
-                                        <img class="img-fluid" src="assets/img/ETS_DIFABLE.png" style="border-radius: 16px;">
-                                        <h5 class="card-title" style="text-align: left;padding-top: 24px;font-weight: 600;font-size: 32px;line-height: 40px;color: #1D2939;">ETS Difabel</h5>
-                                        <p class="card-text" style="width: 360px;height: 96px;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;text-align: left;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <img class="img-fluid" src="assets/img/ETS_UMUM.png"
+                                            style="border-radius: 16px;">
+                                        <h5 class="card-title"
+                                            style="text-align: left;padding-top: 24px;font-weight: 600;font-size: 32px;line-height: 40px;color: #1D2939;">
+                                            ETS Umum</h5>
+                                        <p class="card-text"
+                                            style="width: 360px;height: 96px;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;text-align: left;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;">
+                                            Some quick example text to build on the card title and make up the bulk of
+                                            the card's content.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="card card-body">
-                                        <img class="img-fluid" src="assets/img/ETS_KIA.png" style="border-radius: 16px;">
-                                        <h5 class="card-title" style="text-align: left;padding-top: 24px;font-weight: 600;font-size: 32px;line-height: 40px;color: #1D2939;">ETS KIA</h5>
-                                        <p class="card-text" style="width: 360px;height: 96px;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;text-align: left;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <img class="img-fluid" src="assets/img/ETS_DIFABLE.png"
+                                            style="border-radius: 16px;">
+                                        <h5 class="card-title"
+                                            style="text-align: left;padding-top: 24px;font-weight: 600;font-size: 32px;line-height: 40px;color: #1D2939;">
+                                            ETS Difabel</h5>
+                                        <p class="card-text"
+                                            style="width: 360px;height: 96px;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;text-align: left;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;">
+                                            Some quick example text to build on the card title and make up the bulk of
+                                            the card's content.</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="carousel-item">
                                 <div class="col-md-4">
                                     <div class="card card-body">
-                                        <img class="img-fluid" src="assets/img/ETS_PELAJAR.png" style="border-radius: 16px;">
-                                        <h5 class="card-title" style="text-align: left;padding-top: 24px;font-weight: 600;font-size: 32px;line-height: 40px;color: #1D2939;">ETS Pelajar</h5>
-                                        <p class="card-text" style="width: 360px;height: 96px;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;text-align: left;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <img class="img-fluid" src="assets/img/ETS_LANSIA.png"
+                                            style="border-radius: 16px;">
+                                        <h5 class="card-title"
+                                            style="text-align: left;padding-top: 24px;font-weight: 600;font-size: 32px;line-height: 40px;color: #1D2939;">
+                                            ETS Lansia / Veteran</h5>
+                                        <p class="card-text"
+                                            style="width: 360px;height: 96px;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;text-align: left;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;">
+                                            Some quick example text to build on the card title and make up the bulk of
+                                            the card's content.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="card card-body">
-                                        <img class="img-fluid" src="assets/img/ETS_UMUM.png" style="border-radius: 16px;">
-                                        <h5 class="card-title" style="text-align: left;padding-top: 24px;font-weight: 600;font-size: 32px;line-height: 40px;color: #1D2939;">ETS Umum</h5>
-                                        <p class="card-text" style="width: 360px;height: 96px;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;text-align: left;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <img class="img-fluid" src="assets/img/ETS_PELAJAR.png"
+                                            style="border-radius: 16px;">
+                                        <h5 class="card-title"
+                                            style="text-align: left;padding-top: 24px;font-weight: 600;font-size: 32px;line-height: 40px;color: #1D2939;">
+                                            ETS Pelajar</h5>
+                                        <p class="card-text"
+                                            style="width: 360px;height: 96px;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;text-align: left;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;">
+                                            Some quick example text to build on the card title and make up the bulk of
+                                            the card's content.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="card card-body">
-                                        <img class="img-fluid" src="assets/img/ETS_DIFABLE.png" style="border-radius: 16px;">
-                                        <h5 class="card-title" style="text-align: left;padding-top: 24px;font-weight: 600;font-size: 32px;line-height: 40px;color: #1D2939;">ETS Difabel</h5>
-                                        <p class="card-text" style="width: 360px;height: 96px;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;text-align: left;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <img class="img-fluid" src="assets/img/ETS_UMUM.png"
+                                            style="border-radius: 16px;">
+                                        <h5 class="card-title"
+                                            style="text-align: left;padding-top: 24px;font-weight: 600;font-size: 32px;line-height: 40px;color: #1D2939;">
+                                            ETS Umum</h5>
+                                        <p class="card-text"
+                                            style="width: 360px;height: 96px;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;text-align: left;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;">
+                                            Some quick example text to build on the card title and make up the bulk of
+                                            the card's content.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="card card-body">
-                                        <img class="img-fluid" src="assets/img/ETS_KIA.png" style="border-radius: 16px;">
-                                        <h5 class="card-title" style="text-align: left;padding-top: 24px;font-weight: 600;font-size: 32px;line-height: 40px;color: #1D2939;">ETS KIA</h5>
-                                        <p class="card-text" style="width: 360px;height: 96px;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;text-align: left;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <img class="img-fluid" src="assets/img/ETS_DIFABLE.png"
+                                            style="border-radius: 16px;">
+                                        <h5 class="card-title"
+                                            style="text-align: left;padding-top: 24px;font-weight: 600;font-size: 32px;line-height: 40px;color: #1D2939;">
+                                            ETS Difabel</h5>
+                                        <p class="card-text"
+                                            style="width: 360px;height: 96px;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;text-align: left;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;">
+                                            Some quick example text to build on the card title and make up the bulk of
+                                            the card's content.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="card card-body">
-                                        <img class="img-fluid" src="assets/img/ETS_LANSIA.png" style="border-radius: 16px;">
-                                        <h5 class="card-title" style="text-align: left;padding-top: 24px;font-weight: 600;font-size: 32px;line-height: 40px;color: #1D2939;">ETS Lansia / Veteran</h5>
-                                        <p class="card-text" style="width: 360px;height: 96px;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;text-align: left;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <img class="img-fluid" src="assets/img/ETS_KIA.png"
+                                            style="border-radius: 16px;">
+                                        <h5 class="card-title"
+                                            style="text-align: left;padding-top: 24px;font-weight: 600;font-size: 32px;line-height: 40px;color: #1D2939;">
+                                            ETS KIA</h5>
+                                        <p class="card-text"
+                                            style="width: 360px;height: 96px;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;text-align: left;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;">
+                                            Some quick example text to build on the card title and make up the bulk of
+                                            the card's content.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-md-4">
+                                    <div class="card card-body">
+                                        <img class="img-fluid" src="assets/img/ETS_PELAJAR.png"
+                                            style="border-radius: 16px;">
+                                        <h5 class="card-title"
+                                            style="text-align: left;padding-top: 24px;font-weight: 600;font-size: 32px;line-height: 40px;color: #1D2939;">
+                                            ETS Pelajar</h5>
+                                        <p class="card-text"
+                                            style="width: 360px;height: 96px;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;text-align: left;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;">
+                                            Some quick example text to build on the card title and make up the bulk of
+                                            the card's content.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card card-body">
+                                        <img class="img-fluid" src="assets/img/ETS_UMUM.png"
+                                            style="border-radius: 16px;">
+                                        <h5 class="card-title"
+                                            style="text-align: left;padding-top: 24px;font-weight: 600;font-size: 32px;line-height: 40px;color: #1D2939;">
+                                            ETS Umum</h5>
+                                        <p class="card-text"
+                                            style="width: 360px;height: 96px;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;text-align: left;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;">
+                                            Some quick example text to build on the card title and make up the bulk of
+                                            the card's content.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card card-body">
+                                        <img class="img-fluid" src="assets/img/ETS_DIFABLE.png"
+                                            style="border-radius: 16px;">
+                                        <h5 class="card-title"
+                                            style="text-align: left;padding-top: 24px;font-weight: 600;font-size: 32px;line-height: 40px;color: #1D2939;">
+                                            ETS Difabel</h5>
+                                        <p class="card-text"
+                                            style="width: 360px;height: 96px;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;text-align: left;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;">
+                                            Some quick example text to build on the card title and make up the bulk of
+                                            the card's content.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card card-body">
+                                        <img class="img-fluid" src="assets/img/ETS_KIA.png"
+                                            style="border-radius: 16px;">
+                                        <h5 class="card-title"
+                                            style="text-align: left;padding-top: 24px;font-weight: 600;font-size: 32px;line-height: 40px;color: #1D2939;">
+                                            ETS KIA</h5>
+                                        <p class="card-text"
+                                            style="width: 360px;height: 96px;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;text-align: left;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;">
+                                            Some quick example text to build on the card title and make up the bulk of
+                                            the card's content.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card card-body">
+                                        <img class="img-fluid" src="assets/img/ETS_LANSIA.png"
+                                            style="border-radius: 16px;">
+                                        <h5 class="card-title"
+                                            style="text-align: left;padding-top: 24px;font-weight: 600;font-size: 32px;line-height: 40px;color: #1D2939;">
+                                            ETS Lansia / Veteran</h5>
+                                        <p class="card-text"
+                                            style="width: 360px;height: 96px;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;text-align: left;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;">
+                                            Some quick example text to build on the card title and make up the bulk of
+                                            the card's content.</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="carousel-item active">
                                 <div class="col-md-4">
                                     <div class="card card-body">
-                                        <img class="img-fluid" src="assets/img/ETS_UMUM.png" style="border-radius: 16px;">
-                                        <h5 class="card-title" style="text-align: left;padding-top: 24px;font-weight: 600;font-size: 32px;line-height: 40px;color: #1D2939;">ETS Umum</h5>
-                                        <p class="card-text" style="width: 360px;height: 96px;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;text-align: left;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <img class="img-fluid" src="assets/img/ETS_UMUM.png"
+                                            style="border-radius: 16px;">
+                                        <h5 class="card-title"
+                                            style="text-align: left;padding-top: 24px;font-weight: 600;font-size: 32px;line-height: 40px;color: #1D2939;">
+                                            ETS Umum</h5>
+                                        <p class="card-text"
+                                            style="width: 360px;height: 96px;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;text-align: left;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;">
+                                            Some quick example text to build on the card title and make up the bulk of
+                                            the card's content.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="card card-body">
-                                        <img class="img-fluid" src="assets/img/ETS_DIFABLE.png" style="border-radius: 16px;">
-                                        <h5 class="card-title" style="text-align: left;padding-top: 24px;font-weight: 600;font-size: 32px;line-height: 40px;color: #1D2939;">ETS Difabel</h5>
-                                        <p class="card-text" style="width: 360px;height: 96px;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;text-align: left;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <img class="img-fluid" src="assets/img/ETS_DIFABLE.png"
+                                            style="border-radius: 16px;">
+                                        <h5 class="card-title"
+                                            style="text-align: left;padding-top: 24px;font-weight: 600;font-size: 32px;line-height: 40px;color: #1D2939;">
+                                            ETS Difabel</h5>
+                                        <p class="card-text"
+                                            style="width: 360px;height: 96px;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;text-align: left;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;">
+                                            Some quick example text to build on the card title and make up the bulk of
+                                            the card's content.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="card card-body">
-                                        <img class="img-fluid" src="assets/img/ETS_KIA.png" style="border-radius: 16px;">
-                                        <h5 class="card-title" style="text-align: left;padding-top: 24px;font-weight: 600;font-size: 32px;line-height: 40px;color: #1D2939;">ETS KIA</h5>
-                                        <p class="card-text" style="width: 360px;height: 96px;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;text-align: left;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <img class="img-fluid" src="assets/img/ETS_KIA.png"
+                                            style="border-radius: 16px;">
+                                        <h5 class="card-title"
+                                            style="text-align: left;padding-top: 24px;font-weight: 600;font-size: 32px;line-height: 40px;color: #1D2939;">
+                                            ETS KIA</h5>
+                                        <p class="card-text"
+                                            style="width: 360px;height: 96px;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;text-align: left;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;">
+                                            Some quick example text to build on the card title and make up the bulk of
+                                            the card's content.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="card card-body">
-                                        <img class="img-fluid" src="assets/img/ETS_LANSIA.png" style="border-radius: 16px;">
-                                        <h5 class="card-title" style="text-align: left;padding-top: 24px;font-weight: 600;font-size: 32px;line-height: 40px;color: #1D2939;">ETS Lansia / Veteran</h5>
-                                        <p class="card-text" style="width: 360px;height: 96px;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;text-align: left;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <img class="img-fluid" src="assets/img/ETS_LANSIA.png"
+                                            style="border-radius: 16px;">
+                                        <h5 class="card-title"
+                                            style="text-align: left;padding-top: 24px;font-weight: 600;font-size: 32px;line-height: 40px;color: #1D2939;">
+                                            ETS Lansia / Veteran</h5>
+                                        <p class="card-text"
+                                            style="width: 360px;height: 96px;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;text-align: left;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;">
+                                            Some quick example text to build on the card title and make up the bulk of
+                                            the card's content.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="card card-body">
-                                        <img class="img-fluid" src="assets/img/ETS_PELAJAR.png" style="border-radius: 16px;">
-                                        <h5 class="card-title" style="text-align: left;padding-top: 24px;font-weight: 600;font-size: 32px;line-height: 40px;color: #1D2939;">ETS Pelajar</h5>
-                                        <p class="card-text" style="width: 360px;height: 96px;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;text-align: left;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <img class="img-fluid" src="assets/img/ETS_PELAJAR.png"
+                                            style="border-radius: 16px;">
+                                        <h5 class="card-title"
+                                            style="text-align: left;padding-top: 24px;font-weight: 600;font-size: 32px;line-height: 40px;color: #1D2939;">
+                                            ETS Pelajar</h5>
+                                        <p class="card-text"
+                                            style="width: 360px;height: 96px;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;text-align: left;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;">
+                                            Some quick example text to build on the card title and make up the bulk of
+                                            the card's content.</p>
                                     </div>
                                 </div>
                             </div>
@@ -640,7 +804,22 @@
                             <rect y="0.996826" width="4" height="24" rx="2" fill="#AF2330" />
                         </svg>
                     </div>
-                    <form action="/pengaduan.php" method="post" class="row"
+
+                    <div class="row" style="display: flex;flex-direction: column;align-items: center;padding: 0px;width: 646px;height: 750px;background: #F9FAFB;box-shadow: 0px 4px 12px rgba(29, 41, 57, 0.12);backdrop-filter: blur(10px);border-radius: 20px;">
+                        <div class="mb-3" style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;gap: 2px;width: 646px;height: 662px;background: #F9FAFB;border-radius: 20px;">
+                            <div style="width: 646px;height: 80px;background: #FFFFFF;border-radius: 20px 20px 0 0;">
+                                <p style="position: absolute;width: 233px;height: 40px;left: 40px;top: 20px;font-family: 'Plus Jakarta Sans';font-style: normal;font-weight: 600;font-size: 32px;line-height: 40px;text-transform: capitalize;color: #1D2939;">
+                                    Layanan Aduan
+                                </p>
+                            </div>
+                            <div class="mb-3"
+                                style="display: flex;flex-direction: column;align-items: flex-start;padding: 40px;gap: 20px;width: 646px;height: 580px;background: #FFFFFF;">
+
+                            </div>
+                        </div>
+                    </div>
+
+                    {{-- <form action="/pengaduan.php" method="post" class="row"
                         style="display: flex;flex-direction: column;align-items: center;padding: 0px;width: 646px;height: 750px;background: #F9FAFB;box-shadow: 0px 4px 12px rgba(29, 41, 57, 0.12);backdrop-filter: blur(10px);border-radius: 20px;">
                         <div class="mb-3"
                             style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;gap: 2px;width: 646px;height: 662px;background: #F9FAFB;border-radius: 20px;">
@@ -655,14 +834,12 @@
                                 <legend
                                     style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;isolation: isolate;width: 566px;height: 92px;color: #98A2B3;">
                                     Your email
-                                    {{-- <label for="exampleInputEmail1" class="form-label" style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px 0px 0px 12px;gap: 8px;width: 566px;height: 32px;flex: none;order: 0;align-self: stretch;flex-grow: 0;margin: -12px 0px;z-index: 1;">Email address</label> --}}
                                     <input type="email" class="form-control" id="exampleFormControlInput1"
                                         placeholder="name@example.com">
                                 </legend>
                                 <legend
                                     style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;isolation: isolate;width: 566px;height: 88px;color: #98A2B3;">
                                     Subjek Pengaduan
-                                    {{-- <label for="exampleInputEmail1" class="form-label" style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px 0px 0px 12px;gap: 8px;width: 566px;height: 32px;flex: none;order: 0;align-self: stretch;flex-grow: 0;margin: -12px 0px;z-index: 1;">Email address</label> --}}
                                     <select class="form-select" aria-label="Default select example"
                                         style="font-weight: 400;font-size: 20px;line-height: 28px;letter-spacing: -0.006em;color: #475467;"
                                         required>
@@ -690,14 +867,12 @@
                                 <legend
                                     style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;isolation: isolate;width: 566px;height: 172px;color: #98A2B3;">
                                     Deskripsi Kejadian
-                                    {{-- <label for="exampleInputEmail1" class="form-label" style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px 0px 0px 12px;gap: 8px;width: 566px;height: 32px;flex: none;order: 0;align-self: stretch;flex-grow: 0;margin: -12px 0px;z-index: 1;">Email address</label> --}}
                                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"
                                         placeholder="Sebutkan peristiwa, waktu terjadinya, dan lokasi kejadian atas pengaduan anda" required></textarea>
                                 </legend>
                                 <legend
                                     style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;isolation: isolate;width: 566px;height: 92px;color: #98A2B3;">
                                     Foto Pendukung
-                                    {{-- <label for="exampleInputEmail1" class="form-label" style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px 0px 0px 12px;gap: 8px;width: 566px;height: 32px;flex: none;order: 0;align-self: stretch;flex-grow: 0;margin: -12px 0px;z-index: 1;">Email address</label> --}}
                                     <input class="form-control" type="file" id="formFile"
                                         accept=".jpg,.jpeg,.png" onchange="Filevalidation()" />
                                 </legend>
@@ -712,7 +887,7 @@
                                 style="display: flex;flex-direction: row;justify-content: center;align-items: center;width: 159px;height: 48px;background: #AF2330;border-radius: 8px;"
                                 disabled>Submit Report</button>
                         </div>
-                    </form>
+                    </form> --}}
                 </div>
             </div>
         </div>
@@ -728,51 +903,22 @@
             <div class="row"
                 style="display: flex;flex-direction: row;align-items: center;padding: 40px 80px;width: 1200px;height: 156px;background: #1D2939;border-radius: 8px;">
                 <div class="col"
-                    style="display: flex;justify-content: center;align-items: flex-start;flex-direction: column;align-content: flex-start;">
+                    style="display: flex;flex-direction: column;justify-content: center;align-items: flex-start;padding: 0px;gap: 4px;width: 507px;height: 76px;">
                     <span style="font-weight: 300;font-size: 24px;line-height: 32px;color: #ffffff">Have you ever
                         reported a complaint?</span>
                     <span style="font-weight: 600;font-size: 32px;line-height: 40px;color: #ffffff">Track your
                         complaint report</span>
                 </div>
-                <script>
-                    var googleUser = {};
-                    var startApp = function() {
-                        gapi.load('auth2', function() {
-                            auth2 = gapi.auth2.init({
-                                client_id: '662068769407-v9ceg1qfrabh68j4nmd5svf5q6203hpd.apps.googleusercontent.com',
-                                cookiepolicy: 'single_host_origin',
-                                ux_mode: 'redirect_uri',
-                            });
-                            attachSignin(document.getElementById('customBtn'));
-                        });
-                        console.log('gapi.auth2.init');
-                    };
+                <script src="https://accounts.google.com/gsi/client" async defer></script>
+                <div id="g_id_onload"
+                    data-client_id="662068769407-1qc1taetjo897853c5lkl755p2c5csvi.apps.googleusercontent.com"
+                    data-context="use" data-ux_mode="redirect" data-login_uri="http://localhost/home" data-nonce=""
+                    data-itp_support="true" hidden>
+                </div>
 
-                    function attachSignin(element) {
-                        console.log(element.id);
-                        auth2.attachClickHandler(element, {},
-                            function(googleUser) {
-                                document.getElementById('gName').innerText = "Signed in: " +
-                                    googleUser.getBasicProfile().getName();
-                            },
-                            function(error) {
-                                alert(JSON.stringify(error, undefined, 2));
-                            });
-                    }
-                </script>
-                <div id="g-signin2"
-                    style="display: flex;flex-direction: row;align-items: center;width: 413px;height: 72px;" onSignIn>
-                    <button id="customBtn" role="button" class="customGPlusSignIn" type="button"
-                        style="display: flex;flex-direction: column;padding: 20px 32px;gap: 20px;width: 413px;height: 72px;background: #FFFFFF;box-shadow: 0px 4px 12px rgba(29, 41, 57, 0.08);backdrop-filter: blur(10px);border-radius: 8px;flex-wrap: wrap;">
-                        <img src="https://cdn.cdnlogo.com/logos/g/35/google-icon.svg"
-                            style="width: 32px;height: 32px;">
-                        <span id="gName"
-                            style="font-weight: 600;font-size: 24px;line-height: 32px;color: #1D2939;">Lanjutkan dengan
-                            Google</span>
-                    </button>
-                    <script>
-                        startApp();
-                    </script>
+                <div class="g_id_signin" data-type="standard" data-shape="rectangular" data-theme="outline"
+                    data-text="continue_with" data-size="large" data-locale="id" data-logo_alignment="center"
+                    data-width="413">
                 </div>
             </div>
         </div>

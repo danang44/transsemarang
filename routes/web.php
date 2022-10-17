@@ -84,3 +84,9 @@ Route::get('testing', function () {
         \UniSharp\LaravelFilemanager\Lfm::routes();
     });
 });
+
+Route::get('google', function () {
+    return view('auth/googleAuth');
+});
+Route::get('auth/google', 'Auth\LoginController@redirectToGoogle');
+Route::get('auth/google/callback', 'Auth\LoginController@handleGoogleCallback');

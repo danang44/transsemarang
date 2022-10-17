@@ -14,9 +14,9 @@ return [
     |
     */
     'google' => [
-        'client_id'     => env('GOOGLE_CLIENT_ID'),
-        'client_secret' => env('GOOGLE_APP_SECRET'),
-        'redirect'      => env('GOOGLE_REDIRECT'),
+        'client_id'     => env('662068769407-1qc1taetjo897853c5lkl755p2c5csvi.apps.googleusercontent.com'),
+        'client_secret' => env('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'),
+        'redirect'      => env('http://localhost:8000'),
     ],
 
     'mailgun' => [
