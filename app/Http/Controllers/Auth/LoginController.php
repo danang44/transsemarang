@@ -80,6 +80,7 @@ public function handleProviderCallback(Request $request)
     
             
             \auth()->login($create, true);
+            dd($create);
             return redirect()->route('home');
         }
 
