@@ -67,6 +67,8 @@ Route::post('/card/update', 'Admin\CardController@update');
 Route::get('/aboutadd', 'AdminController@aboutadd')->name('aboutadd');
 Route::post('/about_process', 'AdminController@about_process');
 
+Route::get('auth/google', 'Auth\GoogleController@redirectToGoogle');
+Route::get('auth/google/callback', 'Auth\GoogleController@handleGoogleCallback');
 
 Route::get('/auth/redirect', 'Auth\LoginController@redirectToProvider');
 Route::get('/auth/callback', 'Auth\LoginController@handleProviderCallback');
