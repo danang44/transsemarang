@@ -146,66 +146,18 @@
                         <span style="font-weight: lighter; color: black;"> News</span>
                     </p>
                 </div>
+                @foreach ($PNarticles as $PNart)
                 <div class="row row-cols-1">
                     <div class="col-md-9 text-left text-md-start">
-                        <p style="font-weight: 600;font-size: 24px;line-height: 32px;"><strong>Kolaborasi Musisi
-                                Semarang dan BRT Trans Semarang Lahirkan Kompilasi Ambyaran Semarang</strong></p>
-                        <p class="text-justify text-black-50"
-                            style="display: -webkit-box;
-                        max-width: 412px;
-                        height: 112px;
-                        -webkit-line-clamp: 4;
-                        -webkit-box-orient: vertical;
-                        overflow: hidden;
-                        text-overflow: ellipsis;
-                        line-height: 28px; font-weight: 400;font-size: 20px;margin-bottom: 0px">
-                            Semarang, Trans Semarang menambah waktu operasional dengan Rute Terminal Mangkang - Simpang
-                            Lima mulai Hari Jumat 18
-                            Maret 2022. Layanan malam ini akan beroperasional pada pukul 18.00 - 23.00 WIB.</p>
-                        <p class="text-justify text-black-50" style="font-weight: 400;font-size: 16px;">September
-                            23th, 2022</p>
+                        <p style="font-weight: 600;font-size: 24px;line-height: 32px;">
+                            <strong>{{ $PNart->title }}</strong>
+                        </p>
+                        <p class="text-justify text-black-50" style="display: -webkit-box;max-width: 412px;height: 112px;-webkit-line-clamp: 4;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;line-height: 28px; font-weight: 400;font-size: 20px;margin-bottom: 0px">
+                            {{ $PNart->intro }}</p>
+                        <p class="text-justify text-black-50" style="font-weight: 400;font-size: 16px;">{{ $PNart->date }}</p>
                     </div>
                 </div>
-                <div class="row row-cols-1">
-                    <div class="col-md-9 text-left text-md-start">
-                        <p style="font-weight: 600;font-size: 24px;line-height: 32px;"><strong>Trans Semarang Kembali
-                                Operasikan Feeder 1 Ngaliyan-Mijen-Madukoro</strong></p>
-                        <p class="text-justify text-black-50"
-                            style="display: -webkit-box;
-                        max-width: 412px;
-                        height: 112px;
-                        -webkit-line-clamp: 4;
-                        -webkit-box-orient: vertical;
-                        overflow: hidden;
-                        text-overflow: ellipsis;
-                        line-height: 28px; font-weight: 400;font-size: 20px;margin-bottom: 0px">
-                            Semarang, Trans Semarang
-                            menambah waktu operasional dengan Rute Terminal Mangkang – Simpang Lima mulai Hari Jumat 18
-                            Maret 2022. Layanan malam ini akan beroperasional pada pukul 18.00 – 23.00 WIB.</p>
-                        <p class="text-justify text-black-50" style="font-weight: 400;font-size: 16px;">September
-                            23th, 2022</p>
-                    </div>
-                </div>
-                <div class="row row-cols-1">
-                    <div class="col-md-9 text-left text-md-start">
-                        <p style="font-weight: 600;font-size: 24px;line-height: 32px;"><strong>Trans Semarang Menambah
-                                Waktu Layanan Operasional</strong></p>
-                        <p class="text-justify text-black-50"
-                            style="display: -webkit-box;
-                        max-width: 412px;
-                        height: 112px;
-                        -webkit-line-clamp: 4;
-                        -webkit-box-orient: vertical;
-                        overflow: hidden;
-                        text-overflow: ellipsis;
-                        line-height: 28px; font-weight: 400;font-size: 20px;margin-bottom: 0px">
-                            Semarang, Trans Semarang
-                            menambah waktu operasional dengan Rute Terminal Mangkang – Simpang Lima mulai Hari Jumat 18
-                            Maret 2022. Layanan malam ini akan beroperasional pada pukul 18.00 – 23.00 WIB.</p>
-                        <p class="text-justify text-black-50" style="font-weight: 400;font-size: 16px;">September
-                            23th, 2022</p>
-                    </div>
-                </div>
+                @endforeach
             </div>
             <div class="themed-grid-col"
                 style="display: flex;flex-direction: column;align-items: flex-start;width: 748px;height: 828px;padding-left: 40px">

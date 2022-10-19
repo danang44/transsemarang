@@ -16,9 +16,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/welcome', 'NewsController@portal')->name('welcome');
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/', 'WelcomeController@index');
 
 Auth::routes();
 
