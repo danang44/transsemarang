@@ -57,7 +57,12 @@
                                     {{ __('Login') }}
                                 </button>
 
-                                <a class="btn btn-danger" href="{{ '/auth/redirect'}}">google</a>
+
+                                    <a href="/auth/google" class="btn btn-success">
+                                        Login  Google
+                                    </a>
+                                   
+                               
                                 
                                 @if (Route::has('password.request'))
                                     <a class="btn btn-link" href="{{ route('password.request') }}">

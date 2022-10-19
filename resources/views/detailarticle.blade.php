@@ -77,130 +77,206 @@
     </script>
 </body>
 
-
 <div>
-
-    <style>
-        body {
-            background-color: #1a1a1c;
-        }
-
-        :root {
-            --gradient: linear-gradient style="color:white"(to left top, #96969e 10%, #96969e 90%) !important;
-        }
-
-        .card {
-            /* Background-image: url(../images/vyrusfix.png);
-            Background-position: center;
-
-            background-size: 400px; */
-            border: 3px solid #96969e;
-            color: black;
-            margin-bottom: 2rem;
-            background-color: black;
-
-        }
-
-        .card:hover,
-        .card:focus {
-
-            color: white !important;
-            -webkit-background-clip: none !important;
-            -webkit-text-fill-color: #fff !important;
-
-            text-decoration: underline;
-            text-decoration-color: white;
-            transform: scale(1.065);
-        }
-
-
-        .card-img-top {
-            /* border: 1px solid #0d7cb3; */
-        }
-
-        .btn {
-            border: 2px solid;
-            border-image-slice: 1;
-            background: var(--gradient) !important;
-            -webkit-background-clip: text !important;
-            -webkit-text-fill-color: transparent !important;
-            border-image-source: var(--gradient) !important;
-            text-decoration: none;
-            color: white !important;
-            transition: all .4s ease;
-            -webkit-text-fill-color: white !important;
-
-        }
-
-        .btn:hover,
-        .btn:focus {
-            background: var(--gradient) !important;
-            color: white !important;
-            -webkit-background-clip: none !important;
-            -webkit-text-fill-color: #fff !important;
-            border: 5px solid #fff !important;
-            box-shadow: #222 1px 0 10px;
-            text-decoration: underline;
-            text-decoration-color: white;
-        }
-
-        .judul {
-            color: white;
-            margin-top: 2px;
-            margin-bottom: 2px;
-            font-size: 30px;
-        }
-    </style>
+<style>
+    .card-box {
+        border: 1px solid #ddd;
+        padding: 20px;
+        Background-image: url(../images/vyrusfix.png);
+        /* box-shadow: 0px 0px 10px 0px #c5c5c5; */
+        /* margin-bottom: 30px; */
+        /* float: left; */
+        border-radius: 10px;
 
 
 
-    <div class="judul text">
-        <div class="col-lg-12 mt-5 mb-5 text-center">
-            <h1>PRODUK</h1>
-        </div>
-    </div>
 
-    <div class="container  ">
-        <div class="row  justify-content-center " style="background-color:#1a1a1c">
+    }
 
-            @foreach($article as $h)
+    .card-box1 {
+        border: 1px solid #ddd;
+        padding: 20px;
+        /* box-shadow: 0px 0px 10px 0px #c5c5c5; */
+        /* margin-bottom: 30px; */
+        /* float: left; */
+        border-radius: 10px;
 
-            <div class="col-md-3 center mt-2 ">
 
-                <div class="card ">
-                    <div class="card-thumbnail">
-                        <img width="100px" class="card-img-top" style="margin:7%" class="img-fluid" alt=""><?php echo $h->thumb ?> 
+
+
+    }
+
+    .card-box .card-thumbnail:hover {
+        transform: scale(1.5);
+
+    }
+
+    .card-box1 .card-thumbnail:hover {
+        transform: scale(1.5);
+
+    }
+
+    .card-box h3 a {
+        font-size: 20px;
+        text-decoration: none;
+
+
+    }
+
+    .card-box1 h3 a {
+        font-size: 20px;
+        text-decoration: none;
+
+
+    }
+
+    /* ////// */
+
+    .box-bg {
+
+        /* padding: 15px 15px; */
+        /* border: 2px solid #e2e2e2; */
+        /* border-top-left-radius: 40px;
+        border-bottom-right-radius: 40px; */
+        position: relative;
+        /* margin: 15px 0px; */
+        overflow: hidden;
+    }
+
+
+
+
+
+    /* lllll */
+
+    /* section.our-team {
+        padding: 70px 0px;
+        background-color: #f2f9ff;
+        text-align: center;
+        color: #fff;
+    } */
+    .member {
+        text-align: center;
+        margin-bottom: 20px;
+        position: relative;
+        overflow: hidden;
+        transition: 0.4s;
+        /* border-radius: 100%;
+        border: 6px solid #ffffff; */
+
+    }
+
+    /* .our-team h2 {
+        font-size: 36px;
+        color: #795548;
+        font-weight: normal;
+    }
+
+    .our-team p {
+        color: #9e9e9e;
+        width: 70%;
+        margin: 10px auto 10px;
+    } */
+
+    .member:hover {
+        box-shadow: 0px 10px 0px 0px #795548;
+
+    }
+
+    .member .member-info {
+        position: absolute;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        opacity: 0;
+    }
+
+    .member .member-detail {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 10px;
+
+    }
+
+
+
+    .member:hover .member-info {
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.83) 0%, rgba(0, 0, 0, 0.57) 20%, rgba(121, 85, 72, 0.09) 100%);
+        opacity: 1;
+        transition: 0.4s;
+
+    }
+
+    .member:hover .member-detail {
+        bottom: 80px;
+    }
+
+
+    .btn:hover {
+
+        background-color: black;
+    }
+</style>
+
+<br></br>
+<br></br>
+<br></br>
+
+<div class="container">
+    <div class="row justify-content-center" style="background-color:black">
+        <div class="col-md-11">
+            <div class="card mt-1 mb-2" style="background-color:#d7dbd8">
+                <div class="  row mt-2 mb-2" style="margin:auto">
+                    <h3><b>{{$article->judul}}</b></h3>
+                </div>
+                <div class="row justify-content-center m-1" style="background-color:#1a1a1c">
+                    <div class="col-sm-6 col-md-4 col-lg-5">
+                        <!-- Bootstrap 5 card box -->
+                        <div class="box-bg mb-3 mt-4">
+                            <!-- Bootstrap 5 card box -->
+                            <div class="card-box text-center" style="background-color:black">
+                                <div class="card-thumbnail">
+                                    {{-- <img src="{{ url('/images/'.$article->gambar) }}" style="margin:7%" class="img-fluid" alt=""> --}}
+                                    <?php echo $article->thumb ?>
+                                </div>
+                            </div>
+                           
+                  
+                        </div>
                     </div>
-                    <div class="card-body ">
-                        <h5 class="card-title" style="color:white; font-size:15px">{{$h->title}}</h5>
-                     
-                        <!-- <a href="#" class="btn mr-2"></i> KERANJANG</a> -->
-                        <a href="/detailarticle/{{$h->title}}" class="btn pr-5 pl-5"></i> DETAIL</a>
+
+                    <div class="col-sm-6 col-md-5 col-lg-5">
+                        <!-- Bootstrap 5 card box -->
+                        <div class="mb-3">
+                            <div class="card-box1  border-0 text-left">
+                                <!-- <div class="member-detail"> -->
+
+                                <h4 class="mt-2 text-active" style="text-decoration:none;color:#d7dbd8;"><b>{{$article->title}}</b></h4>
+                                <h4 style="color:#d7dbd8;line-height:2"><b>Rp {{number_format($article->harga_brg)}}</b></h4>
+                                <p <?php echo $article->intro ?></p>
+                                <p <?php echo $article->content ?></p>
+                              
+                            </div>
+                        </div>
                     </div>
+
                 </div>
 
             </div>
-            @endforeach
-
-
-
-            <div class="bottom-block" style="height:45px;background-color:black">
-
-            </div>
-            <div class="container">
-            </div>
-
         </div>
+
+
+
+
     </div>
 </div>
-<footer style="background-color:black; height:50px;margin-top:5px">
-    <p style="color:white;">Vyrus Motobike n Lifestyle 2022 </p>
-</footer>
 
-</div>
+
+
+
 
 
 
 </html>
-
-
