@@ -7,30 +7,44 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trans Semarang | Home</title>
-    <meta name="twitter:description" content="Twitter Resmi BLU UPTD Trans Semarang  Jl. Tambak Aji Raya No. 5 Kode Pos 50185  CS : 1-5000-94  IG: transsemarang  FB: TRANS Semarang">
+    <meta name="twitter:description"
+        content="Twitter Resmi BLU UPTD Trans Semarang  Jl. Tambak Aji Raya No. 5 Kode Pos 50185  CS : 1-5000-94  IG: transsemarang  FB: TRANS Semarang">
     <meta property="og:image" content="assets/img/Trans_Semarang_icon.svg">
     <meta property="og:type" content="website">
-    <meta name="description" content="Trans Semarang adalah sistem transportasi angkutan massal berbasis jalan di Jawa Tengah yang beroperasi di Kota dan Kabupaten Semarang. Layanan ini dioperasikan guna mengurai kemacetan di Kota Semarang serta untuk mengakomodasi para pelaju menuju pusat kota dan destinasi wisata yang ada di Kota Semarang.">
+    <meta name="description"
+        content="Trans Semarang adalah sistem transportasi angkutan massal berbasis jalan di Jawa Tengah yang beroperasi di Kota dan Kabupaten Semarang. Layanan ini dioperasikan guna mengurai kemacetan di Kota Semarang serta untuk mengakomodasi para pelaju menuju pusat kota dan destinasi wisata yang ada di Kota Semarang.">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:image" content="assets/img/tsmgLogo32px-01.png">
     <meta name="twitter:title" content="Trans Semarang | @transsemarang">
-    <meta name="google-signin-client_id"content="662068769407-1qc1taetjo897853c5lkl755p2c5csvi.apps.googleusercontent.com">
+    <meta
+        name="google-signin-client_id"content="662068769407-1qc1taetjo897853c5lkl755p2c5csvi.apps.googleusercontent.com">
     <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="assets/img/tsmgLogo-01-01%20(180x180).png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/img/tsmgLogo-01-01%20(16x16).png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/tsmgLogo32px-01.png">
     <link rel="icon" type="image/png" sizes="180x180" href="assets/img/tsmgLogo-01-01%20(180x180).png">
     <link rel="icon" type="image/png" sizes="192x192" href="assets/img/tsmgLogo-01-01%20(192x192).png">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Lato:100i,300,300i,400,700,900&amp;display=swap">
-    <link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i&amp;display=swap">
+    {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"> --}}
+    <link
+        rel="stylesheet"href="https://fonts.googleapis.com/css?family=Lato:100i,300,300i,400,700,900&amp;display=swap">
+    <link
+        rel="stylesheet"href="https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i&amp;display=swap">
     <link rel="stylesheet" href="assets/css/Footer-Multi-Column-icons.css">
     <link rel="stylesheet" href="assets/css/Hero-Clean-Reverse-images.css">
     <link rel="stylesheet" href="assets/css/logo-slider.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.38/dist/sweetalert2.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
+    <link rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
+        crossorigin="" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
     <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+        integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous">
+    </script>
 </head>
 
 <style>
@@ -204,7 +218,8 @@
                 </div>
                 <div class="row row-cols-6">
                     <div class="col border rounded border-1" onclick="window.location.href = '{{ url('news') }}';"
-                        style="cursor: pointer;background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(0,0,0,1)),url('assets/img/berita1.jpeg')center / cover no-repeat;width: 248px; height: 248px;align-items: flex-end;display: flex">
+                        style="cursor: pointer;background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(0,0,0,1)),url('')center / cover no-repeat;width: 248px; height: 248px;align-items: flex-end;display: flex">
+
                         <div class="card">
                             <div class="card-body">
                                 <span class="fw-semibold text-white"
@@ -296,7 +311,7 @@
 
     <section>
         <div class="row"
-            style="display: flex;flex-direction: column;align-items: flex-start;padding: 80px 120px;gap: 80px;width: 1440px;height: 904px;background: #FFFFFF;">
+            style="display: flex;flex-direction: column;align-items: flex-start;padding: 80px 120px;gap: 80px;width: 1440px;height: 904px;background: #FFFFFF;align-content: center;justify-content: center;">
             <div class="row"
                 style="display: flex;flex-direction: row;align-items: center;padding: 0px;gap: 80px;width: 1200px;height: 96px;align-content: center;">
                 <div class="col"
@@ -770,22 +785,51 @@
                         </svg>
                     </div>
 
-                    {{-- <div class="row" style="display: flex;flex-direction: column;align-items: center;padding: 0px;width: 646px;height: 750px;background: #F9FAFB;box-shadow: 0px 4px 12px rgba(29, 41, 57, 0.12);backdrop-filter: blur(10px);border-radius: 20px;">
-                        <div class="mb-3" style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;gap: 2px;width: 646px;height: 662px;background: #F9FAFB;border-radius: 20px;">
-                            <div style="width: 646px;height: 80px;background: #FFFFFF;border-radius: 20px 20px 0 0;">
-                                <p style="position: absolute;width: 233px;height: 40px;left: 40px;top: 20px;font-family: 'Plus Jakarta Sans';font-style: normal;font-weight: 600;font-size: 32px;line-height: 40px;text-transform: capitalize;color: #1D2939;">
+                    <div class="row"
+                        style="display: flex;flex-direction: column;align-items: center;padding: 0px;width: 646px;height: 746px;background: #FFFFFF;box-shadow: 0px 4px 12px rgba(29, 41, 57, 0.12);backdrop-filter: blur(10px);border-radius: 20px;">
+                        <div class="mb-3"
+                            style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;padding-bottom: 2px;width: 646px;height: 662px;background: #F9FAFB;border-radius: 20px;">
+                            <div
+                                style="width: 646px;height: 80px;background: #FFFFFF;border-radius: 20px 20px 0 0; margin-bottom: 2px">
+                                <p
+                                    style="position: absolute;width: 233px;height: 40px;left: 40px;top: 20px;font-family: 'Plus Jakarta Sans';font-style: normal;font-weight: 600;font-size: 32px;line-height: 40px;text-transform: capitalize;color: #1D2939;">
                                     Layanan Aduan
                                 </p>
                             </div>
                             <div class="mb-3"
                                 style="display: flex;flex-direction: column;align-items: flex-start;padding: 40px;gap: 20px;width: 646px;height: 580px;background: #FFFFFF;">
-                                <img style="position: absolute;width: 566px;height: 344px;" src="assets/img/IlustrationCS.png"/>
-                                p
+                                <img style="width: 566px;height: 344px;" src="assets/img/IlustrationCS.png" />
+                                <div style="width: 566px;height: 200px;left: 40px;top: 424px;">
+                                    <div style="padding: 0px;gap: 4px;width: 566px;height: 92px;">
+                                        <p
+                                            style="font-weight: 600;font-size: 24px;line-height: 32px;text-align: left;letter-spacing: -0.006em;color: #1D2939;">
+                                            Anda harus masuk dengan Google untuk melanjutkan
+                                        </p>
+                                        <p
+                                            style="font-weight: 400;font-size: 20px;line-height: 28px;letter-spacing: -0.006em;color: #98A2B3;">
+                                            Setelah Anda mengajukan keluhan, kami akan mengirimkan informasi penanganan
+                                            ke email yang Anda gunakan untuk login.
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div> --}}
+                        <a class="btn btn-primary" data-bs-toggle="modal" href="#modalPengaduan" role="button" hidden>Pengaduan</a>
+                        <div id="g_id_onload"
+                            data-client_id="662068769407-1qc1taetjo897853c5lkl755p2c5csvi.apps.googleusercontent.com"
+                            data-context="signin" data-ux_mode="popup" data-login_uri="http://localhost:8000/"
+                            data-auto_prompt="false">
+                        </div>
 
-                    <form action="/pengaduan.php" method="post" class="row"
+                        <div class="g_id_signin" data-type="standard" data-shape="rectangular" data-theme="outline"
+                            data-text="signin_with" data-size="large" data-locale="id" data-logo_alignment="left"
+                            data-width="350">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {{-- <form action="/pengaduan.php" method="post" class="row"
                         style="display: flex;flex-direction: column;align-items: center;padding: 0px;width: 646px;height: 750px;background: #F9FAFB;box-shadow: 0px 4px 12px rgba(29, 41, 57, 0.12);backdrop-filter: blur(10px);border-radius: 20px;">
                         <div class="mb-3"
                             style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;gap: 2px;width: 646px;height: 662px;background: #F9FAFB;border-radius: 20px;">
@@ -853,10 +897,135 @@
                                 style="display: flex;flex-direction: row;justify-content: center;align-items: center;width: 159px;height: 48px;background: #AF2330;border-radius: 8px;"
                                 disabled>Submit Report</button>
                         </div>
-                    </form>
+                    </form> --}}
+        </div>
+        </div>
+        {{-- <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Modal 1</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  Show a second modal and hide this one with the button below.
+                </div>
+                <div class="modal-footer">
+                  <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Open second modal</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Modal 2</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  Hide this modal and show the first with the button below.
+                </div>
+                <div class="modal-footer">
+                  <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back to first</button>
+                </div>
+              </div>
+            </div>
+          </div> --}}
+          {{-- <a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Open first modal</a> --}}
+        <div class="modal fade" id="modalPengaduan" aria-hidden="true" aria-labelledby="modalPengaduanLabel" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="modalPengaduanLabel">Layanan Aduan</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="/pengaduan.php" method="post" class="row"
+                            style="display: flex;flex-direction: column;align-items: center;padding: 0px;width: 646px;height: 750px;background: #F9FAFB;box-shadow: 0px 4px 12px rgba(29, 41, 57, 0.12);backdrop-filter: blur(10px);border-radius: 20px;">
+                            <div class="mb-3"
+                                style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;gap: 2px;width: 646px;height: 662px;background: #F9FAFB;border-radius: 20px;">
+                                <div
+                                    style="width: 646px;height: 80px;background: #FFFFFF;border-radius: 20px 20px 0 0;">
+                                    <p
+                                        style="position: absolute;width: 233px;height: 40px;left: 40px;top: 20px;font-family: 'Plus Jakarta Sans';font-style: normal;font-weight: 600;font-size: 32px;line-height: 40px;text-transform: capitalize;color: #1D2939;">
+                                        Layanan Aduan
+                                    </p>
+                                </div>
+                                <div class="mb-3"
+                                    style="display: flex;flex-direction: column;align-items: flex-start;padding: 40px;gap: 20px;width: 646px;height: 580px;background: #FFFFFF;">
+                                    <legend
+                                        style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;isolation: isolate;width: 566px;height: 92px;color: #98A2B3;">
+                                        Your email
+                                        <input type="email" class="form-control" id="exampleFormControlInput1"
+                                            placeholder="name@example.com">
+                                    </legend>
+                                    <legend
+                                        style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;isolation: isolate;width: 566px;height: 88px;color: #98A2B3;">
+                                        Subjek Pengaduan
+                                        <select class="form-select" aria-label="Default select example"
+                                            style="font-weight: 400;font-size: 20px;line-height: 28px;letter-spacing: -0.006em;color: #475467;"
+                                            required>
+                                            <option selected disabled value="">Materi Pengaduan...</option>
+                                            <option value="1"><span>1.Pelanggaran terhadap kode etik dan/atau
+                                                    pedoman
+                                                    perilaku aparat</span></option>
+                                            <option value="2"><span>2.Penyalahgunaan wewenang/jabatan</span>
+                                            </option>
+                                            <option value="3"><span>3.Pelanggaran sumpah jabatan</span></option>
+                                            <option value="4"><span>4.Pelanggaran terhadap peraturan disiplin
+                                                    Pegawai
+                                                    Negeri Sipil</span></option>
+                                            <option value="5"><span>5.Perbuatan tercela, yaitu perbuatan amoral,
+                                                    asusila, atau perbuatan yang tidak selayaknya dilakukan oleh seorang
+                                                    aparat maupun selaku anggota masyarakat</span></option>
+                                            <option value="6"><span>6.Pelanggaran hukum, baik dilakukan dengan
+                                                    sengaja, maupun karena kelalaian dan ketidakpahaman</span></option>
+                                            <option value="7"><span>7.Mal administrasi, yaitu terjadinya
+                                                    kesalahan,
+                                                    kekeliruan atau kelalaian yang bersifat administratif</span>
+                                            </option>
+                                            <option value="8"><span>8.Pelayanan publik yang tidak memuaskan yang
+                                                    dapat
+                                                    merugikan pihak-pihak yang berkepentingan serta masyarakat secara
+                                                    umum</span></option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                            Silahkan pilih materi pengaduan.</div>
+                                    </legend>
+                                    <legend
+                                        style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;isolation: isolate;width: 566px;height: 172px;color: #98A2B3;">
+                                        Deskripsi Kejadian
+                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"
+                                            placeholder="Sebutkan peristiwa, waktu terjadinya, dan lokasi kejadian atas pengaduan anda" required></textarea>
+                                    </legend>
+                                    <legend
+                                        style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;isolation: isolate;width: 566px;height: 92px;color: #98A2B3;">
+                                        Foto Pendukung
+                                        <input class="form-control" type="file" id="formFile"
+                                            accept=".jpg,.jpeg,.png" onchange="Filevalidation()" />
+                                    </legend>
+                                    <p id="fileResult"></p>
+                                </div>
+                            </div>
+                            {{-- <div
+                                style="display: flex;flex-direction: row;justify-content: flex-end;align-items: center;padding: 20px 40px;gap: 12px;width: 646px;height: 88px;">
+                                <button type="reset" class="btn btn-outline-secondary"
+                                    style="display: flex;flex-direction: row;justify-content: center;align-items: center;padding: 12px 24px;gap: 4px;width: 102px;height: 48px;border: 2px solid #E4E7EC;border-radius: 8px;">Cancel</button>
+                                <button id="submitReport" type="submit" class="btn btn-danger text-white"
+                                    style="display: flex;flex-direction: row;justify-content: center;align-items: center;width: 159px;height: 48px;background: #AF2330;border-radius: 8px;"
+                                    disabled>Submit Report</button>
+                            </div> --}}
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="reset" class="btn btn-outline-secondary" data-bs-toggle="modal" style="display: flex;flex-direction: row;justify-content: center;align-items: center;padding: 12px 24px;gap: 4px;width: 102px;height: 48px;border: 2px solid #E4E7EC;border-radius: 8px;">Cancel</button>
+                        <button id="submitReport" type="submit" class="btn btn-danger text-white" style="display: flex;flex-direction: row;justify-content: center;align-items: center;width: 159px;height: 48px;background: #AF2330;border-radius: 8px;" disabled>Submit Report</button>
+                    </div>
                 </div>
             </div>
         </div>
+
     </section>
 
     {{-- ===================== --}}
@@ -1051,7 +1220,8 @@
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.38/dist/sweetalert2.all.min.js"></script>
-<script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
+<script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
+    integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
 
 <script>
     let formFile = document.getElementById('formFile');
@@ -1093,4 +1263,5 @@
 
     }).addTo(map);
 </script>
+
 </html>
