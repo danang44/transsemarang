@@ -9,10 +9,10 @@ class WelcomeController extends Controller
 {
     public function index()
     {
-        $articles = article::take(9)->orderBy('id','desc')->get();
+        $RNarticles = article::take(9)->orderBy('id','desc')->get();
         $PNarticles = article::take(3)->orderBy('id','desc')->get();
 
-        return view('welcome', compact('articles', 'PNarticles'));
+        return view('welcome', compact('RNarticles', 'PNarticles'));
     }
 
 

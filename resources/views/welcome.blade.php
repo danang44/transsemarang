@@ -149,9 +149,11 @@
                 @foreach ($PNarticles as $PNart)
                 <div class="row row-cols-1">
                     <div class="col-md-9 text-left text-md-start">
+                        <a href="/detailarticle/{{$PNart->title}}" style="color: #1D2939">
                         <p style="font-weight: 600;font-size: 24px;line-height: 32px;">
                             <strong>{{ $PNart->title }}</strong>
                         </p>
+                        </a>
                         <p class="text-justify text-black-50" style="display: -webkit-box;max-width: 412px;height: 112px;-webkit-line-clamp: 4;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;line-height: 28px; font-weight: 400;font-size: 20px;margin-bottom: 0px">
                             {{ $PNart->intro }}</p>
                         <p class="text-justify text-black-50" style="font-weight: 400;font-size: 16px;">{{ $PNart->date }}</p>
@@ -168,72 +170,18 @@
                         <span style="font-weight: lighter; color: black;"> News</span>
                     </p>
                 </div>
-                <div class="row row-cols-6">
-                    <div class="col border rounded border-1" onclick="window.location.href = '{{ url('news') }}';"
-                        style="cursor: pointer;background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(0,0,0,1)),url('')center / cover no-repeat;width: 248px; height: 248px;align-items: flex-end;display: flex">
 
+                <div class="row row-cols-6" style="display: flex;width: 748px;flex-wrap: wrap;">
+                    @foreach ($RNarticles as $RNart)
+                    <a class="col border rounded border-1" href="/detailarticle/{{$RNart->title}}" style="cursor: pointer;background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(0,0,0,1)),url('{{ $RNart->thumb }}')center / cover no-repeat;width: 248px; height: 248px;align-items: flex-end;display: flex">
                         <div class="card">
                             <div class="card-body">
                                 <span class="fw-semibold text-white"
-                                    style="font-family: 'Plus Jakarta Sans';font-style: normal;font-size: 16px;line-height: 24px;">Kolaborasi
-                                    Musisi Semarang dan BRT Trans Semarang Lahirkan</span>
+                                    style="font-family: 'Plus Jakarta Sans';font-style: normal;font-size: 16px;line-height: 24px;">{{ $RNart->title }}</span>
                             </div>
                         </div>
-                    </div>
-                    <div class="col border rounded border-1"
-                        style="cursor: pointer;background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(0,0,0,1)),url('assets/img/berita2.jpeg')center / cover no-repeat;width: 248px; height: 248px;align-items: flex-end;display: flex">
-                        <div class="card">
-                            <div class="card-body">
-                                <span class="fw-semibold text-white"
-                                    style="font-family: 'Plus Jakarta Sans';font-style: normal;font-size: 16px;line-height: 24px;">Trans
-                                    Semarang Kembali Operasikan Feeder 1 Ngaliyan-Mijen-Madukoro</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col border rounded border-1"
-                        style="cursor: pointer;background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(0,0,0,1)),url('assets/img/berita3.jpeg')center / cover no-repeat;width: 248px; height: 248px;align-items: flex-end;display: flex">
-                        <div class="card">
-                            <div class="card-body">
-                                <span class="fw-semibold text-white"
-                                    style="font-family: 'Plus Jakarta Sans';font-style: normal;font-size: 16px;line-height: 1.5rem;">Trans
-                                    Semarang Menambah Waktu Layanan Operasional</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row row-cols-6">
-                    <div class="col border rounded border-1" style="width: 248px; height: auto">
-                        <div class="card">
-                            <img src="assets/img/Card.png" class="card-img-top" alt="...">
-                        </div>
-                    </div>
-                    <div class="col border rounded border-1" style="width: 248px; height: 248px">
-                        <div class="card">
-                            <img src="assets/img/Card.png" class="card-img-top" alt="...">
-                        </div>
-                    </div>
-                    <div class="col border rounded border-1" style="width: 248px; height: 248px">
-                        <div class="card">
-                            <img src="assets/img/Card.png" class="card-img-top" alt="...">
-                        </div>
-                    </div>
-                </div>
-                <div class="row row-cols-6">
-                    <div class="col border rounded border-1" style="width: 248px; height: auto">
-                        <div class="card">
-                            <img src="assets/img/Card.png" class="card-img-top" alt="...">
-                        </div>
-                    </div>
-                    <div class="col border rounded border-1" style="width: 248px; height: 248px">
-                        <div class="card">
-                            <img src="assets/img/Card.png" class="card-img-top" alt="...">
-                        </div>
-                    </div>
-                    <div class="col border rounded border-1" style="width: 248px; height: 248px">
-                        <div class="card">
-                            <img src="assets/img/Card.png" class="card-img-top" alt="">
-                        </div>
-                    </div>
+                    </a>
+                    @endforeach
                 </div>
             </div>
         </div>
