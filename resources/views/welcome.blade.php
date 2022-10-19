@@ -1045,10 +1045,10 @@
                         </p>
                         <div class="col-auto"
                             style="font-weight: 400;font-size: 18px;line-height: 24px;letter-spacing: -0.24px;display: flex;flex-direction: column;align-items: flex-start;padding: 0px;gap: 4px;width: 260px;height: 108px;text-decoration-line: none;">
-                            <span class="row"><a class="text-white" href="#tentang_kami">Profil</a></span>
-                            <span class="row"><a class="text-white" href="#kontak_kami">Team</a></span>
-                            <span class="row"><a class="text-white" href="#karir">Visi & Misi</a></span>
-                            <span class="row"><a class="text-white" href="#karir">Tugas Pokok</a></span>
+                            <span class="row"><a class="text-white" href="http://karir.transsemarang.semarangkota.go.id/portal/page/tentang">Profil</a></span>
+                            <span class="row"><a class="text-white" href="http://karir.transsemarang.semarangkota.go.id/portal/page/tentang">Team</a></span>
+                            <span class="row"><a class="text-white" href="http://karir.transsemarang.semarangkota.go.id/portal/page/tentang">Visi & Misi</a></span>
+                            <span class="row"><a class="text-white" href="http://karir.transsemarang.semarangkota.go.id/portal/page/tentang">Tugas Pokok</a></span>
                         </div>
                     </div>
                     <div class="col-auto"
@@ -1058,13 +1058,13 @@
                             Supported by</p>
                         <div class="col-auto"
                             style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;gap: 4px;width: 274px;height: 108px;">
-                            <span class="row"><a class="text-white" href="#tentang_kami">Pemerintah Kota Semarang
+                            <span class="row"><a class="text-white" href="https://www.semarangkota.go.id/">Pemerintah Kota Semarang
                                     2022</a></span>
-                            <span class="row"><a class="text-white" href="#tentang_kami">Walikota
+                            <span class="row"><a class="text-white" href="https://ppid.semarangkota.go.id/">Walikota
                                     Semarang</a></span>
-                            <span class="row"><a class="text-white" href="#tentang_kami">Dinas Kesehatan Kota
+                            <span class="row"><a class="text-white" href="https://dinkes.semarangkota.go.id/">Dinas Kesehatan Kota
                                     Semarang</a></span>
-                            <span class="row"><a class="text-white" href="#tentang_kami">Nusantara Global
+                            <span class="row"><a class="text-white" href="https://nginovasi.com/v2/">Nusantara Global
                                     Inovasi</a></span>
                         </div>
                     </div>
