@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
+Route::get('/welcome', 'NewsController@portal')->name('welcome');
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -23,6 +23,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'WelcomeController@index');
 
 Auth::routes();
+
 
 Route::get('/home', 'HomeController@index')->name('home');
 
@@ -69,11 +70,10 @@ Route::post('/card/update', 'Admin\CardController@update');
 Route::get('/aboutadd', 'AdminController@aboutadd')->name('aboutadd');
 Route::post('/about_process', 'AdminController@about_process');
 
-Route::get('auth/google', 'Auth\GoogleController@redirectToGoogle');
-Route::get('auth/google/callback', 'Auth\GoogleController@handleGoogleCallback');
 
-Route::get('/auth/redirect', 'Auth\LoginController@redirectToProvider');
-Route::get('/auth/callback', 'Auth\LoginController@handleProviderCallback');
+
+Route::get('/auth/{provider}', 'Auth\SocialiteController@redirectToProvider');
+Route::get('/auth/{provider}/callback', 'Auth\SocialiteController@handleProvideCallback');
 
 // Route::get('/home', 'Api\HomeController@index');
 
@@ -89,13 +89,9 @@ Route::get('testing', function () {
     });
 });
 
-Route::get('google', function () {
-    return view('auth/googleAuth');
-});
-Route::get('auth/google', 'Auth\LoginController@redirectToGoogle');
-Route::get('auth/google/callback', 'Auth\LoginController@handleGoogleCallback');
 
 Route::get('/news', function () {
     return view('/news');
 });
 Route::get('/news', 'NewsController@index')->name('news');
+Route::get('/detailarticle/{title}', 'NewsController@detailarticle');

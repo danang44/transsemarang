@@ -37,11 +37,12 @@ max-width: 50px;
                         </div>
                     </div>
                 </div>
+                
                 <div class="col-md-12">
                     <div class="text-right">
-                        <button type="button" class=" mt-3 mb-1 btn btn-outline-success" data-toggle="modal" data-target="#exampleModal">
+                        <a href="/article_add">  <button type="button" class=" mt-3 mb-1 btn btn-outline-success" >
                             Tambah Data <i class="fa-solid fa-plus"></i>
-                        </button>
+                        </button></a>   
                     </div>
                     <div class=" card">
                         <div class="pt-2 pr-1 pl-1 table-responsive col-sm-12 ">

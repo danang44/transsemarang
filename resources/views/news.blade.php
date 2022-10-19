@@ -287,7 +287,7 @@
 </body>
 
 
-{{-- <div>
+<div>
 
     <style>
         body {
@@ -406,8 +406,10 @@
     <p style="color:white;">Vyrus Motobike n Lifestyle 2022 </p>
 </footer>
 
-</div> --}}
+</div>
 
 
 
 </html>
+
+

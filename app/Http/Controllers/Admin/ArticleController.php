@@ -26,42 +26,47 @@ class ArticleController extends Controller
 
     public function store(Request $request)
     {
-        //dd($request);
-        $this->validate($request, [
-            'created_by' => 'required',
+        // dd($request->all());
+        // dd($request);
+        // $validator = $this->validate($request, [
+       $this->validate($request, [
+           
             // 'delete_by' => 'required',
             'date' => 'required',
             'title' => 'required',
             'intro' => 'required',
             'content' => 'required',
-            'aer_seo' => 'required',
-            'iduser' => 'required',
-            'thumb' => 'required|file|image|mimes:jpeg,png,jpg|max:2048',
-
+            'flag' => 'required',
+            'art_seo' => 'nullable',
+            'gambar' => 'required|file|image|mimes:jpeg,png,jpg|max:2048',
         ]);
-
+// dd($validator);
         // menyimpan data file yang diupload ke variabel $file
-        $article = $request->file('image');
+        $article = $request->file('gambar');
 
         $nama_file = time() . "_" . $article->getClientOriginalName();
 
         // isi dengan nama folder tempat kemana file diupload
-        $tujuan_upload = 'data_article';
+        $tujuan_upload = 'data_tes';
         $article->move($tujuan_upload, $nama_file);
 
+        // $status = article::create([
         article::create([
-            'created_by' => $request->created_by,
+            
             // 'delete_by' => $request->delete_by,
             'date' => $request->date,
             'title' => $request->title,
-            'intro' => $request->intro,
+            // 'intro' => $request->intro,
             'intro' => $request->intro,
             'content' => $request->content,
+            'flag' => $request->flag,
             'art_seo' => $request->art_seo,
-            'iduder' => $request->isuder,
-            'thumb' => $nama_file,
+            'iduser' => Auth::user()->id,
+            'gambar' => $nama_file
 
         ]);
+
+        // dd($status);
 
         return redirect('/article');
     }
