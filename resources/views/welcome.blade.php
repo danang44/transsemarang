@@ -173,7 +173,7 @@
 
                 <div class="row row-cols-6" style="display: flex;width: 748px;flex-wrap: wrap;">
                     @foreach ($RNarticles as $RNart)
-                    <a class="col border rounded border-1" href="/detailarticle/{{$RNart->title}}" style="cursor: pointer;background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(0,0,0,1)),url('{{ $RNart->thumb }}')center / cover no-repeat;width: 248px; height: 248px;align-items: flex-end;display: flex">
+                    <a class="col border rounded border-1" href="/detailarticle/{{$RNart->title}}" style="cursor: pointer;background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(0,0,0,1)),url('{{ $RNart->gambar }}')center / cover no-repeat;width: 248px; height: 248px;align-items: flex-end;display: flex">
                         <div class="card">
                             <div class="card-body">
                                 <span class="fw-semibold text-white"
@@ -1036,36 +1036,25 @@
                             <img src="assets/img/App_Store.png"></a>
                     </div>
                 </div>
-                <div class="col-auto"
-                    style="display: flex;flex-direction: row;align-items: flex-start;padding: 0px;gap: 40px;width: 574px;height: 162px;">
-                    <div class="col-auto"
-                        style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;gap: 20px;width: 260px;height: 162px;">
-                        <p class=""
-                            style="font-weight: 700;font-size: 24px;line-height: 34px;letter-spacing: -0.24px;">About
+                <div class="col-auto" style="display: flex;flex-direction: row;align-items: flex-start;padding: 0px;gap: 40px;width: 574px;height: 162px;">
+                    <div class="col-auto" style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;gap: 20px;width: 260px;height: 162px;">
+                        <p style="font-weight: 700;font-size: 24px;line-height: 34px;letter-spacing: -0.24px;">About
                         </p>
-                        <div class="col-auto"
-                            style="font-weight: 400;font-size: 18px;line-height: 24px;letter-spacing: -0.24px;display: flex;flex-direction: column;align-items: flex-start;padding: 0px;gap: 4px;width: 260px;height: 108px;text-decoration-line: none;">
+                        <div class="col-auto" style="font-weight: 400;font-size: 18px;line-height: 24px;letter-spacing: -0.24px;display: flex;flex-direction: column;align-items: flex-start;padding: 0px;gap: 4px;width: 260px;height: 108px;text-decoration-line: none;">
                             <span class="row"><a class="text-white" href="http://karir.transsemarang.semarangkota.go.id/portal/page/tentang">Profil</a></span>
                             <span class="row"><a class="text-white" href="http://karir.transsemarang.semarangkota.go.id/portal/page/tentang">Team</a></span>
                             <span class="row"><a class="text-white" href="http://karir.transsemarang.semarangkota.go.id/portal/page/tentang">Visi & Misi</a></span>
                             <span class="row"><a class="text-white" href="http://karir.transsemarang.semarangkota.go.id/portal/page/tentang">Tugas Pokok</a></span>
                         </div>
                     </div>
-                    <div class="col-auto"
-                        style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;gap: 20px;width: 274px;height: 162px;">
-                        <p class=""
-                            style="font-weight: 700;font-size: 24px;line-height: 34px;letter-spacing: -0.24px;">
-                            Supported by</p>
+                    <div class="col-auto" style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;gap: 20px;width: 274px;height: 162px;">
+                        <p style="font-weight: 700;font-size: 24px;line-height: 34px;letter-spacing: -0.24px;">Supported by</p>
                         <div class="col-auto"
                             style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;gap: 4px;width: 274px;height: 108px;">
-                            <span class="row"><a class="text-white" href="https://www.semarangkota.go.id/">Pemerintah Kota Semarang
-                                    2022</a></span>
-                            <span class="row"><a class="text-white" href="https://ppid.semarangkota.go.id/">Walikota
-                                    Semarang</a></span>
-                            <span class="row"><a class="text-white" href="https://dinkes.semarangkota.go.id/">Dinas Kesehatan Kota
-                                    Semarang</a></span>
-                            <span class="row"><a class="text-white" href="https://nginovasi.com/v2/">Nusantara Global
-                                    Inovasi</a></span>
+                            <span class="row"><a class="text-white" href="https://www.semarangkota.go.id/">Pemerintah Kota Semarang 2022</a></span>
+                            <span class="row"><a class="text-white" href="https://ppid.semarangkota.go.id/">Walikota Semarang</a></span>
+                            <span class="row"><a class="text-white" href="https://dinkes.semarangkota.go.id/">Dinas Kesehatan Kota Semarang</a></span>
+                            <span class="row"><a class="text-white" href="https://nginovasi.com/v2/">Nusantara Global Inovasi</a></span>
                         </div>
                     </div>
                 </div>
