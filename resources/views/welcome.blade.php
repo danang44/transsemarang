@@ -7,44 +7,36 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trans Semarang | Home</title>
-    <meta name="twitter:description"
-        content="Twitter Resmi BLU UPTD Trans Semarang  Jl. Tambak Aji Raya No. 5 Kode Pos 50185  CS : 1-5000-94  IG: transsemarang  FB: TRANS Semarang">
+    <base href="http://192.168.18.14:8000">
+
+    <meta name="twitter:description" content="Twitter Resmi BLU UPTD Trans Semarang  Jl. Tambak Aji Raya No. 5 Kode Pos 50185  CS : 1-5000-94  IG: transsemarang  FB: TRANS Semarang">
     <meta property="og:image" content="assets/img/Trans_Semarang_icon.svg">
     <meta property="og:type" content="website">
-    <meta name="description"
-        content="Trans Semarang adalah sistem transportasi angkutan massal berbasis jalan di Jawa Tengah yang beroperasi di Kota dan Kabupaten Semarang. Layanan ini dioperasikan guna mengurai kemacetan di Kota Semarang serta untuk mengakomodasi para pelaju menuju pusat kota dan destinasi wisata yang ada di Kota Semarang.">
+    <meta name="description" content="Trans Semarang adalah sistem transportasi angkutan massal berbasis jalan di Jawa Tengah yang beroperasi di Kota dan Kabupaten Semarang. Layanan ini dioperasikan guna mengurai kemacetan di Kota Semarang serta untuk mengakomodasi para pelaju menuju pusat kota dan destinasi wisata yang ada di Kota Semarang.">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:image" content="assets/img/tsmgLogo32px-01.png">
     <meta name="twitter:title" content="Trans Semarang | @transsemarang">
-    <meta
-        name="google-signin-client_id"content="662068769407-1qc1taetjo897853c5lkl755p2c5csvi.apps.googleusercontent.com">
+    <meta name="google-signin-client_id"content="662068769407-1qc1taetjo897853c5lkl755p2c5csvi.apps.googleusercontent.com">
+
     <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="assets/img/tsmgLogo-01-01%20(180x180).png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/img/tsmgLogo-01-01%20(16x16).png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/tsmgLogo32px-01.png">
     <link rel="icon" type="image/png" sizes="180x180" href="assets/img/tsmgLogo-01-01%20(180x180).png">
     <link rel="icon" type="image/png" sizes="192x192" href="assets/img/tsmgLogo-01-01%20(192x192).png">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"> --}}
-    <link
-        rel="stylesheet"href="https://fonts.googleapis.com/css?family=Lato:100i,300,300i,400,700,900&amp;display=swap">
-    <link
-        rel="stylesheet"href="https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i&amp;display=swap">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans'>
     <link rel="stylesheet" href="assets/css/Footer-Multi-Column-icons.css">
     <link rel="stylesheet" href="assets/css/Hero-Clean-Reverse-images.css">
     <link rel="stylesheet" href="assets/css/logo-slider.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.38/dist/sweetalert2.css">
-    <link rel="stylesheet"
-        href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
-        crossorigin="" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
     <script src="https://accounts.google.com/gsi/client" async defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
-        integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous">
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+    {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"> --}}
 </head>
 
 <style>
@@ -62,22 +54,20 @@
 
 <body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="72">
     <header>
-        <nav id="mainNav" class="navbar navbar-light navbar-expand-lg shadow fixed-top"
-            style="background: linear-gradient(#1D2939, #1D2939),#1D2939;padding-top: 28px;padding-bottom: 28px; padding-right: 136px;padding-left: 136px; height: 100px;">
+        <nav id="mainNav" class="navbar navbar-expand-lg shadow fixed-top bg-darkngi" style="height: 100px;">
             <div class="container">
                 <a class="navbar-brand d-flex align-items-center" href="#home">
-                    <span
-                        class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center me-2 bs-icon">
+                    <span class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center me-2 bs-icon">
                         <img class="border rounded" src="assets/img/tsmgLogo32px-01.png" width="36" height="36">
                     </span>
                     <img src="assets/img/textLogo.png" width="198.87" height="44">
                 </a>
-                <button data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
-                    class="navbar-toggler text-white bg-primary navbar-toggler-right text-uppercase rounded">
-                    <span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span>
+                <button data-bs-toggle="collapse" data-bs-target="#navbarResponsive" class="navbar-toggler text-white bg-primary navbar-toggler-right text-uppercase rounded">
+                    <span class="visually-hidden">Toggle navigation</span>
+                    <span class="navbar-toggler-icon"></span>
                 </button>
                 <div id="navbarResponsive" class="collapse navbar-collapse" id="navcol-2">
-                    <ul class="navbar-nav ms-auto">
+                    <ul class="navbar-nav ms-auto">#475467
                         <li class="nav-item mx-0 mx-lg-1">
                             <a class="nav-link py-3 px-0 px-lg-3 rounded"
                                 href="http://karir.transsemarang.semarangkota.go.id" target="_blank">CAREER</a>
@@ -155,7 +145,7 @@
                         </p>
                         </a>
                         <p class="text-justify text-black-50" style="display: -webkit-box;max-width: 412px;height: 112px;-webkit-line-clamp: 4;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;line-height: 28px; font-weight: 400;font-size: 20px;margin-bottom: 0px">
-                            {{ $PNart->intro }}</p>
+                            <?php echo $PNart->intro ?></p>
                         <p class="text-justify text-black-50" style="font-weight: 400;font-size: 16px;">{{ $PNart->date }}</p>
                     </div>
                 </div>

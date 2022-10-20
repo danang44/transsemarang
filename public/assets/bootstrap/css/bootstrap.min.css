@@ -28,7 +28,7 @@
     --bs-gray-700: #495057;
     --bs-gray-800: #343a40;
     --bs-gray-900: #212529;
-    --bs-primary: #0d6efd;
+    --bs-primary: #AF2330;
     --bs-secondary: #6c757d;
     --bs-success: #198754;
     --bs-info: #0dcaf0;
@@ -36,6 +36,7 @@
     --bs-danger: rgba(175, 35, 48, 0.12);
     --bs-light: #f8f9fa;
     --bs-dark: #212529;
+    --bs-head-color: #1D2939;
     --bs-primary-rgb: 13,110,253;
     --bs-secondary-rgb: 108,117,125;
     --bs-success-rgb: 25,135,84;
@@ -4026,31 +4027,23 @@ textarea.form-control-lg {
 .navbar {
     --bs-navbar-padding-x: 0;
     --bs-navbar-padding-y: 0.5rem;
-    --bs-navbar-color:
-    rgba(0, 0, 0, 0.55);
-    --bs-navbar-hover-color:
-    rgba(0, 0, 0, 0.7);
-    --bs-navbar-disabled-color:
-    rgba(0, 0, 0, 0.3);
-    --bs-navbar-active-color:
-    rgba(0, 0, 0, 0.9);
+    --bs-navbar-color: var(--bs-head-color);
+    --bs-navbar-hover-color: var(--bs-head-color);
+    --bs-navbar-disabled-color: var(--bs-head-color);
+    --bs-navbar-active-color: var(--bs-head-color);
     --bs-navbar-brand-padding-y: 0.3125rem;
     --bs-navbar-brand-margin-end: 1rem;
     --bs-navbar-brand-font-size: 1.25rem;
-    --bs-navbar-brand-color:
-    rgba(0, 0, 0, 0.9);
-    --bs-navbar-brand-hover-color:
-    rgba(0, 0, 0, 0.9);
+    --bs-navbar-brand-color: var(--bs-head-color)
+    --bs-navbar-brand-hover-color: var(--bs-head-color)
     --bs-navbar-nav-link-padding-x: 0.5rem;
     --bs-navbar-toggler-padding-y: 0.25rem;
     --bs-navbar-toggler-padding-x: 0.75rem;
     --bs-navbar-toggler-font-size: 1.25rem;
-    --bs-navbar-toggler-icon-bg:
-    url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-    --bs-navbar-toggler-border-color:
-    rgba(0, 0, 0, 0.1);
+    --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    --bs-navbar-toggler-border-color: rgba(255, 255, 255, 0.5);
     --bs-navbar-toggler-border-radius: 0.375rem;
-    --bs-navbar-toggler-focus-width: 0.25rem;
+    --bs-navbar-toggler-focus-width: 0.1rem;
     --bs-navbar-toggler-transition: box-shadow 0.15s ease-in-out;
     position: relative;
     display: flex;
@@ -4058,6 +4051,7 @@ textarea.form-control-lg {
     align-items: center;
     justify-content: space-between;
     padding: var(--bs-navbar-padding-y) var(--bs-navbar-padding-x);
+    background: linear-gradient(#1D2939, #1D2939),#1D2939;
 }
 
 .navbar>.container,.navbar>.container-fluid,.navbar>.container-lg,.navbar>.container-md,.navbar>.container-sm,.navbar>.container-xl,.navbar>.container-xxl {
@@ -4113,9 +4107,11 @@ textarea.form-control-lg {
 }
 
 .navbar-collapse {
+    display: grid;
+    justify-content: start;
     flex-basis: 100%;
     flex-grow: 1;
-    align-items: center;
+    background-color: #1D2939;
 }
 
 .navbar-toggler {
@@ -8808,7 +8804,7 @@ textarea.form-control-lg {
 
 .bg-primary {
     --bs-bg-opacity: 1;
-    background-color: rgba(175, 35, 48, 0.12)!important;
+    background-color: #AF2330!important;
 }
 
 .bg-secondary {
@@ -8854,6 +8850,11 @@ textarea.form-control-lg {
 .bg-black {
     --bs-bg-opacity: 1;
     background-color: rgba(var(--bs-black-rgb),var(--bs-bg-opacity))!important;
+}
+
+.bg-darkngi {
+    --bs-bg-opacity: 1;
+    background-color: rgba(var(--bs-head-color),var(--bs-head-color))!important;
 }
 
 .bg-white {
