@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\article;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class NewsController extends Controller
@@ -18,9 +19,13 @@ class NewsController extends Controller
         return view('news', ['article' => $article]);
     }
 
+    
+
     public function detailarticle(Request $request, $title)
     {
         $article = article::where('title', $title)->first();
+        DB::table('article')->where('title', $request->title)->increment('view');
+       
             return view('detailarticle', ['article' => $article]);
     }
 
