@@ -50,6 +50,17 @@
         height: 72px;
         text-align: center;
     }
+    .stepper .line {
+        width: 2px;
+        background-color: lightgrey !important;
+    }
+    .stepper .lead {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 28px;
+        letter-spacing: -0.006em;
+    }
+
     body {
         font-family: 'Plus Jakarta Sans', sans-serif;
         font-style: normal;
@@ -772,94 +783,118 @@
                 </div>
             </div>
         </div>
-    <div class="modal fade" id="modalPengaduan" aria-hidden="true" aria-labelledby="modalPengaduanLabel" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered" style="filter: drop-shadow(0px 4px 12px rgba(29, 41, 57, 0.12));border-radius: 20px;">
+    <div class="modal modal-xl fade" id="modalPengaduan" aria-hidden="true" aria-labelledby="modalPengaduanLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-scrollable" style="filter: drop-shadow(0px 4px 12px rgba(29, 41, 57, 0.12));">
             <div class="modal-content">
                 <div class="modal-header">
                     <h1 class="modal-title fs-5" id="modalPengaduanLabel" style="font-weight: 600;font-size: 32px;line-height: 40px;color: #1D2939;">Detail Complaint</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="col" style="display: flex;flex-direction: row;">
-                        <div class="row" style="width: 600px;height: 496px;border: 1px solid #E4E7EC;">
-                            <!-- Vertical Steppers -->
-<div class="row mt-1">
-    <div class="col-md-12">
-
-      <!-- Stepers Wrapper -->
-      <ul class="stepper stepper-vertical">
-
-        <!-- First Step -->
-        <li class="completed">
-          <a href="#!">
-            <span class="circle">1</span>
-            <span class="label">First step</span>
-          </a>
-        </li>
-
-        <!-- Second Step -->
-        <li class="active">
-
-          <!--Section Title -->
-          <a href="#!">
-            <span class="circle">2</span>
-            <span class="label">Second step</span>
-          </a>
-
-          <!-- Section Description -->
-          <div class="step-content grey lighten-3">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse cupiditate voluptate facere
-              iusto
-              quaerat
-              vitae excepturi, accusantium ut aliquam repellat atque nesciunt nostrum similique. Inventore
-              nostrum
-              ut,
-              nobis porro sapiente.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore error excepturi veniam nemo
-              repellendus, distinctio soluta vitae at sit saepe. Optio eaque quia excepturi adipisci pariatur
-              totam,
-              atque odit fugiat.</p>
-            <p>Deserunt voluptatem illum quae nisi soluta eum perferendis nesciunt asperiores tempore saepe
-              reiciendis,
-              vero quod a dolor corporis natus qui magni quas fuga rem excepturi laboriosam. Quisquam
-              expedita ab
-              fugiat.</p>
-          </div>
-        </li>
-
-        <!-- Third Step -->
-        <li class="warning">
-          <a href="#!">
-            <span class="circle"><i class="fas fa-exclamation"></i></span>
-            <span class="label">Third step</span>
-          </a>
-        </li>
-
-        <!-- Fourth Step -->
-        <li>
-          <a href="#!">
-            <span class="circle">4</span>
-            <span class="label">Fourth step</span>
-          </a>
-        </li>
-
-      </ul>
-      <!-- /.Stepers Wrapper -->
-
-    </div>
-  </div>
-
-  <!-- Steppers Navigation -->
-  <div class="row mt-1">
-    <div class="col-md-12 text-right">
-      <button class="btn btn-flat btn-sm">Cancel</button>
-      <button class="btn btn-primary btn-sm">Next</button>
-    </div>
-  </div>
-  <!-- /.Vertical Steppers -->
+                    <div class="col" style="display: flex;flex-direction: row;justify-content: space-around;align-items: center;align-content: center;">
+                        <div class="row" style="width: 600px;height: 496px;padding: 40px;">
+                            <div class="stepper d-flex flex-column mt-0 ml-0">
+                                <div class="d-flex mb-1">
+                                    <div class="d-flex flex-column pr-4 align-items-center">
+                                        <div class="rounded-circle py-2 px-3 bg-primary text-white mb-1">1</div>
+                                        <div class="line h-100"></div>
+                                    </div>
+                                    <div>
+                                        <h5 class="text-dark">Sudah ditangani</h5>
+                                        <p>Sunday, May 29th 2022 | 10:00 WIB</p>
+                                        <q class="lead text-muted pb-3">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque sed erat leo ullamcorper est. Nibh eget.
+                                        </q>
+                                    </div>
+                                </div>
+                                <div class="d-flex mb-1">
+                                    <div class="d-flex flex-column pr-4 align-items-center">
+                                        <div class="rounded-circle py-2 px-3 bg-primary text-white mb-1">2</div>
+                                        <div class="line h-100"></div>
+                                    </div>
+                                    <div>
+                                        <h5 class="text-dark">Proses Penanganan</h5>
+                                        <p>Sunday, May 29th 2022 | 10:00 WIB</p>
+                                        <p class="lead text-muted pb-3">
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="d-flex mb-1">
+                                    <div class="d-flex flex-column pr-4 align-items-center">
+                                        <div class="rounded-circle py-2 px-3 bg-primary text-white mb-1">3</div>
+                                        <div class="line h-100"></div>
+                                    </div>
+                                    <div>
+                                        <h5 class="text-dark">Laporan ditindak lanjuti</h5>
+                                        <p>Sunday, May 29th 2022 | 10:00 WIB</p>
+                                        <p class="lead text-muted pb-3">
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="d-flex mb-1">
+                                    <div class="d-flex flex-column pr-4 align-items-center">
+                                        <div class="rounded-circle py-2 px-3 bg-primary text-white mb-1">4</div>
+                                        <div class="line h-100 d-none"></div>
+                                    </div>
+                                    <div>
+                                        <h5 class="text-dark">Laporan diterima</h5>
+                                        <p>Sunday, May 29th 2022 | 10:00 WIB</p>
+                                        <p class="lead text-muted pb-3"></p>
+                                    </div>
+                                </div>
+                                <div class="d-flex mb-1">
+                                    <div class="d-flex flex-column pr-4 align-items-center">
+                                        <div class="rounded-circle py-2 px-3 bg-primary text-white mb-1">4</div>
+                                        <div class="line h-100 d-none"></div>
+                                    </div>
+                                    <div>
+                                        <h5 class="text-dark">Laporan diterima</h5>
+                                        <p>Sunday, May 29th 2022 | 10:00 WIB</p>
+                                        <p class="lead text-muted pb-3"></p>
+                                    </div>
+                                </div>
+                                <div class="d-flex mb-1">
+                                    <div class="d-flex flex-column pr-4 align-items-center">
+                                        <div class="rounded-circle py-2 px-3 bg-primary text-white mb-1">4</div>
+                                        <div class="line h-100 d-none"></div>
+                                    </div>
+                                    <div>
+                                        <h5 class="text-dark">Laporan diterima</h5>
+                                        <p>Sunday, May 29th 2022 | 10:00 WIB</p>
+                                        <p class="lead text-muted pb-3"></p>
+                                    </div>
+                                </div>
+                                <div class="d-flex mb-1">
+                                    <div class="d-flex flex-column pr-4 align-items-center">
+                                        <div class="rounded-circle py-2 px-3 bg-primary text-white mb-1">4</div>
+                                        <div class="line h-100 d-none"></div>
+                                    </div>
+                                    <div>
+                                        <h5 class="text-dark">Laporan diterima</h5>
+                                        <p>Sunday, May 29th 2022 | 10:00 WIB</p>
+                                        <p class="lead text-muted pb-3"></p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="row" style="width: 400px;height: 496px;border: 1px solid #E4E7EC;">
-
+                        <div class="row" style="display: flex;width: 400px;height: 496px;align-content: flex-start;flex-direction: row;justify-content: center;">
+                            <div class="card border-secondary mb-3" style="display: flex;flex-direction: column;align-items: center;">
+                                <div class="card-header" style="width: 100%">
+                                    <div style="display: flex;flex-direction: row;align-items: center;justify-content: flex-start;align-content: center;">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM11.7071 6.70711C12.0976 6.31658 12.0976 5.68342 11.7071 5.29289C11.3166 4.90237 10.6834 4.90237 10.2929 5.29289L7 8.58579L5.70711 7.29289C5.31658 6.90237 4.68342 6.90237 4.29289 7.29289C3.90237 7.68342 3.90237 8.31658 4.29289 8.70711L6.29289 10.7071C6.68342 11.0976 7.31658 11.0976 7.70711 10.7071L11.7071 6.70711Z" fill="#114CD6"/>
+                                        </svg>
+                                        <p style="padding-left: 10px;font-weight: 600;font-size: 20px;line-height: 28px;letter-spacing: -0.006em;color: #1D2939;margin-bottom: 0px;margin-block-start: 0px;margin-block-end: 0px;">Laporan Diterima</p>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title" hidden>Secondary card title</h5>
+                                    <p class="card-text text-muted" style="font-weight: 300;font-size: 16px;line-height: 24px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictumst dolor arcu eleifend in. Enim enim fringilla.</p>
+                                </div>
+                                <a href="#" class="btn" style="padding: 12px 24px;gap: 4px;width: 320px;height: 48px;background: #AF2330;border-radius: 8px;font-weight: 600;font-size: 16px;line-height: 24px;letter-spacing: -0.006em;color: #FFFFFF;">Check Aduan Laporan</a>
+                                <hr style="margin-top: 10px; margin-bottom: 0px; border-top: 1px none;">
+                                <a href="#" class="btn" style="padding: 12px 24px;gap: 4px;width: 320px;height: 48px;border: 2px solid #E4E7EC;border-radius: 8px;font-weight: 600;font-size: 16px;line-height: 24px;letter-spacing: -0.006em;color: #1D2939;">Batalkan Aduan</a>
+                            </div>
                         </div>
                     </div>
                 </div>
