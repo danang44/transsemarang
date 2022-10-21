@@ -24,7 +24,7 @@
     <link rel="icon" type="image/png" sizes="180x180" href="assets/img/tsmgLogo-01-01%20(180x180).png">
     <link rel="icon" type="image/png" sizes="192x192" href="assets/img/tsmgLogo-01-01%20(192x192).png">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans:200,300,400,500,600,700,800'>
     <link rel="stylesheet" href="assets/css/Footer-Multi-Column-icons.css">
     <link rel="stylesheet" href="assets/css/Hero-Clean-Reverse-images.css">
     <link rel="stylesheet" href="assets/css/logo-slider.css">
@@ -49,6 +49,14 @@
         width: 413px;
         height: 72px;
         text-align: center;
+    }
+    body {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-style: normal;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: left;
     }
 </style>
 
@@ -637,155 +645,35 @@
     {{-- ===================== --}}
     {{-- USER REPORT COMPLAINT --}}
     {{-- ===================== --}}
-    <section>
-    @if(Auth::check())
-    {{-- <div style="width: 1440px;height: 910px;background: #F9FAFB;">
-        <div class="row" style="">
-            <div class="col"
-                style="display: flex;flex-direction: column;align-items: flex-start;padding: 98.67px 120px 82px 99.3px;gap: 80px;position: absolute;width: 472px;height: 712px;">
-                <div class="row"
-                    style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;width: 472px;height: 152px;">
-                    <p style="font-weight: 500;font-size: 24px;line-height: 32px;color: #AF2330;">TS.ADUAN</p>
-                    <p style="font-weight: 400;font-size: 48px;line-height: 60px;color: #1D2939">Layanan <strong
-                            style=" font-weight: 800;color: #AF2330;">Aduan<br>& Bantuan</strong></p>
-                </div>
-                <div class="row"
-                    style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;gap: 40px;width: 472px;height: 480px;">
-                    <div class="row"
-                        style="display: flex;flex-direction: row;align-items: flex-start;padding: 0px;gap: 20px;width: 472px;height: 112px;">
-                        <h1
-                            style="width: 44px;height: 40px;font-family: 'Plus Jakarta Sans';font-style: normal;font-weight: 400;font-size: 32px;line-height: 40px;color: #AF2330;">
-                            01</h1>
-                        <span
-                            style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;gap: 8px;width: 408px;height: 112px;">
-                            <p
-                                style="width: 408px;height: 40px;font-family: 'Plus Jakarta Sans';font-style: normal;font-weight: 600;font-size: 32px;line-height: 40px;color: #475467;">
-                                Jelaskan dengan jelas</p>
-                            <p
-                                style="width: 408px;height: 64px;font-family: 'Plus Jakarta Sans';font-style: normal;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                        </span>
-                    </div>
-                    <div class="row"
-                        style="display: flex;flex-direction: row;align-items: flex-start;padding: 0px;gap: 20px;width: 472px;height: 176px;">
-                        <h1
-                            style="width: 44px;height: 40px;font-family: 'Plus Jakarta Sans';font-style: normal;font-weight: 400;font-size: 32px;line-height: 40px;color: #AF2330;">
-                            02</h1>
-                        <span
-                            style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;gap: 8px;width: 408px;height: 112px;">
-                            <p
-                                style="width: 408px;height: 40px;font-family: 'Plus Jakarta Sans';font-style: normal;font-weight: 600;font-size: 32px;line-height: 40px;color: #475467;">
-                                Gunakan kata yang sopan</p>
-                            <p
-                                style="width: 408px;height: 128px;font-family: 'Plus Jakarta Sans';font-style: normal;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed est lorem massa.
-                                Risus in faucibus amet laoreet diam. </p>
-                        </span>
-                    </div>
-                    <div class="row"
-                        style="display: flex;flex-direction: row;align-items: flex-start;padding: 0px;gap: 20px;width: 472px;height: 112px;">
-                        <h1
-                            style="width: 44px;height: 40px;font-family: 'Plus Jakarta Sans';font-style: normal;font-weight: 400;font-size: 32px;line-height: 40px;color: #AF2330;">
-                            03</h1>
-                        <span
-                            style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;gap: 8px;width: 408px;height: 112px;">
-                            <p
-                                style="width: 408px;height: 40px;font-family: 'Plus Jakarta Sans';font-style: normal;font-weight: 600;font-size: 32px;line-height: 40px;color: #475467;">
-                                Sed iaculis morbi non.</p>
-                            <p
-                                style="width: 408px;height: 64px;font-family: 'Plus Jakarta Sans';font-style: normal;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div class="col"
-                style="display: flex;flex-direction: row;align-items: flex-start;padding: 80px 120px 80px 674px;isolation: isolate;position: absolute;width: 648px;height: 750px;">
-                <div
-                    style="display: flex;flex-direction: row;align-items: flex-start;padding: 28px 0px;isolation: isolate;width: 4px;height: 80px;margin: 0px -2px;z-index: 1;">
-                    <svg width="4" height="25" viewBox="0 0 4 25" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <rect y="0.996826" width="4" height="24" rx="2" fill="#AF2330" />
-                    </svg>
-                </div>
-
-                <div class="row"
-                    style="display: flex;flex-direction: column;align-items: center;padding: 0px;width: 646px;height: 746px;background: #FFFFFF;box-shadow: 0px 4px 12px rgba(29, 41, 57, 0.12);backdrop-filter: blur(10px);border-radius: 20px;">
-                    <div class="mb-3"
-                        style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;padding-bottom: 2px;width: 646px;height: 662px;background: #F9FAFB;border-radius: 20px;">
-                        <div
-                            style="width: 646px;height: 80px;background: #FFFFFF;border-radius: 20px 20px 0 0; margin-bottom: 2px">
-                            <p
-                                style="position: absolute;width: 233px;height: 40px;left: 40px;top: 20px;font-family: 'Plus Jakarta Sans';font-style: normal;font-weight: 600;font-size: 32px;line-height: 40px;text-transform: capitalize;color: #1D2939;">
-                                Layanan Aduan
-                            </p>
-                        </div>
-                        <div class="mb-3"
-                            style="display: flex;flex-direction: column;align-items: flex-start;padding: 40px;gap: 20px;width: 646px;height: 580px;background: #FFFFFF;">
-                            <img style="width: 566px;height: 344px;" src="assets/img/IlustrationCS.png" />
-                            <div style="width: 566px;height: 200px;left: 40px;top: 424px;">
-                                <div style="padding: 0px;gap: 4px;width: 566px;height: 92px;">
-                                    <p
-                                        style="font-weight: 600;font-size: 24px;line-height: 32px;text-align: left;letter-spacing: -0.006em;color: #1D2939;">
-                                        Anda harus masuk dengan Google untuk melanjutkan
-                                    </p>
-                                    <p
-                                        style="font-weight: 400;font-size: 20px;line-height: 28px;letter-spacing: -0.006em;color: #98A2B3;">
-                                        Setelah Anda mengajukan keluhan, kami akan mengirimkan informasi penanganan
-                                        ke email yang Anda gunakan untuk login.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                     <!-- Authentication Links -->
-   <li class="nav-item mx-3 mx-lg-1 dropdown">
-            <a href="/auth/google" class="btn btn-success">
-                Login  Google
-            </a>
-
-
-            </div>
-        </div> --}}
-
-        <div style="width: 1440px;height: 910px;background: #F9FAFB;">
+    <section style="display: flex;align-items: center;justify-content: center;align-content: center;">
+        @if(Auth::check())
+        <div style="width: 100%;height: 910px;background: #F9FAFB;">
             <div class="row" style="">
                 <div class="col" style="display: flex;flex-direction: column;align-items: flex-start;padding: 98.67px 120px 82px 99.3px;gap: 80px;position: absolute;width: 472px;height: 712px;">
                     <div class="row"style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;width: 472px;height: 152px;">
                         <p style="font-weight: 500;font-size: 24px;line-height: 32px;color: #AF2330;">TS.ADUAN</p>
-                        <p style="font-weight: 400;font-size: 48px;line-height: 60px;color: #1D2939">Layanan
-                            <strong style=" font-weight: 800;color: #AF2330;">Aduan<br>& Bantuan</strong></p>
+                        <p style="font-weight: 400;font-size: 48px;line-height: 60px;color: #1D2939">Layanan<strong style=" font-weight: 800;color: #AF2330;">Aduan<br>& Bantuan</strong></p>
                     </div>
                     <div class="row" style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;gap: 40px;width: 472px;height: 480px;">
                         <div class="row" style="display: flex;flex-direction: row;align-items: flex-start;padding: 0px;gap: 20px;width: 472px;height: 112px;">
-                            <h1 style="width: 44px;height: 40px;font-family: 'Plus Jakarta Sans';font-style: normal;font-weight: 400;font-size: 32px;line-height: 40px;color: #AF2330;">
-                                01</h1>
+                            <h1 style="width: 44px;height: 40px;font-weight: 400;font-size: 32px;line-height: 40px;color: #AF2330;">01</h1>
                             <span style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;gap: 8px;width: 408px;height: 112px;">
-                                <p style="width: 408px;height: 40px;font-family: 'Plus Jakarta Sans';font-style: normal;font-weight: 600;font-size: 32px;line-height: 40px;color: #475467;">
-                                    Jelaskan dengan jelas</p>
-                                <p style="width: 408px;height: 64px;font-family: 'Plus Jakarta Sans';font-style: normal;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                                <p style="width: 408px;height: 40px;font-weight: 600;font-size: 32px;line-height: 40px;color: #475467;">Jelaskan dengan jelas</p>
+                                <p style="width: 408px;height: 64px;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
                             </span>
                         </div>
                         <div class="row" style="display: flex;flex-direction: row;align-items: flex-start;padding: 0px;gap: 20px;width: 472px;height: 176px;">
-                            <h1 style="width: 44px;height: 40px;font-family: 'Plus Jakarta Sans';font-style: normal;font-weight: 400;font-size: 32px;line-height: 40px;color: #AF2330;">
-                                02</h1>
+                            <h1 style="width: 44px;height: 40px;font-weight: 400;font-size: 32px;line-height: 40px;color: #AF2330;">02</h1>
                             <span style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;gap: 8px;width: 408px;height: 112px;">
-                                <p style="width: 408px;height: 40px;font-family: 'Plus Jakarta Sans';font-style: normal;font-weight: 600;font-size: 32px;line-height: 40px;color: #475467;">
-                                    Gunakan kata yang sopan</p>
-                                <p style="width: 408px;height: 128px;font-family: 'Plus Jakarta Sans';font-style: normal;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed est lorem massa.
-                                    Risus in faucibus amet laoreet diam. </p>
+                                <p style="width: 408px;height: 40px;font-weight: 600;font-size: 32px;line-height: 40px;color: #475467;">Gunakan kata yang sopan</p>
+                                <p style="width: 408px;height: 128px;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed est lorem massa. Risus in faucibus amet laoreet diam. </p>
                             </span>
                         </div>
                         <div class="row" style="display: flex;flex-direction: row;align-items: flex-start;padding: 0px;gap: 20px;width: 472px;height: 112px;">
-                            <h1 style="width: 44px;height: 40px;font-family: 'Plus Jakarta Sans';font-style: normal;font-weight: 400;font-size: 32px;line-height: 40px;color: #AF2330;">
-                                03</h1>
+                            <h1 style="width: 44px;height: 40px;font-weight: 400;font-size: 32px;line-height: 40px;color: #AF2330;">03</h1>
                             <span style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;gap: 8px;width: 408px;height: 112px;">
-                                <p style="width: 408px;height: 40px;font-family: 'Plus Jakarta Sans';font-style: normal;font-weight: 600;font-size: 32px;line-height: 40px;color: #475467;">
-                                    Sed iaculis morbi non.</p>
-                                <p style="width: 408px;height: 64px;font-family: 'Plus Jakarta Sans';font-style: normal;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                                <p style="width: 408px;height: 40px;font-weight: 600;font-size: 32px;line-height: 40px;color: #475467;">Sed iaculis morbi non.</p>
+                                <p style="width: 408px;height: 64px;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
                             </span>
                         </div>
                     </div>
@@ -1162,29 +1050,16 @@
     {{-- USER REPORT TRACKING  --}}
     {{-- ===================== --}}
 
-    <section>
-        <div class="col"
-            style="display: flex;flex-direction: row;justify-content: center;align-items: center;padding: 80px 120px;gap: 120px;width: 1440px;height: 316px;">
-            <div class="row"
-                style="display: flex;flex-direction: row;align-items: center;padding: 40px 80px;width: 1200px;height: 156px;background: #1D2939;border-radius: 8px;">
-                <div class="col"
-                    style="display: flex;flex-direction: column;justify-content: center;align-items: flex-start;padding: 0px;gap: 4px;width: 507px;height: 76px;">
-                    <span style="font-weight: 300;font-size: 24px;line-height: 32px;color: #ffffff">Have you ever
-                        reported a complaint?</span>
-                    <span style="font-weight: 600;font-size: 32px;line-height: 40px;color: #ffffff">Track your
-                        complaint report</span>
+    <section style="display: flex;align-items: center;justify-content: center;align-content: center;">
+        <div class="col" style="display: flex;flex-direction: row;justify-content: center;align-items: center;padding: 80px 120px;gap: 120px;width: 1440px;height: 316px;">
+            <div class="row" style="display: flex;flex-direction: row;align-items: center;padding: 40px 80px;width: 1200px;height: 156px;background: #1D2939;border-radius: 8px;">
+                <div class="col" style="display: flex;flex-direction: column;justify-content: center;align-items: flex-start;padding: 0px;gap: 4px;width: 507px;height: 76px;">
+                    <span style="font-weight: 300;font-size: 24px;line-height: 32px;color: #ffffff">Have you ever reported a complaint?</span>
+                    <span style="font-weight: 600;font-size: 32px;line-height: 40px;color: #ffffff">Track your complaint report</span>
                 </div>
-                <script src="https://accounts.google.com/gsi/client" async defer></script>
-                <div id="g_id_onload"
-                    data-client_id="662068769407-1qc1taetjo897853c5lkl755p2c5csvi.apps.googleusercontent.com"
-                    data-context="use" data-ux_mode="redirect" data-login_uri="http://localhost/home" data-nonce=""
-                    data-itp_support="true" hidden>
-                </div>
-
-                <div class="g_id_signin" data-type="standard" data-shape="rectangular" data-theme="outline"
-                    data-text="continue_with" data-size="large" data-locale="id" data-logo_alignment="center"
-                    data-width="413">
-                </div>
+                {{-- <script src="https://accounts.google.com/gsi/client" async defer></script> --}}
+                {{-- <div id="g_id_onload" data-client_id="662068769407-1qc1taetjo897853c5lkl755p2c5csvi.apps.googleusercontent.com" data-context="use" data-ux_mode="redirect" data-login_uri="http://localhost/home" data-nonce="" data-itp_support="true" hidden></div>
+                <div class="g_id_signin" data-type="standard" data-shape="rectangular" data-theme="outline" data-text="continue_with" data-size="large" data-locale="id" data-logo_alignment="center" data-width="413"></div> --}}
             </div>
         </div>
     </section>
