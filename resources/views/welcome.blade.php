@@ -646,7 +646,6 @@
     {{-- USER REPORT COMPLAINT --}}
     {{-- ===================== --}}
     <section style="display: flex;align-items: center;justify-content: center;align-content: center;">
-        @if(Auth::check())
         <div style="width: 100%;height: 910px;background: #F9FAFB;">
             <div class="row" style="">
                 <div class="col" style="display: flex;flex-direction: column;align-items: flex-start;padding: 98.67px 120px 82px 99.3px;gap: 80px;position: absolute;width: 472px;height: 712px;">
@@ -680,370 +679,78 @@
                 </div>
                 <div class="col" style="display: flex;flex-direction: row;align-items: flex-start;padding: 80px 120px 80px 674px;isolation: isolate;position: absolute;width: 648px;height: 750px;">
                     <div style="display: flex;flex-direction: row;align-items: flex-start;padding: 28px 0px;isolation: isolate;width: 4px;height: 80px;margin: 0px -2px;z-index: 1;">
-                        <svg width="4" height="25" viewBox="0 0 4 25" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
+                        <svg width="4" height="25" viewBox="0 0 4 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect y="0.996826" width="4" height="24" rx="2" fill="#AF2330" />
                         </svg>
                     </div>
+                    @if(Auth::check())
                     <div class="row" style="display: flex;flex-direction: column;align-items: center;padding: 0px;width: 646px;height: 746px;background: #FFFFFF;box-shadow: 0px 4px 12px rgba(29, 41, 57, 0.12);backdrop-filter: blur(10px);border-radius: 20px;">
-                        <form action="/pengaduan.php" method="post" class="row" id="formlapor"
-                            style="display: flex;flex-direction: column;align-items: center;padding: 0px;width: 646px;height: 750px;background: #F9FAFB;box-shadow: 0px 4px 12px rgba(29, 41, 57, 0.12);backdrop-filter: blur(10px);border-radius: 20px;">
-                            <div class="mb-3"
-                                style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;gap: 2px;width: 646px;height: 662px;background: #F9FAFB;border-radius: 20px;">
-                                <div
-                                    style="width: 646px;height: 80px;background: #FFFFFF;border-radius: 20px 20px 0 0;">
-                                    <p
-                                        style="position: absolute;width: 233px;height: 40px;left: 40px;top: 20px;font-family: 'Plus Jakarta Sans';font-style: normal;font-weight: 600;font-size: 32px;line-height: 40px;text-transform: capitalize;color: #1D2939;">
-                                        Layanan Aduan
-                                    </p>
+                        <form action="/pengaduan.php" method="post" class="row" id="formlapor" style="display: flex;flex-direction: column;align-items: center;padding: 0px;width: 646px;height: 750px;background: #F9FAFB;box-shadow: 0px 4px 12px rgba(29, 41, 57, 0.12);backdrop-filter: blur(10px);border-radius: 20px;">
+                            <div class="mb-3" style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;gap: 2px;width: 646px;height: 662px;background: #F9FAFB;border-radius: 20px;">
+                                <div style="width: 646px;height: 80px;background: #FFFFFF;border-radius: 20px 20px 0 0;">
+                                    <p style="position: absolute;width: 233px;height: 40px;left: 40px;top: 20px;font-family: 'Plus Jakarta Sans';font-style: normal;font-weight: 600;font-size: 32px;line-height: 40px;text-transform: capitalize;color: #1D2939;">Layanan Aduan</p>
                                 </div>
-                                <div class="mb-3"
-                                    style="display: flex;flex-direction: column;align-items: flex-start;padding: 40px;gap: 20px;width: 646px;height: 580px;background: #FFFFFF;">
-                                    <legend
-                                        style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;isolation: isolate;width: 566px;height: 92px;color: #98A2B3;">
-                                        Your email
-                                        <input type="email" class="form-control" id="exampleFormControlInput1"
-                                            placeholder="name@example.com">
+                                <div class="mb-3" style="display: flex;flex-direction: column;align-items: flex-start;padding: 40px;gap: 20px;width: 646px;height: 580px;background: #FFFFFF;">
+                                    <legend style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;isolation: isolate;width: 566px;height: 92px;color: #98A2B3;">Your email
+                                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com"/>
                                     </legend>
-                                    <legend
-                                        style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;isolation: isolate;width: 566px;height: 88px;color: #98A2B3;">
-                                        Subjek Pengaduan
-                                        <select class="form-select" aria-label="Default select example"
-                                            style="font-weight: 400;font-size: 20px;line-height: 28px;letter-spacing: -0.006em;color: #475467;"
-                                            required>
+                                    <legend style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;isolation: isolate;width: 566px;height: 88px;color: #98A2B3;"> Subjek Pengaduan
+                                        <select class="form-select" aria-label="Default select example" style="font-weight: 400;font-size: 20px;line-height: 28px;letter-spacing: -0.006em;color: #475467;" required>
                                             <option selected disabled value="">Materi Pengaduan...</option>
-                                            <option value="1"><span>1.Pelanggaran terhadap kode etik dan/atau
-                                                    pedoman
-                                                    perilaku aparat</span></option>
-                                            <option value="2"><span>2.Penyalahgunaan wewenang/jabatan</span>
-                                            </option>
+                                            <option value="1"><span>1.Pelanggaran terhadap kode etik dan/atau pedoman perilaku aparat</span></option>
+                                            <option value="2"><span>2.Penyalahgunaan wewenang/jabatan</span> </option>
                                             <option value="3"><span>3.Pelanggaran sumpah jabatan</span></option>
-                                            <option value="4"><span>4.Pelanggaran terhadap peraturan disiplin
-                                                    Pegawai
-                                                    Negeri Sipil</span></option>
-                                            <option value="5"><span>5.Perbuatan tercela, yaitu perbuatan amoral,
-                                                    asusila, atau perbuatan yang tidak selayaknya dilakukan oleh seorang
-                                                    aparat maupun selaku anggota masyarakat</span></option>
-                                            <option value="6"><span>6.Pelanggaran hukum, baik dilakukan dengan
-                                                    sengaja, maupun karena kelalaian dan ketidakpahaman</span></option>
-                                            <option value="7"><span>7.Mal administrasi, yaitu terjadinya
-                                                    kesalahan,
-                                                    kekeliruan atau kelalaian yang bersifat administratif</span>
-                                            </option>
-                                            <option value="8"><span>8.Pelayanan publik yang tidak memuaskan yang
-                                                    dapat
-                                                    merugikan pihak-pihak yang berkepentingan serta masyarakat secara
-                                                    umum</span></option>
+                                            <option value="4"><span>4.Pelanggaran terhadap peraturan disiplin Pegawai Negeri Sipil</span></option>
+                                            <option value="5"><span>5.Perbuatan tercela, yaitu perbuatan amoral, asusila, atau perbuatan yang tidak selayaknya dilakukan oleh seorang aparat maupun selaku anggota masyarakat</span></option>
+                                            <option value="6"><span>6.Pelanggaran hukum, baik dilakukan dengan sengaja, maupun karena kelalaian dan ketidakpahaman</span></option>
+                                            <option value="7"><span>7.Mal administrasi, yaitu terjadinya kesalahan, kekeliruan atau kelalaian yang bersifat administratif</span></option>
+                                            <option value="8"><span>8.Pelayanan publik yang tidak memuaskan yang dapat merugikan pihak-pihak yang berkepentingan serta masyarakat secara umum</span></option>
                                         </select>
-                                        <div class="invalid-feedback">
-                                            Silahkan pilih materi pengaduan.</div>
+                                        <div class="invalid-feedback">Silahkan pilih materi pengaduan.</div>
                                     </legend>
-                                    <legend
-                                        style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;isolation: isolate;width: 566px;height: 172px;color: #98A2B3;">
-                                        Deskripsi Kejadian
-                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"
-                                            placeholder="Sebutkan peristiwa, waktu terjadinya, dan lokasi kejadian atas pengaduan anda" required></textarea>
+                                    <legend style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;isolation: isolate;width: 566px;height: 172px;color: #98A2B3;"> Deskripsi Kejadian
+                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="Sebutkan peristiwa, waktu terjadinya, dan lokasi kejadian atas pengaduan anda" required></textarea>
                                     </legend>
-                                    <legend
-                                        style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;isolation: isolate;width: 566px;height: 92px;color: #98A2B3;">
-                                        Foto Pendukung
-                                        <input class="form-control" type="file" id="formFile"
-                                            accept=".jpg,.jpeg,.png" onchange="Filevalidation()" />
+                                    <legend style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;isolation: isolate;width: 566px;height: 92px;color: #98A2B3;">Foto Pendukung
+                                        <input class="form-control" type="file" id="formFile" accept=".jpg,.jpeg,.png" onchange="Filevalidation()" />
                                     </legend>
                                     <p id="fileResult"></p>
                                 </div>
                             </div>
-                            <div
-                                style="display: flex;flex-direction: row;justify-content: flex-end;align-items: center;padding: 20px 40px;gap: 12px;width: 646px;height: 88px;">
-                                <button type="reset" class="btn btn-outline-secondary"
-                                    style="display: flex;flex-direction: row;justify-content: center;align-items: center;padding: 12px 24px;gap: 4px;width: 102px;height: 48px;border: 2px solid #E4E7EC;border-radius: 8px;">Cancel</button>
-                                <button id="submitReport" type="submit" class="btn btn-danger text-white"
-                                    style="display: flex;flex-direction: row;justify-content: center;align-items: center;width: 159px;height: 48px;background: #AF2330;border-radius: 8px;"
-                                    disabled>Submit Report</button>
+                            <div style="display: flex;flex-direction: row;justify-content: flex-end;align-items: center;padding: 20px 40px;gap: 12px;width: 646px;height: 88px;">
+                                <button type="reset" class="btn btn-outline-secondary" style="display: flex;flex-direction: row;justify-content: center;align-items: center;padding: 12px 24px;gap: 4px;width: 102px;height: 48px;border: 2px solid #E4E7EC;border-radius: 8px;">Cancel</button>
+                                <button id="submitReport" type="submit" class="btn btn-danger text-white" style="display: flex;flex-direction: row;justify-content: center;align-items: center;width: 159px;height: 48px;background: #AF2330;border-radius: 8px;" disabled>Submit Report</button>
                             </div>
                         </form>
-
                         @else
-                         <div style="width: 1440px;height: 910px;background: #F9FAFB;">
-        <div class="row" style="">
-            <div class="col"
-                style="display: flex;flex-direction: column;align-items: flex-start;padding: 98.67px 120px 82px 99.3px;gap: 80px;position: absolute;width: 472px;height: 712px;">
-                <div class="row"
-                    style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;width: 472px;height: 152px;">
-                    <p style="font-weight: 500;font-size: 24px;line-height: 32px;color: #AF2330;">TS.ADUAN</p>
-                    <p style="font-weight: 400;font-size: 48px;line-height: 60px;color: #1D2939">Layanan <strong
-                            style=" font-weight: 800;color: #AF2330;">Aduan<br>& Bantuan</strong></p>
-                </div>
-                <div class="row"
-                    style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;gap: 40px;width: 472px;height: 480px;">
-                    <div class="row"
-                        style="display: flex;flex-direction: row;align-items: flex-start;padding: 0px;gap: 20px;width: 472px;height: 112px;">
-                        <h1
-                            style="width: 44px;height: 40px;font-family: 'Plus Jakarta Sans';font-style: normal;font-weight: 400;font-size: 32px;line-height: 40px;color: #AF2330;">
-                            01</h1>
-                        <span
-                            style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;gap: 8px;width: 408px;height: 112px;">
-                            <p
-                                style="width: 408px;height: 40px;font-family: 'Plus Jakarta Sans';font-style: normal;font-weight: 600;font-size: 32px;line-height: 40px;color: #475467;">
-                                Jelaskan dengan jelas</p>
-                            <p
-                                style="width: 408px;height: 64px;font-family: 'Plus Jakarta Sans';font-style: normal;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                        </span>
-                    </div>
-                    <div class="row"
-                        style="display: flex;flex-direction: row;align-items: flex-start;padding: 0px;gap: 20px;width: 472px;height: 176px;">
-                        <h1
-                            style="width: 44px;height: 40px;font-family: 'Plus Jakarta Sans';font-style: normal;font-weight: 400;font-size: 32px;line-height: 40px;color: #AF2330;">
-                            02</h1>
-                        <span
-                            style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;gap: 8px;width: 408px;height: 112px;">
-                            <p
-                                style="width: 408px;height: 40px;font-family: 'Plus Jakarta Sans';font-style: normal;font-weight: 600;font-size: 32px;line-height: 40px;color: #475467;">
-                                Gunakan kata yang sopan</p>
-                            <p
-                                style="width: 408px;height: 128px;font-family: 'Plus Jakarta Sans';font-style: normal;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed est lorem massa.
-                                Risus in faucibus amet laoreet diam. </p>
-                        </span>
-                    </div>
-                    <div class="row"
-                        style="display: flex;flex-direction: row;align-items: flex-start;padding: 0px;gap: 20px;width: 472px;height: 112px;">
-                        <h1
-                            style="width: 44px;height: 40px;font-family: 'Plus Jakarta Sans';font-style: normal;font-weight: 400;font-size: 32px;line-height: 40px;color: #AF2330;">
-                            03</h1>
-                        <span
-                            style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;gap: 8px;width: 408px;height: 112px;">
-                            <p
-                                style="width: 408px;height: 40px;font-family: 'Plus Jakarta Sans';font-style: normal;font-weight: 600;font-size: 32px;line-height: 40px;color: #475467;">
-                                Sed iaculis morbi non.</p>
-                            <p
-                                style="width: 408px;height: 64px;font-family: 'Plus Jakarta Sans';font-style: normal;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div class="col"
-                style="display: flex;flex-direction: row;align-items: flex-start;padding: 80px 120px 80px 674px;isolation: isolate;position: absolute;width: 648px;height: 750px;">
-                <div
-                    style="display: flex;flex-direction: row;align-items: flex-start;padding: 28px 0px;isolation: isolate;width: 4px;height: 80px;margin: 0px -2px;z-index: 1;">
-                    <svg width="4" height="25" viewBox="0 0 4 25" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <rect y="0.996826" width="4" height="24" rx="2" fill="#AF2330" />
-                    </svg>
-                </div>
-
-                <div class="row"
-                    style="display: flex;flex-direction: column;align-items: center;padding: 0px;width: 646px;height: 746px;background: #FFFFFF;box-shadow: 0px 4px 12px rgba(29, 41, 57, 0.12);backdrop-filter: blur(10px);border-radius: 20px;">
-                    <div class="mb-3"
-                        style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;padding-bottom: 2px;width: 646px;height: 662px;background: #F9FAFB;border-radius: 20px;">
-                        <div
-                            style="width: 646px;height: 80px;background: #FFFFFF;border-radius: 20px 20px 0 0; margin-bottom: 2px">
-                            <p
-                                style="position: absolute;width: 233px;height: 40px;left: 40px;top: 20px;font-family: 'Plus Jakarta Sans';font-style: normal;font-weight: 600;font-size: 32px;line-height: 40px;text-transform: capitalize;color: #1D2939;">
-                                Layanan Aduan
-                            </p>
-                        </div>
-                        <div class="mb-3"
-                            style="display: flex;flex-direction: column;align-items: flex-start;padding: 40px;gap: 20px;width: 646px;height: 580px;background: #FFFFFF;">
-                            <img style="width: 566px;height: 344px;" src="assets/img/IlustrationCS.png" />
-                            <div style="width: 566px;height: 200px;left: 40px;top: 424px;">
-                                <div style="padding: 0px;gap: 4px;width: 566px;height: 92px;">
-                                    <p
-                                        style="font-weight: 600;font-size: 24px;line-height: 32px;text-align: left;letter-spacing: -0.006em;color: #1D2939;">
-                                        Anda harus masuk dengan Google untuk melanjutkan
-                                    </p>
-                                    <p
-                                        style="font-weight: 400;font-size: 20px;line-height: 28px;letter-spacing: -0.006em;color: #98A2B3;">
-                                        Setelah Anda mengajukan keluhan, kami akan mengirimkan informasi penanganan
-                                        ke email yang Anda gunakan untuk login.
-                                    </p>
+                        <div class="row" style="display: flex;flex-direction: column;align-items: center;padding: 0px;width: 646px;height: 746px;background: #FFFFFF;box-shadow: 0px 4px 12px rgba(29, 41, 57, 0.12);backdrop-filter: blur(10px);border-radius: 20px;">
+                            <div class="mb-3" style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;padding-bottom: 2px;width: 646px;height: 662px;background: #F9FAFB;border-radius: 20px;">
+                                <div style="width: 646px;height: 80px;background: #FFFFFF;border-radius: 20px 20px 0 0; margin-bottom: 2px">
+                                    <p style="position: absolute;width: 233px;height: 40px;left: 40px;top: 20px;font-family: 'Plus Jakarta Sans';font-style: normal;font-weight: 600;font-size: 32px;line-height: 40px;text-transform: capitalize;color: #1D2939;">Layanan Aduan</p>
+                                </div>
+                                <div class="mb-3" style="display: flex;flex-direction: column;align-items: flex-start;padding: 40px;gap: 20px;width: 646px;height: 580px;background: #FFFFFF;">
+                                    <img style="width: 566px;height: 344px;" src="assets/img/IlustrationCS.png"/>
+                                    <div style="width: 566px;height: 200px;left: 40px;top: 424px;">
+                                        <div style="padding: 0px;gap: 4px;width: 566px;height: 92px;">
+                                            <p style="font-weight: 600;font-size: 24px;line-height: 32px;text-align: left;letter-spacing: -0.006em;color: #1D2939;">Anda harus masuk dengan Google untuk melanjutkan</p>
+                                            <p tyle="font-weight: 400;font-size: 20px;line-height: 28px;letter-spacing: -0.006em;color: #98A2B3;">Setelah Anda mengajukan keluhan, kami akan mengirimkan informasi penanganan ke email yang Anda gunakan untuk login.</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                     <!-- Authentication Links -->
-   <li class="nav-item mx-3 mx-lg-1 dropdown">
-            <a href="/auth/google" class="btn btn-success">
-                Login  Google
-            </a>
-
-
-            </div>
-        </div>
-@endif
-
-
-
-
-
-            {{-- <form action="/pengaduan.php" method="post" class="row"
-                        style="display: flex;flex-direction: column;align-items: center;padding: 0px;width: 646px;height: 750px;background: #F9FAFB;box-shadow: 0px 4px 12px rgba(29, 41, 57, 0.12);backdrop-filter: blur(10px);border-radius: 20px;">
-                        <div class="mb-3"
-                            style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;gap: 2px;width: 646px;height: 662px;background: #F9FAFB;border-radius: 20px;">
-                            <div style="width: 646px;height: 80px;background: #FFFFFF;border-radius: 20px 20px 0 0;">
-                                <p
-                                    style="position: absolute;width: 233px;height: 40px;left: 40px;top: 20px;font-family: 'Plus Jakarta Sans';font-style: normal;font-weight: 600;font-size: 32px;line-height: 40px;text-transform: capitalize;color: #1D2939;">
-                                    Layanan Aduan
-                                </p>
-                            </div>
-                            <div class="mb-3"
-                                style="display: flex;flex-direction: column;align-items: flex-start;padding: 40px;gap: 20px;width: 646px;height: 580px;background: #FFFFFF;">
-                                <legend
-                                    style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;isolation: isolate;width: 566px;height: 92px;color: #98A2B3;">
-                                    Your email
-                                    <input type="email" class="form-control" id="exampleFormControlInput1"
-                                        placeholder="name@example.com">
-                                </legend>
-                                <legend
-                                    style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;isolation: isolate;width: 566px;height: 88px;color: #98A2B3;">
-                                    Subjek Pengaduan
-                                    <select class="form-select" aria-label="Default select example"
-                                        style="font-weight: 400;font-size: 20px;line-height: 28px;letter-spacing: -0.006em;color: #475467;"
-                                        required>
-                                        <option selected disabled value="">Materi Pengaduan...</option>
-                                        <option value="1"><span>1.Pelanggaran terhadap kode etik dan/atau pedoman
-                                                perilaku aparat</span></option>
-                                        <option value="2"><span>2.Penyalahgunaan wewenang/jabatan</span></option>
-                                        <option value="3"><span>3.Pelanggaran sumpah jabatan</span></option>
-                                        <option value="4"><span>4.Pelanggaran terhadap peraturan disiplin Pegawai
-                                                Negeri Sipil</span></option>
-                                        <option value="5"><span>5.Perbuatan tercela, yaitu perbuatan amoral,
-                                                asusila, atau perbuatan yang tidak selayaknya dilakukan oleh seorang
-                                                aparat maupun selaku anggota masyarakat</span></option>
-                                        <option value="6"><span>6.Pelanggaran hukum, baik dilakukan dengan
-                                                sengaja, maupun karena kelalaian dan ketidakpahaman</span></option>
-                                        <option value="7"><span>7.Mal administrasi, yaitu terjadinya kesalahan,
-                                                kekeliruan atau kelalaian yang bersifat administratif</span></option>
-                                        <option value="8"><span>8.Pelayanan publik yang tidak memuaskan yang dapat
-                                                merugikan pihak-pihak yang berkepentingan serta masyarakat secara
-                                                umum</span></option>
-                                    </select>
-                                    <div class="invalid-feedback">
-                                        Silahkan pilih materi pengaduan.</div>
-                                </legend>
-                                <legend
-                                    style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;isolation: isolate;width: 566px;height: 172px;color: #98A2B3;">
-                                    Deskripsi Kejadian
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"
-                                        placeholder="Sebutkan peristiwa, waktu terjadinya, dan lokasi kejadian atas pengaduan anda" required></textarea>
-                                </legend>
-                                <legend
-                                    style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;isolation: isolate;width: 566px;height: 92px;color: #98A2B3;">
-                                    Foto Pendukung
-                                    <input class="form-control" type="file" id="formFile"
-                                        accept=".jpg,.jpeg,.png" onchange="Filevalidation()" />
-                                </legend>
-                                <p id="fileResult"></p>
+                            <!-- Authentication Links -->
+                            <div style="display: flex;flex-direction: row;align-items: center;width: 413px;height: 72px;">
+                                <button href="/auth/google" class="btn customGPlusSignIn" role="button" type="button" style="display: flex;flex-direction: column;padding: 20px 32px;gap: 20px;width: 413px;height: 72px;background: #FFFFFF;box-shadow: 0px 4px 12px rgba(29, 41, 57, 0.08);backdrop-filter: blur(10px);border-radius: 8px;flex-wrap: wrap;">
+                                    <img src="https://cdn.cdnlogo.com/logos/g/35/google-icon.svg" style="width: 32px;height: 32px;">
+                                    <span id="name" style="font-weight: 600;font-size: 24px;line-height: 32px;color: #1D2939;">Lanjutkan dengan Google</span>
+                                </button>
                             </div>
                         </div>
-                        <div
-                            style="display: flex;flex-direction: row;justify-content: flex-end;align-items: center;padding: 20px 40px;gap: 12px;width: 646px;height: 88px;">
-                            <button type="reset" class="btn btn-outline-secondary"
-                                style="display: flex;flex-direction: row;justify-content: center;align-items: center;padding: 12px 24px;gap: 4px;width: 102px;height: 48px;border: 2px solid #E4E7EC;border-radius: 8px;">Cancel</button>
-                            <button id="submitReport" type="submit" class="btn btn-danger text-white"
-                                style="display: flex;flex-direction: row;justify-content: center;align-items: center;width: 159px;height: 48px;background: #AF2330;border-radius: 8px;"
-                                disabled>Submit Report</button>
-                        </div>
-                    </form> --}}
-        </div>
-        </div>
-        <div class="modal fade" id="modalPengaduan" aria-hidden="true" aria-labelledby="modalPengaduanLabel" tabindex="-1">
-            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="modalPengaduanLabel">Layanan Aduan</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form action="/pengaduan.php" method="post" class="row"
-                            style="display: flex;flex-direction: column;align-items: center;padding: 0px;width: 646px;height: 750px;background: #F9FAFB;box-shadow: 0px 4px 12px rgba(29, 41, 57, 0.12);backdrop-filter: blur(10px);border-radius: 20px;">
-                            <div class="mb-3"
-                                style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;gap: 2px;width: 646px;height: 662px;background: #F9FAFB;border-radius: 20px;">
-                                <div
-                                    style="width: 646px;height: 80px;background: #FFFFFF;border-radius: 20px 20px 0 0;">
-                                    <p
-                                        style="position: absolute;width: 233px;height: 40px;left: 40px;top: 20px;font-family: 'Plus Jakarta Sans';font-style: normal;font-weight: 600;font-size: 32px;line-height: 40px;text-transform: capitalize;color: #1D2939;">
-                                        Layanan Aduan
-                                    </p>
-                                </div>
-                                <div class="mb-3"
-                                    style="display: flex;flex-direction: column;align-items: flex-start;padding: 40px;gap: 20px;width: 646px;height: 580px;background: #FFFFFF;">
-                                    <legend
-                                        style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;isolation: isolate;width: 566px;height: 92px;color: #98A2B3;">
-                                        Your email
-                                        <input type="email" class="form-control" id="exampleFormControlInput1"
-                                            placeholder="name@example.com">
-                                    </legend>
-                                    <legend
-                                        style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;isolation: isolate;width: 566px;height: 88px;color: #98A2B3;">
-                                        Subjek Pengaduan
-                                        <select class="form-select" aria-label="Default select example"
-                                            style="font-weight: 400;font-size: 20px;line-height: 28px;letter-spacing: -0.006em;color: #475467;"
-                                            required>
-                                            <option selected disabled value="">Materi Pengaduan...</option>
-                                            <option value="1"><span>1.Pelanggaran terhadap kode etik dan/atau
-                                                    pedoman
-                                                    perilaku aparat</span></option>
-                                            <option value="2"><span>2.Penyalahgunaan wewenang/jabatan</span>
-                                            </option>
-                                            <option value="3"><span>3.Pelanggaran sumpah jabatan</span></option>
-                                            <option value="4"><span>4.Pelanggaran terhadap peraturan disiplin
-                                                    Pegawai
-                                                    Negeri Sipil</span></option>
-                                            <option value="5"><span>5.Perbuatan tercela, yaitu perbuatan amoral,
-                                                    asusila, atau perbuatan yang tidak selayaknya dilakukan oleh seorang
-                                                    aparat maupun selaku anggota masyarakat</span></option>
-                                            <option value="6"><span>6.Pelanggaran hukum, baik dilakukan dengan
-                                                    sengaja, maupun karena kelalaian dan ketidakpahaman</span></option>
-                                            <option value="7"><span>7.Mal administrasi, yaitu terjadinya
-                                                    kesalahan,
-                                                    kekeliruan atau kelalaian yang bersifat administratif</span>
-                                            </option>
-                                            <option value="8"><span>8.Pelayanan publik yang tidak memuaskan yang
-                                                    dapat
-                                                    merugikan pihak-pihak yang berkepentingan serta masyarakat secara
-                                                    umum</span></option>
-                                        </select>
-                                        <div class="invalid-feedback">
-                                            Silahkan pilih materi pengaduan.</div>
-                                    </legend>
-                                    <legend
-                                        style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;isolation: isolate;width: 566px;height: 172px;color: #98A2B3;">
-                                        Deskripsi Kejadian
-                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"
-                                            placeholder="Sebutkan peristiwa, waktu terjadinya, dan lokasi kejadian atas pengaduan anda" required></textarea>
-                                    </legend>
-                                    <legend
-                                        style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;isolation: isolate;width: 566px;height: 92px;color: #98A2B3;">
-                                        Foto Pendukung
-                                        <input class="form-control" type="file" id="formFile"
-                                            accept=".jpg,.jpeg,.png" onchange="Filevalidation()" />
-                                    </legend>
-                                    <p id="fileResult"></p>
-                                </div>
-                            </div>
-                            {{-- <div
-                                style="display: flex;flex-direction: row;justify-content: flex-end;align-items: center;padding: 20px 40px;gap: 12px;width: 646px;height: 88px;">
-                                <button type="reset" class="btn btn-outline-secondary"
-                                    style="display: flex;flex-direction: row;justify-content: center;align-items: center;padding: 12px 24px;gap: 4px;width: 102px;height: 48px;border: 2px solid #E4E7EC;border-radius: 8px;">Cancel</button>
-                                <button id="submitReport" type="submit" class="btn btn-danger text-white"
-                                    style="display: flex;flex-direction: row;justify-content: center;align-items: center;width: 159px;height: 48px;background: #AF2330;border-radius: 8px;"
-                                    disabled>Submit Report</button>
-                            </div> --}}
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="reset" class="btn btn-outline-secondary" data-bs-toggle="modal" style="display: flex;flex-direction: row;justify-content: center;align-items: center;padding: 12px 24px;gap: 4px;width: 102px;height: 48px;border: 2px solid #E4E7EC;border-radius: 8px;">Cancel</button>
-                        <button id="submitReport" type="submit" class="btn btn-danger text-white" style="display: flex;flex-direction: row;justify-content: center;align-items: center;width: 159px;height: 48px;background: #AF2330;border-radius: 8px;" disabled>Submit Report</button>
+                        @endif
                     </div>
                 </div>
             </div>
         </div>
-
-
-
     </section>
 
     {{-- ===================== --}}
@@ -1057,11 +764,112 @@
                     <span style="font-weight: 300;font-size: 24px;line-height: 32px;color: #ffffff">Have you ever reported a complaint?</span>
                     <span style="font-weight: 600;font-size: 32px;line-height: 40px;color: #ffffff">Track your complaint report</span>
                 </div>
-                {{-- <script src="https://accounts.google.com/gsi/client" async defer></script> --}}
-                {{-- <div id="g_id_onload" data-client_id="662068769407-1qc1taetjo897853c5lkl755p2c5csvi.apps.googleusercontent.com" data-context="use" data-ux_mode="redirect" data-login_uri="http://localhost/home" data-nonce="" data-itp_support="true" hidden></div>
-                <div class="g_id_signin" data-type="standard" data-shape="rectangular" data-theme="outline" data-text="continue_with" data-size="large" data-locale="id" data-logo_alignment="center" data-width="413"></div> --}}
+                <div style="display: flex;flex-direction: row;align-items: center;width: 413px;height: 72px;">
+                    <a href="#modalPengaduan" data-bs-toggle="modal" class="btn customGPlusSignIn" role="button" style="display: flex;flex-direction: column;padding: 20px 32px;gap: 20px;width: 413px;height: 72px;background: #FFFFFF;box-shadow: 0px 4px 12px rgba(29, 41, 57, 0.08);backdrop-filter: blur(10px);border-radius: 8px;flex-wrap: wrap;">
+                        <img src="https://cdn.cdnlogo.com/logos/g/35/google-icon.svg" style="width: 32px;height: 32px;">
+                        <span id="name" style="font-weight: 600;font-size: 24px;line-height: 32px;color: #1D2939;">Lanjutkan dengan Google</span>
+                    </a>
+                </div>
             </div>
         </div>
+    <div class="modal fade" id="modalPengaduan" aria-hidden="true" aria-labelledby="modalPengaduanLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered" style="filter: drop-shadow(0px 4px 12px rgba(29, 41, 57, 0.12));border-radius: 20px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modalPengaduanLabel" style="font-weight: 600;font-size: 32px;line-height: 40px;color: #1D2939;">Detail Complaint</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="col" style="display: flex;flex-direction: row;">
+                        <div class="row" style="width: 600px;height: 496px;border: 1px solid #E4E7EC;">
+                            <!-- Vertical Steppers -->
+<div class="row mt-1">
+    <div class="col-md-12">
+
+      <!-- Stepers Wrapper -->
+      <ul class="stepper stepper-vertical">
+
+        <!-- First Step -->
+        <li class="completed">
+          <a href="#!">
+            <span class="circle">1</span>
+            <span class="label">First step</span>
+          </a>
+        </li>
+
+        <!-- Second Step -->
+        <li class="active">
+
+          <!--Section Title -->
+          <a href="#!">
+            <span class="circle">2</span>
+            <span class="label">Second step</span>
+          </a>
+
+          <!-- Section Description -->
+          <div class="step-content grey lighten-3">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse cupiditate voluptate facere
+              iusto
+              quaerat
+              vitae excepturi, accusantium ut aliquam repellat atque nesciunt nostrum similique. Inventore
+              nostrum
+              ut,
+              nobis porro sapiente.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore error excepturi veniam nemo
+              repellendus, distinctio soluta vitae at sit saepe. Optio eaque quia excepturi adipisci pariatur
+              totam,
+              atque odit fugiat.</p>
+            <p>Deserunt voluptatem illum quae nisi soluta eum perferendis nesciunt asperiores tempore saepe
+              reiciendis,
+              vero quod a dolor corporis natus qui magni quas fuga rem excepturi laboriosam. Quisquam
+              expedita ab
+              fugiat.</p>
+          </div>
+        </li>
+
+        <!-- Third Step -->
+        <li class="warning">
+          <a href="#!">
+            <span class="circle"><i class="fas fa-exclamation"></i></span>
+            <span class="label">Third step</span>
+          </a>
+        </li>
+
+        <!-- Fourth Step -->
+        <li>
+          <a href="#!">
+            <span class="circle">4</span>
+            <span class="label">Fourth step</span>
+          </a>
+        </li>
+
+      </ul>
+      <!-- /.Stepers Wrapper -->
+
+    </div>
+  </div>
+
+  <!-- Steppers Navigation -->
+  <div class="row mt-1">
+    <div class="col-md-12 text-right">
+      <button class="btn btn-flat btn-sm">Cancel</button>
+      <button class="btn btn-primary btn-sm">Next</button>
+    </div>
+  </div>
+  <!-- /.Vertical Steppers -->
+                        </div>
+                        <div class="row" style="width: 400px;height: 496px;border: 1px solid #E4E7EC;">
+
+                        </div>
+                    </div>
+                </div>
+                {{-- <div class="modal-footer">
+                    <button type="reset" class="btn btn-outline-secondary" data-bs-toggle="modal" style="display: flex;flex-direction: row;justify-content: center;align-items: center;padding: 12px 24px;gap: 4px;width: 102px;height: 48px;border: 2px solid #E4E7EC;border-radius: 8px;">Cancel</button>
+                    <button id="submitReport" type="submit" class="btn btn-danger text-white" style="display: flex;flex-direction: row;justify-content: center;align-items: center;width: 159px;height: 48px;background: #AF2330;border-radius: 8px;" disabled>Submit Report</button>
+                </div> --}}
+            </div>
+        </div>
+    </div>
     </section>
 
     {{-- ===================== --}}
