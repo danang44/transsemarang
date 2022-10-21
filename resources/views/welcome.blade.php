@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trans Semarang | Home</title>
-    {{-- <base href="http://192.168.18.14:8000"> --}}
+    <base href="http://192.168.18.14:8000">
 
     <meta name="twitter:description" content="Twitter Resmi BLU UPTD Trans Semarang  Jl. Tambak Aji Raya No. 5 Kode Pos 50185  CS : 1-5000-94  IG: transsemarang  FB: TRANS Semarang">
     <meta property="og:image" content="assets/img/Trans_Semarang_icon.svg">
@@ -57,7 +57,7 @@
         <nav id="mainNav" class="navbar navbar-expand-lg shadow fixed-top bg-darkngi" style="height: 100px;">
             <div class="container">
                 <a class="navbar-brand d-flex align-items-center" href="#home">
-                    <span class="d-flex justify-content-center align-items-center me-2">
+                    <span class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center me-2 bs-icon">
                         <img class="border rounded" src="assets/img/tsmgLogo32px-01.png" width="36" height="36">
                     </span>
                     <img src="assets/img/textLogo.png" width="198.87" height="44">
@@ -67,17 +67,17 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div id="navbarResponsive" class="collapse navbar-collapse" id="navcol-2">
-                    <ul class="navbar-nav ms-auto rounded">
-                        <li class="nav-item mx-3 mx-lg-1 rounded">
+                    <ul class="navbar-nav ms-auto">#475467
+                        <li class="nav-item mx-0 mx-lg-1">
                             <a class="nav-link py-3 px-0 px-lg-3 rounded"
                                 href="http://karir.transsemarang.semarangkota.go.id" target="_blank">CAREER</a>
                         </li>
-                        <li class="nav-item mx-3 mx-lg-1">
+                        <li class="nav-item mx-0 mx-lg-1">
                             <a class="nav-link py-3 px-0 px-lg-3 rounded"
                                 href="https://ppid.semarangkota.go.id/kb/jalur-rute-brt-trans-semarang-dan-feeder-di-kota-semarang"
                                 target="_blank">BUS & RUTE</a>
                         </li>
-                        <li class="nav-item mx-3 mx-lg-1">
+                        <li class="nav-item mx-0 mx-lg-1">
                             <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#hotlineCenter"
                                 onclick="sweet();">HOTLINE CENTER</a>
                         </li>
