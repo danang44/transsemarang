@@ -5,6 +5,8 @@ use Illuminate\Http\Request;
 use App\article;
 use Illuminate\Support\Facades\DB;
 
+use App\Http\Controllers\Controller;
+
 class WelcomeController extends Controller
 {
     public function index()

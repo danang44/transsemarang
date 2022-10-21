@@ -42,7 +42,7 @@
                             </div>
                         </div>
                     </div>
-
+                    
                     <div class="text-center">
                         <h3>PERBAHARUI ARTIKEL</h3>
                     </div>
@@ -54,7 +54,7 @@
 
                             <div class="form-group">
                                 <label>JUDUL</label>
-                                <input type="text" required="required" class="form-control" name="title" id="title">
+                                <input type="text" required="required" class="form-control" name="title" id="title" required autocomplete="title">
                             </div>
                             <div class="form-group">
                                 <label>TANGGAL</label>
@@ -83,13 +83,12 @@
                                     @endforeach
                                 @else --}}
                                     <textarea name="content" required="required" class="form-control" id="content" cols="30" rows="10"
-                                        value="text"></textarea>
+                                        value="text" required autocomplete="content"></textarea>
                                 {{-- @endif --}}
                             </div>
 
                             <div class="form-group">
                                 <label>PUBLIKASI</label>
-    
                                 <div class="col-md-3">
                                     <select id="flag" type="text" class="form-control @error('flag') is-invalid @enderror" name="flag" data-container-css-class="border-teal" data-dropdown-css-class="border-teal" required>
                                         <!-- <option value="1">admin</option> -->
@@ -104,7 +103,7 @@
                                 </div>
                             </div>
 
-                            <div class="form-group">
+                            {{-- <div class="form-group">
                                 <div style="position:relative;">
                                     <a class='btn btn-info col-sm-3' href='javascript:;'>
                                         Choose Image...
@@ -113,37 +112,33 @@
                                     &nbsp;
                                     <span class='label label-info' id="upload-file-info"></span>
                                 </div>
-                            </div>
+                            </div>  --}}
 
-                            {{-- <div class="form-group">
+                            <div class="form-group">
                                 <div style="position:relative;">
-                                    <a class='btn btn-info col-sm-3' href='javascript:;'>
+                                    <a class='btn btn-info col-sm-3' href='javascript:;' >
                                         Choose Image...
                                     </a>
                                     <img class="img-preview img-fluid mt-3 " style="width:400px; height:100%;">
                                     <input type="file"
                                         style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;'
-                                        name="thumb" id="thumb" size="40" onchange="previewImage()">
-
+                                        name="gambar" id="gambar" size="40" onchange="previewImage()">
                                     &nbsp;
                                     <span class='label label-info' id="upload-file-info"></span>
                                 </div>
-                            </div> --}}
-
+                            </div>
                             <input type="submit" value="Simpan" class="btn btn-primary col-sm-3">
                         </form>
                     </div>
 
-
                     <script src="https://cdn.ckeditor.com/4.20.0/standard/ckeditor.js"></script>
 
-                    <script>
-                       
+                    <script>    
                         CKEDITOR.replace('intro');
                         CKEDITOR.replace('content');
-
+                        CKEDITOR.config.autoParagraph = false;
                         function previewImage() {
-                            const image = document.querySelector('#image');
+                            const image = document.querySelector('#gambar');
                             const imgPreview = document.querySelector('.img-preview')
 
 
@@ -154,10 +149,8 @@
                             oFReader.onload = function(oFREvent) {
                                 imgPreview.src = oFREvent.target.result;
                             }
-
                         }
                     </script>
-
                 </div>
             </div>
         </div>

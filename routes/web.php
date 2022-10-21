@@ -13,16 +13,29 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/welcome', 'WelcomeController@index')->name('welcome');
+Route::get('/', 'WelcomeController@index');
 
-Route::get('/welcome', 'NewsController@portal')->name('welcome');
+
+
+
+
+// Route::group(['middleware' => 'App\Http\Middleware\UserMiddleware'], function () {
+Route::get('/welc', 'NewsController@portal')->name('welc');
 
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+// });
 
-Route::get('/', 'WelcomeController@index');
+
+
+
+
 
 Auth::routes();
+
+Route::group(['middleware' => 'App\Http\Middleware\AdminMiddleware'], function () {
 
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -70,24 +83,10 @@ Route::post('/card/update', 'Admin\CardController@update');
 Route::get('/aboutadd', 'AdminController@aboutadd')->name('aboutadd');
 Route::post('/about_process', 'AdminController@about_process');
 
-
-
-Route::get('/auth/{provider}', 'Auth\SocialiteController@redirectToProvider');
-Route::get('/auth/{provider}/callback', 'Auth\SocialiteController@handleProvideCallback');
-
+});
 // Route::get('/home', 'Api\HomeController@index');
 
-Route::get('testing', function () {
-    $client = Http::withHeaders(['key' => 'a1e5b407f811c091c02c25159cd1d4be'])
-        ->get('https://gps.brtnusantara.com/dev/trans_semarang/api_v1/getCorridor')
 
-        ->body();
-    dd($client);
-
-    Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
-        \UniSharp\LaravelFilemanager\Lfm::routes();
-    });
-});
 
 
 Route::get('/news', function () {
@@ -95,3 +94,9 @@ Route::get('/news', function () {
 });
 Route::get('/news', 'NewsController@index')->name('news');
 Route::get('/detailarticle/{title}', 'NewsController@detailarticle');
+
+
+
+
+Route::get('/auth/{provider}', 'Auth\SocialiteController@redirectToProvider');
+Route::get('/auth/{provider}/callback', 'Auth\SocialiteController@handleProvideCallback');

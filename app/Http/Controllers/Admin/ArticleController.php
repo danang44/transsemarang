@@ -47,7 +47,7 @@ class ArticleController extends Controller
         $nama_file = time() . "_" . $article->getClientOriginalName();
 
         // isi dengan nama folder tempat kemana file diupload
-        $tujuan_upload = 'data_tes';
+        $tujuan_upload = 'data_articlenew';
         $article->move($tujuan_upload, $nama_file);
 
         // $status = article::create([
@@ -62,7 +62,7 @@ class ArticleController extends Controller
             'flag' => $request->flag,
             'art_seo' => $request->art_seo,
             'iduser' => Auth::user()->id,
-            'gambar' => $nama_file
+            'gambar' => '/data_articlenew/'.$nama_file
 
         ]);
 

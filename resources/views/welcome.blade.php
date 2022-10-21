@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trans Semarang | Home</title>
-    <base href="http://192.168.18.14:8000">
+    {{-- <base href="http://192.168.18.14:8000"> --}}
 
     <meta name="twitter:description" content="Twitter Resmi BLU UPTD Trans Semarang  Jl. Tambak Aji Raya No. 5 Kode Pos 50185  CS : 1-5000-94  IG: transsemarang  FB: TRANS Semarang">
     <meta property="og:image" content="assets/img/Trans_Semarang_icon.svg">
@@ -57,7 +57,7 @@
         <nav id="mainNav" class="navbar navbar-expand-lg shadow fixed-top bg-darkngi" style="height: 100px;">
             <div class="container">
                 <a class="navbar-brand d-flex align-items-center" href="#home">
-                    <span class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center me-2 bs-icon">
+                    <span class="d-flex justify-content-center align-items-center me-2">
                         <img class="border rounded" src="assets/img/tsmgLogo32px-01.png" width="36" height="36">
                     </span>
                     <img src="assets/img/textLogo.png" width="198.87" height="44">
@@ -67,20 +67,54 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div id="navbarResponsive" class="collapse navbar-collapse" id="navcol-2">
-                    <ul class="navbar-nav ms-auto">#475467
-                        <li class="nav-item mx-0 mx-lg-1">
+                    <ul class="navbar-nav ms-auto rounded">
+                        <li class="nav-item mx-3 mx-lg-1 rounded">
                             <a class="nav-link py-3 px-0 px-lg-3 rounded"
                                 href="http://karir.transsemarang.semarangkota.go.id" target="_blank">CAREER</a>
                         </li>
-                        <li class="nav-item mx-0 mx-lg-1">
+                        <li class="nav-item mx-3 mx-lg-1">
                             <a class="nav-link py-3 px-0 px-lg-3 rounded"
                                 href="https://ppid.semarangkota.go.id/kb/jalur-rute-brt-trans-semarang-dan-feeder-di-kota-semarang"
                                 target="_blank">BUS & RUTE</a>
                         </li>
-                        <li class="nav-item mx-0 mx-lg-1">
+                        <li class="nav-item mx-3 mx-lg-1">
                             <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#hotlineCenter"
                                 onclick="sweet();">HOTLINE CENTER</a>
                         </li>
+                        <!-- Authentication Links -->
+    
+                        @guest
+                        <li class="nav-item mx-3 mx-lg-1">
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{ route('login') }}">{{ __('Login') }}</a>
+                        </li>
+                        @if (Route::has('register'))
+                        <li class="nav-item mx-3 mx-lg-1">
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{ route('register') }}">{{ __('Register') }}</a>
+                        </li>
+                        @endif
+                        @else
+                        <li class="nav-item mx-3 mx-lg-1 dropdown">
+                            <a id="navbarDropdown" class="nav-link py-3 px-0 px-lg-3 rounded dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                {{ Auth::user()->name }} <span class="caret"></span>
+                            </a>
+    
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown" style="background-color:#262b2f">
+    
+                                {{-- <a class="dropdown-item" href="/user" style="color:white"> My Profile </a> --}}
+                                <a style="color:white" class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                         document.getElementById('logout-form').submit();">
+                                    {{ __('Logout') }}
+                                </a>
+    
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    @csrf
+                                </form>
+                            </div>
+                        </li>
+                        @endguest
+                    </ul>
+                    <ul class="navbar-nav ml-auto mr-3">
+                        
                     </ul>
                 </div>
             </div>
@@ -164,6 +198,7 @@
                 <div class="row row-cols-6" style="display: flex;width: 748px;flex-wrap: wrap;">
                     @foreach ($RNarticles as $RNart)
                     <a class="col border rounded border-1" href="/detailarticle/{{$RNart->title}}" style="cursor: pointer;background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(0,0,0,1)),url('{{ $RNart->gambar }}')center / cover no-repeat;width: 248px; height: 248px;align-items: flex-end;display: flex">
+                        {{-- <img src="{{ $RNart->gambar }}" alt=""> --}}
                         <div class="card">
                             <div class="card-body">
                                 <span class="fw-semibold text-white"
@@ -704,21 +739,18 @@
                                 </div>
                             </div>
                         </div>
-                        <a class="btn btn-primary" data-bs-toggle="modal" href="#modalPengaduan" role="button" hidden>Pengaduan</a>
-                        <div id="g_id_onload"
-                            data-client_id="662068769407-1qc1taetjo897853c5lkl755p2c5csvi.apps.googleusercontent.com"
-                            data-context="signin" data-ux_mode="popup" data-login_uri="http://localhost:8000/"
-                            data-auto_prompt="false">
-                        </div>
-
-                        <div class="g_id_signin" data-type="standard" data-shape="rectangular" data-theme="outline"
-                            data-text="signin_with" data-size="large" data-locale="id" data-logo_alignment="left"
-                            data-width="350">
-                        </div>
-                    </div>
+                         <!-- Authentication Links -->
+       <li class="nav-item mx-3 mx-lg-1 dropdown">
+                <a href="/auth/google" class="btn btn-success">
+                    Login  Google
+                </a>
+               
+                        
                 </div>
             </div>
 
+
+         
             {{-- <form action="/pengaduan.php" method="post" class="row"
                         style="display: flex;flex-direction: column;align-items: center;padding: 0px;width: 646px;height: 750px;background: #F9FAFB;box-shadow: 0px 4px 12px rgba(29, 41, 57, 0.12);backdrop-filter: blur(10px);border-radius: 20px;">
                         <div class="mb-3"
@@ -790,39 +822,6 @@
                     </form> --}}
         </div>
         </div>
-        {{-- <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-            <div class="modal-dialog modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Modal 1</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  Show a second modal and hide this one with the button below.
-                </div>
-                <div class="modal-footer">
-                  <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Open second modal</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
-            <div class="modal-dialog modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Modal 2</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  Hide this modal and show the first with the button below.
-                </div>
-                <div class="modal-footer">
-                  <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back to first</button>
-                </div>
-              </div>
-            </div>
-          </div> --}}
-          {{-- <a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Open first modal</a> --}}
         <div class="modal fade" id="modalPengaduan" aria-hidden="true" aria-labelledby="modalPengaduanLabel" tabindex="-1">
             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                 <div class="modal-content">
@@ -915,6 +914,8 @@
                 </div>
             </div>
         </div>
+        
+       
 
     </section>
 
@@ -952,6 +953,7 @@
     {{-- ===================== --}}
     {{-- SECTION RELATED LINK  --}}
     {{-- ===================== --}}
+    
 
     <section
         style="background-color: #F9FAFB;display: flex;flex-direction: row;justify-content: center;align-items: center;padding: 10px 80px;gap: 80px;width: 1440px;height: 120px;">

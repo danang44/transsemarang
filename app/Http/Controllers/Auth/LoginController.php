@@ -37,6 +37,9 @@ class LoginController extends Controller
      *
      * @return void
      */
+
+   
+
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
@@ -44,10 +47,20 @@ class LoginController extends Controller
 
     protected function authenticated(Request $request, $user)
 {
+    // dd($user);
+    if ($user->role =='99') {
+       return redirect()->route('home');
+   } elseif ($user->role=='2'){
+       return redirect()->route('/');
+   }else{
+       return redirect()->route('/');
+   }
+   
     $user->forceFill([
         'last_login_at' => Carbon::now()->toDateTimeString(),
         'last_login_ip' => $request->getClientIp()
     ])->save();
+
 }
 
 public function redirectToProvider()
@@ -81,7 +94,7 @@ public function handleProviderCallback(Request $request)
             
             \auth()->login($create, true);
             dd($create);
-            return redirect()->route('home');
+            return redirect()->route('welcome');
         }
 
     } catch (\Exception $e) {

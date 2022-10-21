@@ -2,23 +2,8 @@
 
 @section('content')
 
-<style>
-    label {
-        color: white !important;
-    }
 
-    option {
-        color: black;
-    }
 
-    .dataTables_info {
-        color: white !important;
-    }
-
-    .image{
-max-width: 50px;
-    }
-</style>
 
 <div class="container">
     <div class="row justify-content-center">
@@ -37,12 +22,11 @@ max-width: 50px;
                         </div>
                     </div>
                 </div>
-                
                 <div class="col-md-12">
                     <div class="text-right">
-                        <a href="/article_add">  <button type="button" class=" mt-3 mb-1 btn btn-outline-success" >
+                        <a href="/article_add"> <button type="button" class=" mt-3 mb-1 btn btn-outline-success" >
                             Tambah Data <i class="fa-solid fa-plus"></i>
-                        </button></a>   
+                        </button></a>
                     </div>
                     <div class=" card">
                         <div class="pt-2 pr-1 pl-1 table-responsive col-sm-12 ">
@@ -54,24 +38,20 @@ max-width: 50px;
                                         <th>Deskripsi</th>
                                         <th>User</th>
                                         <th></th>
-
                                         <th class="col-3s text-center">Opsi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @foreach($article as $c)
                                     <tr>
-                                        
-                                        <!-- <td class="pr-2 pl-2"><?php echo $c->thumb ?></td> -->
                                         <td class="pr-2 pl-2 ">{{$c->date}}</td>
                                         <td class="pr-2 pl-2 ">{{$c->title}}</td>
-                                        <td class="pr-2 pl-2 "><?php echo $c->intro ?></td>
+                                        <td class="text-justify pr-2 pl-2 ">{{$c->intro}}</td>
                                         <td class="pr-2 pl-2 ">{{@$c->user->name}}</td>
                                        
                                         <td class="pr-2 pl-2 "></td>
                                         <td class="text-center">
-
-                                                <button class="btn btn-outline-danger deletebtn" value="{{$c->id}}"><i class="fa-solid fa-trash"></i></button>
+                                            <button class="btn btn-outline-danger deletebtn" value="{{$c->id}}"><i class="fa-solid fa-trash"></i></button>
                                         </td>
                                     </tr>
                                     @endforeach
@@ -87,7 +67,6 @@ max-width: 50px;
 </div>
 
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.0/js/jquery.dataTables.js"></script>
-
 <script>
     $(document).ready(function() {
         $('#table_id').DataTable();
@@ -105,6 +84,7 @@ max-width: 50px;
         });
     });
 </script>
+
 <!-- delete -->
 <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -117,7 +97,7 @@ max-width: 50px;
             </div>
             <div class="modal-body">
                 <!--FORM UPDATE BARANG-->
-                <form action="/card_delete" method="post">
+                <form action="/article_delete" method="post">
                     @csrf
                     @method('DELETE')
                     <h3>Anda yakin menghapus data ?</h3>
@@ -133,5 +113,6 @@ max-width: 50px;
     </div>
 </div>
 <!-- end delete -->
+
 
 @endsection
