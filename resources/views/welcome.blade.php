@@ -30,14 +30,13 @@
     <link rel="stylesheet" href="assets/css/logo-slider.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.38/dist/sweetalert2.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
-    <link rel="stylesheet" href="assets/css/rcardslider.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"> --}}
 </head>
 
@@ -62,6 +61,11 @@
         line-height: 28px;
         letter-spacing: -0.006em;
     }
+
+    .swiper {
+        width: 100%;
+        height: 568px;
+        }
 
     body {
         font-family: 'Plus Jakarta Sans', sans-serif;
@@ -256,107 +260,91 @@
     {{-- SECTION CARD PAYMENT  --}}
     {{-- ===================== --}}
 
-    <section title="cardpayment" style="padding: 80px 120px;width: 100%;height: 904px;background: #FFFFFF;display: flex;align-items: center;justify-content: center;align-content: center;">
-        <div class="wrapper">
-            {{-- <div class="background">
-                <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1537132206/news-slider/background.webp"
-                    alt="" />
-            </div> --}}
-            <div class="item-bg"></div>
-            <div class="news-slider">
-                <div class="news-slider__wrp swiper-wrapper">
-                    <div class="news-slider__item swiper-slide">
-                        <a href="#" class="news__item">
-                            <div class="news__title">ETS Difabel</div>
-                            <p class="news__txt">
-                                Some quick example text to build on the card title and make up the bulk of the card's content.
-                            </p>
-                            <div class="news__img">
-                                <img src="assets/img/ETS_DIFABLE.png" alt="ETS Difabel" />
+    <div title="cardpayment" style="display: flex;align-items: center;justify-content: center;align-content: center;">
+        <div style="display: flex;padding: 80px 120px;height: 904px;width: 100%;flex-direction: column;justify-content: space-between;align-items: center;">
+            <div class="row"style="display: flex;flex-direction: row;align-items: center;padding: 0px;gap: 80px;width: 100%;height: 96px;align-content: center;">
+                <div class="col" style="display: flex;flex-direction: column;justify-content: center;align-items: flex-start;padding: 0px;width: 560px;height: 92px;">
+                    <p style="margin-block-end: 0px;font-weight: 500;font-size: 24px;line-height: 32px;color: #AF2330;">
+                        TS.PAYMENT</p>
+                    <p style="margin-block-end: 0px;font-weight: 700;font-size: 48px;line-height: 60px;color: #1D2939;">
+                        Bayar Pakai Kartu</p>
+                </div>
+                <p class="col" style="margin-block-end: 0px;font-family: 'Plus Jakarta Sans';font-style: normal;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium vulputate id ultricies diam pulvinar vitae sit proin. Quam morbi turpis dolor in.</p>
+            </div>
+            <!-- Slider main container -->
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <a href="#" style="display: flex;flex-direction: column">
+                            <div class="news_img" >
+                                <img src="assets/img/ETS_DIFABLE.png" alt="ETS Difabel" style="width: 360px;height:360px;border-radius: 16px;"/>
                             </div>
+                            <div class="news_title" style="width: 360px;font-weight: 600;font-size: 32px;line-height: 40px;color: #1D2939;padding-top: 24px;">ETS Difabel</div>
+                            <p class="news_txt" style="width: 360px;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;padding-top: 8px;">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin justo sit nisl, lectus quis. In.
+                            </p>
                         </a>
                     </div>
-                    <div class="news-slider__item swiper-slide">
-                        <a href="#" class="news__item">
-                            <div class="news__title">ETS KIA</div>
-                            <p class="news__txt">
-                                Some quick example text to build on the card title and make up the bulk of the card's content.
-                            </p>
-                            <div class="news__img">
-                                <img src="assets/img/ETS_KIA.png" alt="ETS KIA" />
+                    <div class="swiper-slide">
+                        <a href="#" style="display: flex;flex-direction: column">
+                            <div class="news_img" >
+                                <img src="assets/img/ETS_KIA.png" alt="ETS KIA" style="width: 360px;height:360px;border-radius: 16px;"/>
                             </div>
+                            <div class="news_title" style="width: 360px;font-weight: 600;font-size: 32px;line-height: 40px;color: #1D2939;padding-top: 24px;">ETS KIA</div>
+                            <p class="news_txt" style="width: 360px;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;padding-top: 8px;">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin justo sit nisl, lectus quis. In.
+                            </p>
                         </a>
                     </div>
-                    <div class="news-slider__item swiper-slide">
-                        <a href="#" class="news__item">
-                            <div class="news__title">ETS Lansia / Veteran</div>
-                            <p class="news__txt">
-                                Some quick example text to build on the card title and make up the bulk of the card's content.
-                            </p>
-                            <div class="news__img">
-                                <img src="assets/img/ETS_LANSIA.png" alt="ETS Lansia / Veteran" />
+                    <div class="swiper-slide">
+                        <a href="#" style="display: flex;flex-direction: column">
+                            <div class="news_img" >
+                                <img src="assets/img/ETS_LANSIA.png" alt="ETS Lansia / Veteran" style="width: 360px;height:360px;border-radius: 16px;"/>
                             </div>
+                            <div class="news_title" style="width: 360px;font-weight: 600;font-size: 32px;line-height: 40px;color: #1D2939;padding-top: 24px;">ETS Lansia / Veteran</div>
+                            <p class="news_txt" style="width: 360px;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;padding-top: 8px;">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin justo sit nisl, lectus quis. In.
+                            </p>
                         </a>
                     </div>
-                    <div class="news-slider__item swiper-slide">
-                        <a href="#" class="news__item">
-                            <div class="news__title">ETS Pelajar</div>
-                            <p class="news__txt">
-                                Some quick example text to build on the card title and make up the bulk of the card's content.
-                            </p>
-                            <div class="news__img">
-                                <img src="assets/img/ETS_PELAJAR.png" alt="ETS Pelajar" />
+                    <div class="swiper-slide">
+                        <a href="#" style="display: flex;flex-direction: column">
+                            <div class="news_img" >
+                                <img src="assets/img/ETS_PELAJAR.png" alt="ETS Pelajar" style="width: 360px;height:360px;border-radius: 16px;"/>
                             </div>
+                            <div class="news_title" style="width: 360px;font-weight: 600;font-size: 32px;line-height: 40px;color: #1D2939;padding-top: 24px;">ETS Pelajar</div>
+                            <p class="news_txt" style="width: 360px;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;padding-top: 8px;">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin justo sit nisl, lectus quis. In.
+                            </p>
                         </a>
                     </div>
-                    <div class="news-slider__item swiper-slide">
-                        <a href="#" class="news__item">
-                            <div class="news__title">ETS Umum</div>
-                            <p class="news__txt">
-                                Some quick example text to build on the card title and make up the bulk of the card's content.
-                            </p>
-                            <div class="news__img">
-                                <img src="assets/img/ETS_UMUM.png" alt="ETS Umum" />
+                    <div class="swiper-slide">
+                        <a href="#" style="display: flex;flex-direction: column">
+                            <div class="news_img" >
+                                <img src="assets/img/ETS_UMUM.png" alt="ETS Umum" style="width: 360px;height:360px;border-radius: 16px;"/>
                             </div>
+                            <div class="news_title" style="width: 360px;font-weight: 600;font-size: 32px;line-height: 40px;color: #1D2939;padding-top: 24px;">ETS Umum</div>
+                            <p class="news_txt" style="width: 360px;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;padding-top: 8px;">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin justo sit nisl, lectus quis. In.
+                            </p>
                         </a>
                     </div>
                 </div>
-                <div class="news-slider__ctr">
-                    <div class="news-slider__arrows">
-                        <button class="news-slider__arrow news-slider-prev">
-                            <span class="icon-font">
-                                <svg class="icon icon-arrow-left">
-                                    <use xlink:href="#icon-arrow-left"></use>
-                                </svg>
-                            </span>
-                        </button>
-                        <button class="news-slider__arrow news-slider-next">
-                            <span class="icon-font">
-                                <svg class="icon icon-arrow-right">
-                                    <use xlink:href="#icon-arrow-right"></use>
-                                </svg>
-                            </span>
-                        </button>
-                    </div>
-                    <div class="news-slider__pagination"></div>
-                </div>
+                <!-- If we need pagination -->
+                {{-- <div class="swiper-pagination"></div> --}}
+
+                <!-- If we need navigation buttons -->
+                {{-- <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div> --}}
+
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
             </div>
         </div>
-        <svg hidden="hidden">
-            <defs>
-                <symbol id="icon-arrow-left" viewBox="0 0 32 32">
-                    <title>arrow-left</title>
-                    <path d="M0.704 17.696l9.856 9.856c0.896 0.896 2.432 0.896 3.328 0s0.896-2.432 0-3.328l-5.792-5.856h21.568c1.312 0 2.368-1.056 2.368-2.368s-1.056-2.368-2.368-2.368h-21.568l5.824-5.824c0.896-0.896 0.896-2.432 0-3.328-0.48-0.48-1.088-0.704-1.696-0.704s-1.216 0.224-1.696 0.704l-9.824 9.824c-0.448 0.448-0.704 1.056-0.704 1.696s0.224 1.248 0.704 1.696z">
-                    </path>
-                </symbol>
-                <symbol id="icon-arrow-right" viewBox="0 0 32 32">
-                    <title>arrow-right</title>
-                    <path d="M31.296 14.336l-9.888-9.888c-0.896-0.896-2.432-0.896-3.328 0s-0.896 2.432 0 3.328l5.824 5.856h-21.536c-1.312 0-2.368 1.056-2.368 2.368s1.056 2.368 2.368 2.368h21.568l-5.856 5.824c-0.896 0.896-0.896 2.432 0 3.328 0.48 0.48 1.088 0.704 1.696 0.704s1.216-0.224 1.696-0.704l9.824-9.824c0.448-0.448 0.704-1.056 0.704-1.696s-0.224-1.248-0.704-1.664z">
-                    </path>
-                </symbol>
-            </defs>
-        </svg>
-    </section>
+    </div>
 
     {{-- ===================== --}}
     {{-- USER REPORT COMPLAINT --}}
@@ -459,7 +447,7 @@
                     </script>
                     @else
                     <div class="row" style="display: flex;flex-direction: column;align-items: center;padding: 0px;width: 646px;height: 746px;background: #FFFFFF;box-shadow: 0px 4px 12px rgba(29, 41, 57, 0.12);backdrop-filter: blur(10px);border-radius: 20px;">
-                        <div class="mb-3" style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;padding-bottom: 2px;width: 646px;height: 662px;background: #F9FAFB;border-radius: 20px;">
+                        <div class="mb-3" style="display: flex;flex-direction: column;align-items: center;padding: 0px;padding-bottom: 2px;width: 646px;height: 662px;background: #FFFFFF;border-radius: 20px;">
                             <div style="width: 646px;height: 80px;background: #FFFFFF;border-radius: 20px 20px 0 0; margin-bottom: 2px">
                                 <p style="position: absolute;width: 233px;height: 40px;left: 40px;top: 20px;font-family: 'Plus Jakarta Sans';font-style: normal;font-weight: 600;font-size: 32px;line-height: 40px;text-transform: capitalize;color: #1D2939;">Layanan Aduan</p>
                             </div>
@@ -474,11 +462,11 @@
                             </div>
                         </div>
                         <!-- Authentication Links -->
-                        <div style="display: flex;flex-direction: row;align-items: center;width: 413px;height: 72px;">
-                            <button href="/auth/google" class="btn customGPlusSignIn" role="button" type="button" style="display: flex;flex-direction: column;padding: 20px 32px;gap: 20px;width: 413px;height: 72px;background: #FFFFFF;box-shadow: 0px 4px 12px rgba(29, 41, 57, 0.08);backdrop-filter: blur(10px);border-radius: 8px;flex-wrap: wrap;">
+                        <div style="display: flex;flex-direction: row;align-items: center;width: 566px;height: 68px;justify-content: center;">
+                            <a href="/auth/google" class="btn customGPlusSignIn" role="button" type="button" style="display: flex;flex-direction: column;padding: 20px 32px;gap: 20px;width: 413px;height: 72px;background: #FFFFFF;flex-wrap: wrap;border: 1px solid #E4E7EC;box-shadow: 0px 4px 12px rgba(29, 41, 57, 0.12);backdrop-filter: blur(10px);border-radius: 12px;">
                                 <img src="https://cdn.cdnlogo.com/logos/g/35/google-icon.svg" style="width: 32px;height: 32px;">
                                 <span id="name" style="font-weight: 600;font-size: 24px;line-height: 32px;color: #1D2939;">Lanjutkan dengan Google</span>
-                            </button>
+                            </a>
                         </div>
                     </div>
                     @endif
@@ -764,8 +752,74 @@
     </section>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.38/dist/sweetalert2.all.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js" integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
-    <script src="assets/js/rcardslider.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        direction: 'horizontal',
+        effect: 'coverflow',
+        grabCursor: true,
+        loop: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        speed: 300,
+        simulateTouch: true,
+        slidesPerView: 4,
+        spaceBetween: 100,
+
+        coverflowEffect: {
+            rotate: 0,
+            stretch: 0,
+            depth: 0,
+            modifier: 3,
+            slideShadows: false
+        },
+
+        // If we need pagination
+
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        // And if we need scrollbar
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        },
+
+        breakpoints: {
+            // when window width is >= 320px
+            320: {
+            slidesPerView: 2,
+            spaceBetween: 20
+            },
+            // when window width is >= 480px
+            480: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            centeredSlides: true
+            },
+            // when window width is >= 640px
+            640: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+            centeredSlides: true
+            },
+            1440: {
+            slidesPerView: 4,
+            spaceBetween: 350,
+            centeredSlides: true
+            },
+            2559: {
+            slidesPerView: 5,
+            spaceBetween: 0,
+            centeredSlides: true
+            }
+        }
+
+        });
+    </script>
     <script>
         function sweet() {
             Swal.fire({

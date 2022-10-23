@@ -19,7 +19,6 @@ if($(window).width() > 800) {
 
                 $('.item-bg').addClass('active');
                 $('.news__item').removeClass('active');
-                // $('.news__item').removeClass('active');
 
 
                 bg.style.width = width + 'px';

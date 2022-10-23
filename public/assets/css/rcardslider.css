@@ -1,11 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Quicksand:400,500,700&subset=latin-ext");
 html {
-  position: relative;
   overflow-x: hidden !important;
-}
-
-body {
-  font-family: 'Quicksand', sans-serif;
 }
 
 a, a:hover {
@@ -66,7 +60,7 @@ a, a:hover {
 
 .news-slider {
   z-index: 2;
-  max-width: 1440px;
+  max-width: 440px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 60px;
@@ -258,7 +252,7 @@ a, a:hover {
 .news__img {
   border-radius: 10px;
   box-shadow: 0 6px 26px 6px rgba(0, 0, 0, 0.25);
-  height: 200px;
+  height: 360px;
   margin-top: 30px;
   width: 100%;
   transition: all .3s;
