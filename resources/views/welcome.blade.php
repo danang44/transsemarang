@@ -402,7 +402,7 @@
                 </div>
                 @if(Auth::check())
                 <div class="row" style="display: flex;flex-direction: column;align-items: center;padding: 0px;width: 646px;height: 746px;background: #FFFFFF;box-shadow: 0px 4px 12px rgba(29, 41, 57, 0.12);backdrop-filter: blur(10px);border-radius: 20px;">
-                    <form action="/pengaduan.php" method="post" class="row" id="formlapor" style="display: flex;flex-direction: column;align-items: center;padding: 0px;width: 646px;height: 750px;background: #F9FAFB;box-shadow: 0px 4px 12px rgba(29, 41, 57, 0.12);backdrop-filter: blur(10px);border-radius: 20px;">
+                    <form action="/pengaduan.php" method="post" class="row" id="formFile" style="display: flex;flex-direction: column;align-items: center;padding: 0px;width: 646px;height: 750px;background: #F9FAFB;box-shadow: 0px 4px 12px rgba(29, 41, 57, 0.12);backdrop-filter: blur(10px);border-radius: 20px;">
                         <div class="mb-3" style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;gap: 2px;width: 646px;height: 662px;background: #F9FAFB;border-radius: 20px;">
                             <div style="width: 646px;height: 80px;background: #FFFFFF;border-radius: 20px 20px 0 0;">
                                 <p style="position: absolute;width: 233px;height: 40px;left: 40px;top: 20px;font-family: 'Plus Jakarta Sans';font-style: normal;font-weight: 600;font-size: 32px;line-height: 40px;text-transform: capitalize;color: #1D2939;">Layanan Aduan</p>
@@ -439,6 +439,24 @@
                             <button id="submitReport" type="submit" class="btn btn-danger text-white" style="display: flex;flex-direction: row;justify-content: center;align-items: center;width: 159px;height: 48px;background: #AF2330;border-radius: 8px;" disabled>Submit Report</button>
                         </div>
                     </form>
+                    <script>
+                        let formFile = document.getElementById('formFile');
+                        let fileResult = document.getElementById('fileResult');
+                        let submitReport = document.getElementById('submitReport');
+                        formFile.addEventListener('change', function() {
+                            if (formFile.files.length > 0) {
+                                const fileSize = formFile.files.item(0).size;
+                                const fileMb = fileSize / 1024 ** 2;
+                                if (fileMb >= 2) {
+                                    fileResult.innerHTML = "Please select a file less than 2MB.";
+                                    submitReport.disabled = true;
+                                } else {
+                                    fileResult.innerHTML = "Success, your file is " + fileMb.toFixed(1) + "MB.";
+                                    submitReport.disabled = false;
+                                }
+                            }
+                        });
+                    </script>
                     @else
                     <div class="row" style="display: flex;flex-direction: column;align-items: center;padding: 0px;width: 646px;height: 746px;background: #FFFFFF;box-shadow: 0px 4px 12px rgba(29, 41, 57, 0.12);backdrop-filter: blur(10px);border-radius: 20px;">
                         <div class="mb-3" style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;padding-bottom: 2px;width: 646px;height: 662px;background: #F9FAFB;border-radius: 20px;">
@@ -748,24 +766,6 @@
     <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js" integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
     <script src="assets/js/rcardslider.js"></script>
-    <script>
-        let formFile = document.getElementById('formFile');
-        let fileResult = document.getElementById('fileResult');
-        let submitReport = document.getElementById('submitReport');
-        formFile.addEventListener('change', function() {
-            if (formFile.files.length > 0) {
-                const fileSize = formFile.files.item(0).size;
-                const fileMb = fileSize / 1024 ** 2;
-                if (fileMb >= 2) {
-                    fileResult.innerHTML = "Please select a file less than 2MB.";
-                    submitReport.disabled = true;
-                } else {
-                    fileResult.innerHTML = "Success, your file is " + fileMb.toFixed(1) + "MB.";
-                    submitReport.disabled = false;
-                }
-            }
-        });
-    </script>
     <script>
         function sweet() {
             Swal.fire({
