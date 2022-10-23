@@ -78,75 +78,73 @@
 </style>
 
 <body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="72">
-    <header>
-        <nav id="mainNav" class="navbar navbar-expand-lg shadow fixed-top bg-darkngi" style="height: 100px;">
-            <div class="container">
-                <a class="navbar-brand d-flex align-items-center" href="#home">
-                    <span class="d-flex justify-content-center align-items-center me-2">
-                        <img class="border rounded" src="assets/img/tsmgLogo32px-01.png" width="36" height="36">
-                    </span>
-                    <img src="assets/img/textLogo.png" width="198.87" height="44">
-                </a>
-                <button data-bs-toggle="collapse" data-bs-target="#navbarResponsive" class="navbar-toggler text-white bg-primary navbar-toggler-right text-uppercase rounded">
-                    <span class="visually-hidden">Toggle navigation</span>
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div id="navbarResponsive" class="collapse navbar-collapse" id="navcol-2">
-                    <ul class="navbar-nav ms-auto rounded">
-                        <li class="nav-item mx-3 mx-lg-1 rounded">
-                            <a class="nav-link py-3 px-0 px-lg-3 rounded"
-                                href="http://karir.transsemarang.semarangkota.go.id" target="_blank">CAREER</a>
-                        </li>
-                        <li class="nav-item mx-3 mx-lg-1">
-                            <a class="nav-link py-3 px-0 px-lg-3 rounded"
-                                href="https://ppid.semarangkota.go.id/kb/jalur-rute-brt-trans-semarang-dan-feeder-di-kota-semarang"
-                                target="_blank">BUS & RUTE</a>
-                        </li>
-                        <li class="nav-item mx-3 mx-lg-1">
-                            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#hotlineCenter" onclick="sweet();">HOTLINE CENTER</a>
-                        </li>
-                        <!-- Authentication Links -->
+    <nav id="mainNav" class="navbar navbar-expand-lg shadow fixed-top bg-darkngi sticky-top" style="height: 100px;">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="#home">
+                <span class="d-flex justify-content-center align-items-center me-2">
+                    <img class="border rounded" src="assets/img/tsmgLogo32px-01.png" width="36" height="36">
+                </span>
+                <img src="assets/img/textLogo.png" width="198.87" height="44">
+            </a>
+            <button data-bs-toggle="collapse" data-bs-target="#navbarResponsive" class="navbar-toggler text-white bg-primary navbar-toggler-right text-uppercase rounded">
+                <span class="visually-hidden">Toggle navigation</span>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbarResponsive" class="collapse navbar-collapse" id="navcol-2">
+                <ul class="navbar-nav ms-auto rounded">
+                    <li class="nav-item mx-3 mx-lg-1 rounded">
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded"
+                            href="http://karir.transsemarang.semarangkota.go.id" target="_blank">CAREER</a>
+                    </li>
+                    <li class="nav-item mx-3 mx-lg-1">
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded"
+                            href="https://ppid.semarangkota.go.id/kb/jalur-rute-brt-trans-semarang-dan-feeder-di-kota-semarang"
+                            target="_blank">BUS & RUTE</a>
+                    </li>
+                    <li class="nav-item mx-3 mx-lg-1">
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#hotlineCenter" onclick="sweet();">HOTLINE CENTER</a>
+                    </li>
+                    <!-- Authentication Links -->
 
-                        @guest
-                        <li class="nav-item mx-3 mx-lg-1" hidden>
-                            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{ route('login') }}">{{ __('Login') }}</a>
-                        </li>
-                        @if (Route::has('register'))
-                        <li class="nav-item mx-3 mx-lg-1" hidden>
-                            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{ route('register') }}">{{ __('Register') }}</a>
-                        </li>
-                        @endif
-                        @else
-                        <li class="nav-item mx-3 mx-lg-1 dropdown">
-                            <a id="navbarDropdown" class="nav-link py-3 px-0 px-lg-3 rounded dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                {{ Auth::user()->name }} <span class="caret"></span>
+                    @guest
+                    <li class="nav-item mx-3 mx-lg-1" hidden>
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{ route('login') }}">{{ __('Login') }}</a>
+                    </li>
+                    @if (Route::has('register'))
+                    <li class="nav-item mx-3 mx-lg-1" hidden>
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{ route('register') }}">{{ __('Register') }}</a>
+                    </li>
+                    @endif
+                    @else
+                    <li class="nav-item mx-3 mx-lg-1 dropdown">
+                        <a id="navbarDropdown" class="nav-link py-3 px-0 px-lg-3 rounded dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            {{ Auth::user()->name }} <span class="caret"></span>
+                        </a>
+
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown" style="background-color:#262b2f">
+
+                            {{-- <a class="dropdown-item" href="/user" style="color:white"> My Profile </a> --}}
+                            <a style="color:white" class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                        document.getElementById('logout-form').submit();">
+                                {{ __('Logout') }}
                             </a>
 
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown" style="background-color:#262b2f">
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
+                        </div>
+                    </li>
+                    @endguest
+                </ul>
+                <ul class="navbar-nav ml-auto mr-3">
 
-                                {{-- <a class="dropdown-item" href="/user" style="color:white"> My Profile </a> --}}
-                                <a style="color:white" class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                         document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
-                                </a>
-
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                    @csrf
-                                </form>
-                            </div>
-                        </li>
-                        @endguest
-                    </ul>
-                    <ul class="navbar-nav ml-auto mr-3">
-
-                    </ul>
-                </div>
+                </ul>
             </div>
-        </nav>
-    </header>
+        </div>
+    </nav>
     {{-- Section 1 - Slider --}}
     <section
-        style="background: url('assets/img/Hero.png') center / cover no-repeat;position: relative;height:800px;padding-top: 120px;margin-top: 100px;">
+        style="background: url('assets/img/Hero.png') center / cover no-repeat;position: relative;height:800px;padding-top: 120px;">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 text-left text-md-start d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center"
@@ -236,26 +234,43 @@
         </div>
     </section>
     {{-- Section 3 - Maps & Route --}}
-    <section>
-        <div class="">
-            <div class="container">
-                <div class="text-white bg-brand border rounded border-0 p-4 p-md-5">
-                    <p class="mb-0">TS Maps</p>
-                    <h2 class="fw-bold text-white mb-3">Route & Corridor Info</h2>
-                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Sit orci condimentum natoque elit amet mauris augue sed nunc.
-                        Consequat tincidunt risus nulla viverra.
-                        Massa sollicitudin dui adipiscing massa. </p>
-                    <div class="my-3">
-                        {{-- <a class="btn btn-primary btn-lg me-2" role="button" href="#">Button</a>
-                        <a class="btn btn-light btn-lg" role="button" href="#">Button</a> --}}
+    <div title="mapsandrute" style="display: flex;flex-direction: column;justify-content: center;align-items: center;padding: 0px 0px 80px;width: 100%;height: 1206px;background: #AF2330;">
+        <div title="headinfomaps" style="display: flex;flex-direction: column;justify-content: flex-start;align-items: flex-start;padding: 80px 120px 156px;gap: 80px;width: 100%;height: 524px;background: #1D2939;">
+            <div title="infotext" style="display: flex;flex-direction: column;justify-content: center;align-items: flex-start;padding: 0px;gap: 20px;width: 800px;height: 208px;color: #FFFFFF">
+                <div title="headinfo" style="width: 800px;height: 92px;">
+                    <p style="font-weight: 500;font-size: 24px;line-height: 32px;margin-block-start: 0em;margin-block-end: 0em;margin-bottom: 0em;">TS.MAPS</p>
+                    <p style="font-weight: 700;font-size: 48px;line-height: 60px;margin-block-start: 0em;margin-block-end: 0em;margin-bottom: 0em;">Route & Corridor Info</p>
+                </div>
+                <p style="font-weight: 300;font-size: 24px;line-height: 32px;margin-block-start: 0em;margin-block-end: 0em;margin-bottom: 0em;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit orci condimentum natoque elit amet mauris augue sed nunc. Consequat tincidunt risus nulla viverra. Massa sollicitudin dui adipiscing massa. </p>
+            </div>
+        </div>
+        <div title="headmaps" style="display: flex;flex-direction: column;align-items: center;padding: 0px 120px;width: 1440px;height: 758px;background: #AF2330;">
+            <div title="maps" style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;gap: 2px;width: 1200px;height: 758px;/*background: #F9FAFB;*/border: 1px solid #98A2B3;box-shadow: 0px 4px 12px rgba(29, 41, 57, 0.12);backdrop-filter: blur(10px);border-radius: 20px;margin-top: -156px;">
+                <div title="actionmaps" style="display: flex;flex-direction: row;justify-content: space-between;align-items: center;padding: 40px;width: 100%;height: 156px;background: #1D2939;border-top-left-radius: 20px;border-top-right-radius: 20px">
+                    <div title="headeraction" style="display: flex;flex-direction: column;justify-content: center;align-items: flex-start;padding: 0px;gap: 4px;width: 295px;height: 76px;color: #FFFFFF;">
+                        <p style="font-weight: 300;font-size: 24px;line-height: 32px;margin-block-start: 0em;margin-block-end: 0em;margin-bottom: 0em;">Select your preference of</p>
+                        <p style="font-weight: 600;font-size: 32px;line-height: 40px;margin-block-start: 0em;margin-block-end: 0em;margin-bottom: 0em;">Route Corridor Info</p>
+                    </div>
+                    <div class="btn-group" onclick="toggleItems()" style="display: flex;flex-direction: row;align-items: center;width: 490px;height: 76px;background: #AF2330;border-radius: 8px;">
+                        <button class="btn btn-tsm btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false" style="height: 100%">Pilih Koridor BRT</button>
+                        <ul class="dropdown-menu dropdown-menu-lg-end"  style="width: 100%">
+                            <li><a class="dropdown-item" href="#">Koridor 1 (Mangkang - Penggaron)</a></li>
+                            <li><a class="dropdown-item" href="#">Koridor 1 (Mangkang - Penggaron)</a></li>
+                            <li><a class="dropdown-item" href="#">Koridor 1 (Mangkang - Penggaron)</a></li>
+                            <li><a class="dropdown-item" href="#">Koridor 1 (Mangkang - Penggaron)</a></li>
+                            <li><a class="dropdown-item" href="#">Koridor 1 (Mangkang - Penggaron)</a></li>
+                        </ul>
                     </div>
                 </div>
+                <div title="leaflet" style="display: flex;flex-direction: row;justify-content: space-between;align-items: center;width: 100%;height: 600px;background: #98A2B3;border-bottom-left-radius: 20px;border-bottom-right-radius: 20px">
+                    <div style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;gap: 4px;width: 400px;height: 100%;left: 0px;background: #F9FAFB;border-bottom-left-radius: 20px;">
+
+                    </div>
+                    <div class="container bg-dark" id="map" style="width: 800px; height: 100%;right: 0%;border-bottom-right-radius: 20px;"></div>
+                </div>
             </div>
-            <div class="container bg-dark border rounded border-0 p-4 p-md-5" id="map"
-                style="width: auto; height: 600px;"></div>
         </div>
-    </section>
+    </div>
     {{-- ===================== --}}
     {{-- SECTION CARD PAYMENT  --}}
     {{-- ===================== --}}
@@ -818,6 +833,16 @@
             }
         }
 
+        });
+    </script>
+    <script>
+        function toggleItems() {
+            $('.dropdown-menu').toggleClass('open');
+        }
+
+        $('.dropdown-menu li').click(function() {
+            var text = $(this).text(); // get text of the clicked item
+            $(".dropdown-toggle").text(text); // set text text to the button (dropdown)
         });
     </script>
     <script>
