@@ -361,109 +361,109 @@
     {{-- ===================== --}}
     {{-- USER REPORT COMPLAINT --}}
     {{-- ===================== --}}
-    <section style="display: flex;align-items: center;justify-content: center;align-content: center;">
-        <div style="width: 100%;height: 910px;background: #F9FAFB;">
-            <div class="row" style="">
-                <div class="col" style="display: flex;flex-direction: column;align-items: flex-start;padding: 98.67px 120px 82px 99.3px;gap: 80px;position: absolute;width: 472px;height: 712px;">
-                    <div class="row"style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;width: 472px;height: 152px;">
-                        <p style="font-weight: 500;font-size: 24px;line-height: 32px;color: #AF2330;">TS.ADUAN</p>
-                        <p style="font-weight: 400;font-size: 48px;line-height: 60px;color: #1D2939">Layanan<strong style=" font-weight: 800;color: #AF2330;">Aduan<br>& Bantuan</strong></p>
+    <section title="reportcomplaint" style="display: flex;align-items: center;justify-content: center;align-content: center;background-color: #F9FAFB;">
+        <div class="col" style="display: flex;padding: 80px 120px;height: 910px;width: 100%;flex-direction: row;justify-content: space-between;flex-wrap: nowrap;">
+            <div class="row" style="display: flex;width: 472px;height: auto;align-content: space-between;">
+                <div title="TS.Aduan">
+                    <p style="font-weight: 500;font-size: 24px;line-height: 32px;color: #AF2330;margin-block-start: 0px;margin-block-end: 0px;">TS.ADUAN</p>
+                    <p style="font-weight: 400;font-size: 48px;line-height: 60px;color: #1D2939;margin-block-start: 0px;margin-block-end: 0px;">Layanan
+                        <strong style=" font-weight: 800;color: #AF2330;"> Aduan<br>& Bantuan</strong>
+                    </p>
+                </div>
+                <div title="TS.AduanDesc" style="height: 480px;display: flex;flex-direction: column;justify-content: space-between;align-items: baseline;">
+                    <div title="01" style="display: flex;flex-direction: row;align-items: flex-start;">
+                        <p style="width: 44px;height: 40px;font-weight: 400;font-size: 32px;line-height: 40px;color: #AF2330;margin-block-start: 0px;margin-block-end: 0px;">01</p>
+                        <span style="display: flex;flex-direction: column;align-items: flex-start;">
+                            <p style="width: 408px;height: 40px;font-weight: 600;font-size: 32px;line-height: 40px;color: #475467;margin-block-start: 0px;margin-block-end: 0px;">Jelaskan dengan jelas</p>
+                            <p style="width: 408px;height: auto;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;margin-block-start: 0px;margin-block-end: 0px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                        </span>
                     </div>
-                    <div class="row" style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;gap: 40px;width: 472px;height: 480px;">
-                        <div class="row" style="display: flex;flex-direction: row;align-items: flex-start;padding: 0px;gap: 20px;width: 472px;height: 112px;">
-                            <h1 style="width: 44px;height: 40px;font-weight: 400;font-size: 32px;line-height: 40px;color: #AF2330;">01</h1>
-                            <span style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;gap: 8px;width: 408px;height: 112px;">
-                                <p style="width: 408px;height: 40px;font-weight: 600;font-size: 32px;line-height: 40px;color: #475467;">Jelaskan dengan jelas</p>
-                                <p style="width: 408px;height: 64px;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                            </span>
-                        </div>
-                        <div class="row" style="display: flex;flex-direction: row;align-items: flex-start;padding: 0px;gap: 20px;width: 472px;height: 176px;">
-                            <h1 style="width: 44px;height: 40px;font-weight: 400;font-size: 32px;line-height: 40px;color: #AF2330;">02</h1>
-                            <span style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;gap: 8px;width: 408px;height: 112px;">
-                                <p style="width: 408px;height: 40px;font-weight: 600;font-size: 32px;line-height: 40px;color: #475467;">Gunakan kata yang sopan</p>
-                                <p style="width: 408px;height: 128px;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed est lorem massa. Risus in faucibus amet laoreet diam. </p>
-                            </span>
-                        </div>
-                        <div class="row" style="display: flex;flex-direction: row;align-items: flex-start;padding: 0px;gap: 20px;width: 472px;height: 112px;">
-                            <h1 style="width: 44px;height: 40px;font-weight: 400;font-size: 32px;line-height: 40px;color: #AF2330;">03</h1>
-                            <span style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;gap: 8px;width: 408px;height: 112px;">
-                                <p style="width: 408px;height: 40px;font-weight: 600;font-size: 32px;line-height: 40px;color: #475467;">Sed iaculis morbi non.</p>
-                                <p style="width: 408px;height: 64px;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                            </span>
-                        </div>
+                    <div title="02" style="display: flex;flex-direction: row;align-items: flex-start;">
+                        <p style="width: 44px;height: 40px;font-weight: 400;font-size: 32px;line-height: 40px;color: #AF2330;margin-block-start: 0px;margin-block-end: 0px;">02</p>
+                        <span style="display: flex;flex-direction: column;align-items: flex-start;">
+                            <p style="width: 408px;height: 40px;font-weight: 600;font-size: 32px;line-height: 40px;color: #475467;margin-block-start: 0px;margin-block-end: 0px;">Gunakan kata yang sopan</p>
+                            <p style="width: 408px;height: auto;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;margin-block-start: 0px;margin-block-end: 0px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed est lorem massa. Risus in faucibus amet laoreet diam. </p>
+                        </span>
+                    </div>
+                    <div title="03" style="display: flex;flex-direction: row;align-items: flex-start;">
+                        <p style="width: 44px;height: 40px;font-weight: 400;font-size: 32px;line-height: 40px;color: #AF2330;margin-block-start: 0px;margin-block-end: 0px;">03</p>
+                        <span style="display: flex;flex-direction: column;align-items: flex-start;">
+                            <p style="width: 408px;height: 40px;font-weight: 600;font-size: 32px;line-height: 40px;color: #475467;margin-block-start: 0px;margin-block-end: 0px;">Sed iaculis morbi non.</p>
+                            <p style="width: 408px;height: auto;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;margin-block-start: 0px;margin-block-end: 0px;"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                        </span>
                     </div>
                 </div>
-                <div class="col" style="display: flex;flex-direction: row;align-items: flex-start;padding: 80px 120px 80px 674px;isolation: isolate;position: absolute;width: 648px;height: 750px;">
-                    <div style="display: flex;flex-direction: row;align-items: flex-start;padding: 28px 0px;isolation: isolate;width: 4px;height: 80px;margin: 0px -2px;z-index: 1;">
-                        <svg width="4" height="25" viewBox="0 0 4 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect y="0.996826" width="4" height="24" rx="2" fill="#AF2330" />
-                        </svg>
-                    </div>
-                    @if(Auth::check())
+            </div>
+            <div class="row" style="display: flex;width: 648px;height: auto;justify-content: space-around;flex-direction: row;">
+                <div style="display: flex;flex-direction: row;align-items: flex-start;padding: 28px 0px;isolation: isolate;width: 4px;height: 80px;margin: 0px -2px;z-index: 1;">
+                    <svg width="4" height="25" viewBox="0 0 4 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect y="0.996826" width="4" height="24" rx="2" fill="#AF2330" />
+                    </svg>
+                </div>
+                @if(Auth::check())
+                <div class="row" style="display: flex;flex-direction: column;align-items: center;padding: 0px;width: 646px;height: 746px;background: #FFFFFF;box-shadow: 0px 4px 12px rgba(29, 41, 57, 0.12);backdrop-filter: blur(10px);border-radius: 20px;">
+                    <form action="/pengaduan.php" method="post" class="row" id="formlapor" style="display: flex;flex-direction: column;align-items: center;padding: 0px;width: 646px;height: 750px;background: #F9FAFB;box-shadow: 0px 4px 12px rgba(29, 41, 57, 0.12);backdrop-filter: blur(10px);border-radius: 20px;">
+                        <div class="mb-3" style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;gap: 2px;width: 646px;height: 662px;background: #F9FAFB;border-radius: 20px;">
+                            <div style="width: 646px;height: 80px;background: #FFFFFF;border-radius: 20px 20px 0 0;">
+                                <p style="position: absolute;width: 233px;height: 40px;left: 40px;top: 20px;font-family: 'Plus Jakarta Sans';font-style: normal;font-weight: 600;font-size: 32px;line-height: 40px;text-transform: capitalize;color: #1D2939;">Layanan Aduan</p>
+                            </div>
+                            <div class="mb-3" style="display: flex;flex-direction: column;align-items: flex-start;padding: 40px;gap: 20px;width: 646px;height: 580px;background: #FFFFFF;">
+                                <legend style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;isolation: isolate;width: 566px;height: 92px;color: #98A2B3;">Your email
+                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com"/>
+                                </legend>
+                                <legend style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;isolation: isolate;width: 566px;height: 88px;color: #98A2B3;"> Subjek Pengaduan
+                                    <select class="form-select" aria-label="Default select example" style="font-weight: 400;font-size: 20px;line-height: 28px;letter-spacing: -0.006em;color: #475467;" required>
+                                        <option selected disabled value="">Materi Pengaduan...</option>
+                                        <option value="1"><span>1.Pelanggaran terhadap kode etik dan/atau pedoman perilaku aparat</span></option>
+                                        <option value="2"><span>2.Penyalahgunaan wewenang/jabatan</span> </option>
+                                        <option value="3"><span>3.Pelanggaran sumpah jabatan</span></option>
+                                        <option value="4"><span>4.Pelanggaran terhadap peraturan disiplin Pegawai Negeri Sipil</span></option>
+                                        <option value="5"><span>5.Perbuatan tercela, yaitu perbuatan amoral, asusila, atau perbuatan yang tidak selayaknya dilakukan oleh seorang aparat maupun selaku anggota masyarakat</span></option>
+                                        <option value="6"><span>6.Pelanggaran hukum, baik dilakukan dengan sengaja, maupun karena kelalaian dan ketidakpahaman</span></option>
+                                        <option value="7"><span>7.Mal administrasi, yaitu terjadinya kesalahan, kekeliruan atau kelalaian yang bersifat administratif</span></option>
+                                        <option value="8"><span>8.Pelayanan publik yang tidak memuaskan yang dapat merugikan pihak-pihak yang berkepentingan serta masyarakat secara umum</span></option>
+                                    </select>
+                                    <div class="invalid-feedback">Silahkan pilih materi pengaduan.</div>
+                                </legend>
+                                <legend style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;isolation: isolate;width: 566px;height: 172px;color: #98A2B3;"> Deskripsi Kejadian
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="Sebutkan peristiwa, waktu terjadinya, dan lokasi kejadian atas pengaduan anda" required></textarea>
+                                </legend>
+                                <legend style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;isolation: isolate;width: 566px;height: 92px;color: #98A2B3;">Foto Pendukung
+                                    <input class="form-control" type="file" id="formFile" accept=".jpg,.jpeg,.png" onchange="Filevalidation()" />
+                                </legend>
+                                <p id="fileResult"></p>
+                            </div>
+                        </div>
+                        <div style="display: flex;flex-direction: row;justify-content: flex-end;align-items: center;padding: 20px 40px;gap: 12px;width: 646px;height: 88px;">
+                            <button type="reset" class="btn btn-outline-secondary" style="display: flex;flex-direction: row;justify-content: center;align-items: center;padding: 12px 24px;gap: 4px;width: 102px;height: 48px;border: 2px solid #E4E7EC;border-radius: 8px;">Cancel</button>
+                            <button id="submitReport" type="submit" class="btn btn-danger text-white" style="display: flex;flex-direction: row;justify-content: center;align-items: center;width: 159px;height: 48px;background: #AF2330;border-radius: 8px;" disabled>Submit Report</button>
+                        </div>
+                    </form>
+                    @else
                     <div class="row" style="display: flex;flex-direction: column;align-items: center;padding: 0px;width: 646px;height: 746px;background: #FFFFFF;box-shadow: 0px 4px 12px rgba(29, 41, 57, 0.12);backdrop-filter: blur(10px);border-radius: 20px;">
-                        <form action="/pengaduan.php" method="post" class="row" id="formlapor" style="display: flex;flex-direction: column;align-items: center;padding: 0px;width: 646px;height: 750px;background: #F9FAFB;box-shadow: 0px 4px 12px rgba(29, 41, 57, 0.12);backdrop-filter: blur(10px);border-radius: 20px;">
-                            <div class="mb-3" style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;gap: 2px;width: 646px;height: 662px;background: #F9FAFB;border-radius: 20px;">
-                                <div style="width: 646px;height: 80px;background: #FFFFFF;border-radius: 20px 20px 0 0;">
-                                    <p style="position: absolute;width: 233px;height: 40px;left: 40px;top: 20px;font-family: 'Plus Jakarta Sans';font-style: normal;font-weight: 600;font-size: 32px;line-height: 40px;text-transform: capitalize;color: #1D2939;">Layanan Aduan</p>
-                                </div>
-                                <div class="mb-3" style="display: flex;flex-direction: column;align-items: flex-start;padding: 40px;gap: 20px;width: 646px;height: 580px;background: #FFFFFF;">
-                                    <legend style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;isolation: isolate;width: 566px;height: 92px;color: #98A2B3;">Your email
-                                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com"/>
-                                    </legend>
-                                    <legend style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;isolation: isolate;width: 566px;height: 88px;color: #98A2B3;"> Subjek Pengaduan
-                                        <select class="form-select" aria-label="Default select example" style="font-weight: 400;font-size: 20px;line-height: 28px;letter-spacing: -0.006em;color: #475467;" required>
-                                            <option selected disabled value="">Materi Pengaduan...</option>
-                                            <option value="1"><span>1.Pelanggaran terhadap kode etik dan/atau pedoman perilaku aparat</span></option>
-                                            <option value="2"><span>2.Penyalahgunaan wewenang/jabatan</span> </option>
-                                            <option value="3"><span>3.Pelanggaran sumpah jabatan</span></option>
-                                            <option value="4"><span>4.Pelanggaran terhadap peraturan disiplin Pegawai Negeri Sipil</span></option>
-                                            <option value="5"><span>5.Perbuatan tercela, yaitu perbuatan amoral, asusila, atau perbuatan yang tidak selayaknya dilakukan oleh seorang aparat maupun selaku anggota masyarakat</span></option>
-                                            <option value="6"><span>6.Pelanggaran hukum, baik dilakukan dengan sengaja, maupun karena kelalaian dan ketidakpahaman</span></option>
-                                            <option value="7"><span>7.Mal administrasi, yaitu terjadinya kesalahan, kekeliruan atau kelalaian yang bersifat administratif</span></option>
-                                            <option value="8"><span>8.Pelayanan publik yang tidak memuaskan yang dapat merugikan pihak-pihak yang berkepentingan serta masyarakat secara umum</span></option>
-                                        </select>
-                                        <div class="invalid-feedback">Silahkan pilih materi pengaduan.</div>
-                                    </legend>
-                                    <legend style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;isolation: isolate;width: 566px;height: 172px;color: #98A2B3;"> Deskripsi Kejadian
-                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="Sebutkan peristiwa, waktu terjadinya, dan lokasi kejadian atas pengaduan anda" required></textarea>
-                                    </legend>
-                                    <legend style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;isolation: isolate;width: 566px;height: 92px;color: #98A2B3;">Foto Pendukung
-                                        <input class="form-control" type="file" id="formFile" accept=".jpg,.jpeg,.png" onchange="Filevalidation()" />
-                                    </legend>
-                                    <p id="fileResult"></p>
-                                </div>
+                        <div class="mb-3" style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;padding-bottom: 2px;width: 646px;height: 662px;background: #F9FAFB;border-radius: 20px;">
+                            <div style="width: 646px;height: 80px;background: #FFFFFF;border-radius: 20px 20px 0 0; margin-bottom: 2px">
+                                <p style="position: absolute;width: 233px;height: 40px;left: 40px;top: 20px;font-family: 'Plus Jakarta Sans';font-style: normal;font-weight: 600;font-size: 32px;line-height: 40px;text-transform: capitalize;color: #1D2939;">Layanan Aduan</p>
                             </div>
-                            <div style="display: flex;flex-direction: row;justify-content: flex-end;align-items: center;padding: 20px 40px;gap: 12px;width: 646px;height: 88px;">
-                                <button type="reset" class="btn btn-outline-secondary" style="display: flex;flex-direction: row;justify-content: center;align-items: center;padding: 12px 24px;gap: 4px;width: 102px;height: 48px;border: 2px solid #E4E7EC;border-radius: 8px;">Cancel</button>
-                                <button id="submitReport" type="submit" class="btn btn-danger text-white" style="display: flex;flex-direction: row;justify-content: center;align-items: center;width: 159px;height: 48px;background: #AF2330;border-radius: 8px;" disabled>Submit Report</button>
-                            </div>
-                        </form>
-                        @else
-                        <div class="row" style="display: flex;flex-direction: column;align-items: center;padding: 0px;width: 646px;height: 746px;background: #FFFFFF;box-shadow: 0px 4px 12px rgba(29, 41, 57, 0.12);backdrop-filter: blur(10px);border-radius: 20px;">
-                            <div class="mb-3" style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;padding-bottom: 2px;width: 646px;height: 662px;background: #F9FAFB;border-radius: 20px;">
-                                <div style="width: 646px;height: 80px;background: #FFFFFF;border-radius: 20px 20px 0 0; margin-bottom: 2px">
-                                    <p style="position: absolute;width: 233px;height: 40px;left: 40px;top: 20px;font-family: 'Plus Jakarta Sans';font-style: normal;font-weight: 600;font-size: 32px;line-height: 40px;text-transform: capitalize;color: #1D2939;">Layanan Aduan</p>
-                                </div>
-                                <div class="mb-3" style="display: flex;flex-direction: column;align-items: flex-start;padding: 40px;gap: 20px;width: 646px;height: 580px;background: #FFFFFF;">
-                                    <img style="width: 566px;height: 344px;" src="assets/img/IlustrationCS.png"/>
-                                    <div style="width: 566px;height: 200px;left: 40px;top: 424px;">
-                                        <div style="padding: 0px;gap: 4px;width: 566px;height: 92px;">
-                                            <p style="font-weight: 600;font-size: 24px;line-height: 32px;text-align: left;letter-spacing: -0.006em;color: #1D2939;">Anda harus masuk dengan Google untuk melanjutkan</p>
-                                            <p tyle="font-weight: 400;font-size: 20px;line-height: 28px;letter-spacing: -0.006em;color: #98A2B3;">Setelah Anda mengajukan keluhan, kami akan mengirimkan informasi penanganan ke email yang Anda gunakan untuk login.</p>
-                                        </div>
+                            <div class="mb-3" style="display: flex;flex-direction: column;align-items: flex-start;padding: 40px;gap: 20px;width: 646px;height: 580px;background: #FFFFFF;">
+                                <img style="width: 566px;height: 344px;" src="assets/img/IlustrationCS.png"/>
+                                <div style="width: 566px;height: 200px;left: 40px;top: 424px;">
+                                    <div style="padding: 0px;gap: 4px;width: 566px;height: 92px;">
+                                        <p style="font-weight: 600;font-size: 24px;line-height: 32px;text-align: left;letter-spacing: -0.006em;color: #1D2939;">Anda harus masuk dengan Google untuk melanjutkan</p>
+                                        <p tyle="font-weight: 400;font-size: 20px;line-height: 28px;letter-spacing: -0.006em;color: #98A2B3;">Setelah Anda mengajukan keluhan, kami akan mengirimkan informasi penanganan ke email yang Anda gunakan untuk login.</p>
                                     </div>
                                 </div>
                             </div>
-                            <!-- Authentication Links -->
-                            <div style="display: flex;flex-direction: row;align-items: center;width: 413px;height: 72px;">
-                                <button href="/auth/google" class="btn customGPlusSignIn" role="button" type="button" style="display: flex;flex-direction: column;padding: 20px 32px;gap: 20px;width: 413px;height: 72px;background: #FFFFFF;box-shadow: 0px 4px 12px rgba(29, 41, 57, 0.08);backdrop-filter: blur(10px);border-radius: 8px;flex-wrap: wrap;">
-                                    <img src="https://cdn.cdnlogo.com/logos/g/35/google-icon.svg" style="width: 32px;height: 32px;">
-                                    <span id="name" style="font-weight: 600;font-size: 24px;line-height: 32px;color: #1D2939;">Lanjutkan dengan Google</span>
-                                </button>
-                            </div>
                         </div>
-                        @endif
+                        <!-- Authentication Links -->
+                        <div style="display: flex;flex-direction: row;align-items: center;width: 413px;height: 72px;">
+                            <button href="/auth/google" class="btn customGPlusSignIn" role="button" type="button" style="display: flex;flex-direction: column;padding: 20px 32px;gap: 20px;width: 413px;height: 72px;background: #FFFFFF;box-shadow: 0px 4px 12px rgba(29, 41, 57, 0.08);backdrop-filter: blur(10px);border-radius: 8px;flex-wrap: wrap;">
+                                <img src="https://cdn.cdnlogo.com/logos/g/35/google-icon.svg" style="width: 32px;height: 32px;">
+                                <span id="name" style="font-weight: 600;font-size: 24px;line-height: 32px;color: #1D2939;">Lanjutkan dengan Google</span>
+                            </button>
+                        </div>
                     </div>
+                    @endif
                 </div>
             </div>
         </div>
@@ -473,7 +473,7 @@
     {{-- USER REPORT TRACKING  --}}
     {{-- ===================== --}}
 
-    <section style="display: flex;align-items: center;justify-content: center;align-content: center;">
+    <section title="reporttracking" style="display: flex;align-items: center;justify-content: center;align-content: center;">
         <div class="col" style="display: flex;flex-direction: row;justify-content: center;align-items: center;padding: 80px 120px;gap: 120px;width: 1440px;height: 316px;">
             <div class="row" style="display: flex;flex-direction: row;align-items: center;padding: 40px 80px;width: 1200px;height: 156px;background: #1D2939;border-radius: 8px;">
                 <div class="col" style="display: flex;flex-direction: column;justify-content: center;align-items: flex-start;padding: 0px;gap: 4px;width: 507px;height: 76px;">
@@ -617,7 +617,7 @@
     {{-- ===================== --}}
 
 
-    <section style="background-color: #F9FAFB;display: flex;flex-direction: row;justify-content: center;align-items: center;padding: 10px 120px;width: 100%;height: 120px;">
+    <section title="relatedlink" style="background-color: #F9FAFB;display: flex;flex-direction: row;justify-content: center;align-items: center;padding: 10px 120px;width: 100%;height: 120px;">
         <div class="h-100" style="overflow: hidden;padding-left: 120px;padding-right: 120px;width: 100%;">
             <div class="row align-items-center h-100">
                 <div class="container rounded">
@@ -667,14 +667,14 @@
 
     {{-- ===================== --}}
     {{--    SECTION FOOTER     --}}
-    <section style="display: flex;flex-direction: row;align-items: center;align-content: center;justify-content: center;">
-        <footer class="text-white" style="background-color: #AF2330;display: flex;flex-direction: column;align-items: flex-start;padding: 0px;width: -webkit-fill-available;height: 398px;">
-            <div class="col" style="display: flex;flex-direction: column;align-items: flex-start;padding: 40px 120px;width: -webkit-fill-available;height: 338px;justify-content: center;">
-                <div class="row text-lg-start d-flex flex-column item" style="display: flex;flex-direction: row;align-items: flex-start;padding: 0px;width: -webkit-fill-available;height: 48px;">
+    <section title="footer" style="display: flex;flex-direction: row;align-items: center;align-content: center;justify-content: center;">
+        <footer class="text-white" style="background-color: #AF2330;display: flex;flex-direction: column;align-items: flex-start;padding: 0px;width: 100%;height: 398px;">
+            <div class="col" style="display: flex;flex-direction: column;align-items: flex-start;padding: 40px 120px;width: 100%;height: 338px;justify-content: center;">
+                <div class="row text-lg-start d-flex flex-column item" style="display: flex;flex-direction: row;align-items: flex-start;padding: 0px;width: 100%;height: 48px;">
                     <img src="assets/img/Logobar.png" alt="" style="display: flex;flex-direction: row;align-items: left;padding: 0px;width: 256.95px;height: 48px;">
                 </div>
             </div>
-            <div class="row" style="display: flex;flex-direction: row;padding: 0px;gap: 80px;width: -webkit-fill-available;height: 170px;justify-content: space-between;padding-left: 120px;padding-right: 120px;align-items: flex-start;align-content: center;">
+            <div class="row" style="display: flex;flex-direction: row;padding: 0px;gap: 80px;width: 100%;height: 170px;justify-content: space-between;padding-left: 120px;padding-right: 120px;align-items: flex-start;align-content: center;">
                 <div class="col-auto"style="display: flex;flex-direction: column;align-items: flex-start;row-gap: 15px;width: 546px;height: 170px;align-content: flex-start;">
                     <p style="font-weight: 700;font-size: 24px;line-height: 34px;letter-spacing: -0.24px;margin-block-start: 0em;margin-block-end: 0em;">TRANS SEMARANG</p>
                     <p style="font-weight: 400;font-size: 18px;line-height: 24px;letter-spacing: -0.24px;margin-block-start: 0em;margin-block-end: 0em;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et malesuada lobortis quis.</p>
@@ -709,7 +709,7 @@
                 </div>
             </div>
             <hr style="margin-top: 10px; margin-bottom: 0px">
-            <div class="d-flex justify-content-between align-items-center pt-3" style="background-color: #921D28;display: flex;flex-direction: row;padding: 20px 120px;width: -webkit-fill-available;height: 60px;">
+            <div class="d-flex justify-content-between align-items-center pt-3" style="background-color: #921D28;display: flex;flex-direction: row;padding: 20px 120px;width: 100%;height: 60px;">
                 <p class="text-white mb-0" style="font-weight: 300;font-size: 14px;line-height: 20px;letter-spacing: -0.24px;">&#169; NGINOVASI 2022-V.1.1 All rights reserved.</p>
                 <ul class="list-inline mb-0">
                     <li class="list-inline-item">
