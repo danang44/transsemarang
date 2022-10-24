@@ -143,23 +143,54 @@
         </div>
     </nav>
     {{-- Section 1 - Slider --}}
-    <section
-        style="background: url('assets/img/Hero.png') center / cover no-repeat;position: relative;height:800px;padding-top: 120px;">
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            @foreach ($sliderTop as $slider)
+            <div class="carousel-item active" data-bs-interval="1000">
+                <img src="/data_slider/{{$slider->gambar}}" class="d-block w-100" alt="assets/img/Hero.png">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>First slide label</h5>
+                    <p>Some representative placeholder content for the first slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="/data_slider/{{$slider->gambar}}" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Second slide label</h5>
+                  <p>Some representative placeholder content for the second slide.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="/data_slider/{{$slider->gambar}}" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Third slide label</h5>
+                  <p>Some representative placeholder content for the third slide.</p>
+                </div>
+              </div>
+              @endforeach
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    {{-- <div style="background: url('assets/img/Hero.png') center / cover no-repeat;position: relative;height:800px;padding-top: 120px;">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 text-left text-md-start d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center"
-                    style="color: #ffffff">
-                    <div style="max-width: 600px;">
-                        <p>
-                            <span
-                                style="font-size: 24px;font-family: 'Plus Jakarta Sans';font-weight:lighter;">NGINOVASI
-                                X Trans Semarang</span>
-                        </p>
-                        <p>
-                            <span style="font-size:45px;font-family: 'Plus Jakarta Sans';">Download
-                                aplikasi<br><strong>Trans Semarang</strong>, dapatkan<br>info lokasi bus terkini<br>
-                                serta lainnya.</span>
-                        </p>
+                <div class="col-md-6 text-left text-md-start d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center" style="color: #ffffff">
+                    <div class="headerbanner" style="max-width: 600px;">
+                        <p style="font-size: 24px;font-family: 'Plus Jakarta Sans';font-weight:lighter;">NGINOVASI X Trans Semarang</p>
+                        <p style="font-size:45px;font-family: 'Plus Jakarta Sans';">
+                            Download aplikasi<br><strong>Trans Semarang</strong>, dapatkan<br>info lokasi bus terkini<br> serta lainnya.</span></p>
                         <p class="my-1" style="font-size: 24px; font-weight:300; padding-bottom: 80px">
                             <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. At senectus ut tortor auctor
                                 bibendum volutpat ante volutpat. Molestie id purus adipiscing.</span>
@@ -174,11 +205,11 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    {{-- <div class="p-xl-5 m-xl-5"><img class="img-fluid fit-cover" style="min-height: 300px;"></div> --}}
+                    <div class="p-xl-5 m-xl-5"><img class="img-fluid fit-cover" style="min-height: 300px;"></div>
                 </div>
             </div>
         </div>
-    </section>
+    </div> --}}
     {{-- Section 2 - News --}}
     <section
         style="display: flex;flex-direction: row;align-items: center;padding-top: 80px; padding-bottom: 80px;padding-left: 120px;padding-right: 120px;align-content: center;justify-content: center;">
@@ -195,7 +226,7 @@
                 @foreach ($PNarticles as $PNart)
                 <div class="row row-cols-1">
                     <div class="col-md-9 text-left text-md-start">
-                        <a href="/detailarticle/{{$PNart->title}}" style="color: #1D2939">
+                        <a href="/detailarticle/{{$PNart->id}}" style="color: #1D2939">
                         <p style="font-weight: 600;font-size: 24px;line-height: 32px;">
                             <strong>{{ $PNart->title }}</strong>
                         </p>
@@ -254,10 +285,10 @@
                     <div class="btn-group" onclick="toggleItems()" style="display: flex;flex-direction: row;align-items: center;width: 490px;height: 76px;background: #AF2330;border-radius: 8px;">
                         <button class="btn btn-tsm btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false" style="height: 100%">Pilih Koridor BRT</button>
                         <ul class="dropdown-menu dropdown-menu-lg-end"  style="width: 100%">
-                            @foreach($result as $datas)   
+                            @foreach($result as $datas)
                             <li><a class="dropdown-item">Koridor {{$datas['kor']}} {{$datas['origin']}} - {{$datas['toward']}}</a></li>
-                          
-                          @endforeach 
+
+                          @endforeach
                         </ul>
                     </div>
                 </div>

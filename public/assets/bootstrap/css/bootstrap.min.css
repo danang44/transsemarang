@@ -632,13 +632,13 @@ progress {
 
 @media (min-width:1200px) {
     .container,.container-lg,.container-md,.container-sm,.container-xl {
-        max-width: 1140px;
+        max-width: 980px;
     };
 }
 
 @media (min-width:1400px) {
     .container,.container-lg,.container-md,.container-sm,.container-xl,.container-xxl {
-        max-width: 1320px;
+        max-width: 1920px;
     };
 }
 
@@ -4181,6 +4181,24 @@ textarea.form-control-lg {
     overflow-y: auto;
 }
 
+@media (min-width: 320px) {
+    .navbar-expand-sm>.container,.navbar-expand-sm>.container-fluid,.navbar-expand-sm>.container-lg,.navbar-expand-sm>.container-md,.navbar-expand-sm>.container-sm,.navbar-expand-sm>.container-xl,.navbar-expand-sm>.container-xxl {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .navbar-expand-sm>.container-fluid {
+        flex-wrap: nowrap;
+        justify-content: start;
+    }
+    img{
+        width: 80%;
+        height: 80%;
+    }
+    .headerbanner.p{
+        font-size: 1.5rem;
+    }
+}
+
 @media (min-width:576px) {
     .navbar-expand-sm {
         flex-wrap: nowrap;
@@ -4531,6 +4549,8 @@ textarea.form-control-lg {
     --bs-navbar-toggler-border-color: rgba(255, 255, 255, 0.1);
     --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
+
+.navbar
 
 .card {
     --bs-card-spacer-y: 1rem;
@@ -7979,7 +7999,7 @@ textarea.form-control-lg {
 }
 
 .w-100 {
-    /* width: 100%!important; */
+    width: 100%!important;
 }
 
 .w-auto {
@@ -12343,13 +12363,17 @@ textarea.form-control-lg {
     to {
       transform: translate3d(-100%, 0, 0);
     }
-  }
+}
 
-  @keyframes fade-in {
+@keyframes fade-in {
     0% {
       opacity: 0;
     }
     100% {
       opacity: 1;
     }
-  }
+}
+
+@media (min-width: 320px) {
+
+}

@@ -220,9 +220,9 @@
     }
 </style>
 
-<br></br>
-<br></br>
-<br></br>
+<br>
+<br>
+<br>
 
 <div class="container">
     <div class="row justify-content-center" style="background-color:black">
@@ -242,8 +242,8 @@
                                     <?php echo $article->thumb ?>
                                 </div>
                             </div>
-                           
-                  
+
+
                         </div>
                     </div>
 
@@ -257,7 +257,7 @@
                                 <h4 style="color:#d7dbd8;line-height:2"><b>Rp {{number_format($article->harga_brg)}}</b></h4>
                                 <p <?php echo $article->intro ?></p>
                                 <p <?php echo $article->content ?></p>
-                              
+
                             </div>
                         </div>
                     </div>
