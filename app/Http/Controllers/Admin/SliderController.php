@@ -39,7 +39,7 @@ class SliderController extends Controller
             'created_by' => $request->created_by,
             'gambar' => $nama_file,
             'judul' => $request->judul,
-            
+
         ]);
 
 
@@ -49,6 +49,7 @@ class SliderController extends Controller
     public function destroy(Request $request)
     {
         $id = $request->input('delete_id');
+        dd($id);
         $slider = slider::find($id);
         $slider->delete();
 
@@ -56,7 +57,7 @@ class SliderController extends Controller
         $slider->deleted_by= $user;
         $slider->update();
         return redirect()->back()->with('status', 'Data berhasil dihapus');
-        
+
     }
 
 }

@@ -56,8 +56,8 @@
                                         <td class="pr-2 pl-2 ">{{$c->judul}}</td>
                                         <td class="pr-2 pl-2 ">{{@$c->user->name}}</td>
                                         <td class="text-center">
-                                           
-                                            <button class="btn btn-outline-danger deletebtn" value="{{$c->id}}"><i class="fa-solid fa-trash"></i></button>
+
+                                            <button class="btn btn-outline-danger deletebtn" value="{{$c->id}}" data-toggle="modal" data-target="#deleteModal"><i class="fa-solid fa-trash"></i></button>
                                         </td>
                                     </tr>
                                     @endforeach
@@ -104,7 +104,7 @@
             <div class="modal-body">
                 <!--FORM UPDATE BARANG-->
                 <form action="/slider_delete" method="post">
-                @csrf
+                    @csrf
                     @method('DELETE')
                     <h3>Anda yakin menghapus data ?</h3>
                     <input type="hidden" id="deleting_id" name="delete_id">
@@ -138,7 +138,7 @@
                 <input type="hidden" id="id" name="id"> <br/>
                 <input type="hidden" id="user_id" name="user_id" value="{{Auth::id()}}">
                     <input type="hidden" id="created_by" name="created_by" value="{{Auth::id()}}">
-           
+
                     <div class="form-group">
                         <label>Judul</label>
                         <input type="text" required="required" class="form-control" name="judul" id="judul">

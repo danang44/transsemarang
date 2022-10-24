@@ -5828,6 +5828,9 @@ textarea.form-control-lg {
         overflow-y: auto;
         outline: 0;
     }
+    .slicktsm {
+        height: 320px;
+    }
 }
 
 .modal-dialog {
@@ -12375,5 +12378,63 @@ textarea.form-control-lg {
 }
 
 @media (min-width: 320px) {
-
+    .slicktsm{
+        height: 177.777px;
+    }
 }
+
+@media (min-width: 375px) {
+    .slicktsm{
+        height: 210.9375px;
+    }
+}
+
+@media (min-width: 425px) {
+    .slicktsm{
+        height: 243.75px;
+    }
+}
+
+@media (min-width: 768px) {
+    .slicktsm{
+        height: 437.5px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .slicktsm{
+        height: 585.9375px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .slicktsm{
+        height: 703.125px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .slicktsm{
+        height: 851.5625px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .slicktsm{
+        height: 937.5px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .slicktsm{
+        height: 1125px;
+    }
+}
+
+@media (min-width: 2560px) {
+    .slicktsm{
+        height: 1500px;
+    }
+}
+
+
