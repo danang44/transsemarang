@@ -51,6 +51,7 @@
                                   <th scope="col">Jam Operasional</th>
                                   <th scope="col">Jumlah Bis</th>
                                   <th scope="col">Jumlah Halte</th>
+                                  <th scope="col">Koridor</th>
                                 </tr>
                               </thead>
                               <tbody>
@@ -63,6 +64,7 @@
                                   <td>{{$datas['jam_operasional']}}</td>
                                   <td>{{$datas['jumlah_bis']}}</td>
                                   <td>{{$datas['jumlah_halte']}}</td>
+                                  <td>{{$datas['kor']}}</td>
                                 
                                 </tr>
                               @endforeach 

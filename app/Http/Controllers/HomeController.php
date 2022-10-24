@@ -55,11 +55,12 @@ class HomeController extends Controller
                 'jam_operasional' => $row['jam_operasional'],
                 'jumlah_bis' => $row['jumlah_bis'],
                 'jumlah_halte' => $row['jumlah_halte'],
+                'kor' => $row['kor'],
                 
        
             );
         }
-        // dd($data);
+     dd($data);
         return view('home', compact('result'));
     }
     

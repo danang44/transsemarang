@@ -254,11 +254,10 @@
                     <div class="btn-group" onclick="toggleItems()" style="display: flex;flex-direction: row;align-items: center;width: 490px;height: 76px;background: #AF2330;border-radius: 8px;">
                         <button class="btn btn-tsm btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false" style="height: 100%">Pilih Koridor BRT</button>
                         <ul class="dropdown-menu dropdown-menu-lg-end"  style="width: 100%">
-                            <li><a class="dropdown-item" href="#">Koridor 1 (Mangkang - Penggaron)</a></li>
-                            <li><a class="dropdown-item" href="#">Koridor 1 (Mangkang - Penggaron)</a></li>
-                            <li><a class="dropdown-item" href="#">Koridor 1 (Mangkang - Penggaron)</a></li>
-                            <li><a class="dropdown-item" href="#">Koridor 1 (Mangkang - Penggaron)</a></li>
-                            <li><a class="dropdown-item" href="#">Koridor 1 (Mangkang - Penggaron)</a></li>
+                            @foreach($result as $datas)   
+                            <li><a class="dropdown-item">Koridor {{$datas['kor']}} {{$datas['origin']}} - {{$datas['toward']}}</a></li>
+                          
+                          @endforeach 
                         </ul>
                     </div>
                 </div>
