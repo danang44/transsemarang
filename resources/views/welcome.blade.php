@@ -764,7 +764,7 @@
         $(document).ready(function(){
             $('.slicktsm').slick({
                 adaptiveHeight: false,
-                arrows: true,
+                arrows: false,
                 autoplay: true,
                 autoplaySpeed: 2000,
                 cssEase: 'linear',
