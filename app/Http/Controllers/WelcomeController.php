@@ -6,22 +6,24 @@ use App\article;
 use Illuminate\Support\Facades\DB;
 
 use App\Http\Controllers\Controller;
+use App\slider;
 
 class WelcomeController extends Controller
 {
     public function index()
     {
         $RNarticles = article::take(9)->orderBy('id','desc')->get();
-        $PNarticles = article::take(3)->orderBy('id','desc')->get();
+        $PNarticles = article::take(3)->orderBy('view','desc')->get();
+        $sliderTop =  slider::all();
 
-        
+
 
         $headers = [
             'Authorization:Basic czNtNHI0bmc6czNtNHI0bmdOZGVz',
             'Cookie: ci_session=a%3A5%3A%7Bs%3A10%3A%22session_id%22%3Bs%3A32%3A%22cc4bc374b026709fd18f1cb6cd7c92f5%22%3Bs%3A10%3A%22ip_address%22%3Bs%3A13%3A%22112.78.39.189%22%3Bs%3A10%3A%22user_agent%22%3Bs%3A21%3A%22PostmanRuntime%2F7.29.2%22%3Bs%3A13%3A%22last_activity%22%3Bi%3A1665562390%3Bs%3A9%3A%22user_data%22%3Bs%3A0%3A%22%22%3B%7D6fe9ee344dc6bc317b3c063dce14dbda; csrf_cookie_name=ba0325b1bb49557a555522e06d3d2565',
             'Content-Type: application/json',
         ];
-    
+
         $ch = curl_init();
 
         curl_setopt_array($ch, array(
@@ -49,12 +51,12 @@ class WelcomeController extends Controller
                 'jumlah_bis' => $row['jumlah_bis'],
                 'jumlah_halte' => $row['jumlah_halte'],
                 'kor' => $row['kor'],
-                
-       
+
+
             );
         }
         // dd($data);
-        return view('welcome', compact('RNarticles', 'PNarticles','result'));
+        return view('welcome', compact('RNarticles','PNarticles','sliderTop','result'));
     }
 
 
