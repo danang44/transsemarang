@@ -364,16 +364,15 @@
     {{-- ===================== --}}
     {{-- USER REPORT COMPLAINT --}}
     {{-- ===================== --}}
-    <section title="reportcomplaint" style="display: flex;align-items: center;justify-content: center;align-content: center;background-color: #F9FAFB;">
-        <div class="col" style="display: flex;padding: 80px 120px;height: 910px;width: 100%;flex-direction: row;justify-content: space-between;flex-wrap: nowrap;">
-            <div class="row" style="display: flex;width: 472px;height: auto;align-content: space-between;">
-                <div title="TS.Aduan">
-                    <p style="font-weight: 500;font-size: 24px;line-height: 32px;color: #AF2330;margin-block-start: 0px;margin-block-end: 0px;">TS.ADUAN</p>
-                    <p style="font-weight: 400;font-size: 48px;line-height: 60px;color: #1D2939;margin-block-start: 0px;margin-block-end: 0px;">Layanan
-                        <strong style=" font-weight: 800;color: #AF2330;"> Aduan<br>& Bantuan</strong>
-                    </p>
+    <div title="reportcomplaint" style="display: flex;width: 100%;height: 910px;background: #F9FAFB;flex-direction: row;align-content: center;">
+        <div class="col" style="display: flex;flex-direction: row;padding: 80px 120px;width: 100%;height: 100%;justify-content: space-between;align-items: center;">
+            <div style="display: flex;width: 472px;height: 712px;flex-direction: column;justify-content: space-between;">
+                <div style="display: flex;width: 100%;height: 152px;flex-direction: column;align-items: flex-start;">
+                    <p style="font-weight: 500;font-size: 24px;line-height: 32px;color: #AF2330;margin-block-end: 0em;margin-block-start: 0em;">TS.ADUAN</p>
+                    <p style="font-weight: 400;font-size: 48px;line-height: 60px;color: #1D2939;margin-block-end: 0em;margin-block-start: 0em;">Layanan
+                        <strong style=" font-weight: 800;color: #AF2330;">Aduan<br>& Bantuan</strong></p>
                 </div>
-                <div title="TS.AduanDesc" style="height: 480px;display: flex;flex-direction: column;justify-content: space-between;align-items: baseline;">
+                <div style="height: 480px;width: 100%;display: flex;flex-direction: column;justify-content: space-between;align-items: baseline;">
                     <div title="01" style="display: flex;flex-direction: row;align-items: flex-start;">
                         <p style="width: 44px;height: 40px;font-weight: 400;font-size: 32px;line-height: 40px;color: #AF2330;margin-block-start: 0px;margin-block-end: 0px;">01</p>
                         <span style="display: flex;flex-direction: column;align-items: flex-start;">
@@ -399,13 +398,11 @@
             </div>
             <div class="row" style="display: flex;width: 648px;height: auto;justify-content: space-around;flex-direction: row;">
                 <div style="display: flex;flex-direction: row;align-items: flex-start;padding: 28px 0px;isolation: isolate;width: 4px;height: 80px;margin: 0px -2px;z-index: 1;">
-                    <svg width="4" height="25" viewBox="0 0 4 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect y="0.996826" width="4" height="24" rx="2" fill="#AF2330" />
-                    </svg>
+                    <svg width="4" height="25" viewBox="0 0 4 25" fill="none" xmlns="http://www.w3.org/2000/svg"><rect y="0.996826" width="4" height="24" rx="2" fill="#AF2330" /></svg>
                 </div>
                 @if(Auth::check())
                 <div class="row" style="display: flex;flex-direction: column;align-items: center;padding: 0px;width: 646px;height: 746px;background: #FFFFFF;box-shadow: 0px 4px 12px rgba(29, 41, 57, 0.12);backdrop-filter: blur(10px);border-radius: 20px;">
-                    <form action="/pengaduan.php" method="post" class="row" id="formFile" style="display: flex;flex-direction: column;align-items: center;padding: 0px;width: 646px;height: 750px;background: #F9FAFB;box-shadow: 0px 4px 12px rgba(29, 41, 57, 0.12);backdrop-filter: blur(10px);border-radius: 20px;">
+                    <form action="/pengaduan.php" method="post" class="row" id="formlapor" style="display: flex;flex-direction: column;align-items: center;padding: 0px;width: 646px;height: 750px;background: #F9FAFB;box-shadow: 0px 4px 12px rgba(29, 41, 57, 0.12);backdrop-filter: blur(10px);border-radius: 20px;">
                         <div class="mb-3" style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;gap: 2px;width: 646px;height: 662px;background: #F9FAFB;border-radius: 20px;">
                             <div style="width: 646px;height: 80px;background: #FFFFFF;border-radius: 20px 20px 0 0;">
                                 <p style="position: absolute;width: 233px;height: 40px;left: 40px;top: 20px;font-family: 'Plus Jakarta Sans';font-style: normal;font-weight: 600;font-size: 32px;line-height: 40px;text-transform: capitalize;color: #1D2939;">Layanan Aduan</p>
@@ -418,7 +415,7 @@
                                     <select class="form-select" aria-label="Default select example" style="font-weight: 400;font-size: 20px;line-height: 28px;letter-spacing: -0.006em;color: #475467;" required>
                                         <option selected disabled value="">Materi Pengaduan...</option>
                                         <option value="1"><span>1.Pelanggaran terhadap kode etik dan/atau pedoman perilaku aparat</span></option>
-                                        <option value="2"><span>2.Penyalahgunaan wewenang/jabatan</span> </option>
+                                        <option value="2"><span>2.Penyalahgunaan wewenang/jabatan</span></option>
                                         <option value="3"><span>3.Pelanggaran sumpah jabatan</span></option>
                                         <option value="4"><span>4.Pelanggaran terhadap peraturan disiplin Pegawai Negeri Sipil</span></option>
                                         <option value="5"><span>5.Perbuatan tercela, yaitu perbuatan amoral, asusila, atau perbuatan yang tidak selayaknya dilakukan oleh seorang aparat maupun selaku anggota masyarakat</span></option>
@@ -426,7 +423,7 @@
                                         <option value="7"><span>7.Mal administrasi, yaitu terjadinya kesalahan, kekeliruan atau kelalaian yang bersifat administratif</span></option>
                                         <option value="8"><span>8.Pelayanan publik yang tidak memuaskan yang dapat merugikan pihak-pihak yang berkepentingan serta masyarakat secara umum</span></option>
                                     </select>
-                                    <div class="invalid-feedback">Silahkan pilih materi pengaduan.</div>
+                                    <div class="invalid-feedback"> Silahkan pilih materi pengaduan.</div>
                                 </legend>
                                 <legend style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;isolation: isolate;width: 566px;height: 172px;color: #98A2B3;"> Deskripsi Kejadian
                                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="Sebutkan peristiwa, waktu terjadinya, dan lokasi kejadian atas pengaduan anda" required></textarea>
@@ -442,53 +439,35 @@
                             <button id="submitReport" type="submit" class="btn btn-danger text-white" style="display: flex;flex-direction: row;justify-content: center;align-items: center;width: 159px;height: 48px;background: #AF2330;border-radius: 8px;" disabled>Submit Report</button>
                         </div>
                     </form>
-                    <script>
-                        let formFile = document.getElementById('formFile');
-                        let fileResult = document.getElementById('fileResult');
-                        let submitReport = document.getElementById('submitReport');
-                        formFile.addEventListener('change', function() {
-                            if (formFile.files.length > 0) {
-                                const fileSize = formFile.files.item(0).size;
-                                const fileMb = fileSize / 1024 ** 2;
-                                if (fileMb >= 2) {
-                                    fileResult.innerHTML = "Please select a file less than 2MB.";
-                                    submitReport.disabled = true;
-                                } else {
-                                    fileResult.innerHTML = "Success, your file is " + fileMb.toFixed(1) + "MB.";
-                                    submitReport.disabled = false;
-                                }
-                            }
-                        });
-                    </script>
                     @else
-                    <div class="row" style="display: flex;flex-direction: column;align-items: center;padding: 0px;width: 646px;height: 746px;background: #FFFFFF;box-shadow: 0px 4px 12px rgba(29, 41, 57, 0.12);backdrop-filter: blur(10px);border-radius: 20px;">
+                        <div class="row" style="display: flex;flex-direction: column;align-items: center;padding: 0px;width: 646px;height: 746px;background: #FFFFFF;box-shadow: 0px 4px 12px rgba(29, 41, 57, 0.12);backdrop-filter: blur(10px);border-radius: 20px;">
                         <div class="mb-3" style="display: flex;flex-direction: column;align-items: center;padding: 0px;padding-bottom: 2px;width: 646px;height: 662px;background: #FFFFFF;border-radius: 20px;">
-                            <div style="width: 646px;height: 80px;background: #FFFFFF;border-radius: 20px 20px 0 0; margin-bottom: 2px">
+                                <div style="width: 646px;height: 80px;background: #FFFFFF;border-radius: 20px 20px 0 0; margin-bottom: 2px">
                                 <p style="position: absolute;width: 233px;height: 40px;left: 40px;top: 20px;font-family: 'Plus Jakarta Sans';font-style: normal;font-weight: 600;font-size: 32px;line-height: 40px;text-transform: capitalize;color: #1D2939;">Layanan Aduan</p>
-                            </div>
+                                </div>
                             <div class="mb-3" style="display: flex;flex-direction: column;align-items: flex-start;padding: 40px;gap: 20px;width: 646px;height: 580px;background: #FFFFFF;">
                                 <img style="width: 566px;height: 344px;" src="assets/img/IlustrationCS.png"/>
-                                <div style="width: 566px;height: 200px;left: 40px;top: 424px;">
-                                    <div style="padding: 0px;gap: 4px;width: 566px;height: 92px;">
+                                    <div style="width: 566px;height: 200px;left: 40px;top: 424px;">
+                                        <div style="padding: 0px;gap: 4px;width: 566px;height: 92px;">
                                         <p style="font-weight: 600;font-size: 24px;line-height: 32px;text-align: left;letter-spacing: -0.006em;color: #1D2939;">Anda harus masuk dengan Google untuk melanjutkan</p>
                                         <p tyle="font-weight: 400;font-size: 20px;line-height: 28px;letter-spacing: -0.006em;color: #98A2B3;">Setelah Anda mengajukan keluhan, kami akan mengirimkan informasi penanganan ke email yang Anda gunakan untuk login.</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- Authentication Links -->
-                        <div style="display: flex;flex-direction: row;align-items: center;width: 566px;height: 68px;justify-content: center;">
-                            <a href="/auth/google" class="btn customGPlusSignIn" role="button" type="button" style="display: flex;flex-direction: column;padding: 20px 32px;gap: 20px;width: 413px;height: 72px;background: #FFFFFF;flex-wrap: wrap;border: 1px solid #E4E7EC;box-shadow: 0px 4px 12px rgba(29, 41, 57, 0.12);backdrop-filter: blur(10px);border-radius: 12px;">
-                                <img src="https://cdn.cdnlogo.com/logos/g/35/google-icon.svg" style="width: 32px;height: 32px;">
-                                <span id="name" style="font-weight: 600;font-size: 24px;line-height: 32px;color: #1D2939;">Lanjutkan dengan Google</span>
-                            </a>
+                            <div style="display: flex;flex-direction: row;align-items: center;width: 566px;height: 68px;justify-content: center;">
+                                <a href="/auth/google" class="btn customGPlusSignIn" role="button" type="button" style="display: flex;flex-direction: column;padding: 20px 32px;gap: 20px;width: 413px;height: 72px;background: #FFFFFF;flex-wrap: wrap;border: 1px solid #E4E7EC;box-shadow: 0px 4px 12px rgba(29, 41, 57, 0.12);backdrop-filter: blur(10px);border-radius: 12px;">
+                                    <img src="https://cdn.cdnlogo.com/logos/g/35/google-icon.svg" style="width: 32px;height: 32px;">
+                                    <span id="name" style="font-weight: 600;font-size: 24px;line-height: 32px;color: #1D2939;">Lanjutkan dengan Google</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                     @endif
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
     {{-- ===================== --}}
     {{-- USER REPORT TRACKING  --}}
@@ -767,6 +746,24 @@
     </section>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.38/dist/sweetalert2.all.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js" integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
+    <script>
+        let formFile = document.getElementById('formFile');
+        let fileResult = document.getElementById('fileResult');
+        let submitReport = document.getElementById('submitReport');
+        formFile.addEventListener('change', function() {
+            if (formFile.files.length > 0) {
+                const fileSize = formFile.files.item(0).size;
+                const fileMb = fileSize / 1024 ** 2;
+                if (fileMb >= 2) {
+                    fileResult.innerHTML = "Please select a file less than 2MB.";
+                    submitReport.disabled = true;
+                } else {
+                    fileResult.innerHTML = "Success, your file is " + fileMb.toFixed(1) + "MB.";
+                    submitReport.disabled = false;
+                }
+            }
+        });
+    </script>
     <script>
         const swiper = new Swiper('.swiper', {
         // Optional parameters
