@@ -51,14 +51,14 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach($card as $c)
+                                    @foreach($card as $cards)
                                     <tr>
-                                        <td class="pr-2 pl-1 "><img width="300px" src="{{ url('/data_card/'.$c->image) }}"></td>
-                                        <td class="pr-2 pl-2 ">{{$c->name}}</td>
-                                        <td class="pr-2 pl-2 ">{{$c->desc}}</td>
+                                        <td class="pr-2 pl-1 "><img width="300px" src="{{ url('/data_card/'.$cards->image) }}"></td>
+                                        <td class="pr-2 pl-2 ">{{$cards->name}}</td>
+                                        <td class="pr-2 pl-2 ">{{$cards->desc}}</td>
                                         <td class="text-center">
-                                        <button class="btn btn-outline-info editbtn" value="{{$c->id}}"><i class="fa-solid fa-pen"></i></button> 
-                                            <button class="btn btn-outline-danger deletebtn" value="{{$c->id}}"><i class="fa-solid fa-trash"></i></button>
+                                            <button class="btn btn-outline-info editbtn" value="{{$cards->id}}"><i class="fa-solid fa-pen"></i></button>
+                                            <button class="btn btn-outline-danger deletebtn" value="{{$cards->id}}"><i class="fa-solid fa-trash"></i></button>
                                         </td>
                                     </tr>
                                     @endforeach
@@ -73,7 +73,6 @@
     </div>
 </div>
 
-<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.0/js/jquery.dataTables.js"></script>
 
 <script>
     $(document).ready(function() {
@@ -101,7 +100,7 @@
             });
         });
     });
-    </script>
+</script>
 
 <!-- Modal Update -->
 <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -142,7 +141,7 @@
 
 
 
-    <!-- delete -->
+<!-- delete -->
 <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -159,7 +158,7 @@
                     @method('DELETE')
                     <h3>Anda yakin menghapus data ?</h3>
                     <input type="hidden" id="deleting_id" name="delete_id">
-                    <input type="hidden" id="delete_by" name="delete_by" value="{{Auth::id()}}">
+                    <!-- <input type="hidden" id="delete_by" name="delete_by" value="{{Auth::id()}}"> -->
                     <div class="modal-footer">
                         <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Batal</button>
                         <button type="submit" class="btn btn-outline-primary">Hapus</button>
@@ -185,10 +184,10 @@
 
             <div class="modal-body">
                 <form action="/card_store" method="POST" enctype="multipart/form-data">
-                {{ csrf_field() }}
-                    <input type="hidden" id="id" name="id"> <br/>
+                    {{ csrf_field() }}
+                    <input type="hidden" id="id" name="id"> <br />
                     <input type="hidden" id="created_by" name="created_by" value="{{Auth::id()}}">
-                  
+
                     <div class="form-group">
                         <label>Jenis Kartu</label>
                         <input type="text" required="required" class="form-control" name="name" id="name">
@@ -203,8 +202,8 @@
                                 Choose Image...
                             </a>
                             <img class="img-preview img-fluid mt-3 ">
-                            <input type="file"  style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;' name="image" id="image" size="40" onchange="previewImage()">
-                            
+                            <input type="file" style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;' name="image" id="image" size="40" onchange="previewImage()">
+
                             &nbsp;
                             <span class='label label-info' id="upload-file-info"></span>
                         </div>
@@ -220,20 +219,20 @@
 </div>
 
 <script>
-    function previewImage(){
+    function previewImage() {
         const image = document.querySelector('#image');
         const imgPreview = document.querySelector('.img-preview')
-        
+
 
         imgPreview.style.display = 'block';
         const oFReader = new FileReader();
         oFReader.readAsDataURL(image.files[0]);
 
-        oFReader.onload = function(oFREvent){
+        oFReader.onload = function(oFREvent) {
             imgPreview.src = oFREvent.target.result;
         }
-    
+
     }
-    </script>
+</script>
 
 @endsection
