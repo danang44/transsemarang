@@ -31,12 +31,17 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.38/dist/sweetalert2.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/slick/slick.css"/>
+    {{-- // Add the new slick-theme.css if you want the default styling --}}
+    <link rel="stylesheet" type="text/css" href="assets/slick/slick-theme.css"/>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"> --}}
 </head>
 
@@ -65,7 +70,12 @@
     .swiper {
         width: 100%;
         height: 568px;
-        }
+    }
+
+    .swiperTop {
+        width: 100%;
+        height: 800px;
+    }
 
     body {
         font-family: 'Plus Jakarta Sans', sans-serif;
@@ -143,46 +153,77 @@
         </div>
     </nav>
     {{-- Section 1 - Slider --}}
-    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-            @foreach ($sliderTop as $slider)
-            <div class="carousel-item active" data-bs-interval="1000">
-                <img src="/data_slider/{{$slider->gambar}}" class="d-block w-100" alt="assets/img/Hero.png">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>First slide label</h5>
-                    <p>Some representative placeholder content for the first slide.</p>
+
+    <!-- Slider main container -->
+    <div class="swiperTop">
+    <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+    <!-- Slides -->
+            <div class="swiper-slide">
+                <div style="background: url('assets/img/Hero.png') center / cover no-repeat;position: relative;height:800px;padding-top: 120px;">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6 text-left text-md-start d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center" style="color: #ffffff">
+                                <div class="headerbanner" style="max-width: 600px;">
+                                    <p style="font-size: 24px;font-family: 'Plus Jakarta Sans';font-weight:lighter;">NGINOVASI X Trans Semarang</p>
+                                    <p style="font-size:45px;font-family: 'Plus Jakarta Sans';">
+                                        Download aplikasi<br><strong>Trans Semarang</strong>, dapatkan<br>info lokasi bus terkini<br> serta lainnya.</span></p>
+                                    <p class="my-1" style="font-size: 24px; font-weight:300; padding-bottom: 80px">
+                                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. At senectus ut tortor auctor bibendum volutpat ante volutpat. Molestie id purus adipiscing.</span>
+                                    </p>
+                                    <a class="btn me-2" role="button"
+                                        href="https://play.google.com/store/apps/details?id=ngi.brtsemarang.apppublic"
+                                        target="_blank"
+                                        style="background: url('assets/img/Google_Play.png')  center / cover repeat;width: 162px;height: 48px;"></a>
+                                    <a class="btn" role="button"
+                                        href="https://apps.apple.com/id/app/trans-semarang/id1460565652" target="_blank"
+                                        style="background: url('assets/img/App_Store.png')  center / cover repeat;width: 162px;height: 48px;"></a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                {{-- <div class="p-xl-5 m-xl-5"><img class="img-fluid fit-cover" style="min-height: 300px;"></div> --}}
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="carousel-item">
-                <img src="/data_slider/{{$slider->gambar}}" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>Second slide label</h5>
-                  <p>Some representative placeholder content for the second slide.</p>
+            @foreach ($sliderTop as $slider)
+            <div class="swiper-slide">
+                <div title="sliderTop" style="display: flex;align-items: center;justify-content: center;align-content: center;">
+                    <div style="display: flex;height: 800px;width: 100%;flex-direction: column;justify-content: space-between;align-items: center;">
+                        <img src="data_slider/{{$slider->gambar}}" alt="assets/img/Hero.png">
+                    </div>
                 </div>
-              </div>
-              <div class="carousel-item">
-                <img src="/data_slider/{{$slider->gambar}}" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>Third slide label</h5>
-                  <p>Some representative placeholder content for the third slide.</p>
-                </div>
-              </div>
-              @endforeach
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+            </div>
+            @endforeach
         </div>
+    <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+    <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+    <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
     </div>
+
+    {{-- <div class="slicktsm" style="display: flex;">
+        <div class="slickitem">
+            <img src="assets/img/Hero.png" class="d-block w-100" alt="assets/img/Hero.png">
+        </div>
+        @foreach ($sliderTop as $slider)
+        <div class="slickitem">
+            <img src="data_slider/{{$slider->gambar}}" class="d-block w-100" alt="{{$slider->gambar}}">
+        </div>
+        @endforeach
+    </div>
+    <div class="prevArrow">
+        <button type="button" class="slick-prev"><i class="fas fa-chevron-left"></i></button>
+    </div>
+    <div class="nextArrow">
+        <button type="button" class="slick-next"><i class="fas fa-chevron-right"></i></button>
+    </div> --}}
     {{-- <div style="background: url('assets/img/Hero.png') center / cover no-repeat;position: relative;height:800px;padding-top: 120px;">
         <div class="container">
             <div class="row">
@@ -211,8 +252,7 @@
         </div>
     </div> --}}
     {{-- Section 2 - News --}}
-    <section
-        style="display: flex;flex-direction: row;align-items: center;padding-top: 80px; padding-bottom: 80px;padding-left: 120px;padding-right: 120px;align-content: center;justify-content: center;">
+    <section style="display: flex;flex-direction: row;align-items: center;padding-top: 80px; padding-bottom: 80px;padding-left: 120px;padding-right: 120px;align-content: center;justify-content: center;">
         <div class="row row-cols-1"
             style="display: flex;flex-direction: row;align-items: flex-start;width: 1200px;height: 832px;">
             <div class="col-md-4 themed-grid-col" style="width: 412px">
@@ -646,7 +686,6 @@
     {{-- SECTION RELATED LINK  --}}
     {{-- ===================== --}}
 
-
     <section title="relatedlink" style="background-color: #F9FAFB;display: flex;flex-direction: row;justify-content: center;align-items: center;padding: 10px 120px;width: 100%;height: 120px;">
         <div class="h-100" style="overflow: hidden;padding-left: 120px;padding-right: 120px;width: 100%;">
             <div class="row align-items-center h-100">
@@ -697,6 +736,8 @@
 
     {{-- ===================== --}}
     {{--    SECTION FOOTER     --}}
+    {{-- ===================== --}}
+
     <section title="footer" style="display: flex;flex-direction: row;align-items: center;align-content: center;justify-content: center;">
         <footer class="text-white" style="background-color: #AF2330;display: flex;flex-direction: column;align-items: flex-start;padding: 0px;width: 100%;height: 398px;">
             <div class="col" style="display: flex;flex-direction: column;align-items: flex-start;padding: 40px 120px;width: 100%;height: 338px;justify-content: center;">
@@ -776,6 +817,59 @@
     </section>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.38/dist/sweetalert2.all.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js" integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
+    {{-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> --}}
+    <script type="text/javascript" src="assets/slick/slick.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.slicktsm').slick({
+                adaptiveHeight: false,
+                arrows: false,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                cssEase: 'linear',
+                centerMode: true,
+                centerPadding: '0px',
+                dots: true,
+                fade: true,
+                infinite: true,
+                speed: 400,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                touchMove: true,
+                mobileFirst: true,
+                responsive: [
+                    {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        infinite: true,
+                        dots: true
+                    }
+                    },
+                    {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                    },
+                    {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                    }
+                    // You can unslick at a given breakpoint now by adding:
+                    // settings: "unslick"
+                    // instead of a settings object
+                ]
+            });
+        });
+
+    </script>
     <script>
         let formFile = document.getElementById('formFile');
         let fileResult = document.getElementById('fileResult');
@@ -792,6 +886,28 @@
                     submitReport.disabled = false;
                 }
             }
+        });
+    </script>
+    <script>
+        const swiper = new Swiper('.swiperTop', {
+            // Optional parameters
+            direction: 'horizontal',
+            centeredSlides: true,
+            speed: 300,
+            slidesPerView: 1,
+            loop: true,
+            autoplay: {
+                delay: 5000,
+            },
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
         });
     </script>
     <script>
