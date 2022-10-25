@@ -107,7 +107,7 @@
                     @csrf
                     @method('DELETE')
                     <h3>Anda yakin menghapus data ?</h3>
-                    <input type="hidden" id="deleting_id" name="delete_id">
+                    <input type="hidden" id="deleting_id" name="delete_id" value="{{Auth::id()}}">
                     <input type="hidden" id="deleted_by" name="deleted_by" value="{{Auth::id()}}">
                     <div class="modal-footer">
                         <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Batal</button>

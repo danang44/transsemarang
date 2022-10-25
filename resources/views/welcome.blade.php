@@ -72,6 +72,11 @@
         height: 568px;
     }
 
+    .swiperTop {
+        width: 100%;
+        height: 800px;
+    }
+
     body {
         font-family: 'Plus Jakarta Sans', sans-serif;
         font-style: normal;
@@ -148,7 +153,62 @@
         </div>
     </nav>
     {{-- Section 1 - Slider --}}
-    <div class="slicktsm" style="display: flex;">
+
+    <!-- Slider main container -->
+    <div class="swiperTop">
+    <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+    <!-- Slides -->
+            <div class="swiper-slide">
+                <div style="background: url('assets/img/Hero.png') center / cover no-repeat;position: relative;height:800px;padding-top: 120px;">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6 text-left text-md-start d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center" style="color: #ffffff">
+                                <div class="headerbanner" style="max-width: 600px;">
+                                    <p style="font-size: 24px;font-family: 'Plus Jakarta Sans';font-weight:lighter;">NGINOVASI X Trans Semarang</p>
+                                    <p style="font-size:45px;font-family: 'Plus Jakarta Sans';">
+                                        Download aplikasi<br><strong>Trans Semarang</strong>, dapatkan<br>info lokasi bus terkini<br> serta lainnya.</span></p>
+                                    <p class="my-1" style="font-size: 24px; font-weight:300; padding-bottom: 80px">
+                                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. At senectus ut tortor auctor bibendum volutpat ante volutpat. Molestie id purus adipiscing.</span>
+                                    </p>
+                                    <a class="btn me-2" role="button"
+                                        href="https://play.google.com/store/apps/details?id=ngi.brtsemarang.apppublic"
+                                        target="_blank"
+                                        style="background: url('assets/img/Google_Play.png')  center / cover repeat;width: 162px;height: 48px;"></a>
+                                    <a class="btn" role="button"
+                                        href="https://apps.apple.com/id/app/trans-semarang/id1460565652" target="_blank"
+                                        style="background: url('assets/img/App_Store.png')  center / cover repeat;width: 162px;height: 48px;"></a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                {{-- <div class="p-xl-5 m-xl-5"><img class="img-fluid fit-cover" style="min-height: 300px;"></div> --}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @foreach ($sliderTop as $slider)
+            <div class="swiper-slide">
+                <div title="sliderTop" style="display: flex;align-items: center;justify-content: center;align-content: center;">
+                    <div style="display: flex;height: 800px;width: 100%;flex-direction: column;justify-content: space-between;align-items: center;">
+                        <img src="data_slider/{{$slider->gambar}}" alt="assets/img/Hero.png">
+                    </div>
+                </div>
+            </div>
+            @endforeach
+        </div>
+    <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+    <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+    <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+    </div>
+
+    {{-- <div class="slicktsm" style="display: flex;">
         <div class="slickitem">
             <img src="assets/img/Hero.png" class="d-block w-100" alt="assets/img/Hero.png">
         </div>
@@ -163,7 +223,7 @@
     </div>
     <div class="nextArrow">
         <button type="button" class="slick-next"><i class="fas fa-chevron-right"></i></button>
-    </div>
+    </div> --}}
     {{-- <div style="background: url('assets/img/Hero.png') center / cover no-repeat;position: relative;height:800px;padding-top: 120px;">
         <div class="container">
             <div class="row">
@@ -192,8 +252,7 @@
         </div>
     </div> --}}
     {{-- Section 2 - News --}}
-    <section
-        style="display: flex;flex-direction: row;align-items: center;padding-top: 80px; padding-bottom: 80px;padding-left: 120px;padding-right: 120px;align-content: center;justify-content: center;">
+    <section style="display: flex;flex-direction: row;align-items: center;padding-top: 80px; padding-bottom: 80px;padding-left: 120px;padding-right: 120px;align-content: center;justify-content: center;">
         <div class="row row-cols-1"
             style="display: flex;flex-direction: row;align-items: flex-start;width: 1200px;height: 832px;">
             <div class="col-md-4 themed-grid-col" style="width: 412px">
@@ -627,7 +686,6 @@
     {{-- SECTION RELATED LINK  --}}
     {{-- ===================== --}}
 
-
     <section title="relatedlink" style="background-color: #F9FAFB;display: flex;flex-direction: row;justify-content: center;align-items: center;padding: 10px 120px;width: 100%;height: 120px;">
         <div class="h-100" style="overflow: hidden;padding-left: 120px;padding-right: 120px;width: 100%;">
             <div class="row align-items-center h-100">
@@ -678,6 +736,8 @@
 
     {{-- ===================== --}}
     {{--    SECTION FOOTER     --}}
+    {{-- ===================== --}}
+
     <section title="footer" style="display: flex;flex-direction: row;align-items: center;align-content: center;justify-content: center;">
         <footer class="text-white" style="background-color: #AF2330;display: flex;flex-direction: column;align-items: flex-start;padding: 0px;width: 100%;height: 398px;">
             <div class="col" style="display: flex;flex-direction: column;align-items: flex-start;padding: 40px 120px;width: 100%;height: 338px;justify-content: center;">
@@ -826,6 +886,28 @@
                     submitReport.disabled = false;
                 }
             }
+        });
+    </script>
+    <script>
+        const swiper = new Swiper('.swiperTop', {
+            // Optional parameters
+            direction: 'horizontal',
+            centeredSlides: true,
+            speed: 300,
+            slidesPerView: 1,
+            loop: true,
+            autoplay: {
+                delay: 5000,
+            },
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
         });
     </script>
     <script>
