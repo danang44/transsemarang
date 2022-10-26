@@ -42,6 +42,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="assets/bootstrap/js/live.js"></script>
     {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"> --}}
 </head>
 
@@ -187,32 +188,60 @@
                     </p>
                 </div>
                 @foreach ($PNarticles as $PNart)
-                <div class="row row-cols-1 bodydiv">
-                    <a href="/detailarticle/{{$PNart->id}}" style="color: #1D2939">
-                        <p style="font-weight: 600;font-size: 24px;line-height: 32px;">
-                            <strong>{{ $PNart->title }}</strong>
-                        </p>
+                <div class="row row-cols-1 headcont">
+                    <a class="titlenews" href="/detailarticle/{{$PNart->id}}">
+                        <p><strong>{{ $PNart->title }}</strong></p>
                     </a>
-                    <p class="text-justify text-black-50" style="display: -webkit-box;max-width: 412px;height: 112px;-webkit-line-clamp: 4;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;line-height: 28px; font-weight: 400;font-size: 20px;margin-bottom: 0px">
+                    <p class="text-justify text-black-50 bodycont">
                         <?php echo $PNart->intro ?></p>
-                    <p class="text-justify text-black-50" style="font-weight: 400;font-size: 16px;">{{ $PNart->date }}</p>
+                    <p class="text-justify text-black-50 contdate">
+                        <?php $phpdate = strtotime( $PNart->date );
+                            $mysqldate = date( 'l, d F Y', $phpdate );
+                            echo $mysqldate;
+                        ?>
+                    </p>
                 </div>
                 @endforeach
             </div>
-            <div class="themed-grid-col"
-                style="display: flex;flex-direction: column;align-items: flex-start;width: 748px;height: 828px;padding-left: 40px">
-                <div class="pb-3">
-                    <p class="w-lg-50 fw-semibold "
-                        style="color: var(--bs-brand);width: 748px;height: 40px;font-family: 'Plus Jakarta Sans';font-style: normal;font-weight: 700;font-size: 32px;line-height: 40px;">
-                        <strong>Recent</strong>
+            <div class="ngi-row1-col1">
+                <div class="headdiv">
+                    <p><strong>Recent</strong>
                         <span style="font-weight: lighter; color: black;"> News</span>
                     </p>
                 </div>
+                <div class="nginsta">
+                    <div class="gallery">
+                        @foreach ($RNarticles as $RNart)
+                        <div class="gallery-item" tabindex="0">
+                            <img src="{{ $RNart->gambar }}"
+                                class="gallery-image" alt="" />
 
-                <div class="row row-cols-6" style="display: flex;width: 748px;flex-wrap: wrap;">
+                            <div class="gallery-item-info">
+                                <ul>
+                                    <li class="gallery-item-likes">
+                                        <span class="visually-hidden">Likes:</span><i class="fas fa-heart" aria-hidden="true"></i>
+                                        56
+                                    </li>
+                                    <li class="gallery-item-comments">
+                                        <span class="visually-hidden">Comments:</span><i class="fas fa-comment"
+                                            aria-hidden="true"></i> 2
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        @endforeach
+                    </div>
+                    <!-- End of gallery -->
+
+                    <div class="loader"></div>
+                </div>
+                <!-- End of container -->
+            </main>
+
+                {{-- <div class="row row-cols-6 nginsta" style="display: flex;width: 748px;flex-wrap: wrap;">
                     @foreach ($RNarticles as $RNart)
                     <a class="col border rounded border-1" href="/detailarticle/{{$RNart->title}}" style="cursor: pointer;background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(0,0,0,1)),url('{{ $RNart->gambar }}')center / cover no-repeat;width: 248px; height: 248px;align-items: flex-end;display: flex">
-                        {{-- <img src="{{ $RNart->gambar }}" alt=""> --}}
+                        <img src="{{ $RNart->gambar }}" alt="">
                         <div class="card">
                             <div class="card-body">
                                 <span class="fw-semibold text-white"
@@ -221,10 +250,10 @@
                         </div>
                     </a>
                     @endforeach
-                </div>
+                </div> --}}
             </div>
         </div>
-    </section>
+    </div>
     {{-- Section 3 - Maps & Route --}}
     <div title="mapsandrute" style="display: flex;flex-direction: column;justify-content: center;align-items: center;padding: 0px 0px 80px;width: 100%;height: 1206px;background: #AF2330;">
         <div title="headinfomaps" style="display: flex;flex-direction: column;justify-content: flex-start;align-items: flex-start;padding: 80px 120px 156px;gap: 80px;width: 100%;height: 524px;background: #1D2939;">
