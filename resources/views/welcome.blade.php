@@ -42,6 +42,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="assets/bootstrap/js/live.js"></script>
     {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"> --}}
 </head>
 
@@ -70,11 +71,6 @@
     .swiper {
         width: 100%;
         height: 568px;
-    }
-
-    .swiperTop {
-        width: 100%;
-        height: 800px;
     }
 
     body {
@@ -153,145 +149,99 @@
         </div>
     </nav>
     {{-- Section 1 - Slider --}}
-
-    <!-- Slider main container -->
-    <div class="swiperTop">
-    <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-    <!-- Slides -->
-            <div class="swiper-slide">
-                <div style="background: url('assets/img/Hero.png') center / cover no-repeat;position: relative;height:800px;padding-top: 120px;">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-6 text-left text-md-start d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center" style="color: #ffffff">
-                                <div class="headerbanner" style="max-width: 600px;">
-                                    <p style="font-size: 24px;font-family: 'Plus Jakarta Sans';font-weight:lighter;">NGINOVASI X Trans Semarang</p>
-                                    <p style="font-size:45px;font-family: 'Plus Jakarta Sans';">
-                                        Download aplikasi<br><strong>Trans Semarang</strong>, dapatkan<br>info lokasi bus terkini<br> serta lainnya.</span></p>
-                                    <p class="my-1" style="font-size: 24px; font-weight:300; padding-bottom: 80px">
-                                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. At senectus ut tortor auctor bibendum volutpat ante volutpat. Molestie id purus adipiscing.</span>
-                                    </p>
-                                    <a class="btn me-2" role="button"
-                                        href="https://play.google.com/store/apps/details?id=ngi.brtsemarang.apppublic"
-                                        target="_blank"
-                                        style="background: url('assets/img/Google_Play.png')  center / cover repeat;width: 162px;height: 48px;"></a>
-                                    <a class="btn" role="button"
-                                        href="https://apps.apple.com/id/app/trans-semarang/id1460565652" target="_blank"
-                                        style="background: url('assets/img/App_Store.png')  center / cover repeat;width: 162px;height: 48px;"></a>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                {{-- <div class="p-xl-5 m-xl-5"><img class="img-fluid fit-cover" style="min-height: 300px;"></div> --}}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            @foreach ($sliderTop as $slider)
-            <div class="swiper-slide">
-                <div title="sliderTop" style="display: flex;align-items: center;justify-content: center;align-content: center;">
-                    <div style="display: flex;height: 800px;width: 100%;flex-direction: column;justify-content: space-between;align-items: center;">
-                        <img src="data_slider/{{$slider->gambar}}" alt="assets/img/Hero.png">
-                    </div>
-                </div>
-            </div>
-            @endforeach
-        </div>
-    <!-- If we need pagination -->
-        <div class="swiper-pagination"></div>
-
-    <!-- If we need navigation buttons -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-
-    <!-- If we need scrollbar -->
-        <div class="swiper-scrollbar"></div>
-    </div>
-
-    {{-- <div class="slicktsm" style="display: flex;">
+    <div class="slicktsm single-item">
         <div class="slickitem">
-            <img src="assets/img/Hero.png" class="d-block w-100" alt="assets/img/Hero.png">
-        </div>
-        @foreach ($sliderTop as $slider)
-        <div class="slickitem">
-            <img src="data_slider/{{$slider->gambar}}" class="d-block w-100" alt="{{$slider->gambar}}">
-        </div>
-        @endforeach
-    </div>
-    <div class="prevArrow">
-        <button type="button" class="slick-prev"><i class="fas fa-chevron-left"></i></button>
-    </div>
-    <div class="nextArrow">
-        <button type="button" class="slick-next"><i class="fas fa-chevron-right"></i></button>
-    </div> --}}
-    {{-- <div style="background: url('assets/img/Hero.png') center / cover no-repeat;position: relative;height:800px;padding-top: 120px;">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 text-left text-md-start d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center" style="color: #ffffff">
+            <div class="slickbg">
+                <div class="slickbody">
                     <div class="headerbanner" style="max-width: 600px;">
-                        <p style="font-size: 24px;font-family: 'Plus Jakarta Sans';font-weight:lighter;">NGINOVASI X Trans Semarang</p>
-                        <p style="font-size:45px;font-family: 'Plus Jakarta Sans';">
-                            Download aplikasi<br><strong>Trans Semarang</strong>, dapatkan<br>info lokasi bus terkini<br> serta lainnya.</span></p>
-                        <p class="my-1" style="font-size: 24px; font-weight:300; padding-bottom: 80px">
+                        <p class="fssldier1">NGINOVASI X Trans Semarang</p>
+                        <p class="fssldier2">
+                            Download aplikasi<br>
+                            <strong>Trans Semarang</strong>, dapatkan<br>
+                            info lokasi bus terkini<br> serta lainnya.</span></p>
+                        <p class="fssldier3" class="my-1">
                             <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. At senectus ut tortor auctor
                                 bibendum volutpat ante volutpat. Molestie id purus adipiscing.</span>
                         </p>
-                        <a class="btn me-2" role="button"
+                        <a class="btnggl btn me-2" role="button"
                             href="https://play.google.com/store/apps/details?id=ngi.brtsemarang.apppublic"
-                            target="_blank"
-                            style="background: url('assets/img/Google_Play.png')  center / cover repeat;width: 162px;height: 48px;"></a>
-                        <a class="btn" role="button"
-                            href="https://apps.apple.com/id/app/trans-semarang/id1460565652" target="_blank"
-                            style="background: url('assets/img/App_Store.png')  center / cover repeat;width: 162px;height: 48px;"></a>
+                            target="_blank"></a>
+                        <a class="btnapple btn" role="button"
+                            href="https://apps.apple.com/id/app/trans-semarang/id1460565652" target="_blank"></a>
                     </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="p-xl-5 m-xl-5"><img class="img-fluid fit-cover" style="min-height: 300px;"></div>
                 </div>
             </div>
         </div>
-    </div> --}}
+        {{-- @foreach ($sliderTop as $slider)
+        <div class="slickitem">
+            <img src="data_slider/{{$slider->gambar}}" class="d-block w-100" alt="{{$slider->gambar}}">
+        </div>
+        @endforeach --}}
+    </div>
     {{-- Section 2 - News --}}
-    <section style="display: flex;flex-direction: row;align-items: center;padding-top: 80px; padding-bottom: 80px;padding-left: 120px;padding-right: 120px;align-content: center;justify-content: center;">
-        <div class="row row-cols-1"
-            style="display: flex;flex-direction: row;align-items: flex-start;width: 1200px;height: 832px;">
-            <div class="col-md-4 themed-grid-col" style="width: 412px">
-                <div class="pb-3">
-                    <p class=""
-                        style="color: var(--bs-brand);font-family: 'Plus Jakarta Sans';font-style: normal;font-weight: 700;font-size: 32px;line-height: 40px;">
-                        <strong>Popular</strong>
+    <div class="ngi-div1">
+        <div class="ngi-row1">
+            <div class="ngi-row1-col1">
+                <div class="headdiv">
+                    <p><strong>Popular</strong>
                         <span style="font-weight: lighter; color: black;"> News</span>
                     </p>
                 </div>
                 @foreach ($PNarticles as $PNart)
-                <div class="row row-cols-1">
-                    <div class="col-md-9 text-left text-md-start">
-                        <a href="/detailarticle/{{$PNart->id}}" style="color: #1D2939">
-                        <p style="font-weight: 600;font-size: 24px;line-height: 32px;">
-                            <strong>{{ $PNart->title }}</strong>
-                        </p>
-                        </a>
-                        <p class="text-justify text-black-50" style="display: -webkit-box;max-width: 412px;height: 112px;-webkit-line-clamp: 4;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;line-height: 28px; font-weight: 400;font-size: 20px;margin-bottom: 0px">
-                            <?php echo $PNart->intro ?></p>
-                        <p class="text-justify text-black-50" style="font-weight: 400;font-size: 16px;">{{ $PNart->date }}</p>
-                    </div>
+                <div class="row row-cols-1 headcont">
+                    <a class="titlenews" href="/detailarticle/{{$PNart->id}}">
+                        <p><strong>{{ $PNart->title }}</strong></p>
+                    </a>
+                    <p class="text-justify text-black-50 bodycont">
+                        <?php echo $PNart->intro ?></p>
+                    <p class="text-justify text-black-50 contdate">
+                        <?php $phpdate = strtotime( $PNart->date );
+                            $mysqldate = date( 'l, d F Y', $phpdate );
+                            echo $mysqldate;
+                        ?>
+                    </p>
                 </div>
                 @endforeach
             </div>
-            <div class="themed-grid-col"
-                style="display: flex;flex-direction: column;align-items: flex-start;width: 748px;height: 828px;padding-left: 40px">
-                <div class="pb-3">
-                    <p class="w-lg-50 fw-semibold "
-                        style="color: var(--bs-brand);width: 748px;height: 40px;font-family: 'Plus Jakarta Sans';font-style: normal;font-weight: 700;font-size: 32px;line-height: 40px;">
-                        <strong>Recent</strong>
+            <div class="ngi-row1-col1">
+                <div class="headdiv">
+                    <p><strong>Recent</strong>
                         <span style="font-weight: lighter; color: black;"> News</span>
                     </p>
                 </div>
+                <div class="nginsta">
+                    <div class="gallery">
+                        @foreach ($RNarticles as $RNart)
+                        <div class="gallery-item" tabindex="0">
+                            <img src="{{ $RNart->gambar }}"
+                                class="gallery-image" alt="" />
 
-                <div class="row row-cols-6" style="display: flex;width: 748px;flex-wrap: wrap;">
+                            <div class="gallery-item-info">
+                                <ul>
+                                    <li class="gallery-item-likes">
+                                        <span class="visually-hidden">Likes:</span><i class="fas fa-heart" aria-hidden="true"></i>
+                                        56
+                                    </li>
+                                    <li class="gallery-item-comments">
+                                        <span class="visually-hidden">Comments:</span><i class="fas fa-comment"
+                                            aria-hidden="true"></i> 2
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        @endforeach
+                    </div>
+                    <!-- End of gallery -->
+
+                    <div class="loader"></div>
+                </div>
+                <!-- End of container -->
+            </main>
+
+                {{-- <div class="row row-cols-6 nginsta" style="display: flex;width: 748px;flex-wrap: wrap;">
                     @foreach ($RNarticles as $RNart)
                     <a class="col border rounded border-1" href="/detailarticle/{{$RNart->title}}" style="cursor: pointer;background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(0,0,0,1)),url('{{ $RNart->gambar }}')center / cover no-repeat;width: 248px; height: 248px;align-items: flex-end;display: flex">
-                        {{-- <img src="{{ $RNart->gambar }}" alt=""> --}}
+                        <img src="{{ $RNart->gambar }}" alt="">
                         <div class="card">
                             <div class="card-body">
                                 <span class="fw-semibold text-white"
@@ -300,10 +250,10 @@
                         </div>
                     </a>
                     @endforeach
-                </div>
+                </div> --}}
             </div>
         </div>
-    </section>
+    </div>
     {{-- Section 3 - Maps & Route --}}
     <div title="mapsandrute" style="display: flex;flex-direction: column;justify-content: center;align-items: center;padding: 0px 0px 80px;width: 100%;height: 1206px;background: #AF2330;">
         <div title="headinfomaps" style="display: flex;flex-direction: column;justify-content: flex-start;align-items: flex-start;padding: 80px 120px 156px;gap: 80px;width: 100%;height: 524px;background: #1D2939;">
@@ -817,8 +767,6 @@
     </section>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.38/dist/sweetalert2.all.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js" integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
-    {{-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> --}}
     <script type="text/javascript" src="assets/slick/slick.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
@@ -889,28 +837,6 @@
         });
     </script>
     <script>
-        const swiper = new Swiper('.swiperTop', {
-            // Optional parameters
-            direction: 'horizontal',
-            centeredSlides: true,
-            speed: 300,
-            slidesPerView: 1,
-            loop: true,
-            autoplay: {
-                delay: 5000,
-            },
-            // If we need pagination
-            pagination: {
-                el: '.swiper-pagination',
-            },
-            // Navigation arrows
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-        });
-    </script>
-    <script>
         const swiper = new Swiper('.swiper', {
         // Optional parameters
         direction: 'horizontal',
@@ -931,21 +857,15 @@
             modifier: 3,
             slideShadows: false
         },
-
-        // If we need pagination
-
-
         // Navigation arrows
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
-
         // And if we need scrollbar
         scrollbar: {
             el: '.swiper-scrollbar',
         },
-
         breakpoints: {
             // when window width is >= 320px
             320: {
