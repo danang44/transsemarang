@@ -1,154 +1,233 @@
 /*
- * L.PolylineUtil contains utilify functions for polylines, two methods
- * are added to the L.Polyline object to support creation of polylines
- * from an encoded string and converting existing polylines to an
- * encoded string.
+ * Utility functions to decode/encode numbers and array's of numbers
+ * to/from strings (Google maps polyline encoding)
  *
- *  - L.Polyline.fromEncoded(encoded [, options]) returns a L.Polyline
- *  - L.Polyline.encodePath() returns a string
+ * Extends the L.Polyline and L.Polygon object with methods to convert
+ * to and create from these strings.
  *
- * Actual code from:
- * http://facstaff.unca.edu/mcmcclur/GoogleMaps/EncodePolyline/\
+ * Jan Pieter Waagmeester <jieter@jieter.nl>
+ *
+ * Original code from:
+ * http://facstaff.unca.edu/mcmcclur/GoogleMaps/EncodePolyline/
+ * (which is down as of december 2014)
  */
 
 (function () {
-	'use strict';
+    'use strict';
 
-	/* jshint bitwise:false */
+    var defaultOptions = function (options) {
+        if (typeof options === 'number') {
+            // Legacy
+            options = {
+                precision: options
+            };
+        } else {
+            options = options || {};
+        }
 
-	// This function is very similar to Google's, but I added
-	// some stuff to deal with the double slash issue.
-	var encodeNumber = function (num) {
-		var encodeString = '';
-		var nextValue, finalValue;
-		while (num >= 0x20) {
-			nextValue = (0x20 | (num & 0x1f)) + 63;
-			encodeString += (String.fromCharCode(nextValue));
-			num >>= 5;
-		}
-		finalValue = num + 63;
-		encodeString += (String.fromCharCode(finalValue));
-		return encodeString;
-	};
+        options.precision = options.precision || 5;
+        options.factor = options.factor || Math.pow(10, options.precision);
+        options.dimension = options.dimension || 2;
+        return options;
+    };
 
-	// This one is Google's verbatim.
-	var encodeSignedNumber = function (num) {
-		var sgn_num = num << 1;
-		if (num < 0) {
-			sgn_num = ~(sgn_num);
-		}
+    var PolylineUtil = {
+        encode: function (points, options) {
+            options = defaultOptions(options);
 
-		return encodeNumber(sgn_num);
-	};
+            var flatPoints = [];
+            for (var i = 0, len = points.length; i < len; ++i) {
+                var point = points[i];
 
-	var getLat = function (latlng) {
-		if (latlng.lat) {
-			return latlng.lat;
-		} else {
-			return latlng[0];
-		}
-	};
-	var getLng = function (latlng) {
-		if (latlng.lng) {
-			return latlng.lng;
-		} else {
-			return latlng[1];
-		}
-	};
+                if (options.dimension === 2) {
+                    flatPoints.push(point.lat || point[0]);
+                    flatPoints.push(point.lng || point[1]);
+                } else {
+                    for (var dim = 0; dim < options.dimension; ++dim) {
+                        flatPoints.push(point[dim]);
+                    }
+                }
+            }
 
-	var PolylineUtil = {
-		encode: function (latlngs, precision) {
-			var i, dlat, dlng;
-			var plat = 0;
-			var plng = 0;
-			var encoded_points = '';
+            return this.encodeDeltas(flatPoints, options);
+        },
 
-			precision = Math.pow(10, precision || 5);
+        decode: function (encoded, options) {
+            options = defaultOptions(options);
 
-			for (i = 0; i < latlngs.length; i++) {
-				var lat = getLat(latlngs[i]);
-				var lng = getLng(latlngs[i]);
-				var latFloored = Math.floor(lat * precision);
-				var lngFloored = Math.floor(lng * precision);
-				dlat = latFloored - plat;
-				dlng = lngFloored - plng;
-				plat = latFloored;
-				plng = lngFloored;
-				encoded_points += encodeSignedNumber(dlat) + encodeSignedNumber(dlng);
-			}
-			return encoded_points;
-		},
+            var flatPoints = this.decodeDeltas(encoded, options);
 
-		decode: function (encoded, precision) {
-			var len = encoded.length;
-			var index = 0;
-			var latlngs = [];
-			var lat = 0;
-			var lng = 0;
+            var points = [];
+            for (var i = 0, len = flatPoints.length; i + (options.dimension - 1) < len;) {
+                var point = [];
 
-			precision = Math.pow(10, -(precision || 5));
+                for (var dim = 0; dim < options.dimension; ++dim) {
+                    point.push(flatPoints[i++]);
+                }
 
-			while (index < len) {
-				var b;
-				var shift = 0;
-				var result = 0;
-				do {
-					b = encoded.charCodeAt(index++) - 63;
-					result |= (b & 0x1f) << shift;
-					shift += 5;
-				} while (b >= 0x20);
-				var dlat = ((result & 1) ? ~(result >> 1) : (result >> 1));
-				lat += dlat;
+                points.push(point);
+            }
 
-				shift = 0;
-				result = 0;
-				do {
-					b = encoded.charCodeAt(index++) - 63;
-					result |= (b & 0x1f) << shift;
-					shift += 5;
-				} while (b >= 0x20);
-				var dlng = ((result & 1) ? ~(result >> 1) : (result >> 1));
-				lng += dlng;
+            return points;
+        },
 
-				latlngs.push([lat * precision, lng * precision]);
-			}
+        encodeDeltas: function (numbers, options) {
+            options = defaultOptions(options);
 
-			return latlngs;
-		}
-	};
-	/* jshint bitwise:true */
+            var lastNumbers = [];
 
-	// Export Node module
-	if (typeof module === 'object' && typeof module.exports === 'object') {
-		module.exports = PolylineUtil;
-	}
+            for (var i = 0, len = numbers.length; i < len;) {
+                for (var d = 0; d < options.dimension; ++d, ++i) {
+                    var num = numbers[i].toFixed(options.precision);
+                    var delta = num - (lastNumbers[d] || 0);
+                    lastNumbers[d] = num;
 
-	// Inject functionality into Leaflet
-	if (typeof L === 'object') {
-		if (!(L.Polyline.prototype.fromEncoded)) {
-			L.Polyline.fromEncoded = function (encoded, options) {
-				return new L.Polyline(PolylineUtil.decode(encoded), options);
-			};
-		}
-		if (!(L.Polygon.prototype.fromEncoded)) {
-			L.Polygon.fromEncoded = function (encoded, options) {
-				return new L.Polygon(PolylineUtil.decode(encoded), options);
-			};
-		}
+                    numbers[i] = delta;
+                }
+            }
 
-		var encodeMixin = {
-			encodePath: function () {
-				return PolylineUtil.encode(this.getLatLngs());
-			}
-		};
+            return this.encodeFloats(numbers, options);
+        },
 
-		if (!L.Polyline.prototype.encodePath) {
-			L.Polyline.include(encodeMixin);
-		}
-		if (!L.Polygon.prototype.encodePath) {
-			L.Polygon.include(encodeMixin);
-		}
+        decodeDeltas: function (encoded, options) {
+            options = defaultOptions(options);
 
-		L.PolylineUtil = PolylineUtil;
-	}
+            var lastNumbers = [];
+
+            var numbers = this.decodeFloats(encoded, options);
+            for (var i = 0, len = numbers.length; i < len;) {
+                for (var d = 0; d < options.dimension; ++d, ++i) {
+                    numbers[i] = Math.round((lastNumbers[d] = numbers[i] + (lastNumbers[d] || 0)) * options.factor) / options.factor;
+                }
+            }
+
+            return numbers;
+        },
+
+        encodeFloats: function (numbers, options) {
+            options = defaultOptions(options);
+
+            for (var i = 0, len = numbers.length; i < len; ++i) {
+                numbers[i] = Math.round(numbers[i] * options.factor);
+            }
+
+            return this.encodeSignedIntegers(numbers);
+        },
+
+        decodeFloats: function (encoded, options) {
+            options = defaultOptions(options);
+
+            var numbers = this.decodeSignedIntegers(encoded);
+            for (var i = 0, len = numbers.length; i < len; ++i) {
+                numbers[i] /= options.factor;
+            }
+
+            return numbers;
+        },
+
+        encodeSignedIntegers: function (numbers) {
+            for (var i = 0, len = numbers.length; i < len; ++i) {
+                var num = numbers[i];
+                numbers[i] = (num < 0) ? ~(num << 1) : (num << 1);
+            }
+
+            return this.encodeUnsignedIntegers(numbers);
+        },
+
+        decodeSignedIntegers: function (encoded) {
+            var numbers = this.decodeUnsignedIntegers(encoded);
+
+            for (var i = 0, len = numbers.length; i < len; ++i) {
+                var num = numbers[i];
+                numbers[i] = (num & 1) ? ~(num >> 1) : (num >> 1);
+            }
+
+            return numbers;
+        },
+
+        encodeUnsignedIntegers: function (numbers) {
+            var encoded = '';
+            for (var i = 0, len = numbers.length; i < len; ++i) {
+                encoded += this.encodeUnsignedInteger(numbers[i]);
+            }
+            return encoded;
+        },
+
+        decodeUnsignedIntegers: function (encoded) {
+            var numbers = [];
+
+            var current = 0;
+            var shift = 0;
+
+            for (var i = 0, len = encoded.length; i < len; ++i) {
+                var b = encoded.charCodeAt(i) - 63;
+
+                current |= (b & 0x1f) << shift;
+
+                if (b < 0x20) {
+                    numbers.push(current);
+                    current = 0;
+                    shift = 0;
+                } else {
+                    shift += 5;
+                }
+            }
+
+            return numbers;
+        },
+
+        encodeSignedInteger: function (num) {
+            num = (num < 0) ? ~(num << 1) : (num << 1);
+            return this.encodeUnsignedInteger(num);
+        },
+
+        // This function is very similar to Google's, but I added
+        // some stuff to deal with the double slash issue.
+        encodeUnsignedInteger: function (num) {
+            var value, encoded = '';
+            while (num >= 0x20) {
+                value = (0x20 | (num & 0x1f)) + 63;
+                encoded += (String.fromCharCode(value));
+                num >>= 5;
+            }
+            value = num + 63;
+            encoded += (String.fromCharCode(value));
+
+            return encoded;
+        }
+    };
+
+    // Export Node module
+    if (typeof module === 'object' && typeof module.exports === 'object') {
+        module.exports = PolylineUtil;
+    }
+
+    // Inject functionality into Leaflet
+    if (typeof L === 'object') {
+        if (!(L.Polyline.prototype.fromEncoded)) {
+            L.Polyline.fromEncoded = function (encoded, options) {
+                return L.polyline(PolylineUtil.decode(encoded), options);
+            };
+        }
+        if (!(L.Polygon.prototype.fromEncoded)) {
+            L.Polygon.fromEncoded = function (encoded, options) {
+                return L.polygon(PolylineUtil.decode(encoded), options);
+            };
+        }
+
+        var encodeMixin = {
+            encodePath: function () {
+                return PolylineUtil.encode(this.getLatLngs());
+            }
+        };
+
+        if (!L.Polyline.prototype.encodePath) {
+            L.Polyline.include(encodeMixin);
+        }
+        if (!L.Polygon.prototype.encodePath) {
+            L.Polygon.include(encodeMixin);
+        }
+
+        L.PolylineUtil = PolylineUtil;
+    }
 })();

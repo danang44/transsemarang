@@ -51,6 +51,8 @@ class WelcomeController extends Controller
                 'jumlah_bis' => $row['jumlah_bis'],
                 'jumlah_halte' => $row['jumlah_halte'],
                 'kor' => $row['kor'],
+                'points_a' => $row['points_a'],
+                'points_b' => $row['points_b'],
 
 
             );
