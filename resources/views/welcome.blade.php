@@ -213,20 +213,12 @@
                     <div class="gallery">
                         @foreach ($RNarticles as $RNart)
                         <div class="gallery-item" tabindex="0">
-                            <img src="{{ $RNart->gambar }}"
-                                class="gallery-image" alt="" />
+                            <img src="{{ $RNart->gambar }}" class="gallery-image" alt="" />
 
                             <div class="gallery-item-info">
-                                <ul>
-                                    <li class="gallery-item-likes">
-                                        <span class="visually-hidden">Likes:</span><i class="fas fa-heart" aria-hidden="true"></i>
-                                        56
-                                    </li>
-                                    <li class="gallery-item-comments">
-                                        <span class="visually-hidden">Comments:</span><i class="fas fa-comment"
-                                            aria-hidden="true"></i> 2
-                                    </li>
-                                </ul>
+                                <a class="gallery-item-type" href="/detailarticle/{{$RNart->title}}">
+                                    <p class="fw-semibold text-white" style="">{{ $RNart->title }}</p>
+                                </a>
                             </div>
                         </div>
                         @endforeach
@@ -930,6 +922,17 @@
 
         }).addTo(map);
     </script>
+    {{-- <script>
+        const news = document.querySelectorAll('.gallery-item');
+        news.forEach(post => {
+            post.addEventListener('click', () => {
+                //Get original image URL
+                const imgUrl = post.firstElementChild.src.split("?")[0];
+                //Open image in new tab
+                window.open(imgUrl, '_blank');
+            });
+        });
+    </script> --}}
 </body>
 
 </html>
