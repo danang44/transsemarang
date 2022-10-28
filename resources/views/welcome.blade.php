@@ -247,12 +247,12 @@
         </div>
     </div>
     {{-- Section 3 - Maps & Route --}}
-    <div title="mapsandrute" style="display: flex;flex-direction: column;justify-content: center;align-items: center;padding: 0px 0px 80px;width: 100%;height: 1206px;background: #AF2330;">
-        <div title="headinfomaps" style="display: flex;flex-direction: column;justify-content: flex-start;align-items: flex-start;padding: 80px 120px 156px;gap: 80px;width: 100%;height: 524px;background: #1D2939;">
-            <div title="infotext" style="display: flex;flex-direction: column;justify-content: center;align-items: flex-start;padding: 0px;gap: 20px;width: 800px;height: 208px;color: #FFFFFF">
-                <div title="headinfo" style="width: 800px;height: 92px;">
-                    <p style="font-weight: 500;font-size: 24px;line-height: 32px;margin-block-start: 0em;margin-block-end: 0em;margin-bottom: 0em;">TS.MAPS</p>
-                    <p style="font-weight: 700;font-size: 48px;line-height: 60px;margin-block-start: 0em;margin-block-end: 0em;margin-bottom: 0em;">Route & Corridor Info</p>
+    <div class="mapsandrute" id="mapsandrute" name="mapsandrute">
+        <div class="headinfomaps">
+            <div class="infotext">
+                <div class="headinfo">
+                    <p class="headinfo1">TS.MAPS</p>
+                    <p class="headinfo2">Route & Corridor Info</p>
                 </div>
                 <p style="font-weight: 300;font-size: 24px;line-height: 32px;margin-block-start: 0em;margin-block-end: 0em;margin-bottom: 0em;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit orci condimentum natoque elit amet mauris augue sed nunc. Consequat tincidunt risus nulla viverra. Massa sollicitudin dui adipiscing massa. </p>
             </div>
@@ -283,6 +283,11 @@
             </div>
         </div>
     </div>
+
+    <div class="mapsmobile">
+        <div class="container bg-dark" id="mapmobile"></div>
+    </div>
+
     {{-- ===================== --}}
     {{-- SECTION CARD PAYMENT  --}}
     {{-- ===================== --}}
@@ -922,17 +927,63 @@
 
         }).addTo(map);
     </script>
-    {{-- <script>
-        const news = document.querySelectorAll('.gallery-item');
-        news.forEach(post => {
-            post.addEventListener('click', () => {
-                //Get original image URL
-                const imgUrl = post.firstElementChild.src.split("?")[0];
-                //Open image in new tab
-                window.open(imgUrl, '_blank');
-            });
-        });
-    </script> --}}
+    <script>
+        var mapmobile = L.map("mapmobile").fitWorld();
+
+        var tiles = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 19,
+        attribution:'&copy; Trans Semarang',
+        }).addTo(mapmobile);
+        enableHighAccuracy: true;
+        function onLocationFound(e) {
+        var radius = Math.floor(e.accuracy / 2);
+        console.log(e.accuracy);
+        var locationMarker = L.marker(e.latlng)
+            .addTo(mapmobile)
+            .bindPopup(`Anda berada ${radius} meter dari titik ini`)
+            .openPopup();
+
+        var locationCircle = L.circle(e.latlng, radius).addTo(mapmobile);
+        }
+
+        function onLocationError(e) {
+        alert(e.message);
+        }
+
+        mapmobile.on("locationfound", onLocationFound);
+        mapmobile.on("locationerror", onLocationError);
+
+        mapmobile.locate({ setView: true, maxZoom: 16 });
+
+
+        // var mapmobile = L.map('mapmobile').fitWorld().setView([-6.996667, 110.416664], 13);
+        // function onLocationError(e) {alert(e.message + " Lokasi tidak ditemukan");}
+        // mapmobile.on('locationerror', onLocationError);
+        // mapmobile.locate({setView: true, maxZoom: 16});
+        // L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        //     maxZoom: 19,
+        //     attribution: '&copy; Trans Semarang | <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        // }).addTo(mapmobile);
+        // function onLocationFound(e) {
+        //     var radius = e.accuracy;
+        //     L.marker(e.latlng).addTo(mapmobile)
+        //         .bindPopup("You are within " + radius + " meters from this point").openPopup();
+        //     L.circle(e.latlng, radius).addTo(mapmobile);
+        // }
+
+        // map.on('locationfound', onLocationFound);
+    </script>
+    <script>
+        var width = screen.width;
+        if (width <= 1024) {
+            $("#mapsandrute").hide();
+            $('#mapmobile').hide();
+            $('#mapsmobile').show();
+        } else {
+            $('#mapsmobile').hide();
+            $("#mapsandrute").show();
+        }
+    </script>
 </body>
 
 </html>
