@@ -325,14 +325,15 @@
         <div class="listhalte">
             <div class="stepper d-flex flex-column mt-0 ml-0">
                 @foreach($result as $datas)
-                {{dd($datas)}}
                 <div class="d-flex mb-1">
-                    <div class="d-flex flex-column pr-4 align-items-center">
-                        <div class="rounded-circle py-2 px-3 bg-primary text-white mb-1">{{$datas['urut']}}</div>
-                        <div class="line h-100"></div>
+                    <div class="d-flex flex-column pr-4 pt-1 align-items-center">
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="6" cy="6" r="4" fill="white" stroke="#FFB020" stroke-width="4"/>
+                        </svg>
+                        <div class="linee h-100"></div>
                     </div>
                     <div>
-                        <h5 class="text-dark">Halte Koridor {{$datas['kor']}}</h5>
+                        <p class="texthalte">Halte Koridor {{$datas['kor']}}</p>
                     </div>
                 </div>
                 @endforeach
