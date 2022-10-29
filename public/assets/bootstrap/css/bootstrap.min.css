@@ -4569,7 +4569,8 @@ textarea.form-control-lg {
     rgba(0, 0, 0, 0.03);
     --bs-card-cap-color:null;
     --bs-card-height:null;
-    --bs-card-color: ;--bs-card-bg:;
+    --bs-card-color: ;
+    --bs-card-bg: ;
     --bs-card-img-overlay-padding: 1rem;
     --bs-card-group-margin: 0.75rem;
     position: relative;
@@ -12378,6 +12379,12 @@ textarea.form-control-lg {
 }
 
 @media (min-width: 320px) {
+/* Start Navbar */
+    .navbar {
+
+    }
+
+/* Start Slider */
     .slick-dots{
         margin-bottom: 30px !important;
     }
@@ -12431,6 +12438,7 @@ textarea.form-control-lg {
     a.btnapple {
         background: url('/assets/img/App_Store.png')  center / 100% no-repeat;
     }
+/* End Slider */
 
 /* -- ngi_div1 -- */
     .ngi-div1 {
@@ -12505,7 +12513,7 @@ textarea.form-control-lg {
     }
 /* -- ngi_div1 -- */
 
-/* -- insta galery -- */
+/* -- start insta galery -- */
     .nginsta {
         max-width: 93.5rem;
         margin: 0 auto;
@@ -12634,7 +12642,7 @@ textarea.form-control-lg {
             }
         }
     }
-/* -- insta galery -- */
+/* -- end insta galery -- */
 
 /* -- mapsandrute -- */
     .mapsandrute {
@@ -12698,20 +12706,168 @@ textarea.form-control-lg {
         margin-block-end: 0em;
         margin-bottom: 0em;
     }
+    .leaflet-control-attribution a {
+        font-family: 'Plus Jakarta Sans' !important;
+        font-style: normal !important;
+        font-weight: 400 !important;
+        color: #000000 !important;
+    }
 /* -- mapsandrute -- */
 
 /* -- mapsmobile -- */
     .mapsmobile {
         display: flex;
-        height: 400px;
-        width: 600px;
+        height: 312px;
+        width: 1024px;
         max-width: 100%;
         max-height: 100%;
+        /* padding: 0px 20px; */
+    }
+    .leaflet-container {
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+    }
+    .infoop {
+        display: flex;
+        padding: 0px 20px;
+        height: 84px;
+        width: 1024px;
+        max-height: 100%;
+        max-width: 100%;
+        background: var(--bs-brand);
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+    }
+    .infobus {
+        display: flex;
+        flex-direction: column;
+        height: 84px;
+        width: 1024px;
+        max-height: 100%;
+        max-width: 100%;
+        padding: 16px 0px;
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+        color : white;
+    }
+    svg.infobus {
+        color: white;
+    }
+
+    .infotime {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    .bus {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+     p.textinfo {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    .inforute {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        background: #FFFFFF;
+        width: 1024px;
+        height: 432px;
+        max-height: 100%;
+        max-width: 100%;
+        padding: 0px 20px;
+        border-radius: 16px 16px 0px 0px;
+        margin-top: -10px;
+        flex-wrap: nowrap;
+        align-content: center;
+        align-items: center;
+    }
+    .listrute {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+    .startfinal {
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        align-content: center;
+    }
+    .startfinal p {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    .grute {
+        margin: 0px 0px;
+        border: 0;
+        clear:both;
+        display:block;
+        width: 100%;               
+        background-color: #000;
+        height: 1px;
+    }
+    .listr {
+        color: #475467;
+        --bs-list-group-bg: #f5e5e6;
+    }
+    .fliprute {
+        display: flex;
+        width: 1024px;
+        height: 96px;
+        max-height: 100%;
+        max-width: 100%;
+        background: #f5e5e6;
+        border-radius: 8px;
+        align-items: center;
+        justify-content: space-around;
+        align-content: center;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    .btnflip {
+        display: flex;
+        background-color: #edced0;
+        width: 36px;
+        height: 36px;
+        border-radius: 8px;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+    .listhalte {
+        width: 100%;
+        height: 280px;
+        padding: 0px 5px;
+        border: solid #af2330;
+        border-width: 1px 1px;
+        overflow-y:scroll;
+        -webkit-overflow-scrolling: touch;
+    }
+    .h1halte {
+        font-weight: 700;
+        color: #1D2939;
+        margin-top: 0px;
+        margin-bottom: 0px;
     }
 /* -- mapsmobile -- */
 }
 
-@media screen (min-width: 375px) {
+@media (min-width: 375px) {
     .slicktsm{
         display: flex;
         height: 210.9375px;

@@ -43,6 +43,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script type="text/javascript" src="assets/bootstrap/js/live.js"></script>
+    <script src="https://kit.fontawesome.com/1e94ef36ed.js" crossorigin="anonymous"></script>
     {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"> --}}
 </head>
 
@@ -84,7 +85,7 @@
 </style>
 
 <body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="72">
-    <nav id="mainNav" class="navbar navbar-expand-lg shadow fixed-top bg-darkngi sticky-top" style="height: 100px;">
+    <nav id="mainNav" class="navbar navbar-expand-lg shadow fixed-top bg-darkngi sticky-top" style="/*height: 100px;*/">
         <div class="container-fluid">
             <a class="navbar-brand d-flex align-items-center" href="#home">
                 <span class="d-flex justify-content-center align-items-center me-2">
@@ -246,6 +247,7 @@
             </div>
         </div>
     </div>
+    
     {{-- Section 3 - Maps & Route --}}
     <div class="mapsandrute" id="mapsandrute" name="mapsandrute">
         <div class="headinfomaps">
@@ -283,10 +285,61 @@
             </div>
         </div>
     </div>
-
-    <div class="mapsmobile">
+{{-- Start Mobile Maps View --}}
+    <div class="mapsmobile" id="mapsmobile" name="mapsmobile">
         <div class="container bg-dark" id="mapmobile"></div>
     </div>
+    <div class="infoop">
+        <div class="infobus">
+            <div class="infotime col-sm-6">
+                <i class="fa-solid fa-clock"></i>
+                <p class="textinfo">Operate until 23:00 WIB today</p>
+            </div>
+            <div class="bus col-sm-6">
+                <i class="fa-solid fa-bus-simple"></i>
+                <p class="textinfo">10 Bus - 24 Shelter</p>
+            </div>
+        </div>
+    </div>
+    <div class="inforute">
+        <div class="fliprute">
+            <div class="listrute">
+                <div class="startfinal">
+                    <p>Starting point from </p>
+                    <hr class="grute">
+                    <p>Final destination to </p>
+                </div>
+                <ul id="rute" class="listr list-group list-group-flush">
+                    <li class="list-group-item"><strong>Mangkang</strong></li>
+                    <li class="list-group-item"><strong>Penggaron</strong></li>
+                </ul>
+            </div>
+            <a class="btnflip" href="javascript:btnrute();">
+                <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 9C3 9.55228 3.44771 10 4 10C4.55228 10 5 9.55228 5 9L5 3.41421L6.29289 4.70711C6.68342 5.09763 7.31658 5.09763 7.70711 4.70711C8.09763 4.31658 8.09763 3.68342 7.70711 3.29289L4.70711 0.292893C4.51957 0.105357 4.26522 0 4 0C3.73478 0 3.48043 0.105357 3.29289 0.292893L0.292893 3.29289C-0.0976311 3.68342 -0.0976311 4.31658 0.292893 4.70711C0.683417 5.09763 1.31658 5.09763 1.70711 4.70711L3 3.41421L3 9Z" fill="#AF2330"/>
+                    <path d="M13 5C13 4.44772 12.5523 4 12 4C11.4477 4 11 4.44772 11 5L11 10.5858L9.70711 9.29289C9.31658 8.90237 8.68342 8.90237 8.29289 9.29289C7.90237 9.68342 7.90237 10.3166 8.29289 10.7071L11.2929 13.7071C11.4804 13.8946 11.7348 14 12 14C12.2652 14 12.5196 13.8946 12.7071 13.7071L15.7071 10.7071C16.0976 10.3166 16.0976 9.68342 15.7071 9.29289C15.3166 8.90237 14.6834 8.90237 14.2929 9.29289L13 10.5858L13 5Z" fill="#AF2330"/>
+                </svg>                    
+            </a>
+        </div>
+        <p class="h1halte">Route Bus</p>
+        <div class="listhalte">
+            <div class="stepper d-flex flex-column mt-0 ml-0">
+                @foreach($result as $datas)
+                {{dd($datas)}}
+                <div class="d-flex mb-1">
+                    <div class="d-flex flex-column pr-4 align-items-center">
+                        <div class="rounded-circle py-2 px-3 bg-primary text-white mb-1">{{$datas['urut']}}</div>
+                        <div class="line h-100"></div>
+                    </div>
+                    <div>
+                        <h5 class="text-dark">Halte Koridor {{$datas['kor']}}</h5>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        </div>
+    </div>
+{{-- End Mobile Maps View --}}
 
     {{-- ===================== --}}
     {{-- SECTION CARD PAYMENT  --}}
@@ -920,24 +973,24 @@
     </script>
     <script>
         var map = L.map('map').setView([-6.996667, 110.416664], 13);
-        var tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 20,
+        var tiles = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+            maxZoom: 19,
             zoomControl: true,
-            attribution: '&copy; Trans Semarang | <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-
+            subdomains:['mt0','mt1','mt2','mt3'],
+            attribution: '&copy; Trans Semarang | <a href="https://www.google.com/intl/id/permissions/geoguidelines/">Google Maps</a>'
         }).addTo(map);
     </script>
     <script>
         var mapmobile = L.map("mapmobile").fitWorld();
-
-        var tiles = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-        maxZoom: 19,
-        attribution:'&copy; Trans Semarang',
+        var tiles = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}',{
+            maxZoom: 19,
+            attribution:'&copy; Trans Semarang',
+            subdomains:['mt0','mt1','mt2','mt3']
         }).addTo(mapmobile);
         enableHighAccuracy: true;
         function onLocationFound(e) {
         var radius = Math.floor(e.accuracy / 2);
-        console.log(e.accuracy);
+        // console.log(e.accuracy);
         var locationMarker = L.marker(e.latlng)
             .addTo(mapmobile)
             .bindPopup(`Anda berada ${radius} meter dari titik ini`)
@@ -954,35 +1007,34 @@
         mapmobile.on("locationerror", onLocationError);
 
         mapmobile.locate({ setView: true, maxZoom: 16 });
-
-
-        // var mapmobile = L.map('mapmobile').fitWorld().setView([-6.996667, 110.416664], 13);
-        // function onLocationError(e) {alert(e.message + " Lokasi tidak ditemukan");}
-        // mapmobile.on('locationerror', onLocationError);
-        // mapmobile.locate({setView: true, maxZoom: 16});
-        // L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        //     maxZoom: 19,
-        //     attribution: '&copy; Trans Semarang | <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-        // }).addTo(mapmobile);
-        // function onLocationFound(e) {
-        //     var radius = e.accuracy;
-        //     L.marker(e.latlng).addTo(mapmobile)
-        //         .bindPopup("You are within " + radius + " meters from this point").openPopup();
-        //     L.circle(e.latlng, radius).addTo(mapmobile);
-        // }
-
-        // map.on('locationfound', onLocationFound);
     </script>
     <script>
-        var width = screen.width;
-        if (width <= 1024) {
-            $("#mapsandrute").hide();
-            $('#mapmobile').hide();
-            $('#mapsmobile').show();
+        if (screen.width >= 1024) {
+            $('#mapsmobile').hide().css('visibility', 'hidden');
+            $('#mapsandrute').show().css('visibility', 'visible');
         } else {
-            $('#mapsmobile').hide();
-            $("#mapsandrute").show();
+            $('#mapsmobile').show().css('visibility', 'visible');
+            $('#mapsandrute').hide().css('visibility', 'hidden');
         }
+    </script>
+    <script>
+        var rute = document.getElementById("rute");
+        var ruteList = rute.getElementsByTagName("li");
+        function btnrute() {
+            for (var i = ruteList.length - 1; i >= 0; i--) {
+                console.log(ruteList[i]);
+                rute.appendChild(ruteList[i]);
+            };
+        };
+
+
+        // var rute = document.getElementById('rute');
+        // var i = rute.childNodes.length;
+        // function btnrute() {
+        //     while (i--) {
+        //         rute.appendChild(rute.childNodes[i]);
+        //     };
+        // };
     </script>
 </body>
 
