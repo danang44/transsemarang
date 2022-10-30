@@ -12460,6 +12460,7 @@ textarea.form-control-lg {
         margin-right: 0px;
         margin-left: calc(-.5 * var(--bs-gutter-x));
         --bs-gutter-x: 0;
+        justify-content: center;
     }
     .ngi-row1-col1 {
         display: flex;
@@ -12478,7 +12479,6 @@ textarea.form-control-lg {
         margin-block-end: 10px;
     }
     .headcont p {
-
         margin-block-start: 0px;
         margin-block-end: 15px;
     }
@@ -12495,7 +12495,7 @@ textarea.form-control-lg {
 
     p.bodycont{
         display: -webkit-box;
-        max-width: 412px;
+        max-width: 100%;
         -webkit-line-clamp: 4;
         -webkit-box-orient: vertical;
         overflow: hidden;
@@ -12562,9 +12562,9 @@ textarea.form-control-lg {
         font-family: 'Plus Jakarta Sans';
         font-style: normal;
         font-weight: 600;
-        font-size: 16px;
+        font-size: 55%;
         text-justified: inter-word;
-        line-height: 24px;
+        /* line-height: 24px; */
         color: #FFFFFF;
         text-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
         align-content: flex-end;
@@ -12738,9 +12738,11 @@ textarea.form-control-lg {
         background: var(--bs-brand);
         border-top-left-radius: 16px;
         border-top-right-radius: 16px;
-        flex-direction: column;
+        flex-direction: row;
         align-content: center;
         align-items: center;
+        justify-content: flex-start;
+        margin-bottom: -20px;
     }
     .infobus {
         display: flex;
@@ -12749,10 +12751,11 @@ textarea.form-control-lg {
         width: 1024px;
         max-height: 100%;
         max-width: 100%;
-        padding: 16px 0px;
+        padding: 10px 0px;
         border-top-left-radius: 16px;
         border-top-right-radius: 16px;
         color : white;
+        justify-content: flex-start;
     }
     svg.infobus {
         color: white;
@@ -12788,11 +12791,13 @@ textarea.form-control-lg {
         max-height: 100%;
         max-width: 100%;
         padding: 0px 20px;
-        border-radius: 16px 16px 0px 0px;
+        border-radius: 16px 16px 16px 16px;
         margin-top: -10px;
         flex-wrap: nowrap;
         align-content: center;
         align-items: center;
+        border: solid var(--bs-brand);
+        border-width: 1px;
     }
     .listrute {
         display: flex;
@@ -12818,7 +12823,7 @@ textarea.form-control-lg {
         border: 0;
         clear:both;
         display:block;
-        width: 100%;               
+        width: 100%;
         background-color: #000;
         height: 1px;
     }
@@ -12856,7 +12861,10 @@ textarea.form-control-lg {
         padding: 0px 5px;
         border-width: 1px 1px;
         overflow-y:scroll;
-        -webkit-overflow-scrolling: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    .kor{
+        margin-bottom:-5px;
     }
     .h1halte {
         font-weight: 700;
@@ -12879,6 +12887,71 @@ textarea.form-control-lg {
         color: #1D2939;
     }
 /* -- mapsmobile -- */
+
+/* cardpayment */
+    .cardpayment {
+        font-family: 'Plus Jakarta Sans';
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+    }
+    .cardwrap{
+        display: flex;
+        padding: 20px;
+        height: 904px;
+        width: 100%;
+        max-width: 100%;
+        max-height: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .cardhead {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0px;
+        width: 100%;
+        height: 96px;
+        align-content: center;
+        justify-content: flex-start;
+    }
+    .cardheadh1 {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 0px;
+        width: 150px;
+        /* max-width: 100%; */
+        height: 92px;
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+    .cardheadh1-title {
+        margin-block-end: 0px;
+        font-weight: 500;
+        font-size: 100%;
+        line-height: 20px;
+        color: #AF2330;
+    }
+    .cardheadh1-text {
+        margin-block-end: 0px;
+        font-weight: 700;
+        font-size: 100%;
+        line-height: 20px;
+        color: #1D2939;
+    }
+    .cardheadh1-ket {
+        margin-block-end: 0px;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 19px;
+        color: #98A2B3;
+        width: 100%;
+    }
+/* cardpayment */
 }
 
 @media (min-width: 375px) {

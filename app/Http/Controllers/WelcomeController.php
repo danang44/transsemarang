@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\article;
+use App\card;
 use Illuminate\Support\Facades\DB;
 
 use App\Http\Controllers\Controller;
@@ -14,7 +15,9 @@ class WelcomeController extends Controller
     {
         $RNarticles = article::take(9)->orderBy('id','desc')->get();
         $PNarticles = article::take(3)->orderBy('view','desc')->get();
-        $sliderTop =  slider::all();
+        $sliderTop  = slider::all();
+
+        $Cpayment   = card::all();
 
 
 
@@ -56,7 +59,7 @@ class WelcomeController extends Controller
             );
         }
         // dd($data);
-        return view('welcome', compact('RNarticles','PNarticles','sliderTop','result'));
+        return view('welcome', compact('RNarticles','PNarticles','sliderTop','Cpayment','result'));
     }
 
 

@@ -75,16 +75,19 @@
     }
 
     body {
-        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-family: 'Plus Jakarta Sans', sans-serif !important;
         font-style: normal;
         font-size: 16px;
         font-weight: 400;
         line-height: 1.5;
         text-align: left;
+        overflow-x:hidden !important;
+        -webkit-overflow-scrolling: auto;
     }
 </style>
 
 <body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="72">
+{{-- Start Navbar --}}
     <nav id="mainNav" class="navbar navbar-expand-lg shadow fixed-top bg-darkngi sticky-top" style="/*height: 100px;*/">
         <div class="container-fluid">
             <a class="navbar-brand d-flex align-items-center" href="#home">
@@ -149,7 +152,9 @@
             </div>
         </div>
     </nav>
-    {{-- Section 1 - Slider --}}
+{{-- End Navbar --}}
+
+{{-- Start Slider --}}
     <div class="slicktsm single-item">
         <div class="slickitem">
             <div class="slickbg">
@@ -179,7 +184,9 @@
         </div>
         @endforeach --}}
     </div>
-    {{-- Section 2 - News --}}
+{{-- End Slider --}}
+
+{{-- Start News --}}
     <div class="ngi-div1">
         <div class="ngi-row1">
             <div class="ngi-row1-col1">
@@ -247,8 +254,9 @@
             </div>
         </div>
     </div>
-    
-    {{-- Section 3 - Maps & Route --}}
+{{-- End News --}}
+
+{{-- Start Maps & Route --}}
     <div class="mapsandrute" id="mapsandrute" name="mapsandrute">
         <div class="headinfomaps">
             <div class="infotext">
@@ -285,11 +293,13 @@
             </div>
         </div>
     </div>
+{{-- End Maps & Route --}}
+
 {{-- Start Mobile Maps View --}}
     <div class="mapsmobile" id="mapsmobile" name="mapsmobile">
         <div class="container bg-dark" id="mapmobile"></div>
     </div>
-    <div class="infoop">
+    <div class="infoop" id="infoop" name="infoop">
         <div class="infobus">
             <div class="infotime col-sm-6">
                 <i class="fa-solid fa-clock"></i>
@@ -301,7 +311,7 @@
             </div>
         </div>
     </div>
-    <div class="inforute">
+    <div class="inforute" id="inforute" name="inforute">
         <div class="fliprute">
             <div class="listrute">
                 <div class="startfinal">
@@ -318,14 +328,14 @@
                 <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M3 9C3 9.55228 3.44771 10 4 10C4.55228 10 5 9.55228 5 9L5 3.41421L6.29289 4.70711C6.68342 5.09763 7.31658 5.09763 7.70711 4.70711C8.09763 4.31658 8.09763 3.68342 7.70711 3.29289L4.70711 0.292893C4.51957 0.105357 4.26522 0 4 0C3.73478 0 3.48043 0.105357 3.29289 0.292893L0.292893 3.29289C-0.0976311 3.68342 -0.0976311 4.31658 0.292893 4.70711C0.683417 5.09763 1.31658 5.09763 1.70711 4.70711L3 3.41421L3 9Z" fill="#AF2330"/>
                     <path d="M13 5C13 4.44772 12.5523 4 12 4C11.4477 4 11 4.44772 11 5L11 10.5858L9.70711 9.29289C9.31658 8.90237 8.68342 8.90237 8.29289 9.29289C7.90237 9.68342 7.90237 10.3166 8.29289 10.7071L11.2929 13.7071C11.4804 13.8946 11.7348 14 12 14C12.2652 14 12.5196 13.8946 12.7071 13.7071L15.7071 10.7071C16.0976 10.3166 16.0976 9.68342 15.7071 9.29289C15.3166 8.90237 14.6834 8.90237 14.2929 9.29289L13 10.5858L13 5Z" fill="#AF2330"/>
-                </svg>                    
+                </svg>
             </a>
         </div>
         <p class="h1halte">Route Bus</p>
         <div class="listhalte">
             <div class="stepper d-flex flex-column mt-0 ml-0">
                 @foreach($result as $datas)
-                <div class="d-flex mb-1">
+                <div class="d-flex kor">
                     <div class="d-flex flex-column pr-4 pt-1 align-items-center">
                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="6" cy="6" r="4" fill="white" stroke="#FFB020" stroke-width="4"/>
@@ -342,20 +352,15 @@
     </div>
 {{-- End Mobile Maps View --}}
 
-    {{-- ===================== --}}
-    {{-- SECTION CARD PAYMENT  --}}
-    {{-- ===================== --}}
-
-    <div title="cardpayment" style="display: flex;align-items: center;justify-content: center;align-content: center;">
-        <div style="display: flex;padding: 80px 120px;height: 904px;width: 100%;flex-direction: column;justify-content: space-between;align-items: center;">
-            <div class="row"style="display: flex;flex-direction: row;align-items: center;padding: 0px;gap: 80px;width: 100%;height: 96px;align-content: center;">
-                <div class="col" style="display: flex;flex-direction: column;justify-content: center;align-items: flex-start;padding: 0px;width: 560px;height: 92px;">
-                    <p style="margin-block-end: 0px;font-weight: 500;font-size: 24px;line-height: 32px;color: #AF2330;">
-                        TS.PAYMENT</p>
-                    <p style="margin-block-end: 0px;font-weight: 700;font-size: 48px;line-height: 60px;color: #1D2939;">
-                        Bayar Pakai Kartu</p>
+{{-- Start Card Payment --}}
+    <div title="cardpayment">
+        <div class="cardwrap">
+            <div class="row cardhead">
+                <div class="col-1 cardheadh1">
+                    <p class="cardheadh1-title">TS.PAYMENT</p>
+                    <p class="cardheadh1-text">Bayar Pakai Kartu</p>
                 </div>
-                <p class="col" style="margin-block-end: 0px;font-family: 'Plus Jakarta Sans';font-style: normal;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;">
+                <p class="col-3 cardheadh1-ket">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium vulputate id ultricies diam pulvinar vitae sit proin. Quam morbi turpis dolor in.</p>
             </div>
             <!-- Slider main container -->
@@ -363,61 +368,17 @@
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
                     <!-- Slides -->
+                    @foreach ($Cpayment as $dataCard)
                     <div class="swiper-slide">
                         <a href="#" style="display: flex;flex-direction: column">
                             <div class="news_img" >
-                                <img src="assets/img/ETS_DIFABLE.png" alt="ETS Difabel" style="width: 360px;height:360px;border-radius: 16px;"/>
+                                <img src="/data_card/{{$dataCard->image}}" alt="{{$dataCard->image}}" style="width: 360px;height:360px;border-radius: 16px;"/>
                             </div>
-                            <div class="news_title" style="width: 360px;font-weight: 600;font-size: 32px;line-height: 40px;color: #1D2939;padding-top: 24px;">ETS Difabel</div>
-                            <p class="news_txt" style="width: 360px;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;padding-top: 8px;">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin justo sit nisl, lectus quis. In.
-                            </p>
+                            <div class="news_title" style="width: 360px;font-weight: 600;font-size: 32px;line-height: 40px;color: #1D2939;padding-top: 24px;">{{$dataCard->name}}</div>
+                            <p class="news_txt" style="width: 360px;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;padding-top: 8px;">{{$dataCard->desc}}</p>
                         </a>
                     </div>
-                    <div class="swiper-slide">
-                        <a href="#" style="display: flex;flex-direction: column">
-                            <div class="news_img" >
-                                <img src="assets/img/ETS_KIA.png" alt="ETS KIA" style="width: 360px;height:360px;border-radius: 16px;"/>
-                            </div>
-                            <div class="news_title" style="width: 360px;font-weight: 600;font-size: 32px;line-height: 40px;color: #1D2939;padding-top: 24px;">ETS KIA</div>
-                            <p class="news_txt" style="width: 360px;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;padding-top: 8px;">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin justo sit nisl, lectus quis. In.
-                            </p>
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="#" style="display: flex;flex-direction: column">
-                            <div class="news_img" >
-                                <img src="assets/img/ETS_LANSIA.png" alt="ETS Lansia / Veteran" style="width: 360px;height:360px;border-radius: 16px;"/>
-                            </div>
-                            <div class="news_title" style="width: 360px;font-weight: 600;font-size: 32px;line-height: 40px;color: #1D2939;padding-top: 24px;">ETS Lansia / Veteran</div>
-                            <p class="news_txt" style="width: 360px;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;padding-top: 8px;">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin justo sit nisl, lectus quis. In.
-                            </p>
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="#" style="display: flex;flex-direction: column">
-                            <div class="news_img" >
-                                <img src="assets/img/ETS_PELAJAR.png" alt="ETS Pelajar" style="width: 360px;height:360px;border-radius: 16px;"/>
-                            </div>
-                            <div class="news_title" style="width: 360px;font-weight: 600;font-size: 32px;line-height: 40px;color: #1D2939;padding-top: 24px;">ETS Pelajar</div>
-                            <p class="news_txt" style="width: 360px;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;padding-top: 8px;">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin justo sit nisl, lectus quis. In.
-                            </p>
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="#" style="display: flex;flex-direction: column">
-                            <div class="news_img" >
-                                <img src="assets/img/ETS_UMUM.png" alt="ETS Umum" style="width: 360px;height:360px;border-radius: 16px;"/>
-                            </div>
-                            <div class="news_title" style="width: 360px;font-weight: 600;font-size: 32px;line-height: 40px;color: #1D2939;padding-top: 24px;">ETS Umum</div>
-                            <p class="news_txt" style="width: 360px;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;padding-top: 8px;">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin justo sit nisl, lectus quis. In.
-                            </p>
-                        </a>
-                    </div>
+                    @endforeach
                 </div>
                 <!-- If we need pagination -->
                 {{-- <div class="swiper-pagination"></div> --}}
@@ -431,10 +392,9 @@
             </div>
         </div>
     </div>
+{{-- End Card Payment --}}
 
-    {{-- ===================== --}}
-    {{-- USER REPORT COMPLAINT --}}
-    {{-- ===================== --}}
+{{-- Start Report Complaint --}}
     <div title="reportcomplaint" style="display: flex;width: 100%;height: 910px;background: #F9FAFB;flex-direction: row;align-content: center;">
         <div class="col" style="display: flex;flex-direction: row;padding: 80px 120px;width: 100%;height: 100%;justify-content: space-between;align-items: center;">
             <div style="display: flex;width: 472px;height: 712px;flex-direction: column;justify-content: space-between;">
@@ -539,12 +499,10 @@
             </div>
         </div>
     </div>
+{{-- End Report Complaint --}}
 
-    {{-- ===================== --}}
-    {{-- USER REPORT TRACKING  --}}
-    {{-- ===================== --}}
-
-    <section title="reporttracking" style="display: flex;align-items: center;justify-content: center;align-content: center;">
+{{-- Start Report Tracking  --}}
+    <div title="reporttracking" style="display: flex;align-items: center;justify-content: center;align-content: center;">
         <div class="col" style="display: flex;flex-direction: row;justify-content: center;align-items: center;padding: 80px 120px;gap: 120px;width: 1440px;height: 316px;">
             <div class="row" style="display: flex;flex-direction: row;align-items: center;padding: 40px 80px;width: 1200px;height: 156px;background: #1D2939;border-radius: 8px;">
                 <div class="col" style="display: flex;flex-direction: column;justify-content: center;align-items: flex-start;padding: 0px;gap: 4px;width: 507px;height: 76px;">
@@ -681,13 +639,11 @@
             </div>
         </div>
     </div>
-    </section>
+    </div>
+{{-- End Report Tracking  --}}
 
-    {{-- ===================== --}}
-    {{-- SECTION RELATED LINK  --}}
-    {{-- ===================== --}}
-
-    <section title="relatedlink" style="background-color: #F9FAFB;display: flex;flex-direction: row;justify-content: center;align-items: center;padding: 10px 120px;width: 100%;height: 120px;">
+{{-- Start Related Link  --}}
+    <div title="relatedlink" style="background-color: #F9FAFB;display: flex;flex-direction: row;justify-content: center;align-items: center;padding: 10px 120px;width: 100%;height: 120px;">
         <div class="h-100" style="overflow: hidden;padding-left: 120px;padding-right: 120px;width: 100%;">
             <div class="row align-items-center h-100">
                 <div class="container rounded">
@@ -733,13 +689,11 @@
             </div>
 
         </div>
-    </section>
+    </div>
+{{-- End Related Link  --}}
 
-    {{-- ===================== --}}
-    {{--    SECTION FOOTER     --}}
-    {{-- ===================== --}}
-
-    <section title="footer" style="display: flex;flex-direction: row;align-items: center;align-content: center;justify-content: center;">
+{{-- Start Footer --}}
+    <div title="footer" style="display: flex;flex-direction: row;align-items: center;align-content: center;justify-content: center;">
         <footer class="text-white" style="background-color: #AF2330;display: flex;flex-direction: column;align-items: flex-start;padding: 0px;width: 100%;height: 398px;">
             <div class="col" style="display: flex;flex-direction: column;align-items: flex-start;padding: 40px 120px;width: 100%;height: 338px;justify-content: center;">
                 <div class="row text-lg-start d-flex flex-column item" style="display: flex;flex-direction: row;align-items: flex-start;padding: 0px;width: 100%;height: 48px;">
@@ -815,7 +769,9 @@
                 </ul>
             </div>
         </footer>
-    </section>
+    </div>
+{{-- End Footer --}}
+
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.38/dist/sweetalert2.all.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js" integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
     <script type="text/javascript" src="assets/slick/slick.min.js"></script>
@@ -885,6 +841,67 @@
                     submitReport.disabled = false;
                 }
             }
+        });
+
+        const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        direction: 'horizontal',
+        effect: 'coverflow',
+        grabCursor: true,
+        loop: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        speed: 300,
+        simulateTouch: true,
+        slidesPerView: 4,
+        spaceBetween: 100,
+
+        coverflowEffect: {
+            rotate: 0,
+            stretch: 0,
+            depth: 0,
+            modifier: 3,
+            slideShadows: false
+        },
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        // And if we need scrollbar
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        },
+        breakpoints: {
+            // when window width is >= 320px
+            320: {
+            slidesPerView: 2,
+            spaceBetween: 20
+            },
+            // when window width is >= 480px
+            480: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            centeredSlides: true
+            },
+            // when window width is >= 640px
+            640: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+            centeredSlides: true
+            },
+            1440: {
+            slidesPerView: 4,
+            spaceBetween: 350,
+            centeredSlides: true
+            },
+            2559: {
+            slidesPerView: 5,
+            spaceBetween: 0,
+            centeredSlides: true
+            }
+        }
+
         });
     </script>
     <script>
@@ -982,39 +999,58 @@
         }).addTo(map);
     </script>
     <script>
-        var mapmobile = L.map("mapmobile").fitWorld();
+        var mapmobile = L.map("mapmobile", {zoomControl:false}).fitWorld();
+        L.control.zoom({position:'bottomright'}).addTo(mapmobile);
         var tiles = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}',{
             maxZoom: 19,
             attribution:'&copy; Trans Semarang',
+            zoomControl: false,
+            enableHighAccuracy: true,
             subdomains:['mt0','mt1','mt2','mt3']
         }).addTo(mapmobile);
-        enableHighAccuracy: true;
+
+        var greenIcon = L.icon({
+            iconUrl: 'assets/img/Home/Route/Departure.png',
+            iconSize:     [42, 60], // size of the icon
+            iconAnchor:   [21, 53], // point of the icon which will correspond to marker's location
+            popupAnchor:  [0, -50] // point from which the popup should open relative to the iconAnchor
+        });
+
+        // function getloc() {
+        //     var marker;
+        //     map.on('locationfound', function(ev){
+        //         if (!marker) {
+        //             marker = L.marker(ev.latlng);
+        //         } else {
+        //             marker.setLatLng(ev.latlng);
+        //         }
+        //     });
+        // }
         function onLocationFound(e) {
-        var radius = Math.floor(e.accuracy / 2);
-        // console.log(e.accuracy);
-        var locationMarker = L.marker(e.latlng)
-            .addTo(mapmobile)
-            .bindPopup(`Anda berada ${radius} meter dari titik ini`)
-            .openPopup();
-
-        var locationCircle = L.circle(e.latlng, radius).addTo(mapmobile);
+            var radius = Math.round(e.accuracy / 2);
+            // console.log(e.accuracy);
+            var locationMarker = L.marker(e.latlng, {icon: greenIcon}).addTo(mapmobile)
+                .bindPopup(`Anda berada ${radius} meter dari titik ini`)
+                .openPopup();
+            var locationCircle = L.circle(e.latlng, radius).addTo(mapmobile);
         }
-
         function onLocationError(e) {
-        alert(e.message);
+            alert(e.message);
         }
-
         mapmobile.on("locationfound", onLocationFound);
         mapmobile.on("locationerror", onLocationError);
-
         mapmobile.locate({ setView: true, maxZoom: 16 });
     </script>
     <script>
         if (screen.width >= 1024) {
             $('#mapsmobile').hide().css('visibility', 'hidden');
+            $('#inforute').hide().css('visibility', 'hidden');
+            $('#infoop').hide().css('visibility', 'hidden');
             $('#mapsandrute').show().css('visibility', 'visible');
         } else {
             $('#mapsmobile').show().css('visibility', 'visible');
+            $('#inforute').show().css('visibility', 'visible');
+            $('#infoop').show().css('visibility', 'visible');
             $('#mapsandrute').hide().css('visibility', 'hidden');
         }
     </script>

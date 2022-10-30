@@ -35,7 +35,7 @@
                 </div>
                 <div class="col-md-12">
                     <div class="text-right">
-                        <button type="button" class=" mt-3 mb-1 btn btn-outline-success" data-toggle="modal" data-target="#exampleModal">
+                        <button type="button" class=" mt-3 mb-1 btn btn-outline-success" data-toggle="modal" data-target="#exampleModal" style="cursor: pointer;">
                             Tambah Data <i class="fa-solid fa-plus"></i>
                         </button>
                     </div>
@@ -57,7 +57,7 @@
                                         <td class="pr-2 pl-2 ">{{$c->name}}</td>
                                         <td class="pr-2 pl-2 ">{{$c->desc}}</td>
                                         <td class="text-center">
-                                        <button class="btn btn-outline-info editbtn" value="{{$c->id}}"><i class="fa-solid fa-pen"></i></button> 
+                                        <button class="btn btn-outline-info editbtn" value="{{$c->id}}"><i class="fa-solid fa-pen"></i></button>
                                             <button class="btn btn-outline-danger deletebtn" value="{{$c->id}}"><i class="fa-solid fa-trash"></i></button>
                                         </td>
                                     </tr>
@@ -188,7 +188,7 @@
                 {{ csrf_field() }}
                     <input type="hidden" id="id" name="id"> <br/>
                     <input type="hidden" id="created_by" name="created_by" value="{{Auth::id()}}">
-                  
+
                     <div class="form-group">
                         <label>Jenis Kartu</label>
                         <input type="text" required="required" class="form-control" name="name" id="name">
@@ -199,12 +199,12 @@
                     </div>
                     <div class="form-group">
                         <div style="position:relative;">
-                            <a class='btn btn-info col-sm-3' href='javascript:;'>
+                            <a class='btn btn-info col-sm-3' href='javascript:;' style="cursor: pointer;">
                                 Choose Image...
                             </a>
                             <img class="img-preview img-fluid mt-3 ">
-                            <input type="file"  style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;' name="image" id="image" size="40" onchange="previewImage()">
-                            
+                            <input type="file"  style='cursor: pointer;position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;' name="image" id="image" size="40" onchange="previewImage()">
+
                             &nbsp;
                             <span class='label label-info' id="upload-file-info"></span>
                         </div>
@@ -223,7 +223,7 @@
     function previewImage(){
         const image = document.querySelector('#image');
         const imgPreview = document.querySelector('.img-preview')
-        
+
 
         imgPreview.style.display = 'block';
         const oFReader = new FileReader();
@@ -232,7 +232,7 @@
         oFReader.onload = function(oFREvent){
             imgPreview.src = oFREvent.target.result;
         }
-    
+
     }
     </script>
 
