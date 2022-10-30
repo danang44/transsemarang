@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
-use App\test;
+use App\Track;
 use App\article;
 
 class AdminController extends Controller
@@ -94,6 +94,7 @@ class AdminController extends Controller
         // $datas=$data['data'];
         foreach ($data['data'] as $row) {
             $result[] = array(
+                // 'id'=> $row['id'],
                 'urut' => $row['urut'],
                 'origin' => $row['origin'],
                 'toward' => $row['toward'],
@@ -103,6 +104,7 @@ class AdminController extends Controller
                 'kor' => $row['kor'],
                 'points_a' => $row['points_a'],
                 'points_b' => $row['points_b'],
+           
 
 
             );
@@ -110,6 +112,20 @@ class AdminController extends Controller
         // dd($data);
         return view('Admin.test2', compact('result'));
     }
+
+    // public function test3($id)
+    // {
+
+    //     $result = Track::find($id);
+    
+
+    //     return response()->json([
+    //         'status' => 200,
+            
+    //         'data' => $result,
+    //     ]);
+    
+    // }
 
       
   
