@@ -1,69 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Trans Semarang</title>
-
-    <!-- Global stylesheets -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
-    <link href="../../../../global_assets/css/icons/icomoon/styles.min.css" rel="stylesheet" type="text/css">
-    <!-- <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"> -->
-    <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('assets/css/bootstrap_limitless.min.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('assets/css/layout.min.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('assets/css/components.min.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('assets/css/colors.min.css') }}" rel="stylesheet" type="text/css">
-    <!-- /global stylesheets -->
-
-    <!-- Core JS files -->
-    <script src="../../../../global_assets/js/main/jquery.min.js"></script>
-    <script src="../../../../global_assets/js/main/bootstrap.bundle.min.js"></script>
-    <script src="../../../../global_assets/js/plugins/loaders/blockui.min.js"></script>
-    <script src="../../../../global_assets/js/plugins/ui/ripple.min.js"></script>
-    <!-- /core JS files -->
-
-    <!-- Theme JS files -->
-    <script src="../../../../global_assets/js/plugins/ui/prism.min.js"></script>
-    <script src="https://kit.fontawesome.com/76f2dc9b0b.js" crossorigin="anonymous"></script>
-    <script src="{{ asset('assets/js/app.js') }}"></script>
-    <!-- /theme JS files -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.0/css/jquery.dataTables.css">
-
-    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.0/js/jquery.dataTables.js"></script>
-
-    {{-- leaflet --}}
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
-    integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
-    crossorigin=""/>
-
-                           <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
-                           integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg="
-                           crossorigin=""></script>
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="/resources/demos/style.css">
-    {{-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> --}}
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
-    <style>
-        .shimmer {
-            color: grey;
-            -webkit-mask: linear-gradient(-30deg, #1d1963 30%, #00fc, #1d1963 70%) right/200% 100%;
-
-            animation: shimmer 2.5s infinite;
-        }
-
-        @keyframes shimmer {
-            100% {
-                -webkit-mask-position: left
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Trans Semarang</title>
+    
+        <!-- Global stylesheets -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+        <link href="../../../../global_assets/css/icons/icomoon/styles.min.css" rel="stylesheet" type="text/css">
+        <!-- <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"> -->
+        <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
+        <link href="{{ asset('assets/css/bootstrap_limitless.min.css') }}" rel="stylesheet" type="text/css">
+        <link href="{{ asset('assets/css/layout.min.css') }}" rel="stylesheet" type="text/css">
+        <link href="{{ asset('assets/css/components.min.css') }}" rel="stylesheet" type="text/css">
+        <link href="{{ asset('assets/css/colors.min.css') }}" rel="stylesheet" type="text/css">
+        <!-- /global stylesheets -->
+    
+        <!-- Core JS files -->
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="../../../../global_assets/js/main/jquery.min.js"></script>
+        <script src="../../../../global_assets/js/main/bootstrap.bundle.min.js"></script>
+        <script src="../../../../global_assets/js/plugins/loaders/blockui.min.js"></script>
+        <script src="../../../../global_assets/js/plugins/ui/ripple.min.js"></script>
+        <!-- /core JS files -->
+    
+        <!-- Theme JS files -->
+        <script src="../../../../global_assets/js/plugins/ui/prism.min.js"></script>
+        <script src="https://kit.fontawesome.com/76f2dc9b0b.js" crossorigin="anonymous"></script>
+        <script src="{{ asset('assets/js/app.js') }}"></script>
+        <!-- /theme JS files -->
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.0/css/jquery.dataTables.css">
+    
+        <!-- <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.0/js/jquery.dataTables.js"></script> -->
+    
+        {{-- leaflet --}}
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
+    
+        <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js" integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="/resources/demos/style.css">
+    
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.0/js/jquery.dataTables.js"></script>
+    
+        <style>
+            .shimmer {
+                color: grey;
+                -webkit-mask: linear-gradient(-30deg, #1d1963 30%, #00fc, #1d1963 70%) right/200% 100%;
+    
+                animation: shimmer 2.5s infinite;
             }
-        }
-    </style>
-    @stack('scripts')
-</head>
+    
+            @keyframes shimmer {
+                100% {
+                    -webkit-mask-position: left
+                }
+            }
+        </style>
+        @stack('scripts')
+    </head>
 
 <body class="navbar-top">
 
@@ -313,5 +310,5 @@
     <!-- /page content -->
 
 </body>
-
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.0/js/jquery.dataTables.js"></script>
 </html>

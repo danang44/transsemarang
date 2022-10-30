@@ -49,7 +49,7 @@ class SliderController extends Controller
     public function destroy(Request $request)
     {
         $id = $request->input('delete_id');
-        dd($id);
+     
         $slider = slider::find($id);
         $slider->delete();
 

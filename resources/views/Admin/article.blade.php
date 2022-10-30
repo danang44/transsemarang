@@ -48,7 +48,7 @@
                                         <td class="pr-2 pl-2 ">{{$c->title}}</td>
                                         <td class="text-justify pr-2 pl-2 ">{{$c->intro}}</td>
                                         <td class="pr-2 pl-2 ">{{@$c->user->name}}</td>
-                                       
+
                                         <td class="pr-2 pl-2 "></td>
                                         <td class="text-center">
                                             <button class="btn btn-outline-danger deletebtn" value="{{$c->id}}"><i class="fa-solid fa-trash"></i></button>
@@ -69,7 +69,9 @@
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.0/js/jquery.dataTables.js"></script>
 <script>
     $(document).ready(function() {
-        $('#table_id').DataTable();
+        $('#table_id').DataTable({
+            order: [[0, 'desc']],
+        });
         $(document).on('click', '.deletebtn', function() {
             var id = $(this).val();
             // alert(id);
