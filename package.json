@@ -23,6 +23,7 @@
         "vue-template-compiler": "^2.7.10"
     },
     "dependencies": {
+        "polyline-encoded": "^0.0.9",
         "swiper": "^8.4.4",
         "tinymce": "^6.2.0"
     }

@@ -1,101 +1,4 @@
-@extends('master.admin_layout')
 
-@section('content')
-
-<head>
-	<title>Leaflet L.Polyline.fromEncoded()</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7/leaflet.css" />
-	<script src="http://cdn.leafletjs.com/leaflet-0.7/leaflet.js"></script>
-</head>
-
-<body>
-
-	<div class="col-md-12">
-		<div class="col-md-4">
-			<label>RUTE BRT</label>
-			<select class="form-control type" name="type" id="type" onchange>
-				<option value="1">-- PILIH RUTE BRT --</option>
-				<option value="2">Koridor 1  MANGKANG - PENGGARON</option>
-				<option value="3">Koridor 1  PENGGARON - MANGKANG</option>
-				<option value="4">Koridor 2  TERBOYO - UNGARAN</option>
-				<option value="5">Koridor 2  UNGARAN - TERBOYO</option>
-				<option value="6">Koridor 3A PELABUHAN - ELISABETH via DR CIPTO</option>
-				<option value="7">Koridor 3A ELISABETH via DR CIPTO - PELABUHAN</option>
-				<option value="8">Koridor 3B PELABUHAN - ELISABETH</option>
-				<option value="9">Koridor 4 TAWANG - CANGKIRAN</option>
-				<option value="10">Koridor 4 CANGKIRAN - TAWANG</option>
-				<option value="11">Koridor F2A TERBOYO - ADA MAJAPAHIT</option>
-				<option value="12">Koridor F2A ADA MAJAPAHIT - TERBOYO</option>
-				<option value="13">Koridor F2B TERBOYO - ADA MAJAPAHIT B</option>
-				<option value="14">Koridor F2B ADA MAJAPAHIT B - TERBOYO</option>
-				<option value="15">Koridor 5 PRPP - METESEH</option>
-				<option value="16">Koridor 5 METESEH - PRPP</option>
-				<option value="17">Koridor F4B GUNUNG PATI - BSB</option>
-				<option value="18">Koridor F4B BSB - GUNUNG PATI</option>
-				<option value="19">Koridor F4A GUNUNG PATI - UNNES</option>
-				<option value="20">Koridor F4A UNNES - GUNUNG PATI</option>
-				<option value="21">Koridor F3 PENGGARON - TERMINAL BANYUMANIK</option>
-				<option value="22">Koridor F3 TERMINAL BANYUMANIK - PENGGARON</option>
-				<option value="23">Koridor 6 UNDIP - UNNES</option>
-				<option value="24">Koridor 6 UNNES - UNDIP</option>
-				<option value="25">Koridor LM MANGKANG - SIMPANG LIMA (MALAM) </option>
-				<option value="26">Koridor LM SIMPANG LIMA - MANGKANG (MALAM)</option>
-				<option value="27">Koridor 7 GENUK - BALAIKOTA</option>
-				<option value="28">Koridor 7 BALAIKOTA - GENUK</option>
-				<option value="29">Koridor 8 SIMPANG LIMA - GUNUNG PATI - CANGKIRAN</option>
-				<option value="30">Koridor 8 GUNUNG PATI - CANGKIRAN - SIMPANG LIMA</option>
-				<option value="31">Koridor F1A NGALIYAN - KP GONDORIYO</option>
-				<option value="32">Koridor F1A KP GONDORIYO - NGALIYAN</option>
-				<option value="33">Koridor F1B NGALIYAN - MADUKORO RAYA</option>
-				<option value="34">Koridor F1B MADUKORO RAYA - NGALIYAN</option>
-				{{-- <option value="2">Pembelian Total Harga</option>
-				<option value="3">Login</option> --}}
-			</select>
-		</div>
-	</div>
-
-	<div id="default" class="form-control" style="width: 800px; height: 600px"></div>
-	<div id="map" class="form-control" style="width: 800px; height: 600px"></div>
-	<div id="maps" class="form-control" style="width: 800px; height: 600px"></div>
-	<div id="mapss" class="form-control" style="width: 800px; height: 600px"></div>
-	<div id="kor2" class="form-control" style="width: 800px; height: 600px"></div>
-	<div id="kor22" class="form-control" style="width: 800px; height: 600px"></div>
-	<div id="kor3a" class="form-control" style="width: 800px; height: 600px"></div>
-	<div id="kor3aa" class="form-control" style="width: 800px; height: 600px"></div>
-	<div id="kor3b" class="form-control" style="width: 800px; height: 600px"></div>
-	<div id="kor4" class="form-control" style="width: 800px; height: 600px"></div>
-	<div id="kor44" class="form-control" style="width: 800px; height: 600px"></div>
-	<div id="korf2a" class="form-control" style="width: 800px; height: 600px"></div>
-	<div id="korf2aa" class="form-control" style="width: 800px; height: 600px"></div>
-	<div id="korf2b" class="form-control" style="width: 800px; height: 600px"></div>
-	<div id="korf2bb" class="form-control" style="width: 800px; height: 600px"></div>
-	<div id="kor5" class="form-control" style="width: 800px; height: 600px"></div>
-	<div id="kor55" class="form-control" style="width: 800px; height: 600px"></div>
-	<div id="korf4b" class="form-control" style="width: 800px; height: 600px"></div>
-	<div id="korf4bb" class="form-control" style="width: 800px; height: 600px"></div>
-	<div id="korf4a" class="form-control" style="width: 800px; height: 600px"></div>
-	<div id="korf4aa" class="form-control" style="width: 800px; height: 600px"></div>
-	<div id="korf3" class="form-control" style="width: 800px; height: 600px"></div>
-	<div id="korf33" class="form-control" style="width: 800px; height: 600px"></div>
-	<div id="kor6" class="form-control" style="width: 800px; height: 600px"></div>
-	<div id="kor66" class="form-control" style="width: 800px; height: 600px"></div>
-	<div id="korlm" class="form-control" style="width: 800px; height: 600px"></div>
-	<div id="korlmm" class="form-control" style="width: 800px; height: 600px"></div>
-	<div id="kor7" class="form-control" style="width: 800px; height: 600px"></div>
-	<div id="kor77" class="form-control" style="width: 800px; height: 600px"></div>
-	<div id="kor8" class="form-control" style="width: 800px; height: 600px"></div>
-	<div id="kor88" class="form-control" style="width: 800px; height: 600px"></div>
-	<div id="korf1a" class="form-control" style="width: 800px; height: 600px"></div>
-	<div id="korf1aa" class="form-control" style="width: 800px; height: 600px"></div>
-	<div id="korf1b" class="form-control" style="width: 800px; height: 600px"></div>
-	<div id="korf1bb" class="form-control" style="width: 800px; height: 600px"></div>
-
-	<script src="../../../../js/Polyline.encoded.js"></script>
-	{{-- <script src="./resources/js/Polyline.encoded.js"></script> --}}
-	<script>
 		$(document).ready(function() {
 			$(document).on('change', '.type', function(event) {
 				var type = $(this).val();
@@ -190,7 +93,7 @@
 					var encoded = 'pdpi@gcd`TKbA~@f@TEFHPJz@kBPQPEPYdBiDxCyFvAgDp@qBrB}IfAqEn@sDT{BNwDIuGOmDUwBOsAWkDe@aHiAuRIiCIuFGuBW_G@yBZ_BZu@`@o@pAmA`BkAn@g@l@q@|@aBv@eC`AmDj@uDPqBXsENkEt@gJFgADiEG{JRuJN}ETaDT{BNu@d@cAl@y@fFsF^]t@u@dAoAnDcDrG}EbH{FhEiDbAy@jAoAtAwB\\aA|ByIdBoIJiA@{@AeAqA}Wc@kCOk@Qe@}@iB]g@i@i@oI}Ei@e@[a@O_@Mi@Iu@CoAVaCr@uDb@oBjA_EhAeDxAaDZi@|@gAt@o@bAi@dBy@XSXURYXo@TiAXqBNqBDu@TuCFaCLmCXiDPmAhCuKNu@b@gD@m@AWq@mHOuDg@aHCaAOsAE_AI]UqCkBgLy@yHw@mGiAaJ{BmPi@aD_@qBSKMOISAU@ODOHKTOUoAiBwL{AyIMFGWFVLG_B{IoAoGkCkLm@kDeC_U_@wDGcBUsBCiA@_ADe@Xo@H[f@mD?SAQWe@E[@[^Ub@?n@ApAoDtDqKtDqKt@_CmAuCoKwD}QkGo@aI]kCo@iHCe@VO\\FpCzBpXzYjBxB`AVl@Cf@@j@Ch@Q~H}T~EkVx@aDpEmLRo@??xCeIBYCSqAe@SUEQAWzA}DTK`@EPDn@TVHVBNWNa@`@_A~@aCbCcG`@kAnEyKfAuCDAtCyHd@mD^oB^uArA{DtHkVLm@X_A`FyNp@wBfEiM~@aCdAgCtDcHnFuJlA_C|GwLpG{Kf@cAnAsDn@cCtCwOrBuK|Gy]p@{CtDcSfAoFvCyPlAyHT}@`Ka[~EoOrD{KhC}HbCaHpAcDzAeFv@uClBgI\\uAj@qC|AwGWIqE_A_@lAy@xCKHMBMC';
 
 					var polyline = L.Polyline.fromEncoded(encoded, {
-						color: '#b71c1c',
+						color: '#800000',
 						weight: 8
 					}).addTo(map);
 
@@ -239,8 +142,8 @@
 							maxZoom: 18
 						}
 					).addTo(map);
-					// var encoded = 'jqyi@etkaT}A]b@{BTyA\GXWFW|@ZlIhBwCjMaC~Jy@~CiBtFwAtDuB~Fo@vBuGvRmCtIiG~Q_EfMSt@UtAi@bEeAlF_@|BeAtFgCzM_Mho@uBvKU`BcChMe@`B{@tCSf@m@nAgDtFoIrOaA|AeApBkFjJeCxE{@fBiAhCo@fBcM`_@s@nBYh@uHjVsAzD_@tA_@nBe@lDuCxHAFcArCi@lAcDlI_EpKyAfE~DhBHVAh@{AtDQHSAwDqAoCeASUEQAWzA}DTK`@EPDvBv@~DhBHVAh@{AtDQHSAyDiAg@Ta@z@u@nBuBxFmA`DsAzDg@`B]|Ai@rCw@hDc@vBa@zBsBjHe@tAc@pAq@|Aa@tAsAhDU|@I|@[bAs@rAcAFo@Sg@a@a@i@wAe@mNsE_KoDY_BOsBy@{He@}FDc@ZGbBnAlKjKpDbE|JvKz@x@t@Eh@DfAVP`@@h@WnAq@hAqFbO}DbLsCbHe@tBY|Bl@z@Pb@Cb@{@rBc@hBFpAr@lGnAtLp@jGrA~FpC~LjBpKfFh\zB~P^dBPfBnBvOlBlPn@rDx@tFZtCz@~KZlFL~@FtA`@tE?`Aa@dEe@|B}A`Gm@dDSrBa@lJeA`JSfAQh@]j@[Vi@\yCvAi@d@mA|AWb@eAbC[n@m@dBeApDiBhIKtAN@OAGzAFdAJn@Vl@d@j@dAt@~CfBv@ZrA`A^^\l@jAfCb@rBPxADp@jA~V@j@G|AKv@m@xCgB|H}@pDm@|AS`@eA|AeAdAyDbDaDlC{KnI_BvAqD|CsCbDuCvCi@`@oAbBc@hAs@dII|BQzHElHHvEIrEu@pL]pG_@pF}@bFm@lCiA~C[t@q@|@u@r@gBhAoAhAe@v@Wn@]tAGx@?l@LjCJlDN`KXpEDdBh@tJb@|Gh@lGV~BPbDFfGMxDW`Dg@tCkAjFyBxIc@vAkAvCeAtBsFlKaBrDgDlL[`BQATeCVuBMAHk@Le@`DkGQKGIAEJU';
-					var encoded = "jqyi@etkaT}A]b@{BTyA\\GXWFW|@ZlIhBwCjMaC~Jy@~CiBtFwAtDuB~Fo@vBuGvRmCtIiG~Q_EfMSt@UtAi@bEeAlF_@|BeAtFgCzM_Mho@uBvKU`BcChMe@`B{@tCSf@m@nAgDtFoIrOaA|AeApBkFjJeCxE{@fBiAhCo@fBcM`_@s@nBYh@uHjVsAzD_@tA_@nBe@lDuCxHAFcArCi@lAcDlI_EpKyAfE~DhBHVAh@{AtDQHSAwDqAoCeASUEQAWzA}DTK`@EPDvBv@~DhBHVAh@{AtDQHSAyDiAg@Ta@z@u@nBuBxFmA`DsAzDg@`B]|Ai@rCw@hDc@vBa@zBsBjHe@tAc@pAq@|Aa@tAsAhDU|@I|@[bAs@rAcAFo@Sg@a@a@i@wAe@mNsE_KoDY_BOsBy@{He@}FDc@ZGbBnAlKjKpDbE|JvKz@x@t@Eh@DfAVP`@@@h@WnAq@hAqFbO}DbLsCbHe@tBY|Bl@z@Pb@Cb@{@rBc@hBFpAr@lGnAtLp@jGrA~FpC~LjBpKfFh\\zB~P^dBPfBnBvOlBlPn@rDx@tFZtCz@~KZlFL~@FtA`@tE?`Aa@dEe@|B}A`Gm@dDSrBa@lJeA`JSfAQh@]j@[Vi@\\yCvAi@d@mA|AWb@eAbC[n@m@dBeApDiBhIKtAN@OAGzAFdAJn@Vl@d@j@dAt@~CfBv@ZrA`A^^\\l@jAfCb@rBPxADp@jA~V@j@G|AKv@m@xCgB|H}@pDm@|AS`@eA|AeAdAyDbDaDlC{KnI_BvAqD|CsCbDuCvCi@`@oAbBc@hAs@dII|BQzHElHHvEIrEu@pL]pG_@pF}@bFm@lCiA~C[t@q@|@u@r@gBhAoAhAe@v@Wn@]tAGx@?l@LjCJlDN`KXpEDdBh@tJb@|Gh@lGV~BPbDFfGMxDW`Dg@tCkAjFyBxIc@vAkAvCeAtBsFlKaBrDgDlL[`BQATeCVuBMAHk@Le@`DkGQKGIAEJU";
+					var encoded = 'jqyi@etkaT}A]b@{BTyA\\GXWFW|@ZlIhBwCjMaC~Jy@~CiBtFwAtDuB~Fo@vBuGvRmCtIiG~Q_EfMSt@UtAi@bEeAlF_@|BeAtFgCzM_Mho@uBvKU`BcChMe@`B{@tCSf@m@nAgDtFoIrOaA|AeApBkFjJeCxE{@fBiAhCo@fBcM`_@s@nBYh@uHjVsAzD_@tA_@nBe@lDuCxHAFcArCi@lAcDlI_EpKyAfE~DhBHVAh@{AtDQHSAwDqAoCeASUEQAWzA}DTK`@EPDvBv@~DhBHVAh@{AtDQHSAyDiAg@Ta@z@u@nBuBxFmA`DsAzDg@`B]|Ai@rCw@hDc@vBa@zBsBjHe@tAc@pAq@|Aa@tAsAhDU|@I|@[bAs@rAcAFo@Sg@a@a@i@wAe@mNsE_KoDY_BOsBy@{He@}FDc@ZGbBnAlKjKpDbE|JvKz@x@t@Eh@DfAVP`@@h@WnAq@hAqFbO}DbLsCbHe@tBY|Bl@z@Pb@Cb@{@rBc@hBFpAr@lGnAtLp@jGrA~FpC~LjBpKfFh\\zB~P^dBPfBnBvOlBlPn@rDx@tFZtCz@~KZlFL~@FtA`@tE?`Aa@dEe@|B}A`Gm@dDSrBa@lJeA`JSfAQh@]j@[Vi@\\yCvAi@d@mA|AWb@eAbC[n@m@dBeApDiBhIKtAN@OAGzAFdAJn@Vl@d@j@dAt@~CfBv@ZrA`A^^\\l@jAfCb@rBPxADp@jA~V@j@G|AKv@m@xCgB|H}@pDm@|AS`@eA|AeAdAyDbDaDlC{KnI_BvAqD|CsCbDuCvCi@`@oAbBc@hAs@dII|BQzHElHHvEIrEu@pL]pG_@pF}@bFm@lCiA~C[t@q@|@u@r@gBhAoAhAe@v@Wn@]tAGx@?l@LjCJlDN`KXpEDdBh@tJb@|Gh@lGV~BPbDFfGMxDW`Dg@tCkAjFyBxIc@vAkAvCeAtBsFlKaBrDgDlL[`BQATeCVuBMAHk@Le@`DkGQKGIAEJU';
+					// var encoded = 'jqyi@etkaT}A]b@{BTyA\\GXWFW|@ZlIhBwCjMaC~Jy@CiBtFwAtDuB~Fo@vBuGvRmCtIiG~Q_EfMSt@UtAi@bEeAlF_@|BeAtFgCzM_Mho@uBvKU`BcChMe@`B{@tCSf@m@nAgDtFoIrOaA|AeApBkFjJeCxE{@fBiAhCo@fBcM`@s@nBYh@uHjVsAzD@tA_@nBe@lDuCxHAFcArCi@lAcDlI_EpKyAfE~DhBHVAh@{AtDQHSAwDqAoCeASUEQAWzA}DTK`@EPDvBv@~DhBHVAh@{AtDQHSAyDiAg@Ta@z@u@nBuBxFmA`DsAzDg@`B]|Ai@rCw@hDc@vBa@zBsBjHe@tAc@pAq@|Aa@tAsAhDU|@I|@[bAs@rAcAFo@Sg@a@a@i@wAe@mNsE_KoDY_BOsBy@{He@}FDc@ZGbBnAlKjKpDbE|JvKz@x@t@Eh@DfAVP`@@h@WnAq@hAqFbO}DbLsCbHe@tBY|Bl@z@Pb@Cb@{@rBc@hBFpAr@lGnAtLp@jGrA~FpC~LjBpKfFh\\zB~P^dBPfBnBvOlBlPn@rDx@tFZtCz@~KZlFL@FtA`@tE?`Aa@dEe@|B}A`Gm@dDSrBa@lJeA`JSfAQh@]j@[Vi@\\yCvAi@d@mA|AWb@eAbC[n@m@dBeApDiBhIKtAN@OAGzAFdAJn@Vl@d@j@dAt@~CfBv@ZrA`A^^\\l@jAfCb@rBPxADp@jA~V@j@G|AKv@m@xCgB|H}@pDm@|AS`@eA|AeAdAyDbDaDlC{KnI_BvAqD|CsCbDuCvCi@`@oAbBc@hAs@dII|BQzHElHHvEIrEu@pL]pG_@pF}@bFm@lCiA~C[t@q@|@u@r@gBhAoAhAe@v@Wn@]tAGx@?l@LjCJlDN`KXpEDdBh@tJb@|Gh@lGV~BPbDFfGMxDW`Dg@tCkAjFyBxIc@vAkAvCeAtBsFlKaBrDgDlL[`BQATeCVuBMAHk@Le@`DkGQKGIAEJU';
 
 					var polyline = L.Polyline.fromEncoded(encoded, {
 						color: '#800000',
@@ -1899,52 +1802,8 @@
 					map.fitBounds(polyline.getBounds());
 				} else if (type === '') {
 
-					$('#default').hide();
-					$('#map').show();
-					$('#maps').hide();
-					$('#mapss').hide();
-					$('#kor2').hide();
-					$('#kor22').hide();
-					$('#kor3a').hide();
-					$('#kor3aa').hide();
-					$('#kor3b').hide();
-					$('#kor4').hide();
-					$('#kor44').hide();
-					$('#korf2a').hide();
-					$('#korf2aa').hide();
-					$('#korf2b').hide();
-					$('#korf2bb').hide();
-					$('#kor5').hide();
-					$('#kor55').hide();
-					$('#korf4b').hide();
-					$('#korf4bb').hide();
-					$('#korf4a').hide();
-					$('#korf4aa').hide();
-					$('#korf3').hide();
-					$('#korf33').hide();
-					$('#kor6').hide();
-					$('#kor66').hide();
-					$('#korlm').hide();
-					$('#korlmm').hide();
-					$('#kor7').hide();
-					$('#kor77').hide();
-					$('#kor8').hide();
-					$('#kor88').hide();
-					$('#korf1a').hide();
-					$('#korf1aa').hide();
-					$('#korf1b').hide();
-					$('#korf1bb').hide();
-					var map = L.map('map').setView([-6.996667, 110.416664], 13);
-        var tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 20,
-            zoomControl: true,
-            attribution: '&copy; Trans Semarang | <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-        }).addTo(map);
+					$('#map').hide();
 
 				}
 			})
 		});
-	</script>
-</body>
-@endsection
-

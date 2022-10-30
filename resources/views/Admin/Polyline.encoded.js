@@ -11,8 +11,7 @@
  * http://facstaff.unca.edu/mcmcclur/GoogleMaps/EncodePolyline/\
  */
 
-(
-	function () {
+(function () {
 	'use strict';
 
 	/* jshint bitwise:false */
