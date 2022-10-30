@@ -227,7 +227,8 @@ button, input, optgroup, select, textarea {
 }
 
 button, input {
-    overflow: visible
+    overflow: visible;
+    cursor: pointer;
 }
 
 button, select {

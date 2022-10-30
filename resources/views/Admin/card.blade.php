@@ -35,7 +35,7 @@
                 </div>
                 <div class="col-md-12">
                     <div class="text-right">
-                        <button type="button" class=" mt-3 mb-1 btn btn-outline-success" data-toggle="modal" data-target="#exampleModal">
+                        <button type="button" class=" mt-3 mb-1 btn btn-outline-success" data-toggle="modal" data-target="#exampleModal" style="cursor: pointer;">
                             Tambah Data <i class="fa-solid fa-plus"></i>
                         </button>
                     </div>
@@ -198,12 +198,11 @@
                     </div>
                     <div class="form-group">
                         <div style="position:relative;">
-                            <a class='btn btn-info col-sm-3' href='javascript:;'>
+                            <a class='btn btn-info col-sm-3' href='javascript:;' style="cursor: pointer;">
                                 Choose Image...
                             </a>
                             <img class="img-preview img-fluid mt-3 ">
                             <input type="file" style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;' name="image" id="image" size="40" onchange="previewImage()">
-
                             &nbsp;
                             <span class='label label-info' id="upload-file-info"></span>
                         </div>

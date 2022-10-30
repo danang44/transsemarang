@@ -42,7 +42,7 @@ class CardController extends Controller
             'name' => $request->name,
             'desc' => $request->desc,
             'image' => $nama_file,
-            
+
         ]);
 
         return redirect('/card');
@@ -86,7 +86,7 @@ class CardController extends Controller
         $card->update();
 
         return redirect()->back()->with('status', 'Data berhasil dihapus');
-        
+
     }
 
 }
