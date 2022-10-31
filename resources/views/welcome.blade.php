@@ -43,6 +43,7 @@
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script type="text/javascript" src="assets/bootstrap/js/live.js"></script>
     <script src="https://kit.fontawesome.com/1e94ef36ed.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/polyline.js"></script>
     {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"> --}}
 </head>
 
@@ -396,23 +397,23 @@
                     </div>
                 </div>
             </div>
-            <div class="row freport" style="">
-                <div class="freicon" style="">
+            <div class="row freport">
+                <div class="freicon">
                     <svg width="4" height="25" viewBox="0 0 4 25" fill="none" xmlns="http://www.w3.org/2000/svg"><rect y="0.996826" width="4" height="24" rx="2" fill="#AF2330" /></svg>
                 </div>
                 @if(Auth::check())
-                <div class="row freporthead" style="">
-                    <form action="/pengaduan.php" method="post" class="row freportform" id="formlapor" style="">
-                        <div class="mb-3 reportform1" style="">
-                            <div style="width: 646px;height: 80px;background: #FFFFFF;border-radius: 20px 20px 0 0;">
+                <div class="row freporthead">
+                    <form action="/pengaduan.php" method="post" class="row freportform" id="formlapor">
+                        <div class="mb-3 reportform1">
+                            <div class="formjudul">
                                 <p style="position: absolute;width: 233px;height: 40px;left: 40px;top: 20px;font-family: 'Plus Jakarta Sans';font-style: normal;font-weight: 600;font-size: 32px;line-height: 40px;text-transform: capitalize;color: #1D2939;">Layanan Aduan</p>
                             </div>
-                            <div class="mb-3" style="display: flex;flex-direction: column;align-items: flex-start;padding: 40px;gap: 20px;width: 646px;height: 580px;background: #FFFFFF;">
-                                <legend style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;isolation: isolate;width: 566px;height: 92px;color: #98A2B3;">Your email
+                            <div class="mb-3 insideformwrap">
+                                <legend class="lgnd1">Your email
                                     <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com"/>
                                 </legend>
-                                <legend style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;isolation: isolate;width: 566px;height: 88px;color: #98A2B3;"> Subjek Pengaduan
-                                    <select class="form-select" aria-label="Default select example" style="font-weight: 400;font-size: 20px;line-height: 28px;letter-spacing: -0.006em;color: #475467;" required>
+                                <legend class="lgnd2"> Subjek Pengaduan
+                                    <select class="form-select" aria-label="Default select example" required>
                                         <option selected disabled value="">Materi Pengaduan...</option>
                                         <option value="1"><span>1.Pelanggaran terhadap kode etik dan/atau pedoman perilaku aparat</span></option>
                                         <option value="2"><span>2.Penyalahgunaan wewenang/jabatan</span></option>
