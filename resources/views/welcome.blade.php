@@ -33,7 +33,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="assets/slick/slick.css"/>
-    {{-- // Add the new slick-theme.css if you want the default styling --}}
     <link rel="stylesheet" type="text/css" href="assets/slick/slick-theme.css"/>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -69,10 +68,10 @@
         letter-spacing: -0.006em;
     }
 
-    .swiper {
+    /* .swiper {
         width: 100%;
         height: 568px;
-    }
+    } */
 
     body {
         font-family: 'Plus Jakarta Sans', sans-serif !important;
@@ -221,36 +220,17 @@
                     <div class="gallery">
                         @foreach ($RNarticles as $RNart)
                         <div class="gallery-item" tabindex="0">
-                            <img src="{{ $RNart->gambar }}" class="gallery-image" alt="" />
-
+                            <img src="{{ $RNart->gambar }}" class="gallery-image" alt="{{ $RNart->gambar }}" />
                             <div class="gallery-item-info">
                                 <a class="gallery-item-type" href="/detailarticle/{{$RNart->title}}">
-                                    <p class="fw-semibold text-white" style="">{{ $RNart->title }}</p>
+                                    <p class="fw-semibold text-white">{{ $RNart->title }}</p>
                                 </a>
                             </div>
                         </div>
                         @endforeach
                     </div>
-                    <!-- End of gallery -->
-
                     <div class="loader"></div>
                 </div>
-                <!-- End of container -->
-            </main>
-
-                {{-- <div class="row row-cols-6 nginsta" style="display: flex;width: 748px;flex-wrap: wrap;">
-                    @foreach ($RNarticles as $RNart)
-                    <a class="col border rounded border-1" href="/detailarticle/{{$RNart->title}}" style="cursor: pointer;background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(0,0,0,1)),url('{{ $RNart->gambar }}')center / cover no-repeat;width: 248px; height: 248px;align-items: flex-end;display: flex">
-                        <img src="{{ $RNart->gambar }}" alt="">
-                        <div class="card">
-                            <div class="card-body">
-                                <span class="fw-semibold text-white"
-                                    style="font-family: 'Plus Jakarta Sans';font-style: normal;font-size: 16px;line-height: 24px;">{{ $RNart->title }}</span>
-                            </div>
-                        </div>
-                    </a>
-                    @endforeach
-                </div> --}}
             </div>
         </div>
     </div>
@@ -353,88 +333,77 @@
 {{-- End Mobile Maps View --}}
 
 {{-- Start Card Payment --}}
-    <div title="cardpayment">
-        <div class="cardwrap">
-            <div class="row cardhead">
-                <div class="col-1 cardheadh1">
-                    <p class="cardheadh1-title">TS.PAYMENT</p>
-                    <p class="cardheadh1-text">Bayar Pakai Kartu</p>
-                </div>
-                <p class="col-3 cardheadh1-ket">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium vulputate id ultricies diam pulvinar vitae sit proin. Quam morbi turpis dolor in.</p>
+    <div class="cardpayment">
+        <div class="row cardhead">
+            <div class="col-1 cardheadh1">
+                <p class="cardheadh1-title">TS.PAYMENT</p>
+                <p class="cardheadh1-text">Bayar Pakai Kartu</p>
             </div>
-            <!-- Slider main container -->
-            <div class="swiper">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-                    <!-- Slides -->
-                    @foreach ($Cpayment as $dataCard)
-                    <div class="swiper-slide">
-                        <a href="#" style="display: flex;flex-direction: column">
-                            <div class="news_img" >
-                                <img src="/data_card/{{$dataCard->image}}" alt="{{$dataCard->image}}" style="width: 360px;height:360px;border-radius: 16px;"/>
-                            </div>
-                            <div class="news_title" style="width: 360px;font-weight: 600;font-size: 32px;line-height: 40px;color: #1D2939;padding-top: 24px;">{{$dataCard->name}}</div>
-                            <p class="news_txt" style="width: 360px;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;padding-top: 8px;">{{$dataCard->desc}}</p>
-                        </a>
-                    </div>
-                    @endforeach
+            <div class="col text-justify cardheadh1-ket">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        </div>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                @foreach ($Cpayment as $dataCard)
+                <div class="swiper-slide">
+                    <a class="swiperlink" href="#">
+                        <div class="news_img" >
+                            <img src="/data_card/{{$dataCard->image}}" alt="{{$dataCard->image}}"/>
+                        </div>
+                        <div class="news_title text-justify">{{$dataCard->name}}</div>
+                        <p class="news_txt text-justify">{{$dataCard->desc}}</p>
+                    </a>
                 </div>
-                <!-- If we need pagination -->
-                {{-- <div class="swiper-pagination"></div> --}}
-
-                <!-- If we need navigation buttons -->
-                {{-- <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div> --}}
-
-                <!-- If we need scrollbar -->
-                <div class="swiper-scrollbar"></div>
+                @endforeach
             </div>
+            {{-- <div class="swiper-pagination"></div> --}}
+            {{-- <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div> --}}
+            <div class="swiper-scrollbar"></div>
         </div>
     </div>
 {{-- End Card Payment --}}
 
 {{-- Start Report Complaint --}}
-    <div title="reportcomplaint" style="display: flex;width: 100%;height: 910px;background: #F9FAFB;flex-direction: row;align-content: center;">
-        <div class="col" style="display: flex;flex-direction: row;padding: 80px 120px;width: 100%;height: 100%;justify-content: space-between;align-items: center;">
-            <div style="display: flex;width: 472px;height: 712px;flex-direction: column;justify-content: space-between;">
-                <div style="display: flex;width: 100%;height: 152px;flex-direction: column;align-items: flex-start;">
-                    <p style="font-weight: 500;font-size: 24px;line-height: 32px;color: #AF2330;margin-block-end: 0em;margin-block-start: 0em;">TS.ADUAN</p>
-                    <p style="font-weight: 400;font-size: 48px;line-height: 60px;color: #1D2939;margin-block-end: 0em;margin-block-start: 0em;">Layanan
-                        <strong style=" font-weight: 800;color: #AF2330;">Aduan<br>& Bantuan</strong></p>
+    <div class="reportcomplaint">
+        <div class="col rcwrapper">
+            <div class="rcleft">
+                <div class="rclefttitle">
+                    <p class="tsaduan">TS.ADUAN</p>
+                    <p class="tslayanan">Layanan<strong style=" font-weight: 800;color: #AF2330;">Aduan<br>& Bantuan</strong></p>
                 </div>
-                <div style="height: 480px;width: 100%;display: flex;flex-direction: column;justify-content: space-between;align-items: baseline;">
-                    <div title="01" style="display: flex;flex-direction: row;align-items: flex-start;">
-                        <p style="width: 44px;height: 40px;font-weight: 400;font-size: 32px;line-height: 40px;color: #AF2330;margin-block-start: 0px;margin-block-end: 0px;">01</p>
-                        <span style="display: flex;flex-direction: column;align-items: flex-start;">
-                            <p style="width: 408px;height: 40px;font-weight: 600;font-size: 32px;line-height: 40px;color: #475467;margin-block-start: 0px;margin-block-end: 0px;">Jelaskan dengan jelas</p>
-                            <p style="width: 408px;height: auto;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;margin-block-start: 0px;margin-block-end: 0px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                        </span>
+                <div class="tslistwrap">
+                    <div class="tslist">
+                        <p class="tsnumblist">01</p>
+                        <div class="tsnumlistwrap">
+                            <p class="listtitle">Jelaskan dengan jelas</p>
+                            <p class="listcont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                        </div>
                     </div>
-                    <div title="02" style="display: flex;flex-direction: row;align-items: flex-start;">
-                        <p style="width: 44px;height: 40px;font-weight: 400;font-size: 32px;line-height: 40px;color: #AF2330;margin-block-start: 0px;margin-block-end: 0px;">02</p>
-                        <span style="display: flex;flex-direction: column;align-items: flex-start;">
-                            <p style="width: 408px;height: 40px;font-weight: 600;font-size: 32px;line-height: 40px;color: #475467;margin-block-start: 0px;margin-block-end: 0px;">Gunakan kata yang sopan</p>
-                            <p style="width: 408px;height: auto;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;margin-block-start: 0px;margin-block-end: 0px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed est lorem massa. Risus in faucibus amet laoreet diam. </p>
-                        </span>
+                    <div class="tslist">
+                        <p class="tsnumblist">02</p>
+                        <div class="tsnumlistwrap">
+                            <p class="listtitle">Gunakan kata yang sopan</p>
+                            <p class="listcont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed est lorem massa. Risus in faucibus amet laoreet diam. </p>
+                        </div>
                     </div>
-                    <div title="03" style="display: flex;flex-direction: row;align-items: flex-start;">
-                        <p style="width: 44px;height: 40px;font-weight: 400;font-size: 32px;line-height: 40px;color: #AF2330;margin-block-start: 0px;margin-block-end: 0px;">03</p>
-                        <span style="display: flex;flex-direction: column;align-items: flex-start;">
-                            <p style="width: 408px;height: 40px;font-weight: 600;font-size: 32px;line-height: 40px;color: #475467;margin-block-start: 0px;margin-block-end: 0px;">Sed iaculis morbi non.</p>
-                            <p style="width: 408px;height: auto;font-weight: 300;font-size: 24px;line-height: 32px;color: #98A2B3;margin-block-start: 0px;margin-block-end: 0px;"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                        </span>
+                    <div class="tslist">
+                        <p class="tsnumblist">03</p>
+                        <div class="tsnumlistwrap">
+                            <p class="listtitle">Sed iaculis morbi non.</p>
+                            <p class="listcont"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="row" style="display: flex;width: 648px;height: auto;justify-content: space-around;flex-direction: row;">
-                <div style="display: flex;flex-direction: row;align-items: flex-start;padding: 28px 0px;isolation: isolate;width: 4px;height: 80px;margin: 0px -2px;z-index: 1;">
+            <div class="row freport" style="">
+                <div class="freicon" style="">
                     <svg width="4" height="25" viewBox="0 0 4 25" fill="none" xmlns="http://www.w3.org/2000/svg"><rect y="0.996826" width="4" height="24" rx="2" fill="#AF2330" /></svg>
                 </div>
                 @if(Auth::check())
-                <div class="row" style="display: flex;flex-direction: column;align-items: center;padding: 0px;width: 646px;height: 746px;background: #FFFFFF;box-shadow: 0px 4px 12px rgba(29, 41, 57, 0.12);backdrop-filter: blur(10px);border-radius: 20px;">
-                    <form action="/pengaduan.php" method="post" class="row" id="formlapor" style="display: flex;flex-direction: column;align-items: center;padding: 0px;width: 646px;height: 750px;background: #F9FAFB;box-shadow: 0px 4px 12px rgba(29, 41, 57, 0.12);backdrop-filter: blur(10px);border-radius: 20px;">
-                        <div class="mb-3" style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;gap: 2px;width: 646px;height: 662px;background: #F9FAFB;border-radius: 20px;">
+                <div class="row freporthead" style="">
+                    <form action="/pengaduan.php" method="post" class="row freportform" id="formlapor" style="">
+                        <div class="mb-3 reportform1" style="">
                             <div style="width: 646px;height: 80px;background: #FFFFFF;border-radius: 20px 20px 0 0;">
                                 <p style="position: absolute;width: 233px;height: 40px;left: 40px;top: 20px;font-family: 'Plus Jakarta Sans';font-style: normal;font-weight: 600;font-size: 32px;line-height: 40px;text-transform: capitalize;color: #1D2939;">Layanan Aduan</p>
                             </div>
@@ -471,27 +440,26 @@
                         </div>
                     </form>
                     @else
-                        <div class="row" style="display: flex;flex-direction: column;align-items: center;padding: 0px;width: 646px;height: 746px;background: #FFFFFF;box-shadow: 0px 4px 12px rgba(29, 41, 57, 0.12);backdrop-filter: blur(10px);border-radius: 20px;">
+                    <div class="row" style="display: flex;flex-direction: column;align-items: center;padding: 0px;width: 646px;height: 746px;background: #FFFFFF;box-shadow: 0px 4px 12px rgba(29, 41, 57, 0.12);backdrop-filter: blur(10px);border-radius: 20px;">
                         <div class="mb-3" style="display: flex;flex-direction: column;align-items: center;padding: 0px;padding-bottom: 2px;width: 646px;height: 662px;background: #FFFFFF;border-radius: 20px;">
-                                <div style="width: 646px;height: 80px;background: #FFFFFF;border-radius: 20px 20px 0 0; margin-bottom: 2px">
+                            <div style="width: 646px;height: 80px;background: #FFFFFF;border-radius: 20px 20px 0 0; margin-bottom: 2px">
                                 <p style="position: absolute;width: 233px;height: 40px;left: 40px;top: 20px;font-family: 'Plus Jakarta Sans';font-style: normal;font-weight: 600;font-size: 32px;line-height: 40px;text-transform: capitalize;color: #1D2939;">Layanan Aduan</p>
-                                </div>
+                            </div>
                             <div class="mb-3" style="display: flex;flex-direction: column;align-items: flex-start;padding: 40px;gap: 20px;width: 646px;height: 580px;background: #FFFFFF;">
                                 <img style="width: 566px;height: 344px;" src="assets/img/IlustrationCS.png"/>
-                                    <div style="width: 566px;height: 200px;left: 40px;top: 424px;">
-                                        <div style="padding: 0px;gap: 4px;width: 566px;height: 92px;">
+                                <div style="width: 566px;height: 200px;left: 40px;top: 424px;">
+                                    <div style="padding: 0px;gap: 4px;width: 566px;height: 92px;">
                                         <p style="font-weight: 600;font-size: 24px;line-height: 32px;text-align: left;letter-spacing: -0.006em;color: #1D2939;">Anda harus masuk dengan Google untuk melanjutkan</p>
                                         <p tyle="font-weight: 400;font-size: 20px;line-height: 28px;letter-spacing: -0.006em;color: #98A2B3;">Setelah Anda mengajukan keluhan, kami akan mengirimkan informasi penanganan ke email yang Anda gunakan untuk login.</p>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div style="display: flex;flex-direction: row;align-items: center;width: 566px;height: 68px;justify-content: center;">
-                                <a href="/auth/google" class="btn customGPlusSignIn" role="button" type="button" style="display: flex;flex-direction: column;padding: 20px 32px;gap: 20px;width: 413px;height: 72px;background: #FFFFFF;flex-wrap: wrap;border: 1px solid #E4E7EC;box-shadow: 0px 4px 12px rgba(29, 41, 57, 0.12);backdrop-filter: blur(10px);border-radius: 12px;">
-                                    <img src="https://cdn.cdnlogo.com/logos/g/35/google-icon.svg" style="width: 32px;height: 32px;">
-                                    <span id="name" style="font-weight: 600;font-size: 24px;line-height: 32px;color: #1D2939;">Lanjutkan dengan Google</span>
-                                </a>
-                            </div>
+                        </div>
+                        <div style="display: flex;flex-direction: row;align-items: center;width: 566px;height: 68px;justify-content: center;">
+                            <a href="/auth/google" class="btn customGPlusSignIn" role="button" type="button" style="display: flex;flex-direction: column;padding: 20px 32px;gap: 20px;width: 413px;height: 72px;background: #FFFFFF;flex-wrap: wrap;border: 1px solid #E4E7EC;box-shadow: 0px 4px 12px rgba(29, 41, 57, 0.12);backdrop-filter: blur(10px);border-radius: 12px;">
+                                <img src="https://cdn.cdnlogo.com/logos/g/35/google-icon.svg" style="width: 32px;height: 32px;">
+                                <span id="name" style="font-weight: 600;font-size: 24px;line-height: 32px;color: #1D2939;">Lanjutkan dengan Google</span>
+                            </a>
                         </div>
                     </div>
                     @endif
@@ -843,66 +811,66 @@
             }
         });
 
-        const swiper = new Swiper('.swiper', {
-        // Optional parameters
-        direction: 'horizontal',
-        effect: 'coverflow',
-        grabCursor: true,
-        loop: true,
-        centeredSlides: true,
-        slidesPerView: 'auto',
-        speed: 300,
-        simulateTouch: true,
-        slidesPerView: 4,
-        spaceBetween: 100,
+        // const swiper = new Swiper('.swiper', {
+        // // Optional parameters
+        // direction: 'horizontal',
+        // effect: 'coverflow',
+        // grabCursor: true,
+        // loop: true,
+        // centeredSlides: true,
+        // slidesPerView: 'auto',
+        // speed: 300,
+        // simulateTouch: true,
+        // slidesPerView: 4,
+        // spaceBetween: 100,
 
-        coverflowEffect: {
-            rotate: 0,
-            stretch: 0,
-            depth: 0,
-            modifier: 3,
-            slideShadows: false
-        },
-        // Navigation arrows
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        // And if we need scrollbar
-        scrollbar: {
-            el: '.swiper-scrollbar',
-        },
-        breakpoints: {
-            // when window width is >= 320px
-            320: {
-            slidesPerView: 2,
-            spaceBetween: 20
-            },
-            // when window width is >= 480px
-            480: {
-            slidesPerView: 3,
-            spaceBetween: 30,
-            centeredSlides: true
-            },
-            // when window width is >= 640px
-            640: {
-            slidesPerView: 4,
-            spaceBetween: 40,
-            centeredSlides: true
-            },
-            1440: {
-            slidesPerView: 4,
-            spaceBetween: 350,
-            centeredSlides: true
-            },
-            2559: {
-            slidesPerView: 5,
-            spaceBetween: 0,
-            centeredSlides: true
-            }
-        }
+        // coverflowEffect: {
+        //     rotate: 0,
+        //     stretch: 0,
+        //     depth: 0,
+        //     modifier: 3,
+        //     slideShadows: false
+        // },
+        // // Navigation arrows
+        // navigation: {
+        //     nextEl: '.swiper-button-next',
+        //     prevEl: '.swiper-button-prev',
+        // },
+        // // And if we need scrollbar
+        // scrollbar: {
+        //     el: '.swiper-scrollbar',
+        // },
+        // breakpoints: {
+        //     // when window width is >= 320px
+        //     320: {
+        //     slidesPerView: 2,
+        //     spaceBetween: 20
+        //     },
+        //     // when window width is >= 480px
+        //     480: {
+        //     slidesPerView: 3,
+        //     spaceBetween: 30,
+        //     centeredSlides: true
+        //     },
+        //     // when window width is >= 640px
+        //     640: {
+        //     slidesPerView: 4,
+        //     spaceBetween: 40,
+        //     centeredSlides: true
+        //     },
+        //     1440: {
+        //     slidesPerView: 4,
+        //     spaceBetween: 350,
+        //     centeredSlides: true
+        //     },
+        //     2559: {
+        //     slidesPerView: 5,
+        //     spaceBetween: 0,
+        //     centeredSlides: true
+        //     }
+        // }
 
-        });
+        // });
     </script>
     <script>
         const swiper = new Swiper('.swiper', {
@@ -937,13 +905,13 @@
         breakpoints: {
             // when window width is >= 320px
             320: {
-            slidesPerView: 2,
-            spaceBetween: 20
+            slidesPerView: 1,
+            spaceBetween: 0
             },
             // when window width is >= 480px
             480: {
-            slidesPerView: 3,
-            spaceBetween: 30,
+            slidesPerView: 2,
+            spaceBetween: 50,
             centeredSlides: true
             },
             // when window width is >= 640px
@@ -989,7 +957,7 @@
             })
         }
     </script>
-     <script src="../../../../js/Polyline.encoded.js"></script>
+     <script src="/js/Polyline.encoded.js"></script>
     <script>
       	var map = new L.Map('map').setView([-6.996667, 110.416664], 13);
 		var tiles = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
@@ -1005,8 +973,8 @@
 		// var encoded = "jqyi@etkaT}A]b@{BTyA\\GXWFW|@ZlIhBwCjMaC~Jy@~CiBtFwAtDuB~Fo@vBuGvRmCtIiG~Q_EfMSt@UtAi@bEeAlF_@|BeAtFgCzM_Mho@uBvKU`BcChMe@`B{@tCSf@m@nAgDtFoIrOaA|AeApBkFjJeCxE{@fBiAhCo@fBcM`_@s@nBYh@uHjVsAzD_@tA_@nBe@lDuCxHAFcArCi@lAcDlI_EpKyAfE~DhBHVAh@{AtDQHSAwDqAoCeASUEQAWzA}DTK`@EPDvBv@~DhBHVAh@{AtDQHSAyDiAg@Ta@z@u@nBuBxFmA`DsAzDg@`B]|Ai@rCw@hDc@vBa@zBsBjHe@tAc@pAq@|Aa@tAsAhDU|@I|@[bAs@rAcAFo@Sg@a@a@i@wAe@mNsE_KoDY_BOsBy@{He@}FDc@ZGbBnAlKjKpDbE|JvKz@x@t@Eh@DfAVP`@@h@WnAq@hAqFbO}DbLsCbHe@tBY|Bl@z@Pb@Cb@{@rBc@hBFpAr@lGnAtLp@jGrA~FpC~LjBpKfFh\\zB~P^dBPfBnBvOlBlPn@rDx@tFZtCz@~KZlFL~@FtA`@tE?`Aa@dEe@|B}A`Gm@dDSrBa@lJeA`JSfAQh@]j@[Vi@\\yCvAi@d@mA|AWb@eAbC[n@m@dBeApDiBhIKtAN@OAGzAFdAJn@Vl@d@j@dAt@~CfBv@ZrA`A^^\\l@jAfCb@rBPxADp@jA~V@j@G|AKv@m@xCgB|H}@pDm@|AS`@eA|AeAdAyDbDaDlC{KnI_BvAqD|CsCbDuCvCi@`@oAbBc@hAs@dII|BQzHElHHvEIrEu@pL]pG_@pF}@bFm@lCiA~C[t@q@|@u@r@gBhAoAhAe@v@Wn@]tAGx@?l@LjCJlDN`KXpEDdBh@tJb@|Gh@lGV~BPbDFfGMxDW`Dg@tCkAjFyBxIc@vAkAvCeAtBsFlKaBrDgDlL[`BQATeCVuBMAHk@Le@`DkGQKGIAEJU";
 		// var encoded = 'jqyi@etkaT}A]b@{BTyA\GXWFW|@ZlIhBwCjMaC~Jy@~CiBtFwAtDuB~Fo@vBuGvRmCtIiG~Q_EfMSt@UtAi@bEeAlF_@|BeAtFgCzM_Mho@uBvKU`BcChMe@`B{@tCSf@m@nAgDtFoIrOaA|AeApBkFjJeCxE{@fBiAhCo@fBcM`_@s@nBYh@uHjVsAzD_@tA_@nBe@lDuCxHAFcArCi@lAcDlI_EpKyAfE~DhBHVAh@{AtDQHSAwDqAoCeASUEQAWzA}DTK`@EPDvBv@~DhBHVAh@{AtDQHSAyDiAg@Ta@z@u@nBuBxFmA`DsAzDg@`B]|Ai@rCw@hDc@vBa@zBsBjHe@tAc@pAq@|Aa@tAsAhDU|@I|@[bAs@rAcAFo@Sg@a@a@i@wAe@mNsE_KoDY_BOsBy@{He@}FDc@ZGbBnAlKjKpDbE|JvKz@x@t@Eh@DfAVP`@@h@WnAq@hAqFbO}DbLsCbHe@tBY|Bl@z@Pb@Cb@{@rBc@hBFpAr@lGnAtLp@jGrA~FpC~LjBpKfFh\zB~P^dBPfBnBvOlBlPn@rDx@tFZtCz@~KZlFL~@FtA`@tE?`Aa@dEe@|B}A`Gm@dDSrBa@lJeA`JSfAQh@]j@[Vi@\yCvAi@d@mA|AWb@eAbC[n@m@dBeApDiBhIKtAN@OAGzAFdAJn@Vl@d@j@dAt@~CfBv@ZrA`A^^\l@jAfCb@rBPxADp@jA~V@j@G|AKv@m@xCgB|H}@pDm@|AS`@eA|AeAdAyDbDaDlC{KnI_BvAqD|CsCbDuCvCi@`@oAbBc@hAs@dII|BQzHElHHvEIrEu@pL]pG_@pF}@bFm@lCiA~C[t@q@|@u@r@gBhAoAhAe@v@Wn@]tAGx@?l@LjCJlDN`KXpEDdBh@tJb@|Gh@lGV~BPbDFfGMxDW`Dg@tCkAjFyBxIc@vAkAvCeAtBsFlKaBrDgDlL[`BQATeCVuBMAHk@Le@`]DkGQKGIAEJU';
         // var encoded = "jqyi@etkaT}A]b@{BTyA//\\GXWFW|@ZlIhBwCjMaC~Jy@~CiBtFwAtDuB~Fo@vBuGvRmCtIiG~Q_EfMSt@UtAi@bEeAlF_@|BeAtFgCzM_Mho@uBvKU`BcChMe@`B{@tCSf@m@nAgDtFoIrOaA|AeApBkFjJeCxE{@fBiAhCo@fBcM`_@s@nBYh@uHjVsAzD_@tA_@nBe@lDuCxHAFcArCi@lAcDlI_EpKyAfE~DhBHVAh@{AtDQHSAwDqAoCeASUEQAWzA}DTK`@EPDvBv@~DhBHVAh@{AtDQHSAyDiAg@Ta@z@u@nBuBxFmA`DsAzDg@`B]|Ai@rCw@hDc@vBa@zBsBjHe@tAc@pAq@|Aa@tAsAhDU|@I|@[bAs@rAcAFo@Sg@a@a@i@wAe@mNsE_KoDY_BOsBy@{He@}FDc@ZGbBnAlKjKpDbE|JvKz@x@t@Eh@DfAVP`@@h@WnAq@hAqFbO}DbLsCbHe@tBY|Bl@z@Pb@Cb@{@rBc@hBFpAr@lGnAtLp@jGrA~FpC~LjBpKfFh//\\zB~P^dBPfBnBvOlBlPn@rDx@tFZtCz@~KZlFL~@FtA`@tE?`Aa@dEe@|B}A`Gm@dDSrBa@lJeA`JSfAQh@]j@[Vi@//\\yCvAi@d@mA|AWb@eAbC[n@m@dBeApDiBhIKtAN@OAGzAFdAJn@Vl@d@j@dAt@~CfBv@ZrA`A^^//\\l@jAfCb@rBPxADp@jA~V@j@G|AKv@m@xCgB|H}@pDm@|AS`@eA|AeAdAyDbDaDlC{KnI_BvAqD|CsCbDuCvCi@`@oAbBc@hAs@dII|BQzHElHHvEIrEu@pL]pG_@pF}@bFm@lCiA~C[t@q@|@u@r@gBhAoAhAe@v@Wn@]tAGx@?l@LjCJlDN`KXpEDdBh@tJb@|Gh@lGV~BPbDFfGMxDW`Dg@tCkAjFyBxIc@vAkAvCeAtBsFlKaBrDgDlL[`BQATeCVuBMAHk@Le@`DkGQKGIAEJU";
-        var encoded = "d}li@_weaTd@mA|BFdGThCHjAF^?PPpA|XnBxf@LhGR|Cp@|DnDjOpBbIdBvFbApDbD~NZx@PT\\\\PXBtAB`@Hp@l@pP~[|AxCjAvBd@z@Rf@HJLDbC}@xB}@nC{@`AWr@GxGIvC@bDKzEm@tL}AnHaA`Hk@xTj@~Ld@lIb@^bIL~GwILcMLwl@|@sUZcADi@JQVzElVfAbGApDQzGMbBUr@lDpD`OtNpOhOf@R`@@@ZK^@d@fARrAn@p@z@dAdAlApCpCzCfDtD|DfF`GjEhEt@Dr@Ax@Rp@d@zFfCtEtBpAj@pCt@rBz@fG|CdCjA|@b@\\\\Lb@?vDe@~Ec@fD[n@_@l@o@j@o@d@w@z@eAh@Mr@?p@NdAlAVf@lAvBLdAIp@QzA?RF\\\\R\\\\RPPFb@HN?ZGLEbAaA`Am@fBq@nAQtA?j@KtAg@bAa@vDo@|ASv@a@`@Wz@e@RQ`@MtB[z@W\\\\[DKXyAHs@Ja@Z}BDo@d@sDf@qDr@uFl@kDfA}AhGeG|@{@TsA}AaE?GBMZOb@HDDpB~DlAb@^@jACnB\\\\tCv@Z@\\\\Dv@?^C\\\\IvAw@A]@\\\\l@YfAq@RWL[Ts@JSlAcBtAk@rHyAxIqAvP_DtC[bDo@tHsA\\\\En@GpAWpA_@^j@r@t@p@l@fAt@fD|AvBf@bDb@tDZx@C~CL?U`FTjAd@r@JxBJpCV|G~@`B\\\\x@@x@Ef@M\\\\S~@y@v@uBhAeBzBiBnB{A~CgBfB}@|AWtBOj@I`@MN?h@[vAcBf@UpAc@jA?fDNxAXzBt@~@d@bA\\\\hBTnCXbCh@vAf@hEnBRBpBz@tEhCDJrBhAlG~EjBfAbFhCjChAdDjAhFxAnNdDtCl@LC`H`BzBx@fGhBjA\\\\xD|@lBZdHz@zUxBdBJh@HjFd@|BLrA?`FKxNOt@@xESxCOlDDtCVhCVzC^tEb@h@JfB`@`Ab@dB|@rBrAjEbCrAd@bBZv@Dr@@hN]zGAbCSfLgC`AY`Bi@fAQbBEbBBxAHdEb@zB^fG`AxEh@tBLvBBhEIZCjB_@v@WzAu@bAa@hFeCbDmAbAi@rAy@~BmBtB}AfAe@ZIdASb@Gt@EpBBz@HfATxA`@`ALtBFzAMvBi@bCq@`Eu@~AMrBEdBPbBb@hCx@bDlA|AhAzCrDdAjArCbCX`@x@~AlAxCd@z@|A|B\\\\^|AxAx@h@lAf@d@Lr@NdEh@l@Nr@^fAt@nAfA`CnB|@f@n@Vd@HOzAIvAiBBiKc@oLLqGOyCKEg@IScA?";
-console.log(encoded);
+
+
 		var polyline = L.Polyline.fromEncoded(encoded, {
             color: '#b71c1c',
             weight: 8
@@ -1075,19 +1043,9 @@ console.log(encoded);
         var ruteList = rute.getElementsByTagName("li");
         function btnrute() {
             for (var i = ruteList.length - 1; i >= 0; i--) {
-                console.log(ruteList[i]);
                 rute.appendChild(ruteList[i]);
             };
         };
-
-
-        // var rute = document.getElementById('rute');
-        // var i = rute.childNodes.length;
-        // function btnrute() {
-        //     while (i--) {
-        //         rute.appendChild(rute.childNodes[i]);
-        //     };
-        // };
     </script>
 </body>
 
