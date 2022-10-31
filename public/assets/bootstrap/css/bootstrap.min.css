@@ -12888,34 +12888,29 @@ textarea.form-control-lg {
     }
 /* -- mapsmobile -- */
 
-/* cardpayment */
+/* -- cardpayment -- */
     .cardpayment {
         font-family: 'Plus Jakarta Sans';
         display: flex;
-        align-items: center;
-        justify-content: center;
-        align-content: center;
-    }
-    .cardwrap{
-        display: flex;
+        flex-direction: column;
         padding: 20px;
-        height: 904px;
+        height: 620px;
         width: 100%;
         max-width: 100%;
         max-height: 100%;
-        flex-direction: column;
-        justify-content: space-between;
+        justify-content: space-evenly;
         align-items: center;
     }
     .cardhead {
         display: flex;
         flex-direction: row;
         align-items: center;
-        padding: 0px;
+        margin-bottom: 20px;
         width: 100%;
         height: 96px;
         align-content: center;
         justify-content: flex-start;
+        flex-wrap: nowrap;
     }
     .cardheadh1 {
         display: flex;
@@ -12943,6 +12938,7 @@ textarea.form-control-lg {
         color: #1D2939;
     }
     .cardheadh1-ket {
+        display: flex;
         margin-block-end: 0px;
         font-style: normal;
         font-weight: 300;
@@ -12950,8 +12946,200 @@ textarea.form-control-lg {
         line-height: 19px;
         color: #98A2B3;
         width: 100%;
+        height: 100%;
+        align-content: center;
+        align-items: center;
     }
-/* cardpayment */
+    .swiperlink {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .news_img {
+        display: flex;
+        width: 240px;
+        height: 240px;
+        border-radius: 16px;
+        align-items: center;
+        justify-content: center;
+    }
+    .news_img img {
+        width: 100%;
+        height: 100%;
+        border-radius: 16px;
+    }
+    .swiper {
+        width: 100%;
+        height: 100%;
+    }
+    .news_title {
+        width: 100%;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 40px;
+        color: #1D2939;
+        padding-top: 24px;
+    }
+    .news_txt {
+        width: 100%;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 22px;
+        color: #98A2B3;
+        padding-top: 8px;
+    }
+/* -- cardpayment -- */
+
+/* -- reportcomplaint -- */
+    .reportcomplaint {
+        display: flex;
+        width: 100%;
+        height: 910px;
+        background: #F9FAFB;
+        flex-direction: row;
+        align-content: center;
+    }
+    .rcwrapper {
+        display: flex;
+        flex-direction: row;
+        padding: 80px 120px;
+        width: 100%;
+        height: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .rcleft {
+        display: flex;
+        width: 472px;
+        height: 712px;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .rclefttitle {
+        display: flex;
+        width: 100%;
+        height: 152px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .tsaduan {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 32px;
+        color: #AF2330;
+        margin-block-end: 0em;
+        margin-block-start: 0em;
+    }
+    .tslayanan {
+        font-weight: 400;
+        font-size: 48px;
+        line-height: 60px;
+        color: #1D2939;
+        margin-block-end: 0em;
+        margin-block-start: 0em;
+    }
+    .tslistwrap{
+        height: 480px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+    .tslist {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .tsnumblist {
+        width: 44px;
+        height: 40px;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 40px;
+        color: #AF2330;
+        margin-block-start: 0px;
+        margin-block-end: 0px;
+    }
+    .tsnumlistwrap {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .listtitle {
+        width: 408px;
+        height: 40px;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 40px;
+        color: #475467;
+        margin-block-start: 0px;
+        margin-block-end: 0px;
+    }
+    .listcont {
+        width: 408px;
+        height: auto;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 32px;
+        color: #98A2B3;
+        margin-block-start: 0px;
+        margin-block-end: 0px;
+    }
+    .freport {
+        display: flex;
+        width: 648px;
+        height: auto;
+        justify-content: space-around;
+        flex-direction: row;
+    }
+    .freicon {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 28px 0px;
+        isolation: isolate;
+        width: 4px;
+        height: 80px;
+        margin: 0px -2px;
+        z-index: 1;
+    }
+    .freporthead {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px;
+        width: 646px;
+        height: 746px;
+        background: #FFFFFF;
+        box-shadow: 0px 4px 12px rgba(29, 41, 57, 0.12);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+    }
+    .freportform {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px;
+        width: 646px;
+        height: 750px;
+        background: #F9FAFB;
+        box-shadow: 0px 4px 12px rgba(29, 41, 57, 0.12);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+    }
+    .reportform1 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 2px;
+        width: 646px;
+        height: 662px;
+        background: #F9FAFB;
+        border-radius: 20px;
+    }
+/* -- reportcomplaint -- */
 }
 
 @media (min-width: 375px) {
@@ -12990,6 +13178,104 @@ textarea.form-control-lg {
     .slicktsm{
         height: 851.5625px;
     }
+
+/* -- reportcomplaint -- */
+    .reportcomplaint {
+        display: flex;
+        width: 100%;
+        height: 910px;
+        background: #F9FAFB;
+        flex-direction: row;
+        align-content: center;
+    }
+    .rcwrapper {
+        display: flex;
+        flex-direction: row;
+        padding: 80px 120px;
+        width: 100%;
+        height: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .rcleft {
+        display: flex;
+        width: 472px;
+        height: 712px;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .rclefttitle {
+        display: flex;
+        width: 100%;
+        height: 152px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .tsaduan {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 32px;
+        color: #AF2330;
+        margin-block-end: 0em;
+        margin-block-start: 0em;
+    }
+    .tslayanan {
+        font-weight: 400;
+        font-size: 48px;
+        line-height: 60px;
+        color: #1D2939;
+        margin-block-end: 0em;
+        margin-block-start: 0em;
+    }
+    .tslistwrap{
+        height: 480px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+    .tslist {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .tsnumblist {
+        width: 44px;
+        height: 40px;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 40px;
+        color: #AF2330;
+        margin-block-start: 0px;
+        margin-block-end: 0px;
+    }
+    .tsnumlistwrap {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .listtitle {
+        width: 408px;
+        height: 40px;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 40px;
+        color: #475467;
+        margin-block-start: 0px;
+        margin-block-end: 0px;
+    }
+    .listcont {
+        width: 408px;
+        height: auto;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 32px;
+        color: #98A2B3;
+        margin-block-start: 0px;
+        margin-block-end: 0px;
+    }
+/* -- reportcomplaint -- */
 }
 
 @media (min-width: 1600px) {
