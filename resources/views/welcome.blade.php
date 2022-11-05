@@ -23,6 +23,18 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/tsmgLogo32px-01.png">
     <link rel="icon" type="image/png" sizes="180x180" href="assets/img/tsmgLogo-01-01%20(180x180).png">
     <link rel="icon" type="image/png" sizes="192x192" href="assets/img/tsmgLogo-01-01%20(192x192).png">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" type="text/javascript"></script>
+    <script src="https://kit.fontawesome.com/1e94ef36ed.js" type="text/javascript" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="assets/bootstrap/js/live.js" type="text/javascript"></script>
+    <script src="js/polyline.js" type="text/javascript" ></script>
+
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans:200,300,400,500,600,700,800'>
     <link rel="stylesheet" href="assets/css/Footer-Multi-Column-icons.css">
@@ -35,31 +47,10 @@
     <link rel="stylesheet" type="text/css" href="assets/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="assets/slick/slick-theme.css"/>
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script type="text/javascript" src="assets/bootstrap/js/live.js"></script>
-    <script src="https://kit.fontawesome.com/1e94ef36ed.js" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="js/polyline.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"> --}}
 </head>
 
 <style>
-    .g_id_signin {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding: 20px 32px;
-        gap: 20px;
-        width: 413px;
-        height: 72px;
-        text-align: center;
-    }
     .stepper .line {
         width: 2px;
         background-color: lightgrey !important;
@@ -161,10 +152,9 @@
         <div class="slickitem">
             <div class="slickbg">
                 <div class="slickbody">
-                    <div class="headerbanner" style="max-width: 600px;">
+                    <div class="headerbanner" style="max-width: 100%;">
                         <p class="fssldier1">NGINOVASI X Trans Semarang</p>
-                        <p class="fssldier2">
-                            Download aplikasi<br>
+                        <p class="fssldier2">Download aplikasi<br>
                             <strong>Trans Semarang</strong>, dapatkan<br>
                             info lokasi bus terkini<br> serta lainnya.</span></p>
                         <p class="fssldier3" class="my-1">
@@ -180,11 +170,11 @@
                 </div>
             </div>
         </div>
-        {{-- @foreach ($sliderTop as $slider)
+        @foreach ($sliderTop as $slider)
         <div class="slickitem">
             <img src="data_slider/{{$slider->gambar}}" class="d-block w-100" alt="{{$slider->gambar}}">
         </div>
-        @endforeach --}}
+        @endforeach
     </div>
 {{-- End Slider --}}
 
@@ -213,7 +203,7 @@
                 </div>
                 @endforeach
             </div>
-            <div class="ngi-row1-col1">
+            <div class="ngi-row1-col2">
                 <div class="headdiv">
                     <p><strong>Recent</strong>
                         <span style="font-weight: lighter; color: black;"> News</span>
@@ -399,7 +389,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row freport">
+            <div class="freport">
                 <div class="freicon">
                     <svg width="4" height="25" viewBox="0 0 4 25" fill="none" xmlns="http://www.w3.org/2000/svg"><rect y="0.996826" width="4" height="24" rx="2" fill="#AF2330" /></svg>
                 </div>
@@ -420,7 +410,6 @@
                                             document.write('<input type="email" class="form-control" id="email" name="email" value="{{Auth::user()->email}}" readonly required>');
                                         }
                                     </script>
-                                    {{-- <input type="email" class="form-control" id="emaillapor" placeholder="name@example.com"/> --}}
                                 </div>
                                 <div class="form-group">
                                     <label class="lgnd2"> Subjek Pengaduan </label>
@@ -454,25 +443,25 @@
                         </div>
                     </form>
                     @else
-                    <div class="row" style="display: flex;flex-direction: column;align-items: center;padding: 0px;width: 646px;height: 746px;background: #FFFFFF;box-shadow: 0px 4px 12px rgba(29, 41, 57, 0.12);backdrop-filter: blur(10px);border-radius: 20px;">
-                        <div class="mb-3" style="display: flex;flex-direction: column;align-items: center;padding: 0px;padding-bottom: 2px;width: 646px;height: 662px;background: #FFFFFF;border-radius: 20px;">
-                            <div style="width: 646px;height: 80px;background: #FFFFFF;border-radius: 20px 20px 0 0; margin-bottom: 2px">
-                                <p style="position: absolute;width: 233px;height: 40px;left: 40px;top: 20px;font-family: 'Plus Jakarta Sans';font-style: normal;font-weight: 600;font-size: 32px;line-height: 40px;text-transform: capitalize;color: #1D2939;">Layanan Aduan</p>
+                    <div class="row lgnfirst">
+                        <div class="mb-3 lgnfirstwrap1">
+                            <div class="lgnfirsth1">
+                                <p class="lgnfirsth1text">Layanan Aduan</p>
                             </div>
-                            <div class="mb-3" style="display: flex;flex-direction: column;align-items: flex-start;padding: 40px;gap: 20px;width: 646px;height: 580px;background: #FFFFFF;">
-                                <img style="width: 566px;height: 344px;" src="assets/img/IlustrationCS.png"/>
-                                <div style="width: 566px;height: 200px;left: 40px;top: 424px;">
-                                    <div style="padding: 0px;gap: 4px;width: 566px;height: 92px;">
-                                        <p style="font-weight: 600;font-size: 24px;line-height: 32px;text-align: left;letter-spacing: -0.006em;color: #1D2939;">Anda harus masuk dengan Google untuk melanjutkan</p>
-                                        <p tyle="font-weight: 400;font-size: 20px;line-height: 28px;letter-spacing: -0.006em;color: #98A2B3;">Setelah Anda mengajukan keluhan, kami akan mengirimkan informasi penanganan ke email yang Anda gunakan untuk login.</p>
+                            <div class="mb-3 lgnfirstwrap2">
+                                <img class="lgnfirstwrap2img" src="assets/img/IlustrationCS.png"/>
+                                <div class="lgnfirsth1text2">
+                                    <div class="lgnfirsth2text">
+                                        <p class="lgnfirsth2text1">Anda harus masuk dengan Google untuk melanjutkan</p>
+                                        <p class="lgnfirsth2text2">Setelah Anda mengajukan keluhan, kami akan mengirimkan informasi penanganan ke email yang Anda gunakan untuk login.</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div style="display: flex;flex-direction: row;align-items: center;width: 566px;height: 68px;justify-content: center;">
-                            <a href="/auth/google" class="btn customGPlusSignIn" role="button" type="button" style="display: flex;flex-direction: column;padding: 20px 32px;gap: 20px;width: 413px;height: 72px;background: #FFFFFF;flex-wrap: wrap;border: 1px solid #E4E7EC;box-shadow: 0px 4px 12px rgba(29, 41, 57, 0.12);backdrop-filter: blur(10px);border-radius: 12px;">
+                        <div class="mb-3 GPlusSignIn">
+                            <a href="/auth/google" class="btn GPlusSignIn" role="button" type="button">
                                 <img src="https://cdn.cdnlogo.com/logos/g/35/google-icon.svg" style="width: 32px;height: 32px;">
-                                <span id="name" style="font-weight: 600;font-size: 24px;line-height: 32px;color: #1D2939;">Lanjutkan dengan Google</span>
+                                <span id="name" >Lanjutkan dengan Google</span>
                             </a>
                         </div>
                     </div>
@@ -484,31 +473,32 @@
 {{-- End Report Complaint --}}
 
 {{-- Start Report Tracking  --}}
-    <div title="reporttracking" style="display: flex;align-items: center;justify-content: center;align-content: center;">
-        <div class="col" style="display: flex;flex-direction: row;justify-content: center;align-items: center;padding: 80px 120px;gap: 120px;width: 1440px;height: 316px;">
-            <div class="row" style="display: flex;flex-direction: row;align-items: center;padding: 40px 80px;width: 1200px;height: 156px;background: #1D2939;border-radius: 8px;">
-                <div class="col" style="display: flex;flex-direction: column;justify-content: center;align-items: flex-start;padding: 0px;gap: 4px;width: 507px;height: 76px;">
-                    <span style="font-weight: 300;font-size: 24px;line-height: 32px;color: #ffffff">Have you ever reported a complaint?</span>
-                    <span style="font-weight: 600;font-size: 32px;line-height: 40px;color: #ffffff">Track your complaint report</span>
+    <div class="reporttracking">
+        <div class="col reporttrackingwrap">
+            <div class="row reporttrackingwrap1">
+                <div class="col reporttrackingwrap1left">
+                    <p class="reporttrackingwrap1leftspan1">Apakah Anda pernah melaporkan keluhan?</p>
+                    <p class="reporttrackingwrap1leftspan2">Lacak laporan keluhan Anda</p>
                 </div>
-                <div style="display: flex;flex-direction: row;align-items: center;width: 413px;height: 72px;">
-                    <a href="#modalPengaduan" data-bs-toggle="modal" class="btn customGPlusSignIn" role="button" style="display: flex;flex-direction: column;padding: 20px 32px;gap: 20px;width: 413px;height: 72px;background: #FFFFFF;box-shadow: 0px 4px 12px rgba(29, 41, 57, 0.08);backdrop-filter: blur(10px);border-radius: 8px;flex-wrap: wrap;">
-                        <img src="https://cdn.cdnlogo.com/logos/g/35/google-icon.svg" style="width: 32px;height: 32px;">
-                        <span id="name" style="font-weight: 600;font-size: 24px;line-height: 32px;color: #1D2939;">Lanjutkan dengan Google</span>
+                <div class="reporttrackingwrap1right">
+                    <a href="#modalPengaduan" data-bs-toggle="modal" class="btn reporttrackingwrap1rightbtn" role="button">
+                        <img src="https://cdn.cdnlogo.com/logos/g/35/google-icon.svg">
+                        <p id="name">Lanjutkan dengan Google</p>
                     </a>
                 </div>
             </div>
         </div>
+    </div>
     <div class="modal modal-xl fade" id="modalPengaduan" aria-hidden="true" aria-labelledby="modalPengaduanLabel" tabindex="-1">
         <div class="modal-dialog modal-dialog-scrollable" style="filter: drop-shadow(0px 4px 12px rgba(29, 41, 57, 0.12));">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="modalPengaduanLabel" style="font-weight: 600;font-size: 32px;line-height: 40px;color: #1D2939;">Detail Complaint</h1>
+                    <label class="modal-title fs-5 trck" id="modalPengaduanLabel" style="">Detail Complaint</label>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="col" style="display: flex;flex-direction: row;justify-content: space-around;align-items: center;align-content: center;">
-                        <div class="row" style="width: 600px;height: 496px;padding: 40px;">
+                    <div class="col modalwrap">
+                        <div class="row modalwrapleft">
                             <div class="stepper d-flex flex-column mt-0 ml-0">
                                 <div class="d-flex mb-1">
                                     <div class="d-flex flex-column pr-4 align-items-center">
@@ -593,23 +583,23 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row" style="display: flex;width: 400px;height: 496px;align-content: flex-start;flex-direction: row;justify-content: center;">
-                            <div class="card border-secondary mb-3" style="display: flex;flex-direction: column;align-items: center;">
-                                <div class="card-header" style="width: 100%">
-                                    <div style="display: flex;flex-direction: row;align-items: center;justify-content: flex-start;align-content: center;">
+                        <div class="row modalwrapright">
+                            <div class="card border-secondary mb-5 modalwrapright1">
+                                <div class="card-header modalwraprightch">
+                                    <div class="modalwraprightch1">
                                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM11.7071 6.70711C12.0976 6.31658 12.0976 5.68342 11.7071 5.29289C11.3166 4.90237 10.6834 4.90237 10.2929 5.29289L7 8.58579L5.70711 7.29289C5.31658 6.90237 4.68342 6.90237 4.29289 7.29289C3.90237 7.68342 3.90237 8.31658 4.29289 8.70711L6.29289 10.7071C6.68342 11.0976 7.31658 11.0976 7.70711 10.7071L11.7071 6.70711Z" fill="#114CD6"/>
                                         </svg>
-                                        <p style="padding-left: 10px;font-weight: 600;font-size: 20px;line-height: 28px;letter-spacing: -0.006em;color: #1D2939;margin-bottom: 0px;margin-block-start: 0px;margin-block-end: 0px;">Laporan Diterima</p>
+                                        <p>Laporan Diterima</p>
                                     </div>
                                 </div>
                                 <div class="card-body">
                                     <h5 class="card-title" hidden>Secondary card title</h5>
-                                    <p class="card-text text-muted" style="font-weight: 300;font-size: 16px;line-height: 24px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictumst dolor arcu eleifend in. Enim enim fringilla.</p>
+                                    <p class="card-text text-muted cbt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictumst dolor arcu eleifend in. Enim enim fringilla.</p>
                                 </div>
-                                <a href="#" class="btn" style="padding: 12px 24px;gap: 4px;width: 320px;height: 48px;background: #AF2330;border-radius: 8px;font-weight: 600;font-size: 16px;line-height: 24px;letter-spacing: -0.006em;color: #FFFFFF;">Check Aduan Laporan</a>
+                                <a href="#" class="btn btn1">Check Aduan Laporan</a>
                                 <hr style="margin-top: 10px; margin-bottom: 0px; border-top: 1px none;">
-                                <a href="#" class="btn" style="padding: 12px 24px;gap: 4px;width: 320px;height: 48px;border: 2px solid #E4E7EC;border-radius: 8px;font-weight: 600;font-size: 16px;line-height: 24px;letter-spacing: -0.006em;color: #1D2939;">Batalkan Aduan</a>
+                                <a href="#" class="btn btn2">Batalkan Aduan</a>
                             </div>
                         </div>
                     </div>
@@ -625,89 +615,69 @@
 {{-- End Report Tracking  --}}
 
 {{-- Start Related Link  --}}
-    <div title="relatedlink" style="background-color: #F9FAFB;display: flex;flex-direction: row;justify-content: center;align-items: center;padding: 10px 120px;width: 100%;height: 120px;">
-        <div class="h-100" style="overflow: hidden;padding-left: 120px;padding-right: 120px;width: 100%;">
+    <div class="relatedlink">
+        <div class="h-100 relatedlinkwrap">
             <div class="row align-items-center h-100">
                 <div class="container rounded">
-                    <div class="slider" style="animation: slidein 30s linear infinite;white-space: nowrap;">
-                        <div class="logos" style="width: 60%;display: inline-block;margin: 0px 0;">
-                            <img class="fab fa-4x" src="assets/img/LAPOR-02.png"
-                                style="width: calc(100% / 5);animation: fade-in 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;">
-                            <img class="fab fa-4x" src="assets/img/PEMKOT-03.png"
-                                style="width: calc(100% / 5);animation: fade-in 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;">
-                            <img class="fab fa-4x" src="assets/img/DISHUB-01.png"
-                                style="width: calc(100% / 5);animation: fade-in 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;">
-                            <img class="fab fa-4x" src="assets/img/wndrl-07.png"
-                                style="width: calc(100% / 5);animation: fade-in 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;">
-                            <img class="fab fa-4x" src="assets/img/ATCS-04.png"
-                                style="width: calc(100% / 5);animation: fade-in 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;">
+                    <div class="slider slider-wrap">
+                        <div class="logos">
+                            <img class="fab fa-4x" src="assets/img/LAPOR-02.png">
+                            <img class="fab fa-4x" src="assets/img/PEMKOT-03.png">
+                            <img class="fab fa-4x" src="assets/img/DISHUB-01.png">
+                            <img class="fab fa-4x" src="assets/img/wndrl-07.png">
+                            <img class="fab fa-4x" src="assets/img/ATCS-04.png">
                         </div>
-                        <div class="logos" style="width: 60%;display: inline-block;margin: 0px 0;">
-                            <img class="fab fa-4x" src="assets/img/prwst-05.png"
-                                style="width: calc(100% / 5);animation: fade-in 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;">
-                            <img class="fab fa-4x" src="assets/img/RESTABES-06.png"
-                                style="width: calc(100% / 5);animation: fade-in 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;">
-                            <img class="fab fa-4x" src="assets/img/JATENG-08.png"
-                                style="width: calc(100% / 5);animation: fade-in 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;">
-                            <img class="fab fa-4x" src="assets/img/wndrl-07.png"
-                                style="width: calc(100% / 5);animation: fade-in 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;">
-                            <img class="fab fa-4x" src="assets/img/ATCS-04.png"
-                                style="width: calc(100% / 5);animation: fade-in 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;">
+                        <div class="logos">
+                            <img class="fab fa-4x" src="assets/img/prwst-05.png">
+                            <img class="fab fa-4x" src="assets/img/RESTABES-06.png">
+                            <img class="fab fa-4x" src="assets/img/JATENG-08.png">
+                            <img class="fab fa-4x" src="assets/img/wndrl-07.png">
+                            <img class="fab fa-4x" src="assets/img/ATCS-04.png">
                         </div>
-                        <div class="logos" style="width: 60%;display: inline-block;margin: 0px 0;">
-                            <img class="fab fa-4x" src="assets/img/prwst-05.png"
-                                style="width: calc(100% / 5);animation: fade-in 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;">
-                            <img class="fab fa-4x" src="assets/img/RESTABES-06.png"
-                                style="width: calc(100% / 5);animation: fade-in 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;">
-                            <img class="fab fa-4x" src="assets/img/JATENG-08.png"
-                                style="width: calc(100% / 5);animation: fade-in 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;">
-                            <img class="fab fa-4x" src="assets/img/wndrl-07.png"
-                                style="width: calc(100% / 5);animation: fade-in 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;">
-                            <img class="fab fa-4x" src="assets/img/ATCS-04.png"
-                                style="width: calc(100% / 5);animation: fade-in 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;">
+                        <div class="logos">
+                            <img class="fab fa-4x" src="assets/img/prwst-05.png">
+                            <img class="fab fa-4x" src="assets/img/RESTABES-06.png">
+                            <img class="fab fa-4x" src="assets/img/JATENG-08.png">
+                            <img class="fab fa-4x" src="assets/img/wndrl-07.png">
+                            <img class="fab fa-4x" src="assets/img/ATCS-04.png">
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 {{-- End Related Link  --}}
 
 {{-- Start Footer --}}
-    <div title="footer" style="display: flex;flex-direction: row;align-items: center;align-content: center;justify-content: center;">
-        <footer class="text-white" style="background-color: #AF2330;display: flex;flex-direction: column;align-items: flex-start;padding: 0px;width: 100%;height: 398px;">
-            <div class="col" style="display: flex;flex-direction: column;align-items: flex-start;padding: 40px 120px;width: 100%;height: 338px;justify-content: center;">
-                <div class="row text-lg-start d-flex flex-column item" style="display: flex;flex-direction: row;align-items: flex-start;padding: 0px;width: 100%;height: 48px;">
-                    <img src="assets/img/Logobar.png" alt="" style="display: flex;flex-direction: row;align-items: left;padding: 0px;width: 256.95px;height: 48px;">
+    <div class="footer">
+        <footer class="text-white">
+            <div class="col footerc1">
+                <div class="row text-lg-start d-flex flex-column item">
+                    <img src="assets/img/Logobar.png" alt="Trans-Semarang-Logo">
                 </div>
             </div>
-            <div class="row" style="display: flex;flex-direction: row;padding: 0px;gap: 80px;width: 100%;height: 170px;justify-content: space-between;padding-left: 120px;padding-right: 120px;align-items: flex-start;align-content: center;">
-                <div class="col-auto"style="display: flex;flex-direction: column;align-items: flex-start;row-gap: 15px;width: 546px;height: 170px;align-content: flex-start;">
-                    <p style="font-weight: 700;font-size: 24px;line-height: 34px;letter-spacing: -0.24px;margin-block-start: 0em;margin-block-end: 0em;">TRANS SEMARANG</p>
-                    <p style="font-weight: 400;font-size: 18px;line-height: 24px;letter-spacing: -0.24px;margin-block-start: 0em;margin-block-end: 0em;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et malesuada lobortis quis.</p>
-                    <div style="display: flex;flex-direction: row;align-items: flex-start;padding: 0px;gap: 8px;width: 332px;height: 48px;">
-                        <a href="https://play.google.com/store/apps/details?id=ngi.brtsemarang.apppublic" target="_blank" class=""style="width: 162px;height: 48px;transform: matrix(1, 0, 0, 1, 0, 0);">
-                            <img src="assets/img/Google_Play.png">
-                        </a>
-                        <a href="https://apps.apple.com/id/app/trans-semarang/id1460565652" target="_blank" class="" style="width: 162px;height: 48px;transform: matrix(1, 0, 0, 1, 0, 0);">
-                            <img src="assets/img/App_Store.png">
-                        </a>
+            <div class="row footerr1">
+                <div class="col-auto footerr1c1">
+                    <p class="ftrtext1">TRANS SEMARANG</p>
+                    <p class="ftrtext2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et malesuada lobortis quis.</p>
+                    <div class="ftrlogodn">
+                        <a href="https://play.google.com/store/apps/details?id=ngi.brtsemarang.apppublic" target="_blank"><img src="assets/img/Google_Play.png"></a>
+                        <a href="https://apps.apple.com/id/app/trans-semarang/id1460565652" target="_blank"><img src="assets/img/App_Store.png"></a>
                     </div>
                 </div>
-                <div class="col-auto" style="display: flex;flex-direction: row;align-items: flex-start;padding: 0px;gap: 40px;width: 574px;height: 162px;">
-                    <div class="col-auto" style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;gap: 20px;width: 260px;height: 162px;">
-                        <p style="font-weight: 700;font-size: 24px;line-height: 34px;letter-spacing: -0.24px;margin-block-start: 0em;margin-block-end: 0em;">About</p>
-                        <div class="col-auto" style="font-weight: 400;font-size: 18px;line-height: 24px;letter-spacing: -0.24px;display: flex;flex-direction: column;align-items: flex-start;padding: 0px;gap: 4px;width: 260px;height: 108px;text-decoration-line: none;">
+                <div class="col-auto footerr1c2">
+                    <div class="col-auto">
+                        <p>About</p>
+                        <div class="col-auto footerr1c2ex1">
                             <span class="row"><a class="text-white" href="http://karir.transsemarang.semarangkota.go.id/portal/page/tentang">Profil</a></span>
                             <span class="row"><a class="text-white" href="http://karir.transsemarang.semarangkota.go.id/portal/page/tentang">Team</a></span>
                             <span class="row"><a class="text-white" href="http://karir.transsemarang.semarangkota.go.id/portal/page/tentang">Visi & Misi</a></span>
                             <span class="row"><a class="text-white" href="http://karir.transsemarang.semarangkota.go.id/portal/page/tentang">Tugas Pokok</a></span>
                         </div>
                     </div>
-                    <div class="col-auto" style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;gap: 20px;width: 274px;height: 162px;">
-                        <p style="font-weight: 700;font-size: 24px;line-height: 34px;letter-spacing: -0.24px;margin-block-start: 0em;margin-block-end: 0em;">Supported by</p>
-                        <div class="col-auto" style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;gap: 4px;width: 274px;height: 108px;">
+                    <div class="col-auto">
+                        <p>Supported by</p>
+                        <div class="col-auto footerr1c2ex2">
                             <span class="row"><a class="text-white" href="https://www.semarangkota.go.id/">Pemerintah Kota Semarang 2022</a></span>
                             <span class="row"><a class="text-white" href="https://ppid.semarangkota.go.id/">Walikota Semarang</a></span>
                             <span class="row"><a class="text-white" href="https://dinkes.semarangkota.go.id/">Dinas Kesehatan Kota Semarang</a></span>
@@ -717,8 +687,8 @@
                 </div>
             </div>
             <hr style="margin-top: 10px; margin-bottom: 0px">
-            <div class="d-flex justify-content-between align-items-center pt-3" style="background-color: #921D28;display: flex;flex-direction: row;padding: 20px 120px;width: 100%;height: 60px;">
-                <p class="text-white mb-0" style="font-weight: 300;font-size: 14px;line-height: 20px;letter-spacing: -0.24px;">&#169; NGINOVASI 2022-V.1.1 All rights reserved.</p>
+            <div class="d-flex justify-content-between align-items-center pt-3 btmlogo">
+                <p class="text-white mb-0 btmcpyrght">&#169; NGINOVASI 2022-V.1.1 All rights reserved.</p>
                 <ul class="list-inline mb-0">
                     <li class="list-inline-item">
                         <a href="https://www.facebook.com/bus.trans.semarang/" target="_blank" style="color: #ffffff">
@@ -763,7 +733,7 @@
                 adaptiveHeight: false,
                 arrows: false,
                 autoplay: true,
-                autoplaySpeed: 2000,
+                autoplaySpeed: 10000,
                 cssEase: 'linear',
                 centerMode: true,
                 centerPadding: '0px',
@@ -818,10 +788,10 @@
                 const fileSize = formFile.files.item(0).size;
                 const fileMb = fileSize / 1024 ** 2;
                 if (fileMb >= 2) {
-                    fileResult.innerHTML = "Please select a file less than 2MB.";
+                    fileResult.innerHTML = "Maksimal ukuran foto 2MB.";
                     submitReport.disabled = true;
                 } else {
-                    fileResult.innerHTML = "Success, your file is " + fileMb.toFixed(1) + "MB.";
+                    fileResult.innerHTML = "Ukuran foto anda " + fileMb.toFixed(1) + "MB";
                     submitReport.disabled = false;
                 }
             }
@@ -890,64 +860,63 @@
     </script>
     <script>
         const swiper = new Swiper('.swiper', {
-        // Optional parameters
-        direction: 'horizontal',
-        effect: 'coverflow',
-        grabCursor: true,
-        loop: true,
-        centeredSlides: true,
-        slidesPerView: 'auto',
-        speed: 300,
-        simulateTouch: true,
-        slidesPerView: 4,
-        spaceBetween: 100,
+            // Optional parameters
+            direction: 'horizontal',
+            effect: 'coverflow',
+            grabCursor: true,
+            loop: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            speed: 300,
+            simulateTouch: true,
+            slidesPerView: 4,
+            spaceBetween: 100,
 
-        coverflowEffect: {
-            rotate: 0,
-            stretch: 0,
-            depth: 0,
-            modifier: 3,
-            slideShadows: false
-        },
-        // Navigation arrows
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        // And if we need scrollbar
-        scrollbar: {
-            el: '.swiper-scrollbar',
-        },
-        breakpoints: {
-            // when window width is >= 320px
-            320: {
-            slidesPerView: 1,
-            spaceBetween: 0
+            coverflowEffect: {
+                rotate: 0,
+                stretch: 0,
+                depth: 0,
+                modifier: 3,
+                slideShadows: false
             },
-            // when window width is >= 480px
-            480: {
-            slidesPerView: 2,
-            spaceBetween: 50,
-            centeredSlides: true
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
             },
-            // when window width is >= 640px
-            640: {
-            slidesPerView: 4,
-            spaceBetween: 40,
-            centeredSlides: true
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
             },
-            1440: {
-            slidesPerView: 4,
-            spaceBetween: 350,
-            centeredSlides: true
-            },
-            2559: {
-            slidesPerView: 5,
-            spaceBetween: 0,
-            centeredSlides: true
+            breakpoints: {
+                // when window width is >= 320px
+                320: {
+                slidesPerView: 1,
+                spaceBetween: 0
+                },
+                // when window width is >= 480px
+                480: {
+                slidesPerView: 2,
+                spaceBetween: 50,
+                centeredSlides: true
+                },
+                // when window width is >= 640px
+                640: {
+                slidesPerView: 4,
+                spaceBetween: 40,
+                centeredSlides: true
+                },
+                1440: {
+                slidesPerView: 4,
+                spaceBetween: 350,
+                centeredSlides: true
+                },
+                2559: {
+                slidesPerView: 5,
+                spaceBetween: 0,
+                centeredSlides: true
+                }
             }
-        }
-
         });
     </script>
     <script>
