@@ -13967,6 +13967,21 @@ fieldset:disabled .btn {
         border-radius: 20px 20px 0 0;
     }
 
+    .formjudulh1 {
+        position: absolute;
+        width: 233px;
+        height: 40px;
+        left: 40px;
+        top: 20px;
+        font-family: 'Plus Jakarta Sans';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 40px;
+        text-transform: capitalize;
+        color: #1D2939;
+    }
+
     .insideformwrap {
         display: flex;
         flex-direction: column;
@@ -13985,11 +14000,70 @@ fieldset:disabled .btn {
         padding: 0px;
         isolation: isolate;
         width: 566px;
-        height: 92px;
+        /* height: 92px; */
         color: #98A2B3;
     }
     .lgnd2 {
-        display: flex;flex-direction: column;align-items: flex-start;padding: 0px;isolation: isolate;width: 566px;height: 88px;color: #98A2B3;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        isolation: isolate;
+        width: 566px;
+        /* height: 88px; */
+        color: #98A2B3;
+    }
+    .lgnd3 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        isolation: isolate;
+        width: 566px;
+        /* height: 172px; */
+        color: #98A2B3;
+    }
+    .lgnd4 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        isolation: isolate;
+        width: 566px;
+        /* height: 92px; */
+        color: #98A2B3;
+    }
+    .reportformbtn {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 20px 40px;
+        gap: 12px;
+        width: 646px;
+        /* height: 88px; */
+    }
+    .btnreset {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 12px 24px;
+        gap: 4px;
+        width: 102px;
+        height: 48px;
+        border: 2px solid #E4E7EC;
+        border-radius: 8px;
+    }
+    .btnsubmit {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 159px;
+        height: 48px;
+        background: #AF2330;
+        border-radius: 8px;
     }
 
     /* -- reportcomplaint -- */

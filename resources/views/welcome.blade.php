@@ -34,6 +34,7 @@
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="assets/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="assets/slick/slick-theme.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
@@ -44,6 +45,7 @@
     <script type="text/javascript" src="assets/bootstrap/js/live.js"></script>
     <script src="https://kit.fontawesome.com/1e94ef36ed.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/polyline.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"> --}}
 </head>
 
@@ -406,38 +408,49 @@
                     <form action="/pengaduan.php" method="post" class="row freportform" id="formlapor">
                         <div class="mb-3 reportform1">
                             <div class="formjudul">
-                                <p style="position: absolute;width: 233px;height: 40px;left: 40px;top: 20px;font-family: 'Plus Jakarta Sans';font-style: normal;font-weight: 600;font-size: 32px;line-height: 40px;text-transform: capitalize;color: #1D2939;">Layanan Aduan</p>
+                                <p class="formjudulh1">Layanan Aduan</p>
                             </div>
                             <div class="mb-3 insideformwrap">
-                                <legend class="lgnd1">Your email
-                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com"/>
-                                </legend>
-                                <legend class="lgnd2"> Subjek Pengaduan
+                                <div class="form-group">
+                                    <label class="lgnd1">Your email</label>
+                                    <script>
+                                        if ('{{Auth::user()->email}}' == '') {
+                                            document.write('<input type="email" class="form-control disabled" id="email" name="email" placeholder="Your email"  required>');
+                                        } else {
+                                            document.write('<input type="email" class="form-control" id="email" name="email" value="{{Auth::user()->email}}" readonly required>');
+                                        }
+                                    </script>
+                                    {{-- <input type="email" class="form-control" id="emaillapor" placeholder="name@example.com"/> --}}
+                                </div>
+                                <div class="form-group">
+                                    <label class="lgnd2"> Subjek Pengaduan </label>
                                     <select class="form-select" aria-label="Default select example" required>
                                         <option selected disabled value="">Materi Pengaduan...</option>
-                                        <option value="1"><span>1.Pelanggaran terhadap kode etik dan/atau pedoman perilaku aparat</span></option>
-                                        <option value="2"><span>2.Penyalahgunaan wewenang/jabatan</span></option>
-                                        <option value="3"><span>3.Pelanggaran sumpah jabatan</span></option>
-                                        <option value="4"><span>4.Pelanggaran terhadap peraturan disiplin Pegawai Negeri Sipil</span></option>
-                                        <option value="5"><span>5.Perbuatan tercela, yaitu perbuatan amoral, asusila, atau perbuatan yang tidak selayaknya dilakukan oleh seorang aparat maupun selaku anggota masyarakat</span></option>
-                                        <option value="6"><span>6.Pelanggaran hukum, baik dilakukan dengan sengaja, maupun karena kelalaian dan ketidakpahaman</span></option>
-                                        <option value="7"><span>7.Mal administrasi, yaitu terjadinya kesalahan, kekeliruan atau kelalaian yang bersifat administratif</span></option>
-                                        <option value="8"><span>8.Pelayanan publik yang tidak memuaskan yang dapat merugikan pihak-pihak yang berkepentingan serta masyarakat secara umum</span></option>
+                                        <option value="1">1.Pelanggaran terhadap kode etik dan/atau pedoman perilaku aparat</option>
+                                        <option value="2">2.Penyalahgunaan wewenang/jabatan</option>
+                                        <option value="3">3.Pelanggaran sumpah jabatan</option>
+                                        <option value="4">4.Pelanggaran terhadap peraturan disiplin Pegawai Negeri Sipil</option>
+                                        <option value="5">5.Perbuatan tercela, yaitu perbuatan amoral, asusila, atau perbuatan yang tidak selayaknya dilakukan oleh seorang aparat maupun selaku anggota masyarakat</option>
+                                        <option value="6">6.Pelanggaran hukum, baik dilakukan dengan sengaja, maupun karena kelalaian dan ketidakpahaman</option>
+                                        <option value="7">7.Mal administrasi, yaitu terjadinya kesalahan, kekeliruan atau kelalaian yang bersifat administratif</option>
+                                        <option value="8">8.Pelayanan publik yang tidak memuaskan yang dapat merugikan pihak-pihak yang berkepentingan serta masyarakat secara umum</option>
                                     </select>
                                     <div class="invalid-feedback"> Silahkan pilih materi pengaduan.</div>
-                                </legend>
-                                <legend style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;isolation: isolate;width: 566px;height: 172px;color: #98A2B3;"> Deskripsi Kejadian
+                                </div>
+                                <div class="form-group">
+                                    <label class="lgnd3"> Deskripsi Kejadian </label>
                                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="Sebutkan peristiwa, waktu terjadinya, dan lokasi kejadian atas pengaduan anda" required></textarea>
-                                </legend>
-                                <legend style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;isolation: isolate;width: 566px;height: 92px;color: #98A2B3;">Foto Pendukung
+                                </div>
+                                <div class="form-group">
+                                    <label class="lgnd4">Foto Pendukung
                                     <input class="form-control" type="file" id="formFile" accept=".jpg,.jpeg,.png" onchange="Filevalidation()" />
-                                </legend>
+                                </div>
                                 <p id="fileResult"></p>
                             </div>
                         </div>
-                        <div style="display: flex;flex-direction: row;justify-content: flex-end;align-items: center;padding: 20px 40px;gap: 12px;width: 646px;height: 88px;">
-                            <button type="reset" class="btn btn-outline-secondary" style="display: flex;flex-direction: row;justify-content: center;align-items: center;padding: 12px 24px;gap: 4px;width: 102px;height: 48px;border: 2px solid #E4E7EC;border-radius: 8px;">Cancel</button>
-                            <button id="submitReport" type="submit" class="btn btn-danger text-white" style="display: flex;flex-direction: row;justify-content: center;align-items: center;width: 159px;height: 48px;background: #AF2330;border-radius: 8px;" disabled>Submit Report</button>
+                        <div class="reportformbtn">
+                            <button type="reset" class="btn btn-outline-secondary">Cancel</button>
+                            <button id="submitReport" type="submit" class="btn btn-danger text-white" disabled>Submit Report</button>
                         </div>
                     </form>
                     @else
@@ -791,6 +804,8 @@
                     // instead of a settings object
                 ]
             });
+
+            $('.form-select').select2();
         });
 
     </script>
