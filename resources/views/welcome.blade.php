@@ -30,9 +30,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" type="text/javascript"></script>
-    <script src="https://kit.fontawesome.com/1e94ef36ed.js" type="text/javascript" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-    <script src="assets/bootstrap/js/live.js" type="text/javascript"></script>
+    <script src="https://kit.fontawesome.com/1e94ef36ed.js" type="text/javascript" crossorigin="anonymous"></script>
+    {{-- <script src="assets/bootstrap/js/live.js" type="text/javascript"></script> --}}
     <script src="js/polyline.js" type="text/javascript" ></script>
 
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
@@ -74,7 +74,7 @@
         font-weight: 400;
         line-height: 1.5;
         text-align: left;
-        overflow-x:hidden !important;
+        /* overflow-x:hidden !important; */
         -webkit-overflow-scrolling: auto;
     }
 </style>
@@ -733,7 +733,7 @@
                 adaptiveHeight: false,
                 arrows: false,
                 autoplay: true,
-                autoplaySpeed: 10000,
+                autoplaySpeed: 3000,
                 cssEase: 'linear',
                 centerMode: true,
                 centerPadding: '0px',
@@ -904,6 +904,16 @@
                 640: {
                 slidesPerView: 4,
                 spaceBetween: 40,
+                centeredSlides: true
+                },
+                768: {
+                slidesPerView: 4,
+                spaceBetween: 10,
+                centeredSlides: true
+                },
+                1024: {
+                slidesPerView: 4,
+                spaceBetween: 100,
                 centeredSlides: true
                 },
                 1440: {
