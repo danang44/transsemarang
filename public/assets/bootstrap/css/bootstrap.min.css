@@ -19621,6 +19621,7 @@ fieldset:disabled .btn {
         box-shadow: 0px 4px 12px rgba(29, 41, 57, 0.12);
         backdrop-filter: blur(10px);
         border-radius: 20px;
+        flex-wrap: nowrap;
     }
 
     .reportform1 {
