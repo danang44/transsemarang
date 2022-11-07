@@ -15,6 +15,11 @@
             //         maxZoom: 18,
             //     }
 
+
+			// Hybrid: s,h;
+			// Satellite: s;
+			// Streets: m;
+			// Terrain: p;
             // alert(type);
             if (type === "1") {
                 $("#default").show();
@@ -52,16 +57,46 @@
                 $("#korf1aa").hide();
                 $("#korf1b").hide();
                 $("#korf1bb").hide();
-                var map = L.map("default").setView([-6.996667, 110.416664], 13);
-                var tiles = L.tileLayer(
-                    "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                var map = L.map("default");
+				L.tileLayer(
+                    "http://{s}.google.com/vt?lyrs=m&x={x}&y={y}&z={z}",
                     {
                         maxZoom: 20,
-                        zoomControl: true,
-                        attribution:
-                            '&copy; Trans Semarang | <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+                        subdomains: ["mt0", "mt1", "mt2", "mt3"],
                     }
                 ).addTo(map);
+                // var encoded = 'pdpi@gcd`TKbA~@f@TEFHPJz@kBPQPEPYdBiDxCyFvAgDp@qBrB}IfAqEn@sDT{BNwDIuGOmDUwBOsAWkDe@aHiAuRIiCIuFGuBW_G@yBZ_BZu@`@o@pAmA`BkAn@g@l@q@|@aBv@eC`AmDj@uDPqBXsENkEt@gJFgADiEG{JRuJN}ETaDT{BNu@d@cAl@y@fFsF^]t@u@dAoAnDcDrG}EbH{FhEiDbAy@jAoAtAwB\\aA|ByIdBoIJiA@{@AeAqA}Wc@kCOk@Qe@}@iB]g@i@i@oI}Ei@e@[a@O_@Mi@Iu@CoAVaCr@uDb@oBjA_EhAeDxAaDZi@|@gAt@o@bAi@dBy@XSXURYXo@TiAXqBNqBDu@TuCFaCLmCXiDPmAhCuKNu@b@gD@m@AWq@mHOuDg@aHCaAOsAE_AI]UqCkBgLy@yHw@mGiAaJ{BmPi@aD_@qBSKMOISAU@ODOHKTOUoAiBwL{AyIMFGWFVLG_B{IoAoGkCkLm@kDeC_U_@wDGcBUsBCiA@ADe@Xo@H[f@mD?SAQWe@E[@[^Ub@?n@ApAoDtDqKtDqKt@_CmAuCoKwD}QkGo@aI]kCo@iHCe@VO\\FpCzBpXzYjBxB`AVl@Cf@@j@Ch@Q~H}T~EkVx@aDpEmLRo@??xCeIBYCSqAe@SUEQAWzA}DTK`@EPDn@TVHVBNWNa@`@_A~@aCbCcG`@kAnEyKfAuCDAtCyHd@mD^oB^uArA{DtHkVLm@X_A`FyNp@wBfEiM~@aCdAgCtDcHnFuJlA_C|GwLpG{Kf@cAnAsDn@cCtCwOrBuK|Gy]p@{CtDcSfAoFvCyPlAyHT}@`Ka[~EoOrD{KhC}HbCaHpAcDzAeFv@uClBgI\\uAj@qC|AwGWIqE_A@lAy@xCKHMBMC';
+                var encoded =
+                    "pdpi@gcd`TKbA~@f@TEFHPJz@kBPQPEPYdBiDxCyFvAgDp@qBrB}IfAqEn@sDT{BNwDIuGOmDUwBOsAWkDe@aHiAuRIiCIuFGuBW_G@yBZ_BZu@`@o@pAmA`BkAn@g@l@q@|@aBv@eC`AmDj@uDPqBXsENkEt@gJFgADiEG{JRuJN}ETaDT{BNu@d@cAl@y@fFsF^]t@u@dAoAnDcDrG}EbH{FhEiDbAy@jAoAtAwB\\aA|ByIdBoIJiA@{@AeAqA}Wc@kCOk@Qe@}@iB]g@i@i@oI}Ei@e@[a@O_@Mi@Iu@CoAVaCr@uDb@oBjA_EhAeDxAaDZi@|@gAt@o@bAi@dBy@XSXURYXo@TiAXqBNqBDu@TuCFaCLmCXiDPmAhCuKNu@b@gD@m@AWq@mHOuDg@aHCaAOsAE_AI]UqCkBgLy@yHw@mGiAaJ{BmPi@aD_@qBSKMOISAU@ODOHKTOUoAiBwL{AyIMFGWFVLG_B{IoAoGkCkLm@kDeC_U_@wDGcBUsBCiA@_ADe@Xo@H[f@mD?SAQWe@E[@[^Ub@?n@ApAoDtDqKtDqKt@_CmAuCoKwD}QkGo@aI]kCo@iHCe@VO\\FpCzBpXzYjBxB`AVl@Cf@@j@Ch@Q~H}T~EkVx@aDpEmLRo@??xCeIBYCSqAe@SUEQAWzA}DTK`@EPDn@TVHVBNWNa@`@_A~@aCbCcG`@kAnEyKfAuCDAtCyHd@mD^oB^uArA{DtHkVLm@X_A`FyNp@wBfEiM~@aCdAgCtDcHnFuJlA_C|GwLpG{Kf@cAnAsDn@cCtCwOrBuK|Gy]p@{CtDcSfAoFvCyPlAyHT}@`Ka[~EoOrD{KhC}HbCaHpAcDzAeFv@uClBgI\\uAj@qC|AwGWIqE_A_@lAy@xCKHMBMC";
+
+                var polyline = L.Polyline.fromEncoded(encoded, {
+                    color: "#AF2330",
+                    stroke: true,
+                    opacity: 1,
+                    stroke: true,
+                    opacity: 1,
+                    weight: 8,
+                })
+				// L.marker([-7.012321, 110.418670,12]).addTo(map);
+				
+				var coridorIcon = L.icon({
+					iconUrl: 'assets/icon/busstop.png',
+					// shadowUrl: 'leaf-shadow.png',
+				
+					iconSize:     [30, 35], // size of the icon
+					shadowSize:   [50, 64], // size of the shadow
+					iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+					shadowAnchor: [4, 62],  // the same for the shadow
+					popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+				});
+				
+				  
+				L.marker([-7.017536, 	110.492962,12], {icon: coridorIcon}).addTo(map);
+				L.marker([-7.019099,	110.492796,12], {icon: coridorIcon}).addTo(map);
+				L.marker([-7.014584,	110.481580,12], {icon: coridorIcon}).addTo(map);
+				L.marker([-7.012523,	110.476772,12], {icon: coridorIcon}).addTo(map);
+
+                map.fitBounds(polyline.getBounds());
             } else if (type === "2") {
                 $("#default").hide();
                 $("#map").hide();
@@ -118,6 +153,10 @@
                     opacity: 1,
                     weight: 8,
                 }).addTo(map);
+
+				L.marker([-7.012321, 110.418670,12],[-7.002550, 110.402296,12]).addTo(map);
+				
+				
 
                 map.fitBounds(polyline.getBounds());
             } else if (type === "3") {
