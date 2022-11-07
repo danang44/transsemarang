@@ -727,6 +727,19 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.38/dist/sweetalert2.all.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js" integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
     <script type="text/javascript" src="assets/slick/slick.min.js"></script>
+<!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+        (function(){
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/63688c02b0d6371309cda477/1gh865r2q';
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
     <script type="text/javascript">
         $(document).ready(function(){
             $('.slicktsm').slick({
@@ -953,7 +966,7 @@
         }
     </script>
      <script src="/js/Polyline.encoded.js"></script>
-     
+
     <script>
 $.ajax({
     type:"GET",
@@ -975,7 +988,7 @@ $.ajax({
 				var coridorIcon = L.icon({
 					iconUrl: 'assets/icon/busstop.png',
 					// shadowUrl: 'leaf-shadow.png',
-				
+
 					iconSize:     [40, 45], // size of the icon
 					shadowSize:   [50, 64], // size of the shadow
 					iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
@@ -983,7 +996,7 @@ $.ajax({
 					popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
 				});
 
-                
+
 				L.marker([-7.012321, 110.418670,12], {icon: coridorIcon}).addTo(map);
 				L.marker([-6.991553, 110.353506,12], {icon: coridorIcon}).addTo(map);
 
