@@ -405,9 +405,9 @@
                                     <label class="lgnd1">Your email</label>
                                     <script>
                                         if ('{{Auth::user()->email}}' == '') {
-                                            document.write('<input type="email" class="form-control disabled" id="email" name="email" placeholder="Your email"  required>');
+                                            document.write('<span>Your email</span>');
                                         } else {
-                                            document.write('<input type="email" class="form-control" id="email" name="email" value="{{Auth::user()->email}}" readonly required>');
+                                            document.write('<span>{{Auth::user()->email}}</span>');
                                         }
                                     </script>
                                 </div>
@@ -729,7 +729,14 @@
     <script type="text/javascript" src="assets/slick/slick.min.js"></script>
 <!--Start of Tawk.to Script-->
     <script type="text/javascript">
-        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+        var Tawk_API=Tawk_API||{};
+        Tawk_API.visitor = {
+            name    : 'visitor name',
+            email   : 'visitor@email.com'
+        };
+        window.name = '{{ Auth::user()->name }}';
+        console.log(window.name);
+        var Tawk_LoadStart=new Date();
         (function(){
         var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
         s1.async=true;
@@ -739,7 +746,7 @@
         s0.parentNode.insertBefore(s1,s0);
         })();
     </script>
-    <!--End of Tawk.to Script-->
+<!--End of Tawk.to Script-->
     <script type="text/javascript">
         $(document).ready(function(){
             $('.slicktsm').slick({
