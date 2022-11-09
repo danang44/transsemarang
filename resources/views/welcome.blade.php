@@ -1,5 +1,3 @@
-@include('sweetalert::alert')
-
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
@@ -7,22 +5,22 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
     <title>Trans Semarang | Home</title>
-    {{-- <base href="http://192.168.18.14:8000"> --}}
+    <base href="https://transsemarang.semarangkota.go.id/v2/">
 
     <meta name="twitter:description" content="Twitter Resmi BLU UPTD Trans Semarang  Jl. Tambak Aji Raya No. 5 Kode Pos 50185  CS : 1-5000-94  IG: transsemarang  FB: TRANS Semarang">
-    <meta property="og:image" content="assets/img/Trans_Semarang_icon.svg">
+    <meta property="og:image" content="{{asset('assets/img/Trans_Semarang_icon.svg')}}">
     <meta property="og:type" content="website">
     <meta name="description" content="Trans Semarang adalah sistem transportasi angkutan massal berbasis jalan di Jawa Tengah yang beroperasi di Kota dan Kabupaten Semarang. Layanan ini dioperasikan guna mengurai kemacetan di Kota Semarang serta untuk mengakomodasi para pelaju menuju pusat kota dan destinasi wisata yang ada di Kota Semarang.">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:image" content="assets/img/tsmgLogo32px-01.png">
+    <meta name="twitter:image" content="{{asset('assets/img/tsmgLogo32px-01.png')}}">
     <meta name="twitter:title" content="Trans Semarang | @transsemarang">
     <meta name="google-signin-client_id"content="662068769407-1qc1taetjo897853c5lkl755p2c5csvi.apps.googleusercontent.com">
 
-    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="assets/img/tsmgLogo-01-01%20(180x180).png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/tsmgLogo-01-01%20(16x16).png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/tsmgLogo32px-01.png">
-    <link rel="icon" type="image/png" sizes="180x180" href="assets/img/tsmgLogo-01-01%20(180x180).png">
-    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/tsmgLogo-01-01%20(192x192).png">
+    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="{{asset('assets/img/tsmgLogo-01-01%20(180x180).png')}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('assets/img/tsmgLogo-01-01%20(16x16).png')}}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{asset('assets/img/tsmgLogo32px-01.png')}}">
+    <link rel="icon" type="image/png" sizes="180x180" href="{{asset('assets/img/tsmgLogo-01-01%20(180x180).png')}}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{asset('assets/img/tsmgLogo-01-01%20(192x192).png')}}">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
@@ -33,19 +31,20 @@
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script src="https://kit.fontawesome.com/1e94ef36ed.js" type="text/javascript" crossorigin="anonymous"></script>
     {{-- <script src="assets/bootstrap/js/live.js" type="text/javascript"></script> --}}
-    <script src="js/polyline.js" type="text/javascript" ></script>
+    <script src="{{asset('js/polyline.js')}}" type="text/javascript" ></script>
 
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    {{-- <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css"> --}}
+    <link rel="stylesheet" href="{{asset('assets/bootstrap/css/bootstrap.min.css')}}">
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans:200,300,400,500,600,700,800'>
-    <link rel="stylesheet" href="assets/css/Footer-Multi-Column-icons.css">
-    <link rel="stylesheet" href="assets/css/Hero-Clean-Reverse-images.css">
-    <link rel="stylesheet" href="assets/css/logo-slider.css">
+    <link rel="stylesheet" href="{{asset('assets/css/Footer-Multi-Column-icons.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/Hero-Clean-Reverse-images.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/logo-slider.css')}}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.38/dist/sweetalert2.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="assets/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="assets/slick/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/slick/slick.css')}}"/>
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/slick/slick-theme.css')}}"/>
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"> --}}
 </head>
@@ -81,13 +80,13 @@
 
 <body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="72">
 {{-- Start Navbar --}}
-    <nav id="mainNav" class="navbar navbar-expand-lg shadow fixed-top bg-darkngi sticky-top" style="/*height: 100px;*/">
+    <nav id="mainNav" class="navbar navbar-expand-lg shadow fixed-top bg-darkngi sticky-top">
         <div class="container-fluid">
-            <a class="navbar-brand d-flex align-items-center" href="#home">
+            <a class="navbar-brand d-flex align-items-center" href="{{url('/')}}">
                 <span class="d-flex justify-content-center align-items-center me-2">
-                    <img class="border rounded" src="assets/img/tsmgLogo32px-01.png" width="36" height="36">
+                    <img class="border rounded" src="{{asset('assets/img/tsmgLogo32px-01.png')}}" width="36" height="36">
                 </span>
-                <img src="assets/img/textLogo.png" width="198.87" height="44">
+                <img src="{{asset('assets/img/textLogo.png')}}" width="198.87" height="44">
             </a>
             <button data-bs-toggle="collapse" data-bs-target="#navbarResponsive" class="navbar-toggler text-white bg-primary navbar-toggler-right text-uppercase rounded">
                 <span class="visually-hidden">Toggle navigation</span>
@@ -96,13 +95,10 @@
             <div id="navbarResponsive" class="collapse navbar-collapse" id="navcol-2">
                 <ul class="navbar-nav ms-auto rounded">
                     <li class="nav-item mx-3 mx-lg-1 rounded">
-                        <a class="nav-link py-3 px-0 px-lg-3 rounded"
-                            href="http://karir.transsemarang.semarangkota.go.id" target="_blank">CAREER</a>
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded" href="http://karir.transsemarang.semarangkota.go.id" target="_blank">CAREER</a>
                     </li>
                     <li class="nav-item mx-3 mx-lg-1">
-                        <a class="nav-link py-3 px-0 px-lg-3 rounded"
-                            href="https://ppid.semarangkota.go.id/kb/jalur-rute-brt-trans-semarang-dan-feeder-di-kota-semarang"
-                            target="_blank">BUS & RUTE</a>
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded" href="https://ppid.semarangkota.go.id/kb/jalur-rute-brt-trans-semarang-dan-feeder-di-kota-semarang" target="_blank">BUS & RUTE</a>
                     </li>
                     <li class="nav-item mx-3 mx-lg-1">
                         <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#hotlineCenter" onclick="sweet();">HOTLINE CENTER</a>
@@ -150,7 +146,7 @@
 {{-- Start Slider --}}
     <div class="slicktsm single-item">
         <div class="slickitem">
-            <div class="slickbg">
+            <div class="slickbg" style="background: url('{{asset('assets/img/Hero.png')}}') top center / 100% auto no-repeat;">
                 <div class="slickbody">
                     <div class="headerbanner" style="max-width: 100%;">
                         <p class="fssldier1">NGINOVASI X Trans Semarang</p>
@@ -163,9 +159,12 @@
                         </p>
                         <a class="btnggl btn me-2" role="button"
                             href="https://play.google.com/store/apps/details?id=ngi.brtsemarang.apppublic"
-                            target="_blank"></a>
+                            target="_blank"
+                            style="background: url('{{asset('assets/img/Google_Play.png')}}') center / 100% no-repeat;"></a>
                         <a class="btnapple btn" role="button"
-                            href="https://apps.apple.com/id/app/trans-semarang/id1460565652" target="_blank"></a>
+                            href="https://apps.apple.com/id/app/trans-semarang/id1460565652"
+                            target="_blank"
+                            style="background: url('{{asset('assets/img/App_Store.png')}}') center / 100% no-repeat;"></a>
                     </div>
                 </div>
             </div>
@@ -213,7 +212,7 @@
                     <div class="gallery">
                         @foreach ($RNarticles as $RNart)
                         <div class="gallery-item" tabindex="0">
-                            <img src="{{ $RNart->gambar }}" class="gallery-image" alt="{{ $RNart->gambar }}" />
+                            <img src="public/{{ $RNart->gambar }}" class="gallery-image" alt="{{ $RNart->gambar }}" />
                             <div class="gallery-item-info">
                                 <a class="gallery-item-type" href="/detailarticle/{{$RNart->title}}">
                                     <p class="fw-semibold text-white">{{ $RNart->title }}</p>
@@ -341,7 +340,7 @@
                 <div class="swiper-slide">
                     <a class="swiperlink" href="#">
                         <div class="news_img" >
-                            <img src="/data_card/{{$dataCard->image}}" alt="{{$dataCard->image}}"/>
+                            <img src="data_card/{{$dataCard->image}}" alt="{{$dataCard->name}}"/>
                         </div>
                         <div class="news_title text-justify">{{$dataCard->name}}</div>
                         <p class="news_txt text-justify">{{$dataCard->desc}}</p>
@@ -444,25 +443,25 @@
                     </form>
                     @else
                     <div class="row lgnfirst">
-                        <div class="mb-3 lgnfirstwrap1">
+                        <div class="lgnfirstwrap1">
                             <div class="lgnfirsth1">
                                 <p class="lgnfirsth1text">Layanan Aduan</p>
                             </div>
                             <div class="mb-3 lgnfirstwrap2">
                                 <img class="lgnfirstwrap2img" src="assets/img/IlustrationCS.png"/>
                                 <div class="lgnfirsth1text2">
-                                    <div class="lgnfirsth2text">
-                                        <p class="lgnfirsth2text1">Anda harus masuk dengan Google untuk melanjutkan</p>
-                                        <p class="lgnfirsth2text2">Setelah Anda mengajukan keluhan, kami akan mengirimkan informasi penanganan ke email yang Anda gunakan untuk login.</p>
-                                    </div>
+                                    <p>Anda harus masuk dengan Google untuk melanjutkan</p>
+                                </div>
+                                <div class="mb-3 GPlusSignIn">
+                                    <a href="/auth/google" class="btn GPlusSignIn" role="button" type="button">
+                                        <img src="https://cdn.cdnlogo.com/logos/g/35/google-icon.svg" style="width: 32px;height: 32px;">
+                                        <span id="name" >Lanjutkan dengan Google</span>
+                                    </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="mb-3 GPlusSignIn">
-                            <a href="/auth/google" class="btn GPlusSignIn" role="button" type="button">
-                                <img src="https://cdn.cdnlogo.com/logos/g/35/google-icon.svg" style="width: 32px;height: 32px;">
-                                <span id="name" >Lanjutkan dengan Google</span>
-                            </a>
+                        <div class="mb-3 lgnfirsth2text">
+                            <p class="lgnfirsth2text2">Setelah Anda mengajukan keluhan, kami akan mengirimkan informasi penanganan ke email yang Anda gunakan untuk login.</p>
                         </div>
                     </div>
                     @endif
@@ -727,16 +726,10 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.38/dist/sweetalert2.all.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js" integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
     <script type="text/javascript" src="assets/slick/slick.min.js"></script>
+    <script src="{{asset('js/Polyline.encoded.js')}}"></script>
 <!--Start of Tawk.to Script-->
     <script type="text/javascript">
-        var Tawk_API=Tawk_API||{};
-        Tawk_API.visitor = {
-            name    : 'visitor name',
-            email   : 'visitor@email.com'
-        };
-        window.name = '{{ Auth::user()->name }}';
-        console.log(window.name);
-        var Tawk_LoadStart=new Date();
+        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
         (function(){
         var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
         s1.async=true;
@@ -1073,6 +1066,14 @@ $.ajax({
                 rute.appendChild(ruteList[i]);
             };
         };
+    </script>
+    <script src="{{ asset('/sw.js') }}"></script>
+    <script>
+        if (!navigator.serviceWorker.controller) {
+            navigator.serviceWorker.register("/sw.js").then(function (reg) {
+                console.log("Service worker has been registered for scope: " + reg.scope);
+            });
+        }
     </script>
 </body>
 
