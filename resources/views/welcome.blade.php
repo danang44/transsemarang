@@ -965,15 +965,17 @@
             })
         }
     </script>
+     <script src="/js/Polyline.encoded.js"></script>
+
     <script>
-        $.ajax({
-            type:"GET",
-            url:"https://gps.brtnusantara.com/dev/trans_semarang/api_v1/getAllRoutes",
-            data: {},
-            success:function(result){
-                console.log(result);
-            }
-        })
+$.ajax({
+    type:"GET",
+    url:"https://gps.brtnusantara.com/dev/trans_semarang/api_v1/getAllRoutes",
+    data: {},
+    success:function(result){
+        console.log(result);
+    }
+})
 
       	var map = new L.Map('map').setView([-6.996667, 110.416664], 13);
 		var tiles = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
