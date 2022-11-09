@@ -1,5 +1,3 @@
-@include('sweetalert::alert')
-
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
@@ -7,22 +5,22 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
     <title>Trans Semarang | Home</title>
-    {{-- <base href="http://192.168.18.14:8000"> --}}
+    <base href="https://transsemarang.semarangkota.go.id/v2/">
 
     <meta name="twitter:description" content="Twitter Resmi BLU UPTD Trans Semarang  Jl. Tambak Aji Raya No. 5 Kode Pos 50185  CS : 1-5000-94  IG: transsemarang  FB: TRANS Semarang">
-    <meta property="og:image" content="assets/img/Trans_Semarang_icon.svg">
+    <meta property="og:image" content="{{asset('assets/img/Trans_Semarang_icon.svg')}}">
     <meta property="og:type" content="website">
     <meta name="description" content="Trans Semarang adalah sistem transportasi angkutan massal berbasis jalan di Jawa Tengah yang beroperasi di Kota dan Kabupaten Semarang. Layanan ini dioperasikan guna mengurai kemacetan di Kota Semarang serta untuk mengakomodasi para pelaju menuju pusat kota dan destinasi wisata yang ada di Kota Semarang.">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:image" content="assets/img/tsmgLogo32px-01.png">
+    <meta name="twitter:image" content="{{asset('assets/img/tsmgLogo32px-01.png')}}">
     <meta name="twitter:title" content="Trans Semarang | @transsemarang">
     <meta name="google-signin-client_id"content="662068769407-1qc1taetjo897853c5lkl755p2c5csvi.apps.googleusercontent.com">
 
-    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="assets/img/tsmgLogo-01-01%20(180x180).png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/tsmgLogo-01-01%20(16x16).png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/tsmgLogo32px-01.png">
-    <link rel="icon" type="image/png" sizes="180x180" href="assets/img/tsmgLogo-01-01%20(180x180).png">
-    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/tsmgLogo-01-01%20(192x192).png">
+    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="{{asset('assets/img/tsmgLogo-01-01%20(180x180).png')}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('assets/img/tsmgLogo-01-01%20(16x16).png')}}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{asset('assets/img/tsmgLogo32px-01.png')}}">
+    <link rel="icon" type="image/png" sizes="180x180" href="{{asset('assets/img/tsmgLogo-01-01%20(180x180).png')}}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{asset('assets/img/tsmgLogo-01-01%20(192x192).png')}}">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
@@ -33,19 +31,20 @@
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script src="https://kit.fontawesome.com/1e94ef36ed.js" type="text/javascript" crossorigin="anonymous"></script>
     {{-- <script src="assets/bootstrap/js/live.js" type="text/javascript"></script> --}}
-    <script src="js/polyline.js" type="text/javascript" ></script>
+    <script src="{{asset('js/polyline.js')}}" type="text/javascript" ></script>
 
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    {{-- <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css"> --}}
+    <link rel="stylesheet" href="{{asset('assets/bootstrap/css/bootstrap.min.css')}}">
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans:200,300,400,500,600,700,800'>
-    <link rel="stylesheet" href="assets/css/Footer-Multi-Column-icons.css">
-    <link rel="stylesheet" href="assets/css/Hero-Clean-Reverse-images.css">
-    <link rel="stylesheet" href="assets/css/logo-slider.css">
+    <link rel="stylesheet" href="{{asset('assets/css/Footer-Multi-Column-icons.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/Hero-Clean-Reverse-images.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/logo-slider.css')}}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.38/dist/sweetalert2.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="assets/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="assets/slick/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/slick/slick.css')}}"/>
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/slick/slick-theme.css')}}"/>
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"> --}}
 </head>
@@ -81,13 +80,13 @@
 
 <body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="72">
 {{-- Start Navbar --}}
-    <nav id="mainNav" class="navbar navbar-expand-lg shadow fixed-top bg-darkngi sticky-top" style="/*height: 100px;*/">
+    <nav id="mainNav" class="navbar navbar-expand-lg shadow fixed-top bg-darkngi sticky-top">
         <div class="container-fluid">
-            <a class="navbar-brand d-flex align-items-center" href="#home">
+            <a class="navbar-brand d-flex align-items-center" href="{{url('/')}}">
                 <span class="d-flex justify-content-center align-items-center me-2">
-                    <img class="border rounded" src="assets/img/tsmgLogo32px-01.png" width="36" height="36">
+                    <img class="border rounded" src="{{asset('assets/img/tsmgLogo32px-01.png')}}" width="36" height="36">
                 </span>
-                <img src="assets/img/textLogo.png" width="198.87" height="44">
+                <img src="{{asset('assets/img/textLogo.png')}}" width="198.87" height="44">
             </a>
             <button data-bs-toggle="collapse" data-bs-target="#navbarResponsive" class="navbar-toggler text-white bg-primary navbar-toggler-right text-uppercase rounded">
                 <span class="visually-hidden">Toggle navigation</span>
@@ -96,13 +95,10 @@
             <div id="navbarResponsive" class="collapse navbar-collapse" id="navcol-2">
                 <ul class="navbar-nav ms-auto rounded">
                     <li class="nav-item mx-3 mx-lg-1 rounded">
-                        <a class="nav-link py-3 px-0 px-lg-3 rounded"
-                            href="http://karir.transsemarang.semarangkota.go.id" target="_blank">CAREER</a>
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded" href="http://karir.transsemarang.semarangkota.go.id" target="_blank">CAREER</a>
                     </li>
                     <li class="nav-item mx-3 mx-lg-1">
-                        <a class="nav-link py-3 px-0 px-lg-3 rounded"
-                            href="https://ppid.semarangkota.go.id/kb/jalur-rute-brt-trans-semarang-dan-feeder-di-kota-semarang"
-                            target="_blank">BUS & RUTE</a>
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded" href="https://ppid.semarangkota.go.id/kb/jalur-rute-brt-trans-semarang-dan-feeder-di-kota-semarang" target="_blank">BUS & RUTE</a>
                     </li>
                     <li class="nav-item mx-3 mx-lg-1">
                         <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#hotlineCenter" onclick="sweet();">HOTLINE CENTER</a>
@@ -150,7 +146,7 @@
 {{-- Start Slider --}}
     <div class="slicktsm single-item">
         <div class="slickitem">
-            <div class="slickbg">
+            <div class="slickbg" style="background: url('{{asset('assets/img/Hero.png')}}') top center / 100% auto no-repeat;">
                 <div class="slickbody">
                     <div class="headerbanner" style="max-width: 100%;">
                         <p class="fssldier1">NGINOVASI X Trans Semarang</p>
@@ -163,9 +159,12 @@
                         </p>
                         <a class="btnggl btn me-2" role="button"
                             href="https://play.google.com/store/apps/details?id=ngi.brtsemarang.apppublic"
-                            target="_blank"></a>
+                            target="_blank"
+                            style="background: url('{{asset('assets/img/Google_Play.png')}}') center / 100% no-repeat;"></a>
                         <a class="btnapple btn" role="button"
-                            href="https://apps.apple.com/id/app/trans-semarang/id1460565652" target="_blank"></a>
+                            href="https://apps.apple.com/id/app/trans-semarang/id1460565652"
+                            target="_blank"
+                            style="background: url('{{asset('assets/img/App_Store.png')}}') center / 100% no-repeat;"></a>
                     </div>
                 </div>
             </div>
@@ -213,7 +212,7 @@
                     <div class="gallery">
                         @foreach ($RNarticles as $RNart)
                         <div class="gallery-item" tabindex="0">
-                            <img src="{{ $RNart->gambar }}" class="gallery-image" alt="{{ $RNart->gambar }}" />
+                            <img src="public/{{ $RNart->gambar }}" class="gallery-image" alt="{{ $RNart->gambar }}" />
                             <div class="gallery-item-info">
                                 <a class="gallery-item-type" href="/detailarticle/{{$RNart->title}}">
                                     <p class="fw-semibold text-white">{{ $RNart->title }}</p>
@@ -341,7 +340,7 @@
                 <div class="swiper-slide">
                     <a class="swiperlink" href="#">
                         <div class="news_img" >
-                            <img src="/data_card/{{$dataCard->image}}" alt="{{$dataCard->image}}"/>
+                            <img src="data_card/{{$dataCard->image}}" alt="{{$dataCard->name}}"/>
                         </div>
                         <div class="news_title text-justify">{{$dataCard->name}}</div>
                         <p class="news_txt text-justify">{{$dataCard->desc}}</p>
@@ -444,25 +443,25 @@
                     </form>
                     @else
                     <div class="row lgnfirst">
-                        <div class="mb-3 lgnfirstwrap1">
+                        <div class="lgnfirstwrap1">
                             <div class="lgnfirsth1">
                                 <p class="lgnfirsth1text">Layanan Aduan</p>
                             </div>
                             <div class="mb-3 lgnfirstwrap2">
                                 <img class="lgnfirstwrap2img" src="assets/img/IlustrationCS.png"/>
                                 <div class="lgnfirsth1text2">
-                                    <div class="lgnfirsth2text">
-                                        <p class="lgnfirsth2text1">Anda harus masuk dengan Google untuk melanjutkan</p>
-                                        <p class="lgnfirsth2text2">Setelah Anda mengajukan keluhan, kami akan mengirimkan informasi penanganan ke email yang Anda gunakan untuk login.</p>
-                                    </div>
+                                    <p>Anda harus masuk dengan Google untuk melanjutkan</p>
+                                </div>
+                                <div class="mb-3 GPlusSignIn">
+                                    <a href="/auth/google" class="btn GPlusSignIn" role="button" type="button">
+                                        <img src="https://cdn.cdnlogo.com/logos/g/35/google-icon.svg" style="width: 32px;height: 32px;">
+                                        <span id="name" >Lanjutkan dengan Google</span>
+                                    </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="mb-3 GPlusSignIn">
-                            <a href="/auth/google" class="btn GPlusSignIn" role="button" type="button">
-                                <img src="https://cdn.cdnlogo.com/logos/g/35/google-icon.svg" style="width: 32px;height: 32px;">
-                                <span id="name" >Lanjutkan dengan Google</span>
-                            </a>
+                        <div class="mb-3 lgnfirsth2text">
+                            <p class="lgnfirsth2text2">Setelah Anda mengajukan keluhan, kami akan mengirimkan informasi penanganan ke email yang Anda gunakan untuk login.</p>
                         </div>
                     </div>
                     @endif
@@ -727,6 +726,20 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.38/dist/sweetalert2.all.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js" integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
     <script type="text/javascript" src="assets/slick/slick.min.js"></script>
+    <script src="{{asset('js/Polyline.encoded.js')}}"></script>
+<!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+        (function(){
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/63688c02b0d6371309cda477/1gh865r2q';
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
+        })();
+    </script>
+<!--End of Tawk.to Script-->
     <script type="text/javascript">
         $(document).ready(function(){
             $('.slicktsm').slick({
@@ -952,8 +965,16 @@
             })
         }
     </script>
-     <script src="/js/Polyline.encoded.js"></script>
     <script>
+        $.ajax({
+            type:"GET",
+            url:"https://gps.brtnusantara.com/dev/trans_semarang/api_v1/getAllRoutes",
+            data: {},
+            success:function(result){
+                console.log(result);
+            }
+        })
+
       	var map = new L.Map('map').setView([-6.996667, 110.416664], 13);
 		var tiles = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
             maxZoom: 19,
@@ -962,18 +983,20 @@
             attribution: '&copy; Trans Semarang | <a href="https://www.google.com/intl/id/permissions/geoguidelines/">Google Maps</a>'
             }).addTo(map);
 
-        // map.setView(new L.LatLng([[110.49299,-7.017340000000001],[110.49314000000001,-7.016870000000001],[110.49376000000001,-7.01705],[110.49421000000001,-7.0171600000000005],[110.49425000000001,-7.01731],[110.49437,-7.017440000000001],[110.49449000000001,-7.017480000000001],[110.49435000000001,-7.017790000000001],[110.49382000000001,-7.0194600000000005],[110.49152000000001,-7.018700000000001],[110.48960000000001,-7.018050000000001],[110.48880000000001,-7.017760000000001],[110.48757,-7.0172300000000005],[110.48666000000001,-7.01679],[110.48538,-7.0162],[110.48478000000001,-7.015960000000001],[110.48162,-7.014570000000001],[110.47991,-7.01386],[110.47687,-7.012530000000001],[110.47459,-7.011570000000001],[110.47432,-7.011470000000001],[110.47389000000001,-7.011360000000001],[110.47291000000001,-7.011150000000001],[110.47172,-7.010800000000001],[110.47109,-7.01064],[110.46986000000001,-7.01029],[110.46748000000001,-7.00961],[110.45975000000001,-7.007370000000001],[110.45771,-7.006780000000001],[110.45722,-7.006670000000001],[110.45493,-7.006010000000001],[110.45444,-7.005820000000001],[110.45369000000001,-7.005520000000001],[110.45349,-7.005420000000001],[110.45309,-7.005190000000001],[110.45186000000001,-7.0043500000000005],[110.4492,-7.00267],[110.44873000000001,-7.00234],[110.44816000000002,-7.00199],[110.44634,-7.00081],[110.44525000000002,-7.000140000000001],[110.44473,-6.999840000000001],[110.44404000000002,-6.9994700000000005],[110.44352,-6.999230000000001],[110.43839000000001,-6.99697],[110.43783,-6.99671],[110.43762000000001,-6.996580000000001],[110.43388,-6.995030000000001],[110.43294,-6.994610000000001],[110.43251000000001,-6.9944500000000005],[110.43195000000001,-6.99429],[110.43108000000001,-6.9941],[110.42951000000001,-6.99335],[110.42947000000001,-6.993340000000001],[110.42873000000002,-6.993],[110.42834,-6.99279],[110.42667000000002,-6.99197],[110.42466,-6.99101],[110.42366000000001,-6.99056],[110.42313000000001,-6.99152],[110.42301,-6.99157],[110.42280000000001,-6.991560000000001],[110.42189,-6.9911],[110.42184,-6.99101],[110.42185,-6.99091],[110.42226000000001,-6.989990000000001],[110.42261,-6.98927],[110.42272000000001,-6.9891700000000005],[110.42281000000001,-6.989140000000001],[110.42293000000001,-6.98913],[110.42388000000001,-6.989590000000001],[110.42394000000002,-6.989700000000001],[110.42397000000001,-6.989870000000001],[110.42394000000002,-6.989960000000001],[110.42366000000001,-6.99056],[110.42313000000001,-6.99152],[110.42301,-6.99157],[110.42280000000001,-6.991560000000001],[110.42189,-6.9911],[110.42184,-6.99101],[110.42185,-6.99091],[110.42222000000001,-6.989980000000001],[110.42211,-6.9897800000000005],[110.42181000000001,-6.989610000000001],[110.42125000000001,-6.98934],[110.42000000000002,-6.9887500000000005],[110.41919000000001,-6.988360000000001],[110.41825000000001,-6.987940000000001],[110.41776000000002,-6.9877400000000005],[110.41729000000001,-6.987590000000001],[110.41655000000002,-6.987380000000001],[110.41570000000002,-6.987100000000001],[110.41510000000001,-6.9869200000000005],[110.41448000000001,-6.986750000000001],[110.41298,-6.98617],[110.41255000000001,-6.9859800000000005],[110.41214000000001,-6.9858],[110.41167000000002,-6.985550000000001],[110.41124,-6.98538],[110.41039,-6.984960000000001],[110.41008000000001,-6.984850000000001],[110.40977000000001,-6.984800000000001],[110.40943000000001,-6.984660000000001],[110.40901000000001,-6.984400000000001],[110.40897000000001,-6.98406],[110.40907000000001,-6.983820000000001],[110.40924000000001,-6.98362],[110.40945,-6.98345],[110.40964000000001,-6.98301],[110.4107,-6.98054],[110.41158000000001,-6.97862],[110.41206000000001,-6.978490000000001],[110.41264000000001,-6.97841],[110.41422000000001,-6.9781200000000005],[110.41549,-6.977930000000001],[110.41567,-6.97796],[110.41571,-6.9781],[110.41531,-6.9786],[110.41333,-6.98059],[110.41235,-6.98148],[110.41031000000001,-6.983390000000001],[110.41002,-6.98369],[110.41005000000001,-6.983960000000001],[110.41002,-6.984170000000001],[110.40990000000001,-6.98453],[110.40973000000001,-6.9846200000000005],[110.40952000000001,-6.984630000000001],[110.40912000000002,-6.98451],[110.40875000000001,-6.984260000000001],[110.40617,-6.98305],[110.40407,-6.982100000000001],[110.40261000000001,-6.9813600000000005],[110.40202000000001,-6.9811700000000005],[110.40139,-6.98104],[110.40109000000001,-6.98127],[110.40091000000001,-6.9813600000000005],[110.40073000000001,-6.98134],[110.40015000000001,-6.98104],[110.39962000000001,-6.980860000000001],[110.39921000000001,-6.980900000000001],[110.39786000000001,-6.981160000000001],[110.39567000000001,-6.981560000000001],[110.39433000000001,-6.98181],[110.39305,-6.98223],[110.39081000000002,-6.98296],[110.3888,-6.9835],[110.38411,-6.984660000000001],[110.38123,-6.98528],[110.38072000000001,-6.9854400000000005],[110.3802,-6.985530000000001],[110.37752,-6.986090000000001],[110.37473000000001,-6.98664],[110.37383000000001,-6.98688],[110.3726,-6.987170000000001],[110.37185000000001,-6.987310000000001],[110.36977,-6.987610000000001],[110.36858000000001,-6.98775],[110.36826,-6.98782],[110.36783000000001,-6.98786],[110.36676000000001,-6.98803],[110.36643000000001,-6.98803],[110.36544,-6.98786],[110.36481,-6.9876700000000005],[110.36352000000001,-6.9872000000000005],[110.36269000000001,-6.98697],[110.36211000000002,-6.986870000000001],[110.36028,-6.986700000000001],[110.35851000000001,-6.986350000000001],[110.35815000000001,-6.986250000000001],[110.35794000000001,-6.986160000000001],[110.35772000000001,-6.98601],[110.3576,-6.98587],[110.35745000000001,-6.98566],[110.35701,-6.984890000000001],[110.35682000000001,-6.984680000000001],[110.35635,-6.9842900000000006],[110.35617,-6.984170000000001],[110.35551000000001,-6.983820000000001],[110.35527,-6.9836800000000006],[110.35476000000001,-6.98345],[110.35387000000001,-6.9831],[110.35222,-6.982570000000001],[110.35179000000001,-6.98251],[110.35178,-6.982590000000001],[110.35179000000001,-6.98251],[110.35133,-6.98247],[110.35098,-6.98251],[110.35074000000002,-6.982570000000001],[110.35051000000001,-6.982690000000001],[110.35029000000002,-6.982880000000001],[110.35002000000001,-6.983230000000001],[110.3495,-6.984030000000001],[110.34936,-6.984310000000001],[110.34903000000001,-6.984730000000001],[110.34887,-6.984890000000001],[110.34864,-6.985040000000001],[110.34796000000001,-6.98542],[110.34738000000002,-6.985600000000001],[110.34693000000001,-6.985690000000001],[110.34668,-6.985720000000001],[110.34284000000001,-6.9861],[110.34262000000001,-6.986110000000001],[110.34215,-6.986070000000001],[110.34187000000001,-6.98601],[110.34110000000001,-6.985780000000001],[110.33951,-6.98526],[110.33862,-6.98495],[110.33815000000001,-6.98472],[110.33798000000002,-6.9846200000000005],[110.33751000000001,-6.98427],[110.33716000000001,-6.98392],[110.33634,-6.982990000000001],[110.33563000000001,-6.9821800000000005],[110.33395000000002,-6.98012],[110.33351,-6.979640000000001],[110.33272000000001,-6.978750000000001],[110.3319,-6.97801],[110.33114,-6.97726],[110.33097000000001,-6.97705],[110.33047,-6.97665],[110.33010000000002,-6.976470000000001],[110.32847000000001,-6.976210000000001],[110.32784000000001,-6.97616],[110.32626,-6.976070000000001],[110.32475000000001,-6.97604],[110.32367,-6.976090000000001],[110.32261000000001,-6.97604],[110.32044,-6.975770000000001],[110.31907000000001,-6.97562],[110.31786000000001,-6.975460000000001],[110.31672,-6.97515],[110.31601,-6.974920000000001],[110.31521000000001,-6.974550000000001],[110.31494,-6.974410000000001],[110.31463000000001,-6.97416],[110.31437000000001,-6.973890000000001],[110.31400000000001,-6.973370000000001],[110.31363,-6.972970000000001],[110.31335000000001,-6.97278],[110.31311000000001,-6.97266],[110.31268000000001,-6.972510000000001],[110.31239000000001,-6.97247],[110.31216,-6.97247],[110.31146000000001,-6.97254],[110.31059,-6.972600000000001],[110.30866,-6.97268],[110.30761000000001,-6.972810000000001],[110.3071,-6.972840000000001],[110.30523000000001,-6.973050000000001],[110.30380000000001,-6.973230000000001],[110.30245000000001,-6.973440000000001],[110.30181,-6.973560000000001],[110.30099000000001,-6.97365],[110.29967,-6.97369],[110.29874000000001,-6.97362],[110.29793000000001,-6.9735000000000005],[110.29718000000001,-6.973300000000001],[110.296,-6.97292],[110.29427000000001,-6.97231],[110.29383000000001,-6.972130000000001],[110.29307000000001,-6.971750000000001],[110.29248000000001,-6.971400000000001],[110.29049,-6.970180000000001],[110.28959,-6.969690000000001],[110.28744,-6.968850000000001],[110.28695,-6.968710000000001],[110.28696000000001,-6.9686200000000005],[110.28763000000001,-6.968730000000001],[110.28822000000001,-6.968850000000001],[110.28823000000001,-6.968780000000001],[110.28845000000001,-6.9688300000000005],[110.28864000000002,-6.9689000000000005],[110.28998000000001,-6.969710000000001],[110.29004,-6.969620000000001],[110.29009,-6.9695800000000006],[110.29012000000002,-6.969570000000001],[110.29023000000001,-6.96963]]), 8);
+				var coridorIcon = L.icon({
+					iconUrl: 'assets/icon/busstop.png',
+					// shadowUrl: 'leaf-shadow.png',
 
-		// var encoded = 'pdpi@gcd`TKbA~@f@TEFHPJz@kBPQPEPYdBiDxCyFvAgDp@qBrB}IfAqEn@sDT{BNwDIuGOmDUwBOsAWkDe@aHiAuRIiCIuFGuBW_G@yBZ_BZu@`@o@pAmA`BkAn@g@l@q@|@aBv@eC`AmDj@uDPqBXsENkEt@gJFgADiEG{JRuJN}ETaDT{BNu@d@cAl@y@fFsF^]t@u@dAoAnDcDrG}EbH{FhEiDbAy@jAoAtAwB\\aA|ByIdBoIJiA@{@AeAqA}Wc@kCOk@Qe@}@iB]g@i@i@oI}Ei@e@[a@O_@Mi@Iu@CoAVaCr@uDb@oBjA_EhAeDxAaDZi@|@gAt@o@bAi@dBy@XSXURYXo@TiAXqBNqBDu@TuCFaCLmCXiDPmAhCuKNu@b@gD@m@AWq@mHOuDg@aHCaAOsAE_AI]UqCkBgLy@yHw@mGiAaJ{BmPi@aD_@qBSKMOISAU@ODOHKTOUoAiBwL{AyIMFGWFVLG_B{IoAoGkCkLm@kDeC_U_@wDGcBUsBCiA@_ADe@Xo@H[f@mD?SAQWe@E[@[^Ub@?n@ApAoDtDqKtDqKt@_CmAuCoKwD}QkGo@aI]kCo@iHCe@VO\\FpCzBpXzYjBxB`AVl@Cf@@j@Ch@Q~H}T~EkVx@aDpEmLRo@??xCeIBYCSqAe@SUEQAWzA}DTK`@EPDn@TVHVBNWNa@`@_A~@aCbCcG`@kAnEyKfAuCDAtCyHd@mD^oB^uArA{DtHkVLm@X_A`FyNp@wBfEiM~@aCdAgCtDcHnFuJlA_C|GwLpG{Kf@cAnAsDn@cCtCwOrBuK|Gy]p@{CtDcSfAoFvCyPlAyHT}@`Ka[~EoOrD{KhC}HbCaHpAcDzAeFv@uClBgI\\uAj@qC|AwGWIqE_A_@lAy@xCKHMBMC';
-		// var encoded = "jqyi@etkaT}A]b@{BTyA\\GXWFW|@ZlIhBwCjMaC~Jy@~CiBtFwAtDuB~Fo@vBuGvRmCtIiG~Q_EfMSt@UtAi@bEeAlF_@|BeAtFgCzM_Mho@uBvKU`BcChMe@`B{@tCSf@m@nAgDtFoIrOaA|AeApBkFjJeCxE{@fBiAhCo@fBcM`_@s@nBYh@uHjVsAzD_@tA_@nBe@lDuCxHAFcArCi@lAcDlI_EpKyAfE~DhBHVAh@{AtDQHSAwDqAoCeASUEQAWzA}DTK`@EPDvBv@~DhBHVAh@{AtDQHSAyDiAg@Ta@z@u@nBuBxFmA`DsAzDg@`B]|Ai@rCw@hDc@vBa@zBsBjHe@tAc@pAq@|Aa@tAsAhDU|@I|@[bAs@rAcAFo@Sg@a@a@i@wAe@mNsE_KoDY_BOsBy@{He@}FDc@ZGbBnAlKjKpDbE|JvKz@x@t@Eh@DfAVP`@@h@WnAq@hAqFbO}DbLsCbHe@tBY|Bl@z@Pb@Cb@{@rBc@hBFpAr@lGnAtLp@jGrA~FpC~LjBpKfFh\\zB~P^dBPfBnBvOlBlPn@rDx@tFZtCz@~KZlFL~@FtA`@tE?`Aa@dEe@|B}A`Gm@dDSrBa@lJeA`JSfAQh@]j@[Vi@\\yCvAi@d@mA|AWb@eAbC[n@m@dBeApDiBhIKtAN@OAGzAFdAJn@Vl@d@j@dAt@~CfBv@ZrA`A^^\\l@jAfCb@rBPxADp@jA~V@j@G|AKv@m@xCgB|H}@pDm@|AS`@eA|AeAdAyDbDaDlC{KnI_BvAqD|CsCbDuCvCi@`@oAbBc@hAs@dII|BQzHElHHvEIrEu@pL]pG_@pF}@bFm@lCiA~C[t@q@|@u@r@gBhAoAhAe@v@Wn@]tAGx@?l@LjCJlDN`KXpEDdBh@tJb@|Gh@lGV~BPbDFfGMxDW`Dg@tCkAjFyBxIc@vAkAvCeAtBsFlKaBrDgDlL[`BQATeCVuBMAHk@Le@`DkGQKGIAEJU";
-		// var encoded = 'jqyi@etkaT}A]b@{BTyA\GXWFW|@ZlIhBwCjMaC~Jy@~CiBtFwAtDuB~Fo@vBuGvRmCtIiG~Q_EfMSt@UtAi@bEeAlF_@|BeAtFgCzM_Mho@uBvKU`BcChMe@`B{@tCSf@m@nAgDtFoIrOaA|AeApBkFjJeCxE{@fBiAhCo@fBcM`_@s@nBYh@uHjVsAzD_@tA_@nBe@lDuCxHAFcArCi@lAcDlI_EpKyAfE~DhBHVAh@{AtDQHSAwDqAoCeASUEQAWzA}DTK`@EPDvBv@~DhBHVAh@{AtDQHSAyDiAg@Ta@z@u@nBuBxFmA`DsAzDg@`B]|Ai@rCw@hDc@vBa@zBsBjHe@tAc@pAq@|Aa@tAsAhDU|@I|@[bAs@rAcAFo@Sg@a@a@i@wAe@mNsE_KoDY_BOsBy@{He@}FDc@ZGbBnAlKjKpDbE|JvKz@x@t@Eh@DfAVP`@@h@WnAq@hAqFbO}DbLsCbHe@tBY|Bl@z@Pb@Cb@{@rBc@hBFpAr@lGnAtLp@jGrA~FpC~LjBpKfFh\zB~P^dBPfBnBvOlBlPn@rDx@tFZtCz@~KZlFL~@FtA`@tE?`Aa@dEe@|B}A`Gm@dDSrBa@lJeA`JSfAQh@]j@[Vi@\yCvAi@d@mA|AWb@eAbC[n@m@dBeApDiBhIKtAN@OAGzAFdAJn@Vl@d@j@dAt@~CfBv@ZrA`A^^\l@jAfCb@rBPxADp@jA~V@j@G|AKv@m@xCgB|H}@pDm@|AS`@eA|AeAdAyDbDaDlC{KnI_BvAqD|CsCbDuCvCi@`@oAbBc@hAs@dII|BQzHElHHvEIrEu@pL]pG_@pF}@bFm@lCiA~C[t@q@|@u@r@gBhAoAhAe@v@Wn@]tAGx@?l@LjCJlDN`KXpEDdBh@tJb@|Gh@lGV~BPbDFfGMxDW`Dg@tCkAjFyBxIc@vAkAvCeAtBsFlKaBrDgDlL[`BQATeCVuBMAHk@Le@`]DkGQKGIAEJU';
-        // var encoded = "jqyi@etkaT}A]b@{BTyA//\\GXWFW|@ZlIhBwCjMaC~Jy@~CiBtFwAtDuB~Fo@vBuGvRmCtIiG~Q_EfMSt@UtAi@bEeAlF_@|BeAtFgCzM_Mho@uBvKU`BcChMe@`B{@tCSf@m@nAgDtFoIrOaA|AeApBkFjJeCxE{@fBiAhCo@fBcM`_@s@nBYh@uHjVsAzD_@tA_@nBe@lDuCxHAFcArCi@lAcDlI_EpKyAfE~DhBHVAh@{AtDQHSAwDqAoCeASUEQAWzA}DTK`@EPDvBv@~DhBHVAh@{AtDQHSAyDiAg@Ta@z@u@nBuBxFmA`DsAzDg@`B]|Ai@rCw@hDc@vBa@zBsBjHe@tAc@pAq@|Aa@tAsAhDU|@I|@[bAs@rAcAFo@Sg@a@a@i@wAe@mNsE_KoDY_BOsBy@{He@}FDc@ZGbBnAlKjKpDbE|JvKz@x@t@Eh@DfAVP`@@h@WnAq@hAqFbO}DbLsCbHe@tBY|Bl@z@Pb@Cb@{@rBc@hBFpAr@lGnAtLp@jGrA~FpC~LjBpKfFh//\\zB~P^dBPfBnBvOlBlPn@rDx@tFZtCz@~KZlFL~@FtA`@tE?`Aa@dEe@|B}A`Gm@dDSrBa@lJeA`JSfAQh@]j@[Vi@//\\yCvAi@d@mA|AWb@eAbC[n@m@dBeApDiBhIKtAN@OAGzAFdAJn@Vl@d@j@dAt@~CfBv@ZrA`A^^//\\l@jAfCb@rBPxADp@jA~V@j@G|AKv@m@xCgB|H}@pDm@|AS`@eA|AeAdAyDbDaDlC{KnI_BvAqD|CsCbDuCvCi@`@oAbBc@hAs@dII|BQzHElHHvEIrEu@pL]pG_@pF}@bFm@lCiA~C[t@q@|@u@r@gBhAoAhAe@v@Wn@]tAGx@?l@LjCJlDN`KXpEDdBh@tJb@|Gh@lGV~BPbDFfGMxDW`Dg@tCkAjFyBxIc@vAkAvCeAtBsFlKaBrDgDlL[`BQATeCVuBMAHk@Le@`DkGQKGIAEJU";
+					iconSize:     [40, 45], // size of the icon
+					shadowSize:   [50, 64], // size of the shadow
+					iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+					shadowAnchor: [4, 62],  // the same for the shadow
+					popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+				});
 
 
-		var polyline = L.Polyline.fromEncoded(encoded, {
-            color: '#b71c1c',
-            weight: 8
-        }).addTo(map);
+				L.marker([-7.012321, 110.418670,12], {icon: coridorIcon}).addTo(map);
+				L.marker([-6.991553, 110.353506,12], {icon: coridorIcon}).addTo(map);
 
 		map.fitBounds(polyline.getBounds());
     </script>
@@ -1041,6 +1064,14 @@
                 rute.appendChild(ruteList[i]);
             };
         };
+    </script>
+    <script src="{{ asset('/sw.js') }}"></script>
+    <script>
+        if (!navigator.serviceWorker.controller) {
+            navigator.serviceWorker.register("/sw.js").then(function (reg) {
+                console.log("Service worker has been registered for scope: " + reg.scope);
+            });
+        }
     </script>
 </body>
 
