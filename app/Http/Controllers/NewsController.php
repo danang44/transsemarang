@@ -21,10 +21,10 @@ class NewsController extends Controller
 
 
 
-    public function detailarticle(Request $request, $id)
+    public function detailarticle(Request $request, $title)
     {
-        $article = article::where('id', $id)->first();
-        DB::table('article')->where('id', $request->id)->increment('view');
+        $article = article::where('title', $title)->first();
+        DB::table('article')->where('title', $request->title)->increment('view');
 
             return view('detailarticle', ['article' => $article]);
     }

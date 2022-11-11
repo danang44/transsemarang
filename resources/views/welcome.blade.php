@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
     <title>Trans Semarang | Home</title>
     <base href="https://transsemarang.semarangkota.go.id/v2/">
+    {{-- <base href="http://127.0.0.1:8000/"> --}}
 
     <meta name="twitter:description" content="Twitter Resmi BLU UPTD Trans Semarang  Jl. Tambak Aji Raya No. 5 Kode Pos 50185  CS : 1-5000-94  IG: transsemarang  FB: TRANS Semarang">
     <meta property="og:image" content="{{asset('assets/img/Trans_Semarang_icon.svg')}}">
@@ -188,7 +189,8 @@
                 </div>
                 @foreach ($PNarticles as $PNart)
                 <div class="row row-cols-1 headcont">
-                    <a class="titlenews" href="/detailarticle/{{$PNart->id}}">
+                    {{-- {{dd($PNart)}} --}}
+                    <a class="titlenews" href="/detailarticle/{{$PNart->title}}">
                         <p><strong>{{ $PNart->title }}</strong></p>
                     </a>
                     <p class="text-justify text-black-50 bodycont">
