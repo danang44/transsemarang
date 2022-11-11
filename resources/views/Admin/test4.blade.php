@@ -31,6 +31,22 @@
     });
 
     for (let i = 0; i < result.length; i++) {
+      var koridor = result[i].kor;
+      switch(koridor){
+        case '1':
+          var iconNya = 'assets/icon/busstop.png';
+          break;
+        case '2':
+          var iconNya = 'assets/icon/favicon.png';
+          break;
+        default:
+          var iconNya = 'assets/icon/tsmg.png';
+      }
+      var coridorIcon = L.icon({
+        iconUrl: iconNya,
+        iconSize: [30, 35], 
+        iconAnchor: [16, 35],
+      });
         var data = result[i].coordinate.split("|")
         var lat = parseFloat(data[0])
         var lng = parseFloat(data[1])

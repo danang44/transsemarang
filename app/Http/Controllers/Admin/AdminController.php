@@ -178,7 +178,7 @@ class AdminController extends Controller
             $result[] = array( 
                 // 'sh_id' => $row['sh_id'],
                 // 'sh_name' => $row['sh_name'],
-                // 'kor' => $row['kor'],
+                'kor' => $row['kor'],
                 // 'origin' => $row['origin'],
                 // 'toward' => $row['toward'],
                 'coordinate'=> $row['sh_lat'].'|'.$row['sh_lng'],
