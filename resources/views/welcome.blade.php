@@ -189,7 +189,6 @@
                 </div>
                 @foreach ($PNarticles as $PNart)
                 <div class="row row-cols-1 headcont">
-                    {{-- {{dd($PNart)}} --}}
                     <a class="titlenews" href="/detailarticle/{{$PNart->title}}">
                         <p><strong>{{ $PNart->title }}</strong></p>
                     </a>
@@ -259,9 +258,14 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="leaflet">
-                        <div style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;gap: 4px;width: 400px;height: 100%;left: 0px;background: #F9FAFB;border-bottom-left-radius: 20px;"></div>
-                        <div class="container bg-dark" id="map"></div>
+                    <div class="btn-group" onclick="toggleItems()" style="display: flex;flex-direction: row;align-items: center;width: 490px;height: 76px;background: #AF2330;border-radius: 8px;">
+                        <button class="btn btn-tsm btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false" style="height: 100%">Pilih Koridor BRT</button>
+                        <ul class="dropdown-menu dropdown-menu-lg-end"  style="width: 100%">
+                            @foreach($result as $datas)
+                            {{-- <li><a class="dropdown-item {{$datas['kor']}} hidden">Koridor {{$datas['kor']}} {{$datas['origin']}} - {{$datas['toward']}}</a></li> --}}
+
+                          @endforeach
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -317,7 +321,7 @@
                         <div class="linee h-100"></div>
                     </div>
                     <div>
-                        <p class="texthalte">Halte Koridor {{$datas['kor']}}</p>
+                        {{-- <p class="texthalte">Halte Koridor {{$datas['kor']}}</p> --}}
                     </div>
                 </div>
                 @endforeach
@@ -964,40 +968,117 @@
             })
         }
     </script>
-    {{-- <script src="/js/Polyline.encoded.js"></script>
-    <script>
-        // var result = {!! json_encode($result) !!};
-        let map = L.map('map', {zoomControl:false}).setView([-6.997226, 110.393395], 12);
-        L.control.zoom({position:'bottomright'}).addTo(map);
-        L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
-            maxZoom: 20,
-            zoomControl: true,
-            subdomains: ['mt0', 'mt1', 'mt2', 'mt3'],
-            attribution: '&copy; Trans Semarang | <a href="https://www.google.com/intl/id/permissions/geoguidelines/">Google Maps</a>'
-        }).addTo(map);
+     <script src="/js/Polyline.encoded.js"></script>
 
-        var coridorIcon = L.icon({
-            iconUrl: 'assets/icon/busstop.png',
-            iconSize: [30, 35],
-            iconAnchor: [16, 35],
-        });
 
-        for (let i = 0; i < result.length; i++) {
-            var data = result[i].coordinate.split("|")
-            var lat = parseFloat(data[0])
-            var lng = parseFloat(data[1])
-            L.marker([lat, lng], {icon: coridorIcon}).addTo(map);
-        }
-    </script> --}}
-    <script>
-        $.ajax({
-            type:"GET",
-            url:"https://gps.brtnusantara.com/dev/trans_semarang/api_v1/getAllRoutes",
-            data: {},
-            success:function(result){
-                console.log(result);
-            }
-        })
+<script>
+    var result = {!! json_encode($result) !!};;
+    console.log(result);
+
+    let map = L.map('map', {zoomControl:false}).setView([-6.997226, 110.393395], 12);
+    L.control.zoom({position:'bottomright'}).addTo(map);
+    L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+        maxZoom: 20,
+        zoomControl: true,
+        subdomains: ['mt0', 'mt1', 'mt2', 'mt3'],
+        attribution: '&copy; Trans Semarang | <a href="https://www.google.com/intl/id/permissions/geoguidelines/">Google Maps</a>'
+    }).addTo(map);
+
+
+
+    var coridorIcon = L.icon({
+        iconUrl: 'assets/icon/busstop.png',
+        iconSize: [30, 35], // size of the icon
+        iconAnchor: [16, 35], // point of the icon which will correspond to marker's location
+    });
+
+    for (let i = 0; i < result.length; i++) {
+      var koridor = result[i].koridor;
+      switch(koridor){
+        case '1':
+          var iconNya = 'assets/icon/kor1.png';
+          break;
+        case '2':
+          var iconNya = 'assets/icon/kor2.png';
+          break;
+          case '3A':
+            var iconNya = 'assets/icon/kor3a.png';
+            break;
+          case '3B':
+            var iconNya = 'assets/icon/kor3b.png';
+            break;
+          case '4':
+            var iconNya = 'assets/icon/kor4.png';
+            break;
+          case 'F2A':
+            var iconNya = 'assets/icon/korf2a.png';
+            break;
+          case 'F2B':
+            var iconNya = 'assets/icon/korf2b.png';
+            break;
+          case '5':
+            var iconNya = 'assets/icon/kor5.png';
+            break;
+          case 'F4B':
+            var iconNya = 'assets/icon/korf4b.png';
+            break;
+          case 'F4A':
+            var iconNya = 'assets/icon/korf4a.png';
+            break;
+          case 'F3':
+            var iconNya = 'assets/icon/korf3.png';
+            break;
+          case '6':
+            var iconNya = 'assets/icon/kor6.png';
+            break;
+          case 'LM':
+            var iconNya = 'assets/icon/korlm.png';
+            break;
+          case '7':
+            var iconNya = 'assets/icon/kor7.png';
+            break;
+          case '8':
+            var iconNya = 'assets/icon/kor8.png';
+            break;
+          case 'F1A':
+            var iconNya = 'assets/icon/korf1a.png';
+            break;
+          case 'F1B':
+            var iconNya = 'assets/icon/korf1b.png';
+            break;
+        default:
+          var iconNya = 'assets/icon/tsmg.png';
+      }
+      var coridorIcon = L.icon({
+        iconUrl: iconNya,
+        iconSize: [25, 35],
+        iconAnchor: [16, 35],
+      });
+        var data = result[i].coordinate.split("|")
+        var lat = parseFloat(data[0])
+        var lng = parseFloat(data[1])
+        var dataname = result[i].name;
+        var name = (dataname)
+        var datakor = result[i].koridor;
+        var kor = (datakor)
+
+        console.log(lat + " -> " + lng )
+        console.log(koridor + " - " + name)
+L.marker([lat, lng], { icon: coridorIcon}).addTo(map)
+        .bindPopup( 'koridor ' + kor +' '+ name);
+    }
+
+</script>
+
+    {{-- <script>
+$.ajax({
+    type:"GET",
+    url:"https://gps.brtnusantara.com/dev/trans_semarang/api_v1/getAllRoutes",
+    data: {},
+    success:function(result){
+        console.log(result);
+    }
+})
 
       	var map = new L.Map('map').setView([-6.996667, 110.416664], 13);
 		var tiles = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
@@ -1023,7 +1104,7 @@
 				L.marker([-6.991553, 110.353506,12], {icon: coridorIcon}).addTo(map);
 
 		map.fitBounds(polyline.getBounds());
-    </script>
+    </script> --}}
     <script>
         var mapmobile = L.map("mapmobile", {zoomControl:false}).fitWorld();
         L.control.zoom({position:'bottomright'}).addTo(mapmobile);
