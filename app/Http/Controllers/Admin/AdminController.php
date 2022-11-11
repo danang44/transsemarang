@@ -177,8 +177,8 @@ class AdminController extends Controller
         foreach ($data['data'] as $row) {
             $result[] = array( 
                 // 'sh_id' => $row['sh_id'],
-                // 'sh_name' => $row['sh_name'],
-                'kor' => $row['kor'],
+                'name' => $row['sh_name'],
+                'koridor' => $row['kor'],
                 // 'origin' => $row['origin'],
                 // 'toward' => $row['toward'],
                 'coordinate'=> $row['sh_lat'].'|'.$row['sh_lng'],

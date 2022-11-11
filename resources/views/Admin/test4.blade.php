@@ -16,7 +16,7 @@
 
 <script>
     var result = {!! json_encode($result) !!};;
-    console.log(result);
+    // console.log(result);
 
 
     //  var map = new L.Map("map");
@@ -50,38 +50,151 @@
     // });
 
     for (let i = 0; i < result.length; i++) {
-      var koridor = result[i].kor;
+      var koridor = result[i].koridor;
       switch(koridor){
         case '1':
-          var iconNya = 'assets/icon/busstop.png';
+          var iconNya = 'assets/icon/kor1.png';
           break;
         case '2':
-          var iconNya = 'assets/icon/favicon.png';
+          var iconNya = 'assets/icon/kor2.png';
           break;
+          case '3A':
+            var iconNya = 'assets/icon/kor3a.png';
+            break;
+          case '3B':
+            var iconNya = 'assets/icon/kor3b.png';
+            break;
+          case '4':
+            var iconNya = 'assets/icon/kor4.png';
+            break;
+          case 'F2A':
+            var iconNya = 'assets/icon/korf2a.png';
+            break;
+          case 'F2B':
+            var iconNya = 'assets/icon/korf2b.png';
+            break;
+          case '5':
+            var iconNya = 'assets/icon/kor5.png';
+            break;
+          case 'F4B':
+            var iconNya = 'assets/icon/korf4b.png';
+            break;
+          case 'F4A':
+            var iconNya = 'assets/icon/korf4a.png';
+            break;
+          case 'F3':
+            var iconNya = 'assets/icon/korf3.png';
+            break;
+          case '6':
+            var iconNya = 'assets/icon/kor6.png';
+            break;
+          case 'LM':
+            var iconNya = 'assets/icon/korlm.png';
+            break;
+          case '7':
+            var iconNya = 'assets/icon/kor7.png';
+            break;
+          case '8':
+            var iconNya = 'assets/icon/kor8.png';
+            break;
+          case 'F1A':
+            var iconNya = 'assets/icon/korf1a.png';
+            break;
+          case 'F1B':
+            var iconNya = 'assets/icon/korf1b.png';
+            break;
         default:
           var iconNya = 'assets/icon/tsmg.png';
       }
       var coridorIcon = L.icon({
         iconUrl: iconNya,
-        iconSize: [30, 35], 
-        iconAnchor: [16, 35],
+        iconSize: [18, 23], 
+        iconAnchor: [16, 23],
       });
         var data = result[i].coordinate.split("|")
         var lat = parseFloat(data[0])
         var lng = parseFloat(data[1])
-        // data = result[i].coordinate.map(parseFloat)
-        console.log(lat + " -> " + lng)
+        var dataname = result[i].name;
+        var name = (dataname)
+        var datakor = result[i].koridor;
+        var kor = (datakor)
+        // var data = result[i].kor.map(parseFloat)
+        // console.log(lat + " -> " + lng )
+        // console.log(koridor + " - " + name)
         // console.info(isNaN(result[i].coordinate))
         // if(isNaN(result[i].coordinate) == true){
-        L.marker([lat, lng], {
-            icon: coridorIcon
-        }).addTo(map);
+
+        // L.marker([lat, lng], { icon: coridorIcon }).addTo(map)
+        
+        // .bindPopup( 'koridor ' + kor +' '+ name);
+
+
+        // Create some marker that will be resized on the map zooming
+// var myMarker = new L.CircleMarker([10,10], { /* Options */ });
+
+// map.on('zoomend', function() {
+//   var currentZoom = map.getZoom();
+//   myMarker.setRadius(currentZoom);
+// });
+
+
+
+      var shelter1 =  L.marker([lat, lng], {dragable:true, icon: coridorIcon}).addTo(map)
+        .bindPopup( 'koridor ' + kor +' '+ name);
+
+        map.on('zoomend' , function (e) {
+    var geo = map.getCenter();
+    console.log(map.getZoom());
+    if (map.getZoom()>14)
+    {
+        shelter1.setLatLng(geo);
+        shelter1.addTo(map);
+    }else {
+        shelter1.remove();
+    }
+});
+// map.on('zoomend', function() {
+//   var currentZoom = map.getZoom();
+//   shelter1.setRadius(currentZoom);
+// });
+
+// map.on('zoomend', function() {
+//         var currentZoom = map.getZoom();
+//         var myRadius = currentZoom*(1/2); //or whatever ratio you prefer
+//         var myWeight = currentZoom*(1/5); //or whatever ratio you prefer
+//             shelter1.setStyle({radius: myRadius, weight: myWeight});
+//     });
+//         var coridorIcon = new L.FeatureGroup();
+//         coridorIcon.addLayer(shelter1);
+//         map.on('zoomend', function() {
+//     if (map.getZoom() <15){
+//             map.removeLayer(coridorIcon);
+//     }
+//     else {
+//             map.addLayer(coridorIcon);
+//         }
+// });
+        // .openPopup();
         // map.fitBounds(coordinate.getBounds());
         // console.log(parseFloat(result[i].coordinate));
         // } else {
         //   // alert(result[i].coordinate)
         // }
 
+//         var shelter1 = L.marker([55.08, 11.62], {icon: shelterIcon});
+
+// var shelterMarkers = new L.FeatureGroup();
+
+// shelterMarkers.addLayer(shelter1);
+
+// map.on('zoomend', function() {
+//     if (map.getZoom() <7){
+//             map.removeLayer(shelterMarkers);
+//     }
+//     else {
+//             map.addLayer(shelterMarkers);
+//         }
+// });
     }
     // L.marker([result[0]], {icon: coridorIcon}).addTo(map);
     //  L.marker([50.5, 30.5]).addTo(map);

@@ -229,7 +229,8 @@
         <div class="col-md-11">
             <div class="card mt-1 mb-2" style="background-color:#d7dbd8">
                 <div class="  row mt-2 mb-2" style="margin:auto">
-                    <h3><b>{{$article->judul}}</b></h3>
+                    <h3><b>{{$article->title}}</b></h3>
+             
                 </div>
                 <div class="row justify-content-center m-1" style="background-color:#1a1a1c">
                     <div class="col-sm-6 col-md-4 col-lg-5">
