@@ -7,9 +7,9 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7/leaflet.css" />
+	{{-- <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7/leaflet.css" />
 	<script src="http://cdn.leafletjs.com/leaflet-0.7/leaflet.js"></script>
-</head>
+</head> --}}
 
 <body>
 
@@ -51,6 +51,7 @@
 				<option value="32">Koridor F1A KP GONDORIYO - NGALIYAN</option>
 				<option value="33">Koridor F1B NGALIYAN - MADUKORO RAYA</option>
 				<option value="34">Koridor F1B MADUKORO RAYA - NGALIYAN</option>
+				<option value="35">Koridor</option>
 				{{-- <option value="2">Pembelian Total Harga</option>
 				<option value="3">Login</option> --}}
 			</select>
@@ -92,11 +93,12 @@
 	<div id="korf1aa" class="form-control" style="width: 800px; height: 600px"></div>
 	<div id="korf1b" class="form-control" style="width: 800px; height: 600px"></div>
 	<div id="korf1bb" class="form-control" style="width: 800px; height: 600px"></div>
+	<div id="koridor" class="form-control" style="width: 800px; height: 600px"></div>
 
 	<script src="../../../../js/Polyline.encoded.js"></script>
 	<script type="text/javascript" src="../../../../js/polyline.js"></script>
 	{{-- <script src="./resources/js/Polyline.encoded.js"></script> --}}
-	
+{{-- 	
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-lg-12">
@@ -161,7 +163,7 @@
 		</div>
 	  </div>
 
-</body>
+</body> --}}
 @endsection
 
 

@@ -11,16 +11,12 @@
 
 <body>
     <div id="map" style="height:800px;width=800px"> </div>
-    {{-- <script src="script.js"></script> --}}
 </body>
 
 <script>
-    var result = {!! json_encode($result) !!};;
-    // console.log(result);
+       var result = {!! json_encode($result) !!};;
+    console.log(result);
 
-
-    //  var map = new L.Map("map");
-    // var map = new L.Map('map').setView([-6.996667, 110.416664], 13);
     let map = L.map('map', {zoomControl:false}).setView([-6.997226, 110.393395], 12);
     L.control.zoom({position:'bottomright'}).addTo(map);
     L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
@@ -34,20 +30,9 @@
 
     var coridorIcon = L.icon({
         iconUrl: 'assets/icon/busstop.png',
-        // shadowUrl: 'leaf-shadow.png',
-
         iconSize: [30, 35], // size of the icon
-        // shadowSize:   [50, 64], // size of the shadow
         iconAnchor: [16, 35], // point of the icon which will correspond to marker's location
-        // shadowAnchor: [4, 62],  // the same for the shadow
-        // popupAnchor: [0, -50] // point from which the popup should open relative to the iconAnchor
     });
-
-    //         const customMarker = new L.icon({
-    //     iconUrl: '/images/icons/location-pointer.svg',
-    //     iconSize: [35, 46],
-    //     iconAnchor: [17, 46]
-    // });
 
     for (let i = 0; i < result.length; i++) {
       var koridor = result[i].koridor;
@@ -108,8 +93,8 @@
       }
       var coridorIcon = L.icon({
         iconUrl: iconNya,
-        iconSize: [18, 23], 
-        iconAnchor: [16, 23],
+        iconSize: [25, 35], 
+        iconAnchor: [16, 35],
       });
         var data = result[i].coordinate.split("|")
         var lat = parseFloat(data[0])
@@ -118,126 +103,12 @@
         var name = (dataname)
         var datakor = result[i].koridor;
         var kor = (datakor)
-        // var data = result[i].kor.map(parseFloat)
-        // console.log(lat + " -> " + lng )
-        // console.log(koridor + " - " + name)
-        // console.info(isNaN(result[i].coordinate))
-        // if(isNaN(result[i].coordinate) == true){
 
-        // L.marker([lat, lng], { icon: coridorIcon }).addTo(map)
-        
-        // .bindPopup( 'koridor ' + kor +' '+ name);
-
-
-        // Create some marker that will be resized on the map zooming
-// var myMarker = new L.CircleMarker([10,10], { /* Options */ });
-
-// map.on('zoomend', function() {
-//   var currentZoom = map.getZoom();
-//   myMarker.setRadius(currentZoom);
-// });
-
-
-
-      var shelter1 =  L.marker([lat, lng], {dragable:true, icon: coridorIcon}).addTo(map)
+        console.log(lat + " -> " + lng )
+        console.log(koridor + " - " + name)
+L.marker([lat, lng], { icon: coridorIcon}).addTo(map)
         .bindPopup( 'koridor ' + kor +' '+ name);
-
-        map.on('zoomend' , function (e) {
-    var geo = map.getCenter();
-    console.log(map.getZoom());
-    if (map.getZoom()>14)
-    {
-        shelter1.setLatLng(geo);
-        shelter1.addTo(map);
-    }else {
-        shelter1.remove();
     }
-});
-// map.on('zoomend', function() {
-//   var currentZoom = map.getZoom();
-//   shelter1.setRadius(currentZoom);
-// });
-
-// map.on('zoomend', function() {
-//         var currentZoom = map.getZoom();
-//         var myRadius = currentZoom*(1/2); //or whatever ratio you prefer
-//         var myWeight = currentZoom*(1/5); //or whatever ratio you prefer
-//             shelter1.setStyle({radius: myRadius, weight: myWeight});
-//     });
-//         var coridorIcon = new L.FeatureGroup();
-//         coridorIcon.addLayer(shelter1);
-//         map.on('zoomend', function() {
-//     if (map.getZoom() <15){
-//             map.removeLayer(coridorIcon);
-//     }
-//     else {
-//             map.addLayer(coridorIcon);
-//         }
-// });
-        // .openPopup();
-        // map.fitBounds(coordinate.getBounds());
-        // console.log(parseFloat(result[i].coordinate));
-        // } else {
-        //   // alert(result[i].coordinate)
-        // }
-
-//         var shelter1 = L.marker([55.08, 11.62], {icon: shelterIcon});
-
-// var shelterMarkers = new L.FeatureGroup();
-
-// shelterMarkers.addLayer(shelter1);
-
-// map.on('zoomend', function() {
-//     if (map.getZoom() <7){
-//             map.removeLayer(shelterMarkers);
-//     }
-//     else {
-//             map.addLayer(shelterMarkers);
-//         }
-// });
-    }
-    // L.marker([result[0]], {icon: coridorIcon}).addTo(map);
-    //  L.marker([50.5, 30.5]).addTo(map);
-    //  L.marker([-6.987165,110.408270]).addTo(map);
-
-    //     $.getJSON("https://gps.brtnusantara.com/dev/trans_semarang/api_v1/getAllRoutes", function(data) {
-
-    // // Array of markers
-    // var markers = [];
-
-    // // For each row in Socrata, create a marker
-    // for (var i = 0; i < data.length; i++) {
-
-    //   var item = data[i];
-
-    //   // Extract coordinates, convert strings to floats
-    //   var coordinates = [
-    //     parseFloat(item.sh_lat),
-    //     parseFloat(item.sh_lng)
-    //   ]
-
-    //   // Create a marker with a custom icon
-    //   var marker = L.marker(coordinates, {
-    //       icon: L.icon({
-    //         iconUrl: 'images/americorps.png',
-    //         iconSize: [24, 24],
-    //         iconAnchor: [12, 12],
-    //         opacity: 0.5
-    //       })
-    //   }).bindTooltip(item.sponsor + '<br>' + item.project_description);
-
-    //   // Add marker to the array of markers
-    //   markers.push(marker);
-    // }
-
-    // // Create a Leaflet layer group from array of markers
-    // var layer = L.layerGroup(markers);
-    // layer.addTo(map); // add layer to the map
-
-    // // Add layer to the legend, together with the little icon
-    // legend.addOverlay(layer, 'AmeriCorps NCCC <img src="images/americorps.png" height="11" alt="AmeriCorps NCCC">')
-
-    // })
 </script>
 
 </html>
