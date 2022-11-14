@@ -281,15 +281,15 @@
                             <p class="ha2">Route Corridor Info</p>
                         </div>
                         <div class="btn-group" onclick="toggleItems()">
-                            <button class="btn btn-tsm btn-lg dropdown-toggle" type="button"
+                            {{-- <button class="btn btn-tsm btn-lg dropdown-toggle" type="button"
                                 data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false"
-                                style="height: 100%">Pilih Koridor BRT</button>
+                                style="height: 100%">Pilih Koridor BRT</button> --}}
+                                <select class="container type" name="type" id="type" onchange>
                             <ul class="dropdown-menu dropdown-menu-lg-end" style="width: 100%">
                                 {{-- @foreach ($result as $datas)
                                 <li><a class="dropdown-item {{$datas['kor']}} hidden">Koridor {{$datas['kor']}} {{$datas['origin']}} - {{$datas['toward']}}</a></li>
                                 @endforeach --}}
-                                <select class="container type" name="type" id="type" onchange>
-                                    <option value="1">-- PILIH RUTE BRT --</option>
+                                    <option value="1" >Pilih Koridor BRT</option>
                                     <option value="2">Koridor 1  MANGKANG - PENGGARON</option>
                                     <option value="3">Koridor 1  PENGGARON - MANGKANG</option>
                                     <option value="4">Koridor 2  TERBOYO - UNGARAN</option>
@@ -1140,6 +1140,23 @@
             })
         }
     </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("select").change(function(){
+            $(this).find("option:selected").each(function(){
+                var optionValue = $(this).attr("value");
+                if(optionValue){
+                    $(".box").not("." + optionValue).hide();
+                    $("." + optionValue).show();
+                } else{
+                    $(".box").hide();
+                }
+            });
+        }).change();
+    });
+    </script>
     <script src="/js/Polyline.encoded.js"></script>
 
 
@@ -1153,7 +1170,8 @@
         L.control.zoom({
             position: 'bottomright'
         }).addTo(map);
-        L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+         L.tileLayer(
+                    "http://{s}.google.com/vt?lyrs=m&x={x}&y={y}&z={z}", {
             maxZoom: 20,
             zoomControl: true,
             subdomains: ['mt0', 'mt1', 'mt2', 'mt3'],
