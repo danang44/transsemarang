@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
     <title>Trans Semarang | Home</title>
-    <base href="https://transsemarang.semarangkota.go.id/v2/">
-    {{-- <base href="http://127.0.0.1:8000/"> --}}
+    {{-- <base href="https://transsemarang.semarangkota.go.id/v2/"> --}}
+    <base href="http://127.0.0.1:8000/">
 
     <meta name="twitter:description" content="Twitter Resmi BLU UPTD Trans Semarang  Jl. Tambak Aji Raya No. 5 Kode Pos 50185  CS : 1-5000-94  IG: transsemarang  FB: TRANS Semarang">
     <meta property="og:image" content="{{asset('assets/img/Trans_Semarang_icon.svg')}}">
@@ -252,20 +252,15 @@
                         <div class="btn-group" onclick="toggleItems()">
                             <button class="btn btn-tsm btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false" style="height: 100%">Pilih Koridor BRT</button>
                             <ul class="dropdown-menu dropdown-menu-lg-end"  style="width: 100%">
-                                @foreach($result as $datas)
+                                {{-- @foreach($result as $datas)
                                 <li><a class="dropdown-item {{$datas['kor']}} hidden">Koridor {{$datas['kor']}} {{$datas['origin']}} - {{$datas['toward']}}</a></li>
-                                @endforeach
+                                @endforeach --}}
                             </ul>
                         </div>
                     </div>
-                    <div class="btn-group" onclick="toggleItems()" style="display: flex;flex-direction: row;align-items: center;width: 490px;height: 76px;background: #AF2330;border-radius: 8px;">
-                        <button class="btn btn-tsm btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false" style="height: 100%">Pilih Koridor BRT</button>
-                        <ul class="dropdown-menu dropdown-menu-lg-end"  style="width: 100%">
-                            @foreach($result as $datas)
-                            {{-- <li><a class="dropdown-item {{$datas['kor']}} hidden">Koridor {{$datas['kor']}} {{$datas['origin']}} - {{$datas['toward']}}</a></li> --}}
-
-                          @endforeach
-                        </ul>
+                    <div class="leaflet">
+                        <div style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;gap: 4px;width: 400px;height: 100%;left: 0px;background: #F9FAFB;border-bottom-left-radius: 20px;"></div>
+                        <div class="container bg-dark" id="map"></div>
                     </div>
                 </div>
             </div>
