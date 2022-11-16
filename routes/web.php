@@ -44,8 +44,9 @@ Route::get('/home_admin', 'Admin\AdminController@home')->name('home_admin');
 Route::get('/test', 'Admin\AdminController@test')->name('test');
 Route::get('/test2', 'Admin\AdminController@test2')->name('test2');
 Route::post('/test_store', 'Admin\AdminController@store');
-Route::get('/test3/{id}', 'Admin\AdminController@test3')->name('test3');
+Route::get('/test3', 'Admin\AdminController@test3')->name('test3');
 Route::get('/test4', 'Admin\AdminController@test4')->name('test4');
+Route::get('/test5', 'Admin\AdminController@test5')->name('test5');
 
 //SLIDER
 Route::get('/slider', 'Admin\SliderController@index')->name('slider');

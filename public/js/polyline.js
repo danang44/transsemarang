@@ -1,10 +1,10 @@
 (function () {
     "use strict";
-
+    
     $(document).ready(function () {
         $(document).on("change", ".type", function (event) {
             var type = $(this).val();
-
+            
             //style leaflet
             // );
             // L.tileLayer(
@@ -58,6 +58,29 @@
                 $("#korf1b").hide();
                 $("#korf1bb").hide();
                 var map = L.map("default");
+         
+
+
+                // var result = {!! json_encode($result) !!};
+                // console.log(result);
+            // $.ajax({
+            //     type: 'GET', //THIS NEEDS TO BE GET
+            //     url: '{{$result}}/AdminController/test3',
+            //     success: function (data) {
+            //         var obj = JSON.parse(data);
+            //         var your_html = "";
+            //         $.each(obj['getstamps'], function (key, val) {
+            //            your_html += "<p>My Value :" +  val + ") </p>"
+            //         });
+            //          $("#data").append(you_html); //// For Append
+            //          $("#mydiv").html(your_html)   //// For replace with previous one
+            //     },
+            //     error: function() { 
+            //          console.log($result);
+            //     }
+            // });
+               
+            
 				L.tileLayer(
                     "http://{s}.google.com/vt?lyrs=m&x={x}&y={y}&z={z}",
                     {
@@ -157,6 +180,16 @@
 				L.marker([-7.012321, 110.418670,12],[-7.002550, 110.402296,12]).addTo(map);
 				
 				
+                $.ajax({
+                    url: "AdminController/test5",
+                    method: "GET",
+                    data: {},
+                    success: function(result){
+                        var result = result;
+                        console.log(result)
+                    
+                    }
+                });
 
                 map.fitBounds(polyline.getBounds());
             } else if (type === "3") {

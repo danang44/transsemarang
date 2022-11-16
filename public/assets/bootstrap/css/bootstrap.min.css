@@ -19617,6 +19617,15 @@ fieldset:disabled .btn {
         border-top-right-radius: 20px;
     }
 
+    .dnngi {
+        display: flex;
+        max-width: 100%;
+        height: 100%;
+        width: 100%;
+        background-color: transparent;
+        color: white;
+    }
+
     .headeraction {
         display: flex;
         flex-direction: column;
@@ -19648,6 +19657,9 @@ fieldset:disabled .btn {
     }
 
     .btn-group {
+        font-family: 'Plus Jakarta Sans';
+        font-size: 24px;
+        font-weight: 700;
         display: flex;
         flex-direction: row;
         align-items: center;

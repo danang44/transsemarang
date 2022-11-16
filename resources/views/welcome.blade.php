@@ -282,57 +282,58 @@
                         </div>
                         <div class="btn-group" onclick="toggleItems()">
                             {{-- <button class="btn btn-tsm btn-lg dropdown-toggle" type="button"
-                                data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false"
-                                style="height: 100%">Pilih Koridor BRT</button> --}}
-                                <select class="container type" name="type" id="type" onchange>
-                            <ul class="dropdown-menu dropdown-menu-lg-end" style="width: 100%">
-                                {{-- @foreach ($result as $datas)
-                                <li><a class="dropdown-item {{$datas['kor']}} hidden">Koridor {{$datas['kor']}} {{$datas['origin']}} - {{$datas['toward']}}</a></li>
-                                @endforeach --}}
-                                    <option value="1" >Pilih Koridor BRT</option>
-                                    <option value="2">Koridor 1  MANGKANG - PENGGARON</option>
-                                    <option value="3">Koridor 1  PENGGARON - MANGKANG</option>
-                                    <option value="4">Koridor 2  TERBOYO - UNGARAN</option>
-                                    <option value="5">Koridor 2  UNGARAN - TERBOYO</option>
-                                    <option value="6">Koridor 3A PELABUHAN - ELISABETH via DR CIPTO</option>
-                                    <option value="7">Koridor 3A ELISABETH via DR CIPTO - PELABUHAN</option>
-                                    <option value="8">Koridor 3B PELABUHAN - ELISABETH</option>
-                                    <option value="9">Koridor 4 TAWANG - CANGKIRAN</option>
-                                    <option value="10">Koridor 4 CANGKIRAN - TAWANG</option>
-                                    <option value="11">Koridor F2A TERBOYO - ADA MAJAPAHIT</option>
-                                    <option value="12">Koridor F2A ADA MAJAPAHIT - TERBOYO</option>
-                                    <option value="13">Koridor F2B TERBOYO - ADA MAJAPAHIT B</option>
-                                    <option value="14">Koridor F2B ADA MAJAPAHIT B - TERBOYO</option>
-                                    <option value="15">Koridor 5 PRPP - METESEH</option>
-                                    <option value="16">Koridor 5 METESEH - PRPP</option>
-                                    <option value="17">Koridor F4B GUNUNG PATI - BSB</option>
-                                    <option value="18">Koridor F4B BSB - GUNUNG PATI</option>
-                                    <option value="19">Koridor F4A GUNUNG PATI - UNNES</option>
-                                    <option value="20">Koridor F4A UNNES - GUNUNG PATI</option>
-                                    <option value="21">Koridor F3 PENGGARON - TERMINAL BANYUMANIK</option>
-                                    <option value="22">Koridor F3 TERMINAL BANYUMANIK - PENGGARON</option>
-                                    <option value="23">Koridor 6 UNDIP - UNNES</option>
-                                    <option value="24">Koridor 6 UNNES - UNDIP</option>
-                                    <option value="25">Koridor LM MANGKANG - SIMPANG LIMA (MALAM) </option>
-                                    <option value="26">Koridor LM SIMPANG LIMA - MANGKANG (MALAM)</option>
-                                    <option value="27">Koridor 7 GENUK - BALAIKOTA</option>
-                                    <option value="28">Koridor 7 BALAIKOTA - GENUK</option>
-                                    <option value="29">Koridor 8 SIMPANG LIMA - GUNUNG PATI - CANGKIRAN</option>
-                                    <option value="30">Koridor 8 GUNUNG PATI - CANGKIRAN - SIMPANG LIMA</option>
-                                    <option value="31">Koridor F1A NGALIYAN - KP GONDORIYO</option>
-                                    <option value="32">Koridor F1A KP GONDORIYO - NGALIYAN</option>
-                                    <option value="33">Koridor F1B NGALIYAN - MADUKORO RAYA</option>
-                                    <option value="34">Koridor F1B MADUKORO RAYA - NGALIYAN</option>
-                                    {{-- <option value="2">Pembelian Total Harga</option>
-                                    <option value="3">Login</option> --}}
-                                </select>
-        
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="leaflet">
-                        <div
-                            style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;gap: 4px;width: 400px;height: 100%;left: 0px;background: #F9FAFB;border-bottom-left-radius: 20px;">
+                            data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false"
+                            style="height: 100%">Pilih Koridor BRT</button> --}}
+                            
+                            <select class="container type dnngi" name="type" id="type" onchange>
+                                <ul class="dropdown-menu dropdown-menu-lg-end" style="width: 100%">
+                                    {{-- @foreach ($result as $datas)
+                                        <li><a class="dropdown-item {{$datas['kor']}} hidden">Koridor {{$datas['kor']}} {{$datas['origin']}} - {{$datas['toward']}}</a></li>
+                                        @endforeach --}}
+                                        <option value="1">Pilih Koridor BRT</option>
+                                        <option value="2">Koridor 1 (MANGKANG - PENGGARON)</option>
+                                        <option value="3">Koridor 1 PENGGARON - MANGKANG</option>
+                                        <option value="4">Koridor 2 TERBOYO - UNGARAN</option>
+                                        <option value="5">Koridor 2 UNGARAN - TERBOYO</option>
+                                        <option value="6">Koridor 3A PELABUHAN - ELISABETH via DR CIPTO</option>
+                                        <option value="7">Koridor 3A ELISABETH via DR CIPTO - PELABUHAN</option>
+                                        <option value="8">Koridor 3B PELABUHAN - ELISABETH</option>
+                                        <option value="9">Koridor 4 TAWANG - CANGKIRAN</option>
+                                        <option value="10">Koridor 4 CANGKIRAN - TAWANG</option>
+                                        <option value="11">Koridor F2A TERBOYO - ADA MAJAPAHIT</option>
+                                        <option value="12">Koridor F2A ADA MAJAPAHIT - TERBOYO</option>
+                                        <option value="13">Koridor F2B TERBOYO - ADA MAJAPAHIT B</option>
+                                        <option value="14">Koridor F2B ADA MAJAPAHIT B - TERBOYO</option>
+                                        <option value="15">Koridor 5 PRPP - METESEH</option>
+                                        <option value="16">Koridor 5 METESEH - PRPP</option>
+                                        <option value="17">Koridor F4B GUNUNG PATI - BSB</option>
+                                        <option value="18">Koridor F4B BSB - GUNUNG PATI</option>
+                                        <option value="19">Koridor F4A GUNUNG PATI - UNNES</option>
+                                        <option value="20">Koridor F4A UNNES - GUNUNG PATI</option>
+                                        <option value="21">Koridor F3 PENGGARON - TERMINAL BANYUMANIK</option>
+                                        <option value="22">Koridor F3 TERMINAL BANYUMANIK - PENGGARON</option>
+                                        <option value="23">Koridor 6 UNDIP - UNNES</option>
+                                        <option value="24">Koridor 6 UNNES - UNDIP</option>
+                                        <option value="25">Koridor LM MANGKANG - SIMPANG LIMA (MALAM) </option>
+                                        <option value="26">Koridor LM SIMPANG LIMA - MANGKANG (MALAM)</option>
+                                        <option value="27">Koridor 7 GENUK - BALAIKOTA</option>
+                                        <option value="28">Koridor 7 BALAIKOTA - GENUK</option>
+                                        <option value="29">Koridor 8 SIMPANG LIMA - GUNUNG PATI - CANGKIRAN</option>
+                                        <option value="30">Koridor 8 GUNUNG PATI - CANGKIRAN - SIMPANG LIMA</option>
+                                        <option value="31">Koridor F1A NGALIYAN - KP GONDORIYO</option>
+                                        <option value="32">Koridor F1A KP GONDORIYO - NGALIYAN</option>
+                                        <option value="33">Koridor F1B NGALIYAN - MADUKORO RAYA</option>
+                                        <option value="34">Koridor F1B MADUKORO RAYA - NGALIYAN</option>
+                                        {{-- <option value="2">Pembelian Total Harga</option>
+                                        <option value="3">Login</option> --}}
+                                    </select>
+                                    
+                                </ul>
+                            </div>
+                            </div>
+                            <div class="leaflet">
+                                <div
+                                style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;gap: 4px;width: 400px;height: 100%;left: 0px;background: #F9FAFB;border-bottom-left-radius: 20px;">
                         </div>
                         {{-- <div class="container bg-dark" id="map"></div> --}}
                         <div class="container bg-dark" id="default"></div>
@@ -532,11 +533,11 @@
                                             if ('{{ Auth::user()->email }}' == '') {
                                                 document.write(
                                                     '<input type="email" class="form-control disabled" id="email" name="email" placeholder="Your email"  required>'
-                                                    );
+                                                );
                                             } else {
                                                 document.write(
                                                     '<input type="email" class="form-control" id="email" name="email" value="{{ Auth::user()->email }}" readonly required>'
-                                                    );
+                                                );
                                             }
                                         </script>
                                     </div>
@@ -1143,26 +1144,26 @@
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script>
-    $(document).ready(function(){
-        $("select").change(function(){
-            $(this).find("option:selected").each(function(){
-                var optionValue = $(this).attr("value");
-                if(optionValue){
-                    $(".box").not("." + optionValue).hide();
-                    $("." + optionValue).show();
-                } else{
-                    $(".box").hide();
-                }
-            });
-        }).change();
-    });
+        $(document).ready(function() {
+            $("select").change(function() {
+                $(this).find("option:selected").each(function() {
+                    var optionValue = $(this).attr("value");
+                    if (optionValue) {
+                        $(".box").not("." + optionValue).hide();
+                        $("." + optionValue).show();
+                    } else {
+                        $(".box").hide();
+                    }
+                });
+            }).change();
+        });
     </script>
     <script src="/js/Polyline.encoded.js"></script>
 
 
     <script>
         var result = {!! json_encode($result) !!};;
-        console.log(result);
+        // console.log(result);
 
         let map = L.map('default', {
             // zoomControl: false
@@ -1170,13 +1171,13 @@
         L.control.zoom({
             position: 'bottomright'
         }).addTo(map);
-         L.tileLayer(
-                    "http://{s}.google.com/vt?lyrs=m&x={x}&y={y}&z={z}", {
-            maxZoom: 20,
-            zoomControl: true,
-            subdomains: ['mt0', 'mt1', 'mt2', 'mt3'],
-            attribution: '&copy; Trans Semarang | <a href="https://www.google.com/intl/id/permissions/geoguidelines/">Google Maps</a>'
-        }).addTo(map);
+        L.tileLayer(
+            "http://{s}.google.com/vt?lyrs=m&x={x}&y={y}&z={z}", {
+                maxZoom: 20,
+                zoomControl: true,
+                subdomains: ['mt0', 'mt1', 'mt2', 'mt3'],
+                attribution: '&copy; Trans Semarang | <a href="https://www.google.com/intl/id/permissions/geoguidelines/">Google Maps</a>'
+            }).addTo(map);
 
 
 
@@ -1256,14 +1257,16 @@
             var datakor = result[i].koridor;
             var kor = (datakor)
 
-            console.log(lat + " -> " + lng)
-            console.log(koridor + " - " + name)
+            // console.log(lat + " -> " + lng)
+            // console.log(koridor + " - " + name)
             L.marker([lat, lng], {
                     icon: coridorIcon
                 }).addTo(map)
                 .bindPopup('koridor ' + kor + ' ' + name);
         }
     </script>
+
+    
 
     {{-- <script>
 $.ajax({

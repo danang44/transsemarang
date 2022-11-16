@@ -52,6 +52,8 @@
                                   <th scope="col">Jumlah Bis</th>
                                   <th scope="col">Jumlah Halte</th>
                                   <th scope="col">Koridor</th>
+                                  <th scope="col">poin a</th>
+                                  <th scope="col">poin b</th>
                                 </tr>
                               </thead>
                               <tbody>
@@ -65,6 +67,8 @@
                                   <td>{{$datas['jumlah_bis']}}</td>
                                   <td>{{$datas['jumlah_halte']}}</td>
                                   <td>{{$datas['kor']}}</td>
+                                  <td>{{$datas['points_a']}}</td>
+                                  <td>{{$datas['points_b']}}</td>
                                 
                                 </tr>
                               @endforeach 
