@@ -13432,6 +13432,7 @@ fieldset:disabled .btn {
         opacity: 0;
         overflow: hidden;
     }
+    
 
     .headinfomaps {
         display: flex;
@@ -19617,7 +19618,7 @@ fieldset:disabled .btn {
         border-top-right-radius: 20px;
     }
 
-    .dnngi {
+    select.dnngi {
         display: flex;
         max-width: 100%;
         height: 100%;
@@ -19657,9 +19658,6 @@ fieldset:disabled .btn {
     }
 
     .btn-group {
-        font-family: 'Plus Jakarta Sans';
-        font-size: 24px;
-        font-weight: 700;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -20627,6 +20625,37 @@ fieldset:disabled .btn {
         width: calc(100% / 5);
         animation: fade-in 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
     }
+
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(calc(-250px * 4));
+        }
+    }
+    .slider {
+        background-color: #F9FAFB;
+        display: flex;
+        height: 120px;
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        overflow: hidden;
+        position: relative;
+        width: auto;
+    }
+    .slider .slide-track {
+        animation: scroll 40s linear infinite;
+        display: flex;
+        width: calc(250px * 8);
+    }
+    .slider .slide {
+        height: 100px;
+        width: 250px;
+    }
+
 /* -- relatedlink -- */
 
 /* -- Footer -- */
@@ -20789,7 +20818,6 @@ fieldset:disabled .btn {
     .btmwrap {
         display: flex;
         flex-direction: row;
-        padding: 20px 120px;
         max-width: 1440px;
         width: 100%;
         height: auto;
@@ -20825,6 +20853,67 @@ fieldset:disabled .btn {
         aspect-ratio: auto;
         background-size: contain;
     }
+/* article berita */
+    .headerart {
+        font-family: 'Plus Jakarta Sans';
+        font-style: normal;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 80px 120px;
+        width: 1440px;
+        max-width: 100%;
+        height: auto;
+        gap: 80px;
+    }
+    .headerartwrap {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 40px;
+        width: 1200px;
+        max-width: 100%;
+        height: auto;
+    }
+    .headerartwrap>span {
+        width: 100%;
+        height: auto;
+        font-family: 'Plus Jakarta Sans';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 60px;
+        color: #1D2939;
+    }
+
+    .detailwrap {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px;
+        gap: 40px;
+        width: 1200px;
+        height: 68px;
+    }
+
+    .detailwrap>span {
+        width: 356px;
+        height: auto;
+        font-family: 'Plus Jakarta Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 32px;
+        color: #98A2B3;
+    }
+
+    div.detailwrap>span>p* {
+        margin-bottom: 0rem !important;
+    }
+
     article {
         display: flex;
         flex-direction: column;
@@ -20834,4 +20923,5 @@ fieldset:disabled .btn {
         justify-content: center;
         align-content: center;
     }
+/* article berita */
 }

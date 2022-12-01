@@ -1,25 +1,24 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="id">
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
     <title>Trans Semarang | Home</title>
-    {{-- <base href="https://transsemarang.semarangkota.go.id/v2/"> --}}
-    <base href="http://127.0.0.1:8000/">
+    <base href="https://transsemarang.semarangkota.go.id/v2/">
 
+    <meta name="description"
+        content="Trans Semarang adalah sistem transportasi angkutan massal berbasis jalan di Jawa Tengah yang beroperasi di Kota dan Kabupaten Semarang. Layanan ini dioperasikan guna mengurai kemacetan di Kota Semarang serta untuk mengakomodasi para pelaju menuju pusat kota dan destinasi wisata yang ada di Kota Semarang.">
     <meta name="twitter:description"
         content="Twitter Resmi BLU UPTD Trans Semarang  Jl. Tambak Aji Raya No. 5 Kode Pos 50185  CS : 1-5000-94  IG: transsemarang  FB: TRANS Semarang">
     <meta property="og:image" content="{{ asset('assets/img/Trans_Semarang_icon.svg') }}">
     <meta property="og:type" content="website">
-    <meta name="description"
-        content="Trans Semarang adalah sistem transportasi angkutan massal berbasis jalan di Jawa Tengah yang beroperasi di Kota dan Kabupaten Semarang. Layanan ini dioperasikan guna mengurai kemacetan di Kota Semarang serta untuk mengakomodasi para pelaju menuju pusat kota dan destinasi wisata yang ada di Kota Semarang.">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:image" content="{{ asset('assets/img/tsmgLogo32px-01.png') }}">
     <meta name="twitter:title" content="Trans Semarang | @transsemarang">
-    <meta
-        name="google-signin-client_id"content="662068769407-1qc1taetjo897853c5lkl755p2c5csvi.apps.googleusercontent.com">
+    <meta name="google-signin-client_id"
+        content="662068769407-1qc1taetjo897853c5lkl755p2c5csvi.apps.googleusercontent.com">
 
     <link rel="apple-touch-icon" type="image/png" sizes="180x180"
         href="{{ asset('assets/img/tsmgLogo-01-01%20(180x180).png') }}">
@@ -30,52 +29,45 @@
     <link rel="icon" type="image/png" sizes="192x192"
         href="{{ asset('assets/img/tsmgLogo-01-01%20(192x192).png') }}">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js">
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
-        integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" type="text/javascript"></script>
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-    <script src="https://kit.fontawesome.com/1e94ef36ed.js" type="text/javascript" crossorigin="anonymous"></script>
-    <script src="/scripts/snippet-javascript-console.min.js?v=1"></script>
-    {{-- <script src="assets/bootstrap/js/live.js" type="text/javascript"></script> --}}
-    {{-- <script src="{{ asset('js/polyline.js') }}" type="text/javascript"></script> --}}
-    {{-- <script src="//unpkg.com/leaflet-gesture-handling"></script> --}}
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    {{-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"></script>
+    <script src="https://kit.fontawesome.com/1e94ef36ed.js"></script> --}}
+
+    {{-- <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
+    integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script> --}}
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
-        integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
-        crossorigin=""/>
-  <link rel="stylesheet" href="//unpkg.com/leaflet-gesture-handling/dist/leaflet-gesture-handling.min.css"
-        type="text/css">
-  <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
-          integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
-          crossorigin=""></script>
-  <script src="//unpkg.com/leaflet-gesture-handling"></script>
-          {{-- <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
-          integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
-    <link rel="stylesheet" href="//unpkg.com/leaflet-gesture-handling/dist/leaflet-gesture-handling.min.css"
-    type="text/css"> --}}
-    
-    {{-- <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css"> --}}
-    <link rel="stylesheet" href="{{ asset('assets/bootstrap/css/bootstrap.min.css') }}">
+    integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+    crossorigin=""/>
+<link rel="stylesheet" href="//unpkg.com/leaflet-gesture-handling/dist/leaflet-gesture-handling.min.css"
+    type="text/css">
+<script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+      integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+      crossorigin=""></script>
+<script src="//unpkg.com/leaflet-gesture-handling"></script>
+
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/bootstrap/css/bootstrap.min.css') }}">
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans:200,300,400,500,600,700,800'>
-    <link rel="stylesheet" href="{{ asset('assets/css/Footer-Multi-Column-icons.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/Hero-Clean-Reverse-images.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/logo-slider.css') }}">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.38/dist/sweetalert2.css">
-    {{-- <link rel="stylesheet"
-        href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
-        crossorigin="" /> --}}
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/Footer-Multi-Column-icons.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/Hero-Clean-Reverse-images.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/logo-slider.css') }}">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.38/dist/sweetalert2.css">
+    {{-- <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css" /> --}}
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/slick/slick.css') }}" />
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/slick/slick-theme.css') }}" />
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-    {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"> --}}
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" />
+        
 </head>
 
 <style>
@@ -91,11 +83,6 @@
         letter-spacing: -0.006em;
     }
 
-    /* .swiper {
-        width: 100%;
-        height: 568px;
-    } */
-
     body {
         font-family: 'Plus Jakarta Sans', sans-serif !important;
         font-style: normal;
@@ -103,32 +90,12 @@
         font-weight: 400;
         line-height: 1.5;
         text-align: left;
-        /* overflow-x:hidden !important; */
         -webkit-overflow-scrolling: auto;
     }
-
-    .map-scroll:before {
-content: 'Use ctrl + scroll to zoom the map';
-position: absolute;
-top: 50%;
-left: 50%;
-z-index: 999;
-font-size: 34px;
- }
- .map-scroll:after {
-position: absolute;
-left: 0;
-right: 0;
-bottom: 0;
-top: 0;
-content: '';
-background: #00000061;
-z-index: 999;
-}
 </style>
 
 <body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="72">
-    {{-- Start Navbar --}}
+    <!-- Navigation -->
     <nav id="mainNav" class="navbar navbar-expand-lg shadow fixed-top bg-darkngi sticky-top">
         <div class="container-fluid">
             <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
@@ -156,7 +123,8 @@ z-index: 999;
                     </li>
                     <li class="nav-item mx-3 mx-lg-1">
                         <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#hotlineCenter"
-                            onclick="sweet();">HOTLINE CENTER</a>
+                            onclick="sweet();">HOTLINE
+                            CENTER</a>
                     </li>
                     <!-- Authentication Links -->
 
@@ -178,14 +146,11 @@ z-index: 999;
                                 aria-expanded="false" v-pre>
                                 {{ Auth::user()->name }} <span class="caret"></span>
                             </a>
-
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"
                                 style="background-color:#262b2f">
-
-                                {{-- <a class="dropdown-item" href="/user" style="color:white"> My Profile </a> --}}
                                 <a style="color:white" class="dropdown-item" href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
-                                                        document.getElementById('logout-form').submit();">
+                                document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}
                                 </a>
 
@@ -203,9 +168,9 @@ z-index: 999;
             </div>
         </div>
     </nav>
-    {{-- End Navbar --}}
+    <!-- Navigation -->
 
-    {{-- Start Slider --}}
+    <!-- Slider -->
     <div class="slicktsm single-item">
         <div class="slickitem">
             <div class="slickbg"
@@ -238,9 +203,9 @@ z-index: 999;
             </div>
         @endforeach
     </div>
-    {{-- End Slider --}}
+    <!-- Slider -->
 
-    {{-- Start News --}}
+    <!-- News -->
     <div class="ngi-div1">
         <div class="ngi-row1">
             <div class="ngi-row1-col1">
@@ -251,11 +216,12 @@ z-index: 999;
                 </div>
                 @foreach ($PNarticles as $PNart)
                     <div class="row row-cols-1 headcont">
-                        <a class="titlenews" href="/detailarticle/{{ $PNart->title }}">
+                        <a class="titlenews" href="/v2/detailarticle/{{ $PNart->title }}">
                             <p><strong>{{ $PNart->title }}</strong></p>
                         </a>
                         <p class="text-justify text-black-50 bodycont">
-                            <?php echo $PNart->intro; ?></p>
+                            <?php echo $PNart->intro; ?>
+                        </p>
                         <p class="text-justify text-black-50 contdate">
                             <?php $phpdate = strtotime($PNart->date);
                             $mysqldate = date('l, d F Y', $phpdate);
@@ -278,7 +244,7 @@ z-index: 999;
                                 <img src="public/{{ $RNart->gambar }}" class="gallery-image"
                                     alt="{{ $RNart->gambar }}" />
                                 <div class="gallery-item-info">
-                                    <a class="gallery-item-type" href="/detailarticle/{{ $RNart->title }}">
+                                    <a class="gallery-item-type" href="/v2/detailarticle/{{ $RNart->title }}">
                                         <p class="fw-semibold text-white">{{ $RNart->title }}</p>
                                     </a>
                                 </div>
@@ -289,9 +255,9 @@ z-index: 999;
             </div>
         </div>
     </div>
-    {{-- End News --}}
+    <!-- News -->
 
-    {{-- Start Maps & Route --}}
+    <!-- Maps & Rute -->
     <div class="mapsandrute" id="mapsandrute" name="mapsandrute">
         <div class="headinfomaps">
             <div class="infowrap">
@@ -316,63 +282,89 @@ z-index: 999;
                         </div>
                         <div class="btn-group" onclick="toggleItems()">
                             {{-- <button class="btn btn-tsm btn-lg dropdown-toggle" type="button"
-                            data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false"
-                            style="height: 100%">Pilih Koridor BRT</button> --}}
-                            
-                          
-                                    
-                                </ul>
-                            </div>
-                            </div>
-                            <div class="leaflet">
-                                <div
-                                style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;gap: 4px;width: 400px;height: 100%;left: 0px;background: #F9FAFB;border-bottom-left-radius: 20px;">
+                                data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false"
+                                style="height: 100%">Pilih Koridor BRT</button> --}}
+
+                            <select class="container type dnngi" name="type" id="my-select" onchange>
+                                <ul class="dropdown-menu dropdown-menu-lg-end" style="width: 100%">
+                                    {{-- @foreach($result as $datas)   
+                                    <option value={{$datas['kor']}}>Koridor {{$datas['kor']}} {{$datas['origin']}} - {{$datas['toward']}}</option>
+                                    @endforeach --}}
+                                    @foreach ($resultall as $datas)
+                                    <option value="{{ $datas['kor'] }}" data-origin="{{ $datas['origin'] }}"
+                                        data-toward="{{ $datas['toward'] }}">Koridor {{ $datas['kor'] }} {{ $datas['origin'] }} -
+                                        {{ $datas['toward'] }}</option>
+                                @endforeach
+                            </select>
+
+                            </ul>
                         </div>
-                        <div class="container bg-dark" id="map"></div>
-                        {{-- <div class="container bg-dark" id="default"></div>
-                        <div id="map" class="container bg-dark"></div>
-                        <div id="maps" class="container bg-dark"></div>
-                        <div id="mapss" class="container bg-dark"></div>
-                        <div id="kor2" class="container bg-dark"></div>
-                        <div id="kor22" class="container bg-dark"></div>
-                        <div id="kor3a" class="container bg-dark"></div>
-                        <div id="kor3aa" class="container bg-dark"></div>
-                        <div id="kor3b" class="container bg-dark"></div>
-                        <div id="kor4" class="container bg-dark"></div>
-                        <div id="kor44" class="container bg-dark"></div>
-                        <div id="korf2a" class="container bg-dark"></div>
-                        <div id="korf2aa" class="container bg-dark"></div>
-                        <div id="korf2b" class="container bg-dark"></div>
-                        <div id="korf2bb" class="container bg-dark"></div>
-                        <div id="kor5" class="container bg-dark"></div>
-                        <div id="kor55" class="container bg-dark"></div>
-                        <div id="korf4b" class="container bg-dark"></div>
-                        <div id="korf4bb" class="container bg-dark"></div>
-                        <div id="korf4a" class="container bg-dark"></div>
-                        <div id="korf4aa" class="container bg-dark"></div>
-                        <div id="korf3" class="container bg-dark"></div>
-                        <div id="korf33" class="container bg-dark"></div>
-                        <div id="kor6" class="container bg-dark"></div>
-                        <div id="kor66" class="container bg-dark"></div>
-                        <div id="korlm" class="container bg-dark"></div>
-                        <div id="korlmm" class="container bg-dark"></div>
-                        <div id="kor7" class="container bg-dark"></div>
-                        <div id="kor77" class="container bg-dark"></div>
-                        <div id="kor8" class="container bg-dark"></div>
-                        <div id="kor88" class="container bg-dark"></div>
-                        <div id="korf1a" class="container bg-dark"></div>
-                        <div id="korf1aa" class="container bg-dark"></div>
-                        <div id="korf1b" class="container bg-dark"></div>
-                        <div id="korf1bb" class="container bg-dark"></div> --}}
+                    </div>
+                    <div class="leaflet">
+                        {{-- <div
+                            style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;gap: 4px;width: 400px;height: 100%;left: 0px;background: #F9FAFB;border-bottom-left-radius: 20px;"> --}}
+                            {{-- <div class="page-content page-container" id="page-content">
+                                <div class="padding">
+                                    <div class="row">
+                                        
+                                        <div class="col-lg-6">
+                                            <p>Basic Timeline</p>
+                                            <div class="timeline p-4 block mb-4">
+                                                <div class="tl-item active">
+                                                    <div class="tl-dot b-warning"></div>
+                                                    <div class="tl-content">
+                                                        <div class="">@twitter thanks for you appreciation and @google thanks for you appreciation</div>
+                                                        <div class="tl-date text-muted mt-1">13 june 18</div>
+                                                    </div>
+                                                </div>
+                                                <div class="tl-item">
+                                                    <div class="tl-dot b-primary"></div>
+                                                    <div class="tl-content">
+                                                        <div class="">Do you know how Google search works.</div>
+                                                        <div class="tl-date text-muted mt-1">45 minutes ago</div>
+                                                    </div>
+                                                </div>
+                                                <div class="tl-item">
+                                                    <div class="tl-dot b-danger"></div>
+                                                    <div class="tl-content">
+                                                        <div class="">Thanks to <a href="#" data-abc="true">@apple</a>, for iphone 7</div>
+                                                        <div class="tl-date text-muted mt-1">1 day ago</div>
+                                                    </div>
+                                                </div>
+                                                <div class="tl-item">
+                                                    <div class="tl-dot b-danger"></div>
+                                                    <div class="tl-content">
+                                                        <div class="">Order placed <a href="#" data-abc="true">@eBay</a> you will get your products</div>
+                                                        <div class="tl-date text-muted mt-1">1 Week ago</div>
+                                                    </div>
+                                                </div>
+                                                <div class="tl-item">
+                                                    <div class="tl-dot b-warning"></div>
+                                                    <div class="tl-content">
+                                                        <div class="">Learn how to use <a href="#" data-abc="true">Google Analytics</a> to discover vital information about your readers.</div>
+                                                        <div class="tl-date text-muted mt-1">3 days ago</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    
+                                    </div>
+                                </div>
+                            </div> --}}
+                        {{-- </div> --}}
+                     
+                        
+                        <div id="map" style="height:600px;width=600px" class="container"> </div>
 
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    {{-- End Maps & Route --}}
+    <!-- Maps & Rute -->
 
-    {{-- Start Mobile Maps View --}}
+    <!-- Mobile Maps & Rute -->
     <div class="mapsmobile" id="mapsmobile" name="mapsmobile">
         <div class="container bg-dark" id="mapmobile"></div>
     </div>
@@ -434,9 +426,9 @@ z-index: 999;
             </div>
         </div>
     </div>
-    {{-- End Mobile Maps View --}}
+    <!-- Mobile Maps & Rute -->
 
-    {{-- Start Card Payment --}}
+    <!-- Card Payment -->
     <div class="cardpayment">
         <div class="cardwrap">
             <div class="row cardhead">
@@ -469,9 +461,9 @@ z-index: 999;
             </div>
         </div>
     </div>
-    {{-- End Card Payment --}}
+    <!-- Card Payment -->
 
-    {{-- Start Report Complaint --}}
+    <!-- Report Complaint -->
     <div class="reportcomplaint">
         <div class="col rcwrapper">
             <div class="rcleft">
@@ -573,7 +565,8 @@ z-index: 999;
                             <div class="reportformbtn">
                                 <button type="reset" class="btn btn-outline-secondary">Cancel</button>
                                 <button id="submitReport" type="submit" class="btn btn-danger text-white"
-                                    disabled>Submit Report</button>
+                                    disabled>Submit
+                                    Report</button>
                             </div>
                         </form>
                     @else
@@ -607,9 +600,9 @@ z-index: 999;
         </div>
     </div>
     </div>
-    {{-- End Report Complaint --}}
+    <!-- Report Complaint -->
 
-    {{-- Start Report Tracking  --}}
+    <!-- Report Track -->
     <div class="reporttracking">
         <div class="col reporttrackingwrap">
             <div class="row reporttrackingwrap1">
@@ -754,10 +747,10 @@ z-index: 999;
         </div>
     </div>
     </div>
-    {{-- End Report Tracking  --}}
+    <!-- Report Track -->
 
-    {{-- Start Related Link  --}}
-    <div class="relatedlink">
+    <!-- Related Link -->
+    {{-- <div class="relatedlink">
         <div class="relatedwrap">
             <div class="h-100 relatedlinkwrap">
                 <div class="row align-items-center h-100">
@@ -789,10 +782,39 @@ z-index: 999;
                 </div>
             </div>
         </div>
+    </div> --}}
+    <div class="slider">
+        <div class="slide-track">
+            <div class="slide">
+                <img src="{{ asset('assets/img/LAPOR-02.png') }}" height="100" width="auto" alt="{{ asset('assets/img/LAPOR-02.png') }}" />
+            </div>
+            <div class="slide">
+                <img src="{{ asset('assets/img/PEMKOT-03.png') }}" height="100" width="auto" alt="{{ asset('assets/img/PEMKOT-03.png') }}" />
+            </div>
+            <div class="slide">
+                <img src="{{ asset('assets/img/DISHUB-01.png') }}" height="100" width="auto" alt="{{ asset('assets/img/DISHUB-01.png') }}" />
+            </div>
+            <div class="slide">
+                <img src="{{ asset('assets/img/wndrl-07.png') }}" height="100" width="auto" alt="{{ asset('assets/img/wndrl-07.png') }}" />
+            </div>
+            <div class="slide">
+                <img src="{{ asset('assets/img/ATCS-04.png') }}" height="100" width="auto" alt="{{ asset('assets/img/ATCS-04.png') }}" />
+            </div>
+            <div class="slide">
+                <img src="{{ asset('assets/img/prwst-05.png') }}" height="100" width="auto" alt="{{ asset('assets/img/prwst-05.png') }}" />
+            </div>
+            <div class="slide">
+                <img src="{{ asset('assets/img/RESTABES-06.png') }}" height="100" width="auto" alt="{{ asset('assets/img/RESTABES-06.png') }}" />
+            </div>
+            <div class="slide">
+                <img src="{{ asset('assets/img/JATENG-08.png') }}" height="100" width="auto" alt="{{ asset('assets/img/JATENG-08.png') }}" />
+            </div>
+        </div>
     </div>
-    {{-- End Related Link  --}}
 
-    {{-- Start Footer --}}
+    <!-- Related Link -->
+
+    <!-- Footer -->
     <div class="footer">
         <footer class="text-white">
             <div class="row footerr1">
@@ -827,11 +849,14 @@ z-index: 999;
                         <p>Supported by</p>
                         <div class="col-auto footerr1c2ex2">
                             <span class="row"><a class="text-white"
-                                    href="https://www.semarangkota.go.id/">Pemerintah Kota Semarang 2022</a></span>
+                                    href="https://www.semarangkota.go.id/">Pemerintah
+                                    Kota Semarang 2022</a></span>
                             <span class="row"><a class="text-white"
-                                    href="https://ppid.semarangkota.go.id/">Walikota Semarang</a></span>
+                                    href="https://ppid.semarangkota.go.id/">Walikota
+                                    Semarang</a></span>
                             <span class="row"><a class="text-white"
-                                    href="https://dinkes.semarangkota.go.id/">Dinas Kesehatan Kota Semarang</a></span>
+                                    href="https://dinkes.semarangkota.go.id/">Dinas
+                                    Kesehatan Kota Semarang</a></span>
                             <span class="row"><a class="text-white" href="https://nginovasi.com/v2/">Nusantara
                                     Global Inovasi</a></span>
                         </div>
@@ -889,12 +914,11 @@ z-index: 999;
             </div>
         </footer>
     </div>
-    {{-- End Footer --}}
+    <!-- Footer -->
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.38/dist/sweetalert2.all.min.js"></script>
-
     <script type="text/javascript" src="assets/slick/slick.min.js"></script>
-    {{-- <script src="{{ asset('js/Polyline.encoded.js') }}"></script> --}}
+    <script src="{{ asset('js/Polyline.encoded.js') }}"></script>
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
         var Tawk_API = Tawk_API || {},
@@ -951,9 +975,6 @@ z-index: 999;
                             slidesToScroll: 1
                         }
                     }
-                    // You can unslick at a given breakpoint now by adding:
-                    // settings: "unslick"
-                    // instead of a settings object
                 ]
             });
 
@@ -977,67 +998,6 @@ z-index: 999;
                 }
             }
         });
-
-        // const swiper = new Swiper('.swiper', {
-        // // Optional parameters
-        // direction: 'horizontal',
-        // effect: 'coverflow',
-        // grabCursor: true,
-        // loop: true,
-        // centeredSlides: true,
-        // slidesPerView: 'auto',
-        // speed: 300,
-        // simulateTouch: true,
-        // slidesPerView: 4,
-        // spaceBetween: 100,
-
-        // coverflowEffect: {
-        //     rotate: 0,
-        //     stretch: 0,
-        //     depth: 0,
-        //     modifier: 3,
-        //     slideShadows: false
-        // },
-        // // Navigation arrows
-        // navigation: {
-        //     nextEl: '.swiper-button-next',
-        //     prevEl: '.swiper-button-prev',
-        // },
-        // // And if we need scrollbar
-        // scrollbar: {
-        //     el: '.swiper-scrollbar',
-        // },
-        // breakpoints: {
-        //     // when window width is >= 320px
-        //     320: {
-        //     slidesPerView: 2,
-        //     spaceBetween: 20
-        //     },
-        //     // when window width is >= 480px
-        //     480: {
-        //     slidesPerView: 3,
-        //     spaceBetween: 30,
-        //     centeredSlides: true
-        //     },
-        //     // when window width is >= 640px
-        //     640: {
-        //     slidesPerView: 4,
-        //     spaceBetween: 40,
-        //     centeredSlides: true
-        //     },
-        //     1440: {
-        //     slidesPerView: 4,
-        //     spaceBetween: 350,
-        //     centeredSlides: true
-        //     },
-        //     2559: {
-        //     slidesPerView: 5,
-        //     spaceBetween: 0,
-        //     centeredSlides: true
-        //     }
-        // }
-
-        // });
     </script>
     <script>
         const swiper = new Swiper('.swiper', {
@@ -1133,8 +1093,6 @@ z-index: 999;
             })
         }
     </script>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script>
         $(document).ready(function() {
             $("select").change(function() {
@@ -1150,241 +1108,103 @@ z-index: 999;
             }).change();
         });
     </script>
-    <script src="/js/Polyline.encoded.js"></script>
 
-    <script>
-        var result = {!! json_encode($result) !!};;
-        var resultRoute = {!! json_encode($resultRoute) !!};;
-        // console.log(resultRoute);
-      
-        let map = L.map('map', {
-         
-        }).setView([-6.997226, 110.393395], 12);
-        L.control.zoom({
-            position: 'bottomright'
-        }).addTo(map);
-        L.tileLayer(
-            "http://{s}.google.com/vt?lyrs=m&x={x}&y={y}&z={z}", {
-                maxZoom: 20,
-                zoomControl: true,
-                subdomains: ['mt0', 'mt1', 'mt2', 'mt3'],
-                attribution: '&copy; Trans Semarang | <a href="https://www.google.com/intl/id/permissions/geoguidelines/">Google Maps</a>'
-            }).addTo(map);
-            
-            for (let i = 0; i < result.length; i++) {
+<script>
+    document.getElementById('my-select').addEventListener('change', function() {
+        var point = this.value;
+        for (let i = 0; i < result.length; i++) {
             var kor = result[i].kor;
-            // console.log(kor);
-            switch (kor) {
-                case '1':
-                    var data = result[i].rute.split("|||")
-                    var points_a = JSON.stringify(data[0])
-                    var points_b = JSON.stringify(data[1])
-                    var encoded = data[0];
-                 ;
-                    var polyline = L.Polyline.fromEncoded(encoded, {
-                        color: "#AF2330",
-                        stroke: true,
-                        opacity: 1,
-                        weight: 8,
-                    }).addTo(map);
+            var dataname = result[i].name;
+            var name = (dataname)
+            var datakor = result[i].kor;
+            var kor = (datakor)
+            var selected = point;
+            console.log(dataname);
+
+        }
+
+    });
+ 
+</script>
     
-                    for (let j = 0; j < resultRoute.length; j++) {
-                        var koridor = resultRoute[j].koridor;
-                        switch (koridor) {
-                            case '1':
-                                var iconNya = 'assets/icon/kor1.png';
-                                break;
-                            default:
-                                var iconNya = '';
-                        }
-                        var coridorIcon = L.icon({
-                            iconUrl: iconNya,
-                            iconSize: [25, 35],
-                            iconAnchor: [16, 35],
-                        });
-                        var data = resultRoute[j].coordinate.split("|")
-                        var lat = parseFloat(data[0])
-                        var lng = parseFloat(data[1])
-                        var dataname = resultRoute[j].name;
-                        var name = (dataname)
-                        var datakor = resultRoute[j].koridor;
-                        var kor = (datakor)
-    
-                        L.marker([lat, lng], {icon: coridorIcon}).addTo(map)
-                        .bindPopup( 'koridor ' + kor +' '+ name);
-                        // console.log(lat + " -> " + lng)
-                    }
+<script>
+    var polyline = "";
+    var shelter = [];
+    const map = L.map('map', {
+        gestureHandling: true
+    }).setView([-6.997226, 110.393395], 12);
+    L.control.zoom({position: 'bottomright'}).addTo(map);
 
-                    map.fitBounds(polyline.getBounds());
-                }
-                
-                map.scrollWheelZoom.disable();
-                
-                $("#map").bind('gabisaaa weyyyy', function (event) {
-                  event.stopPropagation();
-                   if (event.ctrlKey == true) {
-                           event.preventDefault();
-                       map.scrollWheelZoom.enable();
-                         $('#map').removeClass('map-scroll');
-                       setTimeout(function(){
-                           map.scrollWheelZoom.disable();
-                       }, 1000);
-                   } else {
-                       map.scrollWheelZoom.disable();
-                       $('#map').addClass('map-scroll');
-                   }
-                
-                });
-                
-                $(window).bind('gabisaaa weyyyy', function (event) {
-                     $('#map').removeClass('map-scroll');
-                })
-            }
-    </script>
+    L.tileLayer("http://{s}.google.com/vt?lyrs=m&x={x}&y={y}&z={z}", {
+        maxZoom: 20,
+        subdomains: ['mt0', 'mt1', 'mt2', 'mt3'],
+        attribution: '&copy; Trans Semarang | <a href="https://www.google.com/intl/id/permissions/geoguidelines/">Google Maps</a>'
+    }).addTo(map);
 
-{{-- 
-    <script>
-        var result = {!! json_encode($result) !!};;
-        // console.log(result);
+    document.getElementById('my-select').addEventListener('change', function() {
+        var point = this.value;
+        // console.log(point);
+        var iconNya;
+        // var name;
+        var coridorIcon;
+        var result = {!! json_encode($result) !!};
 
-        let map = L.map('default', {
-            // zoomControl: false
-        }).setView([-6.997226, 110.393395], 12);
-        L.control.zoom({
-            position: 'bottomright'
-        }).addTo(map);
-        L.tileLayer(
-            "http://{s}.google.com/vt?lyrs=m&x={x}&y={y}&z={z}", {
-                maxZoom: 20,
-                zoomControl: true,
-                subdomains: ['mt0', 'mt1', 'mt2', 'mt3'],
-                attribution: '&copy; Trans Semarang | <a href="https://www.google.com/intl/id/permissions/geoguidelines/">Google Maps</a>'
-            }).addTo(map);
-
-
-
-        var coridorIcon = L.icon({
-            iconUrl: 'assets/icon/busstop.png',
-            iconSize: [30, 35], // size of the icon
-            iconAnchor: [16, 35], // point of the icon which will correspond to marker's location
-        });
+        shelter.forEach(function(marker) {
+            map.removeLayer(marker);
+        })
+        shelter = [];
 
         for (let i = 0; i < result.length; i++) {
-            var koridor = result[i].koridor;
-            switch (koridor) {
-                case '1':
-                    var iconNya = 'assets/icon/kor1.png';
-                    break;
-                case '2':
-                    var iconNya = 'assets/icon/kor2.png';
-                    break;
-                case '3A':
-                    var iconNya = 'assets/icon/kor3a.png';
-                    break;
-                case '3B':
-                    var iconNya = 'assets/icon/kor3b.png';
-                    break;
-                case '4':
-                    var iconNya = 'assets/icon/kor4.png';
-                    break;
-                case 'F2A':
-                    var iconNya = 'assets/icon/korf2a.png';
-                    break;
-                case 'F2B':
-                    var iconNya = 'assets/icon/korf2b.png';
-                    break;
-                case '5':
-                    var iconNya = 'assets/icon/kor5.png';
-                    break;
-                case 'F4B':
-                    var iconNya = 'assets/icon/korf4b.png';
-                    break;
-                case 'F4A':
-                    var iconNya = 'assets/icon/korf4a.png';
-                    break;
-                case 'F3':
-                    var iconNya = 'assets/icon/korf3.png';
-                    break;
-                case '6':
-                    var iconNya = 'assets/icon/kor6.png';
-                    break;
-                case 'LM':
-                    var iconNya = 'assets/icon/korlm.png';
-                    break;
-                case '7':
-                    var iconNya = 'assets/icon/kor7.png';
-                    break;
-                case '8':
-                    var iconNya = 'assets/icon/kor8.png';
-                    break;
-                case 'F1A':
-                    var iconNya = 'assets/icon/korf1a.png';
-                    break;
-                case 'F1B':
-                    var iconNya = 'assets/icon/korf1b.png';
-                    break;
-                default:
-                    var iconNya = 'assets/icon/tsmg.png';
-            }
-            var coridorIcon = L.icon({
-                iconUrl: iconNya,
-                iconSize: [25, 35],
-                iconAnchor: [16, 35],
-            });
+            var kor = result[i].kor;
             var data = result[i].coordinate.split("|")
             var lat = parseFloat(data[0])
             var lng = parseFloat(data[1])
             var dataname = result[i].name;
             var name = (dataname)
-            var datakor = result[i].koridor;
+            var datakor = result[i].kor;
             var kor = (datakor)
+            var selected = point;
+            console.log(name);
 
-            // console.log(lat + " -> " + lng)
-            // console.log(koridor + " - " + name)
-            L.marker([lat, lng], {
+            if (kor == selected) {
+                var data = result[i].points.split("|||")
+                var points = JSON.stringify(data[0])
+                console.log(points);
+                var encoded = data[0];
+
+                if (polyline != "") {
+                    map.removeLayer(polyline);
+                }
+
+                polyline = L.Polyline.fromEncoded(encoded, {
+                    color: "#AF2330",
+                    stroke: true,
+                    opacity: 1,
+                    weight: 8,
+                }).addTo(map);
+
+                if (kor == selected) {
+                    iconNya = 'assets/icon/' + selected + '.png';
+                } else {
+                    iconNya = 'assets/icon/tp.png';
+                }
+
+                coridorIcon = L.icon({
+                    iconUrl: iconNya,
+                    iconSize: [25, 35],
+                    iconAnchor: [16, 35],
+                });
+
+                var marker = L.marker([lat, lng], {
                     icon: coridorIcon
-                }).addTo(map)
-                .bindPopup('koridor ' + kor + ' ' + name);
+                }).addTo(map).bindPopup('koridor ' + kor + ' ' + name);
+                shelter.push(marker);
+            }
         }
-    </script> --}}
+        map.fitBounds(polyline.getBounds());
+    });
+</script>
 
-    
-
-    {{-- <script>
-$.ajax({
-    type:"GET",
-    url:"https://gps.brtnusantara.com/dev/trans_semarang/api_v1/getAllRoutes",
-    data: {},
-    success:function(result){
-        console.log(result);
-    }
-})
-
-      	var map = new L.Map('map').setView([-6.996667, 110.416664], 13);
-		var tiles = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
-            maxZoom: 19,
-            zoomControl: true,
-            subdomains:['mt0','mt1','mt2','mt3'],
-            attribution: '&copy; Trans Semarang | <a href="https://www.google.com/intl/id/permissions/geoguidelines/">Google Maps</a>'
-            }).addTo(map);
-
-				var coridorIcon = L.icon({
-					iconUrl: 'assets/icon/busstop.png',
-					// shadowUrl: 'leaf-shadow.png',
-
-					iconSize:     [40, 45], // size of the icon
-					shadowSize:   [50, 64], // size of the shadow
-					iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
-					shadowAnchor: [4, 62],  // the same for the shadow
-					popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
-				});
-
-
-				L.marker([-7.012321, 110.418670,12], {icon: coridorIcon}).addTo(map);
-				L.marker([-6.991553, 110.353506,12], {icon: coridorIcon}).addTo(map);
-
-		map.fitBounds(polyline.getBounds());
-    </script> --}}
     <script>
         var mapmobile = L.map("mapmobile", {
             zoomControl: false
