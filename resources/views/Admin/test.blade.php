@@ -17,6 +17,14 @@
 
 
 <body>
+
+	<select id="my-select">
+        @foreach ($result as $key => $datas)
+            <option>Koridor {{ $datas['sh_id'] }} {{ $datas['origin'] }} -
+                {{ $datas['toward'] }}</option>
+        @endforeach
+    </select>
+
     <div id="map" style="height:800px;width=800px"> </div>
 </body>
 

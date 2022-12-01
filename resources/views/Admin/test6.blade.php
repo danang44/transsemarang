@@ -15,14 +15,14 @@
 
 
     <select id="my-select">
-        @foreach ($result as $key => $datas)
-            <option value={{ $datas['kor'] }}>Koridor {{ $datas['kor'] }}{{ $datas['points'] }} {{ $datas['origin'] }} -
-                {{ $datas['toward'] }}</option>
+        @foreach ($result as $key => $data)
+            <option value={{ $data['kor'] }} >Koridor {{ $data['kor'] }} {{ $data['origin'] }} -
+                {{ $data['toward'] }}</option>
         @endforeach
     </select>
     <select id="my-select">
-        @foreach ($resultRoute as $datasb)
-            <option >{{ $datasb['or_lng'] }} {{ $datasb['or_lng'] }} 
+        @foreach ($result as $data)
+            <option >{{ $data['points'] }} 
                </option>
         @endforeach
     </select>
@@ -62,7 +62,7 @@
         var kordinat;
         
         var result = {!! json_encode($result) !!};;
-        var resultRoute = {!! json_encode($resultRoute) !!};;
+        // var result = {!! json_encode($result) !!};;
 
         for (let i = 0; i < result.length; i++) {
             var kor = result[i].kor;
@@ -96,8 +96,8 @@
                     iconNya = 'assets/icon/tp.png';
                 }
 
-                for (let j = 0; j < resultRoute.length; j++) {
-                    var koridor = resultRoute[j].koridor;
+                for (let j = 0; j < result.length; j++) {
+                    var koridor = result[j].koridor;
                     switch (koridor) {
 
                         case (selected):
@@ -111,12 +111,12 @@
                         iconSize: [25, 35],
                         iconAnchor: [16, 35],
                     });
-                    var data = resultRoute[j].coordinate.split("|")
+                    var data = result[j].coordinate.split("|")
                     var lat = parseFloat(data[0])
                     var lng = parseFloat(data[1])
-                    var dataname = resultRoute[j].name;
+                    var dataname = result[j].name;
                     var name = (dataname)
-                    var datakor = resultRoute[j].koridor;
+                    var datakor = result[j].koridor;
                     var kor = (datakor)
                     // console.log(data);
 

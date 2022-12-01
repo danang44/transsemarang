@@ -228,59 +228,59 @@
   for (let i = 0; i < result.length; i++) {
       var koridor = result[i].koridor;
       switch (koridor) {
-          case '1':
-              var iconNya = 'assets/icon/kor1.png';
-              break;
-          case '2':
-              var iconNya = 'assets/icon/kor2.png';
-              break;
+        //   case '1':
+        //       var iconNya = 'assets/icon/kor1.png';
+        //       break;
+        //   case '2':
+        //       var iconNya = 'assets/icon/kor2.png';
+        //       break;
           case '3A':
               var iconNya = 'assets/icon/kor3a.png';
               break;
-          case '3B':
-              var iconNya = 'assets/icon/kor3b.png';
-              break;
-          case '4':
-              var iconNya = 'assets/icon/kor4.png';
-              break;
-          case 'F2A':
-              var iconNya = 'assets/icon/korf2a.png';
-              break;
-          case 'F2B':
-              var iconNya = 'assets/icon/korf2b.png';
-              break;
-          case '5':
-              var iconNya = 'assets/icon/kor5.png';
-              break;
-          case 'F4B':
-              var iconNya = 'assets/icon/korf4b.png';
-              break;
-          case 'F4A':
-              var iconNya = 'assets/icon/korf4a.png';
-              break;
-          case 'F3':
-              var iconNya = 'assets/icon/korf3.png';
-              break;
-          case '6':
-              var iconNya = 'assets/icon/kor6.png';
-              break;
-          case 'LM':
-              var iconNya = 'assets/icon/korlm.png';
-              break;
-          case '7':
-              var iconNya = 'assets/icon/kor7.png';
-              break;
-          case '8':
-              var iconNya = 'assets/icon/kor8.png';
-              break;
-          case 'F1A':
-              var iconNya = 'assets/icon/korf1a.png';
-              break;
-          case 'F1B':
-              var iconNya = 'assets/icon/korf1b.png';
-              break;
+    //       case '3B':
+    //           var iconNya = 'assets/icon/kor3b.png';
+    //           break;
+    //       case '4':
+    //           var iconNya = 'assets/icon/kor4.png';
+    //           break;
+    //       case 'F2A':
+    //           var iconNya = 'assets/icon/korf2a.png';
+    //           break;
+    //       case 'F2B':
+    //           var iconNya = 'assets/icon/korf2b.png';
+    //           break;
+    //       case '5':
+    //           var iconNya = 'assets/icon/kor5.png';
+    //           break;
+    //       case 'F4B':
+    //           var iconNya = 'assets/icon/korf4b.png';
+    //           break;
+    //       case 'F4A':
+    //           var iconNya = 'assets/icon/korf4a.png';
+    //           break;
+    //       case 'F3':
+    //           var iconNya = 'assets/icon/korf3.png';
+    //           break;
+    //       case '6':
+    //           var iconNya = 'assets/icon/kor6.png';
+    //           break;
+    //       case 'LM':
+    //           var iconNya = 'assets/icon/korlm.png';
+    //           break;
+    //       case '7':
+    //           var iconNya = 'assets/icon/kor7.png';
+    //           break;
+    //       case '8':
+    //           var iconNya = 'assets/icon/kor8.png';
+    //           break;
+    //       case 'F1A':
+    //           var iconNya = 'assets/icon/korf1a.png';
+    //           break;
+    //       case 'F1B':
+    //           var iconNya = 'assets/icon/korf1b.png';
+    //           break;
           default:
-              var iconNya = 'assets/icon/tsmg.png';
+              var iconNya = 'assets/icon/tp.png';
       }
       var coridorIcon = L.icon({
           iconUrl: iconNya,
@@ -295,8 +295,8 @@
       var datakor = result[i].koridor;
       var kor = (datakor)
 
-    //   console.log(lat + " -> " + lng)
-    //   console.log(koridor + " - " + name)
+      console.log(lat + " -> " + lng)
+      console.log(koridor + " - " + name)
       L.marker([lat, lng], {
               icon: coridorIcon
           }).addTo(map)

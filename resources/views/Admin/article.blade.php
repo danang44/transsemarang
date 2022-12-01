@@ -36,6 +36,7 @@
                                         <th>Tanggal</th>
                                         <th>Judul</th>
                                         <th>Deskripsi</th>
+                                        <th>Gambar</th>
                                         <th>User</th>
                                         <th></th>
                                         <th class="col-3s text-center">Opsi</th>
@@ -47,6 +48,10 @@
                                         <td class="pr-2 pl-2 ">{{$c->date}}</td>
                                         <td class="pr-2 pl-2 ">{{$c->title}}</td>
                                         <td class="text-justify pr-2 pl-2 ">{{$c->intro}}</td>
+                                        <td class="pr-2 pl-1 "><img src="public/data_article/{{ $c->gambar }}" class="gallery-image"
+                                      ></td>
+                                        {{-- <td class="pr-2 pl-1 "><img width="300px" src="{{ url('/content/images/'.$c->gambar) }}"></td> --}}
+                                        {{-- <td class="pr-2 pl-2 ">{{$c->gambar}}</td> --}}
                                         <td class="pr-2 pl-2 ">{{@$c->user->name}}</td>
 
                                         <td class="pr-2 pl-2 "></td>

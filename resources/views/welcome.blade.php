@@ -42,9 +42,24 @@
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" type="text/javascript"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script src="https://kit.fontawesome.com/1e94ef36ed.js" type="text/javascript" crossorigin="anonymous"></script>
+    <script src="/scripts/snippet-javascript-console.min.js?v=1"></script>
     {{-- <script src="assets/bootstrap/js/live.js" type="text/javascript"></script> --}}
-    <script src="{{ asset('js/polyline.js') }}" type="text/javascript"></script>
-
+    {{-- <script src="{{ asset('js/polyline.js') }}" type="text/javascript"></script> --}}
+    {{-- <script src="//unpkg.com/leaflet-gesture-handling"></script> --}}
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+        integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+        crossorigin=""/>
+  <link rel="stylesheet" href="//unpkg.com/leaflet-gesture-handling/dist/leaflet-gesture-handling.min.css"
+        type="text/css">
+  <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+          integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+          crossorigin=""></script>
+  <script src="//unpkg.com/leaflet-gesture-handling"></script>
+          {{-- <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
+          integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
+    <link rel="stylesheet" href="//unpkg.com/leaflet-gesture-handling/dist/leaflet-gesture-handling.min.css"
+    type="text/css"> --}}
+    
     {{-- <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css"> --}}
     <link rel="stylesheet" href="{{ asset('assets/bootstrap/css/bootstrap.min.css') }}">
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans:200,300,400,500,600,700,800'>
@@ -52,9 +67,9 @@
     <link rel="stylesheet" href="{{ asset('assets/css/Hero-Clean-Reverse-images.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/logo-slider.css') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.38/dist/sweetalert2.css">
-    <link rel="stylesheet"
+    {{-- <link rel="stylesheet"
         href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
-        crossorigin="" />
+        crossorigin="" /> --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/slick/slick.css') }}" />
@@ -91,6 +106,25 @@
         /* overflow-x:hidden !important; */
         -webkit-overflow-scrolling: auto;
     }
+
+    .map-scroll:before {
+content: 'Use ctrl + scroll to zoom the map';
+position: absolute;
+top: 50%;
+left: 50%;
+z-index: 999;
+font-size: 34px;
+ }
+ .map-scroll:after {
+position: absolute;
+left: 0;
+right: 0;
+bottom: 0;
+top: 0;
+content: '';
+background: #00000061;
+z-index: 999;
+}
 </style>
 
 <body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="72">
@@ -285,48 +319,7 @@
                             data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false"
                             style="height: 100%">Pilih Koridor BRT</button> --}}
                             
-                            <select class="container type dnngi" name="type" id="type" onchange>
-                                <ul class="dropdown-menu dropdown-menu-lg-end" style="width: 100%">
-                                    {{-- @foreach ($result as $datas)
-                                        <li><a class="dropdown-item {{$datas['kor']}} hidden">Koridor {{$datas['kor']}} {{$datas['origin']}} - {{$datas['toward']}}</a></li>
-                                        @endforeach --}}
-                                        <option value="1">Pilih Koridor BRT</option>
-                                        <option value="2">Koridor 1 (MANGKANG - PENGGARON)</option>
-                                        <option value="3">Koridor 1 PENGGARON - MANGKANG</option>
-                                        <option value="4">Koridor 2 TERBOYO - UNGARAN</option>
-                                        <option value="5">Koridor 2 UNGARAN - TERBOYO</option>
-                                        <option value="6">Koridor 3A PELABUHAN - ELISABETH via DR CIPTO</option>
-                                        <option value="7">Koridor 3A ELISABETH via DR CIPTO - PELABUHAN</option>
-                                        <option value="8">Koridor 3B PELABUHAN - ELISABETH</option>
-                                        <option value="9">Koridor 4 TAWANG - CANGKIRAN</option>
-                                        <option value="10">Koridor 4 CANGKIRAN - TAWANG</option>
-                                        <option value="11">Koridor F2A TERBOYO - ADA MAJAPAHIT</option>
-                                        <option value="12">Koridor F2A ADA MAJAPAHIT - TERBOYO</option>
-                                        <option value="13">Koridor F2B TERBOYO - ADA MAJAPAHIT B</option>
-                                        <option value="14">Koridor F2B ADA MAJAPAHIT B - TERBOYO</option>
-                                        <option value="15">Koridor 5 PRPP - METESEH</option>
-                                        <option value="16">Koridor 5 METESEH - PRPP</option>
-                                        <option value="17">Koridor F4B GUNUNG PATI - BSB</option>
-                                        <option value="18">Koridor F4B BSB - GUNUNG PATI</option>
-                                        <option value="19">Koridor F4A GUNUNG PATI - UNNES</option>
-                                        <option value="20">Koridor F4A UNNES - GUNUNG PATI</option>
-                                        <option value="21">Koridor F3 PENGGARON - TERMINAL BANYUMANIK</option>
-                                        <option value="22">Koridor F3 TERMINAL BANYUMANIK - PENGGARON</option>
-                                        <option value="23">Koridor 6 UNDIP - UNNES</option>
-                                        <option value="24">Koridor 6 UNNES - UNDIP</option>
-                                        <option value="25">Koridor LM MANGKANG - SIMPANG LIMA (MALAM) </option>
-                                        <option value="26">Koridor LM SIMPANG LIMA - MANGKANG (MALAM)</option>
-                                        <option value="27">Koridor 7 GENUK - BALAIKOTA</option>
-                                        <option value="28">Koridor 7 BALAIKOTA - GENUK</option>
-                                        <option value="29">Koridor 8 SIMPANG LIMA - GUNUNG PATI - CANGKIRAN</option>
-                                        <option value="30">Koridor 8 GUNUNG PATI - CANGKIRAN - SIMPANG LIMA</option>
-                                        <option value="31">Koridor F1A NGALIYAN - KP GONDORIYO</option>
-                                        <option value="32">Koridor F1A KP GONDORIYO - NGALIYAN</option>
-                                        <option value="33">Koridor F1B NGALIYAN - MADUKORO RAYA</option>
-                                        <option value="34">Koridor F1B MADUKORO RAYA - NGALIYAN</option>
-                                        {{-- <option value="2">Pembelian Total Harga</option>
-                                        <option value="3">Login</option> --}}
-                                    </select>
+                          
                                     
                                 </ul>
                             </div>
@@ -335,8 +328,8 @@
                                 <div
                                 style="display: flex;flex-direction: column;align-items: flex-start;padding: 0px;gap: 4px;width: 400px;height: 100%;left: 0px;background: #F9FAFB;border-bottom-left-radius: 20px;">
                         </div>
-                        {{-- <div class="container bg-dark" id="map"></div> --}}
-                        <div class="container bg-dark" id="default"></div>
+                        <div class="container bg-dark" id="map"></div>
+                        {{-- <div class="container bg-dark" id="default"></div>
                         <div id="map" class="container bg-dark"></div>
                         <div id="maps" class="container bg-dark"></div>
                         <div id="mapss" class="container bg-dark"></div>
@@ -370,7 +363,7 @@
                         <div id="korf1a" class="container bg-dark"></div>
                         <div id="korf1aa" class="container bg-dark"></div>
                         <div id="korf1b" class="container bg-dark"></div>
-                        <div id="korf1bb" class="container bg-dark"></div>
+                        <div id="korf1bb" class="container bg-dark"></div> --}}
 
                     </div>
                 </div>
@@ -899,10 +892,9 @@
     {{-- End Footer --}}
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.38/dist/sweetalert2.all.min.js"></script>
-    <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
-        integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
+
     <script type="text/javascript" src="assets/slick/slick.min.js"></script>
-    <script src="{{ asset('js/Polyline.encoded.js') }}"></script>
+    {{-- <script src="{{ asset('js/Polyline.encoded.js') }}"></script> --}}
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
         var Tawk_API = Tawk_API || {},
@@ -1160,7 +1152,97 @@
     </script>
     <script src="/js/Polyline.encoded.js"></script>
 
+    <script>
+        var result = {!! json_encode($result) !!};;
+        var resultRoute = {!! json_encode($resultRoute) !!};;
+        // console.log(resultRoute);
+      
+        let map = L.map('map', {
+         
+        }).setView([-6.997226, 110.393395], 12);
+        L.control.zoom({
+            position: 'bottomright'
+        }).addTo(map);
+        L.tileLayer(
+            "http://{s}.google.com/vt?lyrs=m&x={x}&y={y}&z={z}", {
+                maxZoom: 20,
+                zoomControl: true,
+                subdomains: ['mt0', 'mt1', 'mt2', 'mt3'],
+                attribution: '&copy; Trans Semarang | <a href="https://www.google.com/intl/id/permissions/geoguidelines/">Google Maps</a>'
+            }).addTo(map);
+            
+            for (let i = 0; i < result.length; i++) {
+            var kor = result[i].kor;
+            // console.log(kor);
+            switch (kor) {
+                case '1':
+                    var data = result[i].rute.split("|||")
+                    var points_a = JSON.stringify(data[0])
+                    var points_b = JSON.stringify(data[1])
+                    var encoded = data[0];
+                 ;
+                    var polyline = L.Polyline.fromEncoded(encoded, {
+                        color: "#AF2330",
+                        stroke: true,
+                        opacity: 1,
+                        weight: 8,
+                    }).addTo(map);
+    
+                    for (let j = 0; j < resultRoute.length; j++) {
+                        var koridor = resultRoute[j].koridor;
+                        switch (koridor) {
+                            case '1':
+                                var iconNya = 'assets/icon/kor1.png';
+                                break;
+                            default:
+                                var iconNya = '';
+                        }
+                        var coridorIcon = L.icon({
+                            iconUrl: iconNya,
+                            iconSize: [25, 35],
+                            iconAnchor: [16, 35],
+                        });
+                        var data = resultRoute[j].coordinate.split("|")
+                        var lat = parseFloat(data[0])
+                        var lng = parseFloat(data[1])
+                        var dataname = resultRoute[j].name;
+                        var name = (dataname)
+                        var datakor = resultRoute[j].koridor;
+                        var kor = (datakor)
+    
+                        L.marker([lat, lng], {icon: coridorIcon}).addTo(map)
+                        .bindPopup( 'koridor ' + kor +' '+ name);
+                        // console.log(lat + " -> " + lng)
+                    }
 
+                    map.fitBounds(polyline.getBounds());
+                }
+                
+                map.scrollWheelZoom.disable();
+                
+                $("#map").bind('gabisaaa weyyyy', function (event) {
+                  event.stopPropagation();
+                   if (event.ctrlKey == true) {
+                           event.preventDefault();
+                       map.scrollWheelZoom.enable();
+                         $('#map').removeClass('map-scroll');
+                       setTimeout(function(){
+                           map.scrollWheelZoom.disable();
+                       }, 1000);
+                   } else {
+                       map.scrollWheelZoom.disable();
+                       $('#map').addClass('map-scroll');
+                   }
+                
+                });
+                
+                $(window).bind('gabisaaa weyyyy', function (event) {
+                     $('#map').removeClass('map-scroll');
+                })
+            }
+    </script>
+
+{{-- 
     <script>
         var result = {!! json_encode($result) !!};;
         // console.log(result);
@@ -1264,7 +1346,7 @@
                 }).addTo(map)
                 .bindPopup('koridor ' + kor + ' ' + name);
         }
-    </script>
+    </script> --}}
 
     
 
